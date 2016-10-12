@@ -1,0 +1,48 @@
+baseurl = "http://matrixise.github.io/"
+languageCode = "en-us"
+title = "Stephane Wirtel"
+theme = "ghostwriter"
+# pygmentsstyle = "monokai"
+# pygmentsstyle = "murphy"
+pygmentsstyle = "borland"
+disableRSS=false
+
+copyright = "Stephane Wirtel"
+
+[Permalinks]
+post = "/post/:year/:month/:day/:filename"
+
+[Author]
+name = "Stephane Wirtel"
+
+[Params]
+description = "Description"
+intro = false
+github = "https://github.com/matrixise"
+twitter = "https://github.com/matrixise"
+opengraph = true
+
+[[menu.main]]
+name = "Blog"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Projects"
+url = "/project"
+weight = 2
+
+[[menu.main]]
+name = "Talks"
+url = "/talk"
+weight = 3
+
+# [[menu.main]]
+#name = "Contact"
+#url = "/page/contact/"
+#weight = 4
+
+[[menu.main]]
+name = "About"
+url = "/page/about/"
+weight = 5
