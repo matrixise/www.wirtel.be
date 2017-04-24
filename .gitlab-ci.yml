@@ -14,7 +14,7 @@ before_script:
 pages:
   script:
     - hugo -t=ghostwriter -d public/
-    - rsync --chown=www-data:www-data -hrvz --delete --exclude=_ -e 'ssh -i id_rsa' public/ root@wirtel.be:/home/www/www.wirtel.be/src/
+    - rsync -og --chown=www-data:www-data -hrvz --delete --exclude=_ -e 'ssh -i id_rsa' public/ root@wirtel.be:/home/www/www.wirtel.be/src/
 
   artifacts:
     paths:
