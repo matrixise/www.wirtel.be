@@ -5,7 +5,7 @@ before_script:
   - 'which ssh-agent || (apt-get install openssh-client -y)'
   - eval $(ssh-agent -s)
   - apt-get install --yes --force-yes rsync
-  - ssh-add < (ehco "$SSH_PRIVATE_KEY")
+  - ssh-add < (ehco "${SSH_PRIVATE_KEY}")
   - mkdir -p ~/.ssh
   - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
