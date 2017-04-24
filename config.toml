@@ -1,16 +1,36 @@
-baseurl = "http://matrixise.github.io/"
-languageCode = "en-us"
+# baseurl = "http://matrixise.github.io/"
+baseurl = "https://wirtel.be/"
+#languageCode = "en-us"
 title = "Stephane Wirtel"
 theme = "ghostwriter"
 # pygmentsstyle = "monokai"
 # pygmentsstyle = "murphy"
 pygmentsstyle = "borland"
 disableRSS=false
-
 copyright = "Stephane Wirtel"
+googleAnalytics = "UA-22059464-1"
+
+
+#uglyUrls = true
+#defaultContentLanguage = "en"
+#defaultContentLanguageInSubdir = true
+
+#[Languages]
+#[Languages.en]
+#weight = 1
+#name = "English"
+#[Languages.fr]
+#weight = 2
+#name = "Francais"
+
+[Taxonomies]
+tags = "tags"
+categories = "categories"
+series = "series"
 
 [Permalinks]
 post = "/post/:year/:month/:day/:filename"
+cv = "/:filename/"
 
 [Author]
 name = "Stephane Wirtel"
@@ -36,6 +56,12 @@ weight = 2
 name = "Talks"
 url = "/talk"
 weight = 3
+
+#[[menu.main]]
+#name = "Curriculum Vitae"
+#url = "/page/cv"
+#weight = 6
+
 
 # [[menu.main]]
 #name = "Contact"

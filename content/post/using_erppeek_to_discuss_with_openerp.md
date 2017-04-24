@@ -6,9 +6,9 @@ draft = false
 categories = ["programming"]
 image = "using_erppeek_to_discuss_with_openerp-background.jpg"
 comments = true
-aliases = [
-    "/posts/en/2014/06/13/using_erppeek_to_discuss_with_openerp"
-]
+# aliases = [
+#    "/posts/en/2014/06/13/using_erppeek_to_discuss_with_openerp"
+#]
 +++
 
 In this post, we will use the new name, [Odoo] instead of [OpenERP] but
