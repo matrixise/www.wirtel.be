@@ -2,10 +2,10 @@ image: publysher/hugo
 
 before_script:
   - apt-get update
-  - 'which ssh-agent || (apt-get install openssh-client -y)'
+  - 'which ssh-agent || ( apt-get install openssh-client -y )'
   - eval $(ssh-agent -s)
   - apt-get install --yes --force-yes rsync
-  - ssh-add < (echo "${SSH_PRIVATE_KEY}")
+  - ssh-add <(echo "$SSH_PRIVATE_KEY")
   - mkdir -p ~/.ssh
   - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
