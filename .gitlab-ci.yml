@@ -1,11 +1,20 @@
 image: publysher/hugo
 
 before_script:
+  - apt-get update
+  - 'which ssh-agent || (apt-get install openssh-client -y)'
+  - eval $(ssh-agent -s)
+  - apt-get install --yes --force-yes rsync
+  - ssh-add < (ehco "$SSH_PRIVATE_KEY")
+  - mkdir -p ~/.ssh
+  - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   - git submodule update --init
 
 pages:
   script:
     - hugo -t=ghostwriter -d public/
+    - rsync -hrvz --delete --exclude=_ -e 'ssh -i id_rsa' public root@wirtel.be:/home/www/www.wirtel.be/src/
 
   artifacts:
     paths:
