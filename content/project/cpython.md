@@ -1,7 +1,7 @@
 +++
 title = "Contributor of CPython"
 author = "Stephane Wirtel"
-date = "2016-10-11T18:00:00"
+date = "2014-04-01T18:00:00"
 +++
 
 ## Description
