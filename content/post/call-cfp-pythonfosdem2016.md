@@ -2,8 +2,8 @@
 date = "2015-12-16T18:16:29+01:00"
 draft = false
 title = "Help PythonFOSDEM 2016 with your proposals"
-tags = ["python", "fosdem"]
-categories = ["event"]
+tags = ["python", "fosdem", "conference"]
+categories = ["conference"]
 image = "python-fosdem-2016.jpg"
 +++
 

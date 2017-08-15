@@ -2,8 +2,8 @@
 date = "2017-02-01T21:00:00+01:00"
 draft = false
 title = "PythonFOSDEM 2017 - Schedule"
-tags = ["python", "fosdem", "schedule"]
-categories = ["event"]
+tags = ["python", "fosdem", "conference", "schedule"]
+categories = ["conference"]
 +++
 
 # Introduction

@@ -2,8 +2,8 @@
 date = "2016-10-19T20:00:00+01:00"
 draft = false
 title = "PythonFOSDEM 2017 - Call for Proposals"
-tags = ["python", "fosdem"]
-categories = ["event"]
+tags = ["python", "fosdem", "conference"]
+categories = ["conference"]
 +++
 
 # Introduction

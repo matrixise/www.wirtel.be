@@ -23,8 +23,8 @@ https://speakerdeck.com/matrixise/python-and-postgresql-a-wonderful-wedding-engl
 
 ## Conferences
 
-* Pycon France 2014
+* PyCon France 2014
 * Python FOSDEM 2015
 * EuroPython 2015 (absent)
-* Pycon Ireland 2015
-* Pycon UK 2015
+* PyCon Ireland 2015
+* PyCon UK 2015
