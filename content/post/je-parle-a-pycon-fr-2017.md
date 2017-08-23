@@ -19,7 +19,7 @@ and for PyConFR 2017, I submitted 3 talks, and they have been accepted:
 
 ## "Va débugger ton Python!"
 
-English: "Go to debug your Python!"
+English: "Go and debug your Python!"
 
 In this talk, I will explain how to debug your Python script with your underestimated debugger, in this case, `gdb` but of course, I will show `pdb` and others tools.
 If you think the `print()` function is your best friend, then this talk is for you, because `gdb` is really awesome.
