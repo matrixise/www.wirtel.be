@@ -6,7 +6,8 @@ theme = "ghostwriter"
 # pygmentsstyle = "monokai"
 # pygmentsstyle = "murphy"
 pygmentsstyle = "borland"
-disableRSS=false
+#disableRSS=false
+#disableKinds=["RSS"]
 copyright = "Stephane Wirtel"
 googleAnalytics = "UA-22059464-1"
 
