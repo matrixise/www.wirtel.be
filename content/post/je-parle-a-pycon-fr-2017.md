@@ -13,7 +13,7 @@ and for PyConFR 2017, I submitted 3 talks, and they have been accepted:
 
 # Talks
 1. Talk: "Va débugger ton Python!"
-2. Talk: "Django, d'un cauchemard à un rêve, avec de Bonnes Pratiques"
+2. Talk: "Django, d'un cauchemar à un rêve, avec de Bonnes Pratiques"
 3. Talk: "As-tu déjà pensé à contribuer à CPython"
 
 
@@ -27,7 +27,7 @@ If you think the `print()` function is your best friend, then this talk is for y
 * `pdb`
 * `gdb`
 
-## "Django, d'un cauchemard à un rêve, avec de Bonnes Pratiques"
+## "Django, d'un cauchemar à un rêve, avec de Bonnes Pratiques"
 
 English: *Drango, from nigthmare to dream with best practices*
 
