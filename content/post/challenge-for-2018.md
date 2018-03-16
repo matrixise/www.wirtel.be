@@ -1,0 +1,31 @@
+---
+title: "Challenge for 2018"
+date: 2018-03-16T14:47:58+01:00
+author: "Stéphane Wirtel"
+tags: []
+---
+
+## About
+
+I think I am just frustrated because I don't have time to share my experience or
+just continue to contribute to several open source projects. For example, I love
+to develop with Python and like to contribute to this awesome language but I
+don't have time and I am just frustrated with that.
+
+Usually, I work for my customers and when I have time, I try to contribute and
+it's really difficult because you have your job, your family and a lot of
+external things (Sport, ...). In fact, I think you know this situation where you
+want to contribute but it's just impossible because a day it's just 24 hours and
+no more.
+
+So, from today, I will share my experience about Python, programming and a lot
+of stuff, but regularly, firstly, one article every two weeks. That will be
+difficult because I need to find time for the redaction of an article, but
+without that I will continue to be frustrated and I don't want to do a burn-out
+because of that.
+
+Share my experience and receive your feedback.
+
+Now, an other point, French is my mother language but I will continue to write
+in English because it is a challenge.
+
