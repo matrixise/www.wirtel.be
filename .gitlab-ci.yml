@@ -1,7 +1,6 @@
 image: publysher/hugo
 
 before_script:
-  - apt-get update
   - 'which ssh-agent || ( apt-get install openssh-client -y )'
   - eval $(ssh-agent -s)
   - apt-get install --yes --force-yes rsync
