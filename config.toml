@@ -40,7 +40,7 @@ name = "Stephane Wirtel"
 description = "Description"
 intro = false
 github = "https://github.com/matrixise"
-twitter = "https://github.com/matrixise"
+twitter = "https://twitter.com/matrixise"
 opengraph = true
 
 [[menu.main]]
