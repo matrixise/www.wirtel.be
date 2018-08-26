@@ -23,6 +23,12 @@ googleAnalytics = "UA-22059464-1"
 #weight = 2
 #name = "Francais"
 
+[Privacy]
+[Privacy.googleAnalytics]
+anonymizeIP = true
+respectDoNotTrack = true
+useSessionStorage = false
+
 [Taxonomies]
 tags = "tags"
 categories = "categories"
