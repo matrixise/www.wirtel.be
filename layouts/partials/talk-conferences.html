@@ -1,0 +1,10 @@
+{{ if isSet .Params "conferences" }}
+<div class='post-content clearfix'>
+    <h2>Conferences</h2>
+    <ul>
+        {{ range .Params.conferences }}
+        <li>{{ . }}</li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}
