@@ -4,7 +4,6 @@ draft = false
 title = "Move to Hugo"
 comments = false
 share = false
-image="/background2.jpg"
 +++
 
 # Introduction
