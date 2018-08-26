@@ -1,7 +1,7 @@
 ---
 title: "Challenge for 2018"
 date: 2018-03-16T14:47:58+01:00
-author: "Stéphane Wirtel"
+description: "What are my challenges for 2018"
 tags: []
 ---
 
@@ -28,4 +28,3 @@ Share my experience and receive your feedback.
 
 Now, an other point, French is my mother language but I will continue to write
 in English because it is a challenge.
-
