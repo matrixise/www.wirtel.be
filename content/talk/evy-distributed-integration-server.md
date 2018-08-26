@@ -1,6 +1,7 @@
 +++
 title = "Evy - Serveur d'Integration Continue Distribue"
 date = "2013-10-27T00:00:00"
+conferences = ["PyCon France 2013]
 +++
 
 
@@ -14,7 +15,3 @@ It can execute a lot of processes in background, but we can not executed them on
 In this case, this presentation is just a collection of small ideas for the improvements of the runbot.
 
 {{< speakerdeck "matrixise/evy-serveur-dintegration-continue-distribue" >}}
-
-## Conferences
-
-* PyCon France 2013

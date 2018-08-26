@@ -2,6 +2,10 @@
 title: "CPython loves your Pull Requests"
 date: 2017-11-19T14:09:00+01:00
 tags: ["cpython", "git", "github", "statistics", "contributions", "automation"]
+conferences:
+    - PyCon Canada 2017
+    - PyCon Italy 2018
+    - PyCon Ukraine 2018
 ---
 
 ## About
@@ -14,5 +18,3 @@ development of CPython.
 
 
 {{< speakerdeck "matrixise/cpython-loves-your-pull-requests" >}}
-
-* PyCon Canada 2017

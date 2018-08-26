@@ -1,6 +1,10 @@
 +++
 title = "Django, from a nightmare to a dream with Best Practices"
 date = "2017-07-11T15:45:00"
+conferences = [
+    "EuroPython 2017",
+    "PyCon France 2017"
+]
 +++
 
 ## About
@@ -30,7 +34,3 @@ tests, now we have +- 100 tests and a code coverage of 32%.
 We have organized a sprint code for the project and we have had some sprinters.
 
 Thank you so much,
-
-## Conferences
-
-* EuroPython 2017

@@ -2,6 +2,9 @@
 title = "Va debugger ton Python"
 date = "2017-09-23T00:00:00"
 tags = ["cpython", "gdb", "pdb"]
+conferences = [
+    "PyCon France 2017"
+]
 +++
 
 ## A propos
@@ -25,8 +28,3 @@ présente ces deux outils.
 Je vous souhaite une très bonne lecture.
 
 {{< speakerdeck "matrixise/va-debugger-ton-python" >}}
-
-## Conferences
-
-* PyCon France 2017 (Toulouse)
-
