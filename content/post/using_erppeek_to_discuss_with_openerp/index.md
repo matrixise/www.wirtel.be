@@ -82,7 +82,7 @@ But in some cases, for example, if you have a lot of xmlrpc calls, the code
 starts to be too long and very verbose. And by the way, I think you will not
 like write a file with one hundred of lines.
 
-Now, we will use the [ERPpeek] library by :github:`Florent Xicluna <florentx>`.
+Now, we will use the [ERPpeek] library by [Florent Xicluna](https://github.com/florentx).
 
 Here is the same example with ERPpeek
 
