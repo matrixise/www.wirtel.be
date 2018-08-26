@@ -24,7 +24,7 @@ présente ces deux outils.
 
 Je vous souhaite une très bonne lecture.
 
-{{< speakerdeck "matrixise/va-debugger-ton-python >}}
+{{< speakerdeck "matrixise/va-debugger-ton-python" >}}
 
 ## Conferences
 
