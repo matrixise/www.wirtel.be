@@ -1,7 +1,7 @@
 +++
 title = "Evy - Serveur d'Integration Continue Distribue"
 date = "2013-10-27T00:00:00"
-conferences = ["PyCon France 2013]
+conferences = ["PyCon France 2013"]
 +++
 
 
