@@ -10,9 +10,7 @@ This talk will present some parts of the CPython interpreter and how to travel i
 
 It's a good introduction if you desire to learn the development of CPython.
 
-<script async class="speakerdeck-embed" data-id="978b38c8286f4dd6b950f64256013837" data-ratio="1.33159947984395" src="//speakerdeck.com/assets/embed.js"></script>
-
-https://speakerdeck.com/matrixise/exploring-our-python-interpreter
+{{< speakerdeck "matrixise/exploring-our-python-interpreter" >}}
 
 ## Conferences
 

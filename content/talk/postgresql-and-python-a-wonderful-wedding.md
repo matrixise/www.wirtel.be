@@ -16,10 +16,7 @@ This talk will give an overview of psycopg2, Peewee, SQLAlchemy, Alembic and PL/
 * PL/Python, a procedural language for PostgreSQL, allows to write functions in the Python language.
 * Multicorn, a Foreign Data Wrapper in Python
 
-
-<script async class="speakerdeck-embed" data-id="ee02e0443e5840548fde55044ba157b0" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-
-https://speakerdeck.com/matrixise/python-and-postgresql-a-wonderful-wedding-english
+{{< speakerdeck "matrixise/python-and-postgresql-a-wonderful-wedding-english" >}}
 
 ## Conferences
 

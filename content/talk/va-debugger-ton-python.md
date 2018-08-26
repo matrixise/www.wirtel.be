@@ -24,10 +24,7 @@ présente ces deux outils.
 
 Je vous souhaite une très bonne lecture.
 
-
-<script async class="speakerdeck-embed" data-id="cdf70ccd581443ff97a0c420b425afd9" data-ratio="1.33159947984395" src="//speakerdeck.com/assets/embed.js"></script>
-
-https://speakerdeck.com/matrixise/va-debugger-ton-python
+{{< speakerdeck "matrixise/va-debugger-ton-python >}}
 
 ## Conferences
 

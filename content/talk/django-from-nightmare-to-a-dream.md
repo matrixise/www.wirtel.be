@@ -22,11 +22,7 @@ From a nightmare to a dream.
 
 Keywords, TDD, Refactoring, Tests, BDD, Selenium, CI, and many more
 
-<script async class="speakerdeck-embed"
-data-id="b0a298d07c2142d8bbe7656b330834e4" data-ratio="1.33159947984395"
-src="//speakerdeck.com/assets/embed.js"></script>
-
-https://speakerdeck.com/matrixise/django-from-nightmare-to-dream-with-best-practices
+{{< speakerdeck "matrixise/django-from-nightmare-to-dream-with-best-practices" >}}
 
 After this conference, the source code of EuroPython has been improved. From 0
 tests, now we have +- 100 tests and a code coverage of 32%.
