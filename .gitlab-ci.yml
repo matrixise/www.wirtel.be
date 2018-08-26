@@ -6,6 +6,7 @@ before_script:
   - mkdir -p ~/.ssh
   - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  - cat .gitmodules
   - git submodule update --init
 
 pages:
