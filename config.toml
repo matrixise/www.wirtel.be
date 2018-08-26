@@ -52,6 +52,9 @@ github = "https://github.com/matrixise"
 twitter = "https://twitter.com/matrixise"
 opengraph = true
 headline = "nothing"
+shareTwitter = true
+shareLinkedIn = true
+dateFormat = "Mon, Jan 2, 2006"
 
 [[menu.main]]
 name = "Blog"
