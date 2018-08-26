@@ -1,0 +1,32 @@
+{{ partial "header.html" . }}
+<div class="container">
+    {{ $.Scratch.Set "total"  0 }}
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        {{ $serie_name := urlize $.Params.series }}
+        {{ $articles := index .Site.Taxonomies.series $serie_name }}
+        {{ $current_node := . }}
+        {{ range $page := $articles }}
+            {{ if ne $page $current_node }}
+                {{ $value := $.Scratch.Get "total" }}
+                {{ $new_total := add $value 1 }}
+                {{ $.Scratch.Set "total" $new_total }} 
+            {{ end }}
+        {{ end }}
+        {{ partial "post-content.html" . }}
+        {{ $total := $.Scratch.Get "total" }}
+        {{ if gt $total 0 }}
+        <ul>
+            {{ range $page := $articles }}
+                {{ if ne $page $current_node }}
+                <li>
+                    <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+                </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+        {{ end }}
+        {{ partial "post-footer.html" . }}
+        {{ partial "disqus.html" . }}
+    </article>
+</div>
+{{ partial "footer.html" . }}
