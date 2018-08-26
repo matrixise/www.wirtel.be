@@ -24,6 +24,9 @@ googleAnalytics = "UA-22059464-1"
 #name = "Francais"
 
 [Privacy]
+[Privacy.disqus]
+disable = true
+
 [Privacy.googleAnalytics]
 anonymizeIP = true
 respectDoNotTrack = true
