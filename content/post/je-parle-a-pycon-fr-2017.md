@@ -41,7 +41,7 @@ In fact, it can be with Django or with another tool, but the most important thin
 
 The [slides in English](speakerdeck.com/matrixise/django-from-nightmare-to-dream-with-best-practices), from EuroPython
 
-{{< speakerdeck b0a298d07c2142d8bbe7656b330834e4 >}}
+{{< speakerdeck "matrixise/django-from-nightmare-to-dream-with-best-practices" >}}
 
 ## "As-tu déjà pensé à contribuer à CPython"
 
