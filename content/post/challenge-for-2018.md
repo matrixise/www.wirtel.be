@@ -1,8 +1,8 @@
 ---
 title: "Challenge for 2018"
 date: 2018-03-16T14:47:58+01:00
-description: "What are my challenges for 2018"
-tags: []
+description: "What are my challenges for 2018?"
+tags: ["python", "contribution"]
 ---
 
 ## About
