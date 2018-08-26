@@ -1,0 +1,7 @@
+{{ $name := .Get 0 }}
+
+{{ range $res := .Page.Resources.ByType "image" }}
+    {{ if eq $name $res.Name }}
+        <img src="{{ $res.Permalink }}"/>
+    {{ end }}
+{{ end }}
