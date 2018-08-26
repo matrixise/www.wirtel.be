@@ -8,6 +8,7 @@ before_script:
   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   - cat .gitmodules
   - git submodule update --init
+  - cd themes/ghostwriter && git log -n 5 && cd ../..
 
 pages:
   script:
