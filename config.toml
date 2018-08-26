@@ -1,6 +1,6 @@
 baseurl = "https://wirtel.be/"
 #languageCode = "en-us"
-title = "Stéphane Wirtel"
+title = "Blog"
 theme = "ghostwriter"
 # pygmentsstyle = "monokai"
 # pygmentsstyle = "murphy"
