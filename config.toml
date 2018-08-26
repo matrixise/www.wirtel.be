@@ -1,14 +1,13 @@
-# baseurl = "http://matrixise.github.io/"
 baseurl = "https://wirtel.be/"
 #languageCode = "en-us"
-title = "Stephane Wirtel"
+title = "Stéphane Wirtel"
 theme = "ghostwriter"
 # pygmentsstyle = "monokai"
 # pygmentsstyle = "murphy"
 pygmentsstyle = "borland"
 #disableRSS=false
 #disableKinds=["RSS"]
-copyright = "Stephane Wirtel"
+copyright = "Stéphane Wirtel"
 googleAnalytics = "UA-22059464-1"
 
 
@@ -35,6 +34,7 @@ cv = "/:filename/"
 
 [Author]
 name = "Stephane Wirtel"
+email = "stephane@wirtel.be"
 
 [Params]
 description = "Description"
@@ -42,6 +42,7 @@ intro = false
 github = "https://github.com/matrixise"
 twitter = "https://twitter.com/matrixise"
 opengraph = true
+headline = "nothing"
 
 [[menu.main]]
 name = "Blog"
