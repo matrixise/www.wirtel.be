@@ -1,6 +1,10 @@
 ---
 title: "Award At Pycon US 2017"
 date: 2017-05-21T00:00:00+02:00
+tags:
+    - python
+    - psf
+    - contributions
 ---
 
 # Introduction
