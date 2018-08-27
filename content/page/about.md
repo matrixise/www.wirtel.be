@@ -12,13 +12,11 @@ This blog is about
 * programming
 * making technical topics easy to understand
 
-
 ## About me
 
 ![Me by my daughter](/me-draw.png)
 
-I am live in Charleroi in Belgium. I am a freelancer, especially a Python expert. I like to share my knowledge with some talks. I have no personal project, excepted my small contributions to CPython.
-
+I am live in Charleroi in Belgium. I am a freelancer, especially a Python expert. I like to share my knowledge with some talks. I have no personal projects, excepted my small contributions to CPython.
 
 I am also a [#fellow](https://www.python.org/psf/members/) of the Python Software Foundation and received a [Community Service Award](https://www.python.org/community/awards/psf-awards/#june-2016) from the Python Software Foundation.
 
