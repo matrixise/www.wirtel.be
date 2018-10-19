@@ -2,7 +2,8 @@ image: matrixise/hugo-for-wirtel.be
 
 before_script:
   - eval $(ssh-agent -s)
-  - echo "$SSH_PRIVATE_KEY" | ssh-add -
+#   - echo "$SSH_PRIVATE_KEY" | ssh-add -
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
   - mkdir -p ~/.ssh
   - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
@@ -12,6 +13,6 @@ before_script:
 pages:
   script:
     - hugo -t=ghostwriter -d public/
-    - rsync -hrvz --chown=www-data:www-data --delete --exclude=_ -e 'ssh -i id_rsa' public/ root@wirtel.be:/home/www/www.wirtel.be/src/
+    - rsync -hrvz --chown=www-data:www-data --delete --exclude=_ -e 'ssh -i id_rsa' public/ root@vhost.wirtel.be:/home/www/www.wirtel.be/src/
   only:
     - master
