@@ -3,6 +3,9 @@ title: "What's new in Python 3.7?"
 date: "2018-07-25T00:00:00"
 conferences:
     - "EuroPython 2018"
+    - "PyCon UK 2018"
+    - "PyCon France 2018"
+    - "PyCon San Sebastiàn 2018"
 ---
 
 ## About
