@@ -7,7 +7,6 @@ before_script:
   - mkdir -p ~/.ssh
   - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-  - git submodule sync --recursive
   - git submodule update --init --recursive
 
 pages:
