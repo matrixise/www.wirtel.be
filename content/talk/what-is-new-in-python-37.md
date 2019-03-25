@@ -6,6 +6,9 @@ conferences:
     - "PyCon UK 2018"
     - "PyCon France 2018"
     - "PyCon San Sebastiàn 2018"
+    - "PyCon Germany 2018"
+    - "PyCon Ireland 2018"
+    - "PyCon Slovakoa 2019"
 ---
 
 ## About
