@@ -45,5 +45,5 @@ happy.
 
 Cheers,
 
-Stéphane Wirtel
+Stéphane
 
