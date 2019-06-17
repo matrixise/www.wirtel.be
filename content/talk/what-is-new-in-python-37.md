@@ -8,7 +8,7 @@ conferences:
     - "PyCon San Sebastiàn 2018"
     - "PyCon Germany 2018"
     - "PyCon Ireland 2018"
-    - "PyCon Slovakoa 2019"
+    - "PyCon Slovakia 2019"
 ---
 
 ## About
