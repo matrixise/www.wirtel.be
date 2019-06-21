@@ -17,18 +17,30 @@ build:
 
 deploy:
   stage: deploy
+  image: alpine:latest
+
+  variables:
+    SSH_HOST: vhost.wirtel.be
+    SSH_USER: root
+    SSH_PATH: /home/www/www.wirtel.be/src
+
+  script:
+    - apk add rsync openssh-client
     - eval $(ssh-agent -s)
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - mkdir -p ~/.ssh
     - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    - rsync -hrvz --chown=www-data:www-data --delete --exclude=_ -e 'ssh -i id_rsa' public/ root@vhost.wirtel.be:/home/www/www.wirtel.be/src/
+    - rsync -hrvz --chown=www-data:www-data --delete --exclude=_ -e 'ssh -i id_rsa' public/ ${SSH_USER}@${SSH_HOST}:${SSH_PATH}
   only:
     - master
 
 deploy_cv:
   stage: deploy_curriculum_vitae
-  image: debian
+  image: alpine:latest
   script:
-    curl --request POST --form "token=$CI_JOB_TOKEN" --form ref=master https://gitlab.wirtel.be/api/v4/projects/13/trigger/pipeline
+    - apk add curl
+    - curl --request POST --form "token=$CI_JOB_TOKEN" --form ref=master https://gitlab.wirtel.be/api/v4/projects/13/trigger/pipeline
 
+  only:
+    - master
