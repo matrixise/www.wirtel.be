@@ -1,17 +1,36 @@
-image: matrixise/hugo-for-wirtel.be
+stages:
+  - build
+  - deploy
+  - deploy_curriculum_vitae
 
 before_script:
-  - eval $(ssh-agent -s)
-#   - echo "$SSH_PRIVATE_KEY" | ssh-add -
-  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
-  - mkdir -p ~/.ssh
-  - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
-  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-  - git submodule update --init --recursive
 
-pages:
+build:
+  stage: build
+  image: matrixise/hugo-for-wirtel.be
+
   script:
+    - git submodule update --init --recursive
     - hugo -t=ghostwriter -d public/
+
+  artifacts:
+    paths:
+      - public/
+
+deploy:
+  stage: deploy
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
     - rsync -hrvz --chown=www-data:www-data --delete --exclude=_ -e 'ssh -i id_rsa' public/ root@vhost.wirtel.be:/home/www/www.wirtel.be/src/
   only:
     - master
+
+deploy_cv:gg
+  stage: deploy_curriculum_vitae
+  image: debian
+  script:
+    curl --request POST --form "token=$CI_JOB_TOKEN" --form ref=master https://gitlab.wirtel.be/api/v4/projects/13/trigger/pipeline
+
