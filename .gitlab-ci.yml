@@ -8,6 +8,7 @@ build:
   image: matrixise/hugo-for-wirtel.be
 
   script:
+    - apk add zip
     - git submodule update --init --recursive
     - hugo -t=ghostwriter -d public/
     - zip -r public.zip public/
