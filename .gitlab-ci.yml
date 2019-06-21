@@ -3,8 +3,6 @@ stages:
   - deploy
   - deploy_curriculum_vitae
 
-before_script:
-
 build:
   stage: build
   image: matrixise/hugo-for-wirtel.be
@@ -28,7 +26,7 @@ deploy:
   only:
     - master
 
-deploy_cv:gg
+deploy_cv:
   stage: deploy_curriculum_vitae
   image: debian
   script:
