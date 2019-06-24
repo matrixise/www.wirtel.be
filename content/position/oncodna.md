@@ -3,7 +3,7 @@ company: OncoDNA S.A.
 location: Gosselies
 country: Belgium
 title: Python Expert
-start: 2018-11-01
+start: 2018-11
 ---
 
 OncoKDM is a DNA sequencing interpretation platform for biologists and

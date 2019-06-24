@@ -3,8 +3,8 @@ company: Université Catholique de Louvain
 location: Louvain-La-Neuve
 country: Belgium
 title: Python/Django Developer
-start: 2017-02-01
-stop: 2018-10-01
+start: 2017-02
+stop: 2018-10
 ---
 
 Python and Django Coach, Best Practices, Integration with Travis-CI, Custom

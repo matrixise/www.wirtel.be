@@ -1,0 +1,32 @@
+{{ partial "header.html" . }}
+
+<div class="container">
+    <article class="post-container">
+        {{ partial "page-header.html" . }}
+
+        {{ partial "page-content.html" . }}
+
+        Current Position(s)
+        {{ $positions := where .Data.Pages "Section" "position" }}
+
+        {{ $pag := (where $positions "Params.stop" "==" nil) }}
+        <ul>
+        {{ range sort $pag ".Params.start" "desc" }}
+        <li>{{ .Title }} - {{ .Params.Company }}</li>
+        {{ end }}
+        </ul>
+
+        Past Positions
+        {{ $pag := (where $positions "Params.stop" "!=" nil) }}
+
+        <ul>
+        {{ range sort $pag ".Params.start" "desc" }}
+        <li>{{ .Title }} - {{ .Params.Company }} - {{ .Params.Start }} {{ .Params.Stop }}</li>
+        {{ end }}
+        </ul>
+
+        {{ partial "post-footer.html" . }}
+    </article>
+</div>
+
+{{ partial "footer.html" . }}
