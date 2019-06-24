@@ -1,15 +1,19 @@
-+++
-title = "Contributor of CPython"
-author = "Stephane Wirtel"
-date = "2014-04-01T18:00:00"
-+++
+---
+title: "CPython Core Developer"
+author: "Stephane Wirtel"
+date: "2014-04-01T18:00:00"
+---
 
 ## Description
 
-CPython is the reference interpreter, written in C. Sometimes and when I have the possibility, I try to contribute to CPython.
+CPython is the reference interpreter of Python, written in C. I work on the
+documentation and some others aspects of CPython.
 
 ## Contributions
 
+* Bug Triager
+* Contribute to CPython sprints
+* Fix issues
+* Organise CPython sprints
 * Participate to CPython sprint at PyCons
-* Fix some issues
-* Organise a CPython sprint at PyCon.FR 2016
+* Work on the devguide
