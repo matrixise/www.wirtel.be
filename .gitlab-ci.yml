@@ -43,9 +43,7 @@ deploy_cv:
   stage: deploy_curriculum_vitae
   image: alpine:latest
   script:
-    - set
     - apk add curl
-    - curl --request POST --form "token=$CI_JOB_TOKEN" --form ref=master https://gitlab.wirtel.be/api/v4/projects/13/trigger/pipeline
-
+    - curl -X POST -F token=820997d4448ec555a8e9040da2f949 -F ref=master https://gitlab.wirtel.be/api/v4/projects/13/trigger/pipeline
   only:
     - master
