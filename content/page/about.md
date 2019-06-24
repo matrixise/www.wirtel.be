@@ -9,6 +9,7 @@ description = "Things about me."
 
 This blog is about
 
+* [CPython](https://www.python.org)
 * programming
 * making technical topics easy to understand
 
@@ -16,14 +17,15 @@ This blog is about
 
 ![Me by my daughter](/me-draw.png)
 
-I am live in Charleroi in Belgium. I am a freelancer, especially a Python
-expert. I like to share my knowledge with some talks. I have no personal
-projects, excepted my small contributions to CPython.
+I am live in [Charleroi](https://en.wikipedia.org/wiki/Charleroi) in Belgium. I
+am a freelancer, especially a Python expert. I like to share my knowledge with
+some talks. I have no personal projects, excepted my contributions to
+[CPython](https://www.python.org).
 
-I am also a [#fellow](https://www.python.org/psf/members/) of the Python
-Software Foundation and received a [Community Service
-Award](https://www.python.org/community/awards/psf-awards/#june-2016) from the
-Python Software Foundation.
+I am also a [#fellow](https://www.python.org/psf/members/) of the [Python
+Software Foundation](https://www.python.org/psf) and received a [Community
+Service Award](https://www.python.org/community/awards/psf-awards/#june-2016)
+from the Python Software Foundation.
 
 This announce has been published [on the
 blog](http://pyfound.blogspot.be/2016/08/in-beginning-there-was-one-python-group.html)
