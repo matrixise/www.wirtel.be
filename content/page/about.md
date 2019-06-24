@@ -1,7 +1,7 @@
 +++
 title = "About"
 date = "2016-11-11T14:39:12"
-author = "Stephane Wirtel"
+author = "Stéphane Wirtel"
 description = "Things about me."
 +++
 
