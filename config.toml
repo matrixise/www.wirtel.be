@@ -43,7 +43,7 @@ post = "/post/:year/:month/:day/:filename"
 cv = "/:filename/"
 
 [Author]
-name = "Stephane Wirtel"
+name = "Stéphane Wirtel"
 email = "stephane@wirtel.be"
 
 [Params]
