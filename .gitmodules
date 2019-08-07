@@ -1,3 +1,4 @@
 [submodule "themes/ghostwriter"]
 	path = themes/ghostwriter
 	url = https://github.com/matrixise/ghostwriter
+	branch = merge-jbub
