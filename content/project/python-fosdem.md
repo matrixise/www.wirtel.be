@@ -5,9 +5,12 @@ date = "2013-02-01T00:00:00"
 
 PythonFOSDEM is a small conference in Brussels during FOSDEM.
 
-FOSDEM is organised by developers for developers. During FOSDEM, the organisers propose some rooms for some topics. In this case, the Python project has a room for one day and we can organise some talks.
+FOSDEM is organised by developers for developers. During FOSDEM, the organisers
+propose some rooms for some topics. In this case, the Python project has a room
+for one day and we can organise some talks.
 
-Since 2013, PythonFOSDEM is organised by some friends and myself. Since 80 people, we can have a room for 600 people.
+Since 2013, PythonFOSDEM is organised by some friends and myself. Since 80
+people, we have had a for 800 people.
 
 Editions:
 
@@ -15,14 +18,9 @@ Editions:
 * [PythonFOSDEM 2014](https://archive.fosdem.org/2014/schedule/track/python/) 80 seats
 * [PythonFOSDEM 2015](https://archive.fosdem.org/2015/schedule/track/python/) 200 seats
 * [PythonFOSDEM 2016](https://archive.fosdem.org/2016/schedule/track/python/) 363 seats
-* [PythonFOSDEM 2017](https://fosdem.org/2017/schedule/track/python/) 148 + 446 seats
-
-We are a small team:
-
-* **Ludovic Gasc**
-* **Christophe Simonis**
-* **Fabien Benetou**
-* **Laurent Peuch**
+* [PythonFOSDEM 2017](https://archive.fosdem.org/2017/schedule/track/python/) 148 + 446 seats
+* [PythonFOSDEM 2018](https://archive.fosdem.org/2018/schedule/track/python/) 800 seats
+* [PythonFOSDEM 2018](https://fosdem.org/2019/schedule/track/python/) 800 seats
 
 Thank you to the volunteers during the FOSDEM.
 
