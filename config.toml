@@ -8,6 +8,7 @@ theme = "ghostwriter"
 # pygmentsstyle = "borland"
 #disableRSS=false
 #disableKinds=["RSS"]
+newContentEditor = "/usr/bin/nvim"
 copyright = "Stéphane Wirtel"
 googleAnalytics = "UA-22059464-1"
 
