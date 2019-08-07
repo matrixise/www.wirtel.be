@@ -19,8 +19,7 @@ This blog is about
 
 I am live in [Charleroi](https://en.wikipedia.org/wiki/Charleroi) in Belgium. I
 am a freelancer, especially a Python expert. I like to share my knowledge with
-some talks. I have no personal projects, excepted my contributions to
-[CPython](https://www.python.org).
+some talks. I am a CPython Core Dev.
 
 I am also a [#fellow](https://www.python.org/psf/members/) of the [Python
 Software Foundation](https://www.python.org/psf) and received a [Community
@@ -31,9 +30,10 @@ This announce has been published [on the
 blog](http://pyfound.blogspot.be/2016/08/in-beginning-there-was-one-python-group.html)
 of the Python Software Foundation.
 
-During the PyCon US 2017 in Portland, I have received my Award.  Thank you to
-the Python Software Foundation
+During the PyCon US 2017 in Portland, I have received my Award. 
 
-![Award](https://pbs.twimg.com/media/DAXg5FuUIAAohWd.jpg)
+Thank you to the [Python Software Foundation](https://www.python.org/psf)
+
+<img src="/DAXg5FuUIAAohWd.jpg" />
 
 I am also a former [Odoo](https://www.odoo.com) developer.
