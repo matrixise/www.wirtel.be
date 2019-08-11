@@ -1,0 +1,19 @@
+---
+title: "PyCon Germany 2019"
+description: ""
+date: 2019-08-11T21:26:48+02:00
+tags: ["python", "pycon"]
+draft: [[false]]
+---
+
+# Speaker at PyCon.DE 2019
+
+Voilà, during the last week, I received very good news, I will be a speaker at
+[PyCon.DE 2019](https://pycon.de) in Berlin in October 2019.
+
+I will present my new talk [What's new in Python 3.8?]({{< ref "talk/what-is-new-in-python-38.md" >}}) 
+
+So, good luck to the other speakers and I hope to see you there.
+
+Stéphane
+
