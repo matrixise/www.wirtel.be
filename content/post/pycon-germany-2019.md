@@ -1,5 +1,5 @@
 ---
-title: "PyCon Germany 2019"
+title: "Speaker at PyCon.DE 2019"
 description: ""
 date: 2019-08-11T21:26:48+02:00
 tags: ["python", "pycon"]
