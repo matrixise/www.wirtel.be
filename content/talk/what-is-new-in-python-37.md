@@ -1,6 +1,6 @@
 ---
 title: "What's new in Python 3.7?"
-date: "2018-07-25T00:00:00"
+date: "2018-07-25T00:00:00+02:00"
 conferences:
     - "EuroPython 2018"
     - "PyCon UK 2018"
@@ -11,8 +11,9 @@ conferences:
     - "PyCon Slovakia 2019"
 ---
 
-## About
+# Abstract
 
-This talk will explain the new features of Python 3.7, released at the end of June 2018.
+This talk will explain the new features of Python 3.7, released at the end of
+June 2018.
 
 {{< speakerdeck "matrixise/whats-new-in-python-3-dot-7" >}}
