@@ -1,0 +1,47 @@
+Author:
+  email: stephane@wirtel.be
+  name: Stéphane Wirtel
+Params:
+  dateFormat: Mon, Jan 2, 2006
+  description: Description
+  github: https://github.com/matrixise
+  headline: nothing
+  intro: false
+  opengraph: true
+  shareLinkedIn: true
+  shareTwitter: true
+  twitter: https://twitter.com/matrixise
+Permalinks:
+  cv: /:filename/
+  post: /post/:year/:month/:day/:filename
+Privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    anonymizeIP: true
+    respectDoNotTrack: true
+    useSessionStorage: false
+Taxonomies:
+  categories: categories
+  series: series
+  tags: tags
+baseurl: https://wirtel.be/
+copyright: Stéphane Wirtel
+googleAnalytics: UA-22059464-1
+menu:
+  main:
+  - name: Blog
+    url: /
+    weight: 1
+  - name: Projects
+    url: /project
+    weight: 2
+  - name: Talks
+    url: /talk
+    weight: 3
+  - name: About
+    url: /page/about/
+    weight: 5
+newContentEditor: /usr/bin/nvim
+theme: ghostwriter
+title: Blog
