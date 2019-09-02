@@ -1,9 +1,22 @@
 stages:
   - build
+  - build-cv
   - deploy
-  - deploy_curriculum_vitae
+    # - deploy_curriculum_vitae
 
-build:
+build-tex:
+  stage: build
+  image: python:3.7
+
+  script:
+    - pip install jinja2
+    - python generate-cv.py
+  artifacts:
+    paths:
+      - StephaneWirtel.tex
+    expire_in: 1h
+
+build-html:
   stage: build
   image: matrixise/hugo-for-wirtel.be
 
@@ -11,12 +24,25 @@ build:
     - apk add zip
     - git submodule update --init --recursive
     - hugo -t=ghostwriter -d public/
-    - zip -r public.zip public/
 
   artifacts:
     paths:
-      - public.zip
+      - public/
     expire_in: 1h
+
+build-cv:
+  stage: build-cv
+  image: aergus/latex:latest
+
+  script:
+    - pdflatex StephaneWirtel.tex
+    - pdflatex StephaneWirtel.tex
+
+  artifacts:
+    paths:
+      - StephaneWirtel.pdf
+    expire_in: 1 week
+
 
 deploy:
   stage: deploy
@@ -34,16 +60,15 @@ deploy:
     - mkdir -p ~/.ssh
     - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    - unzip public.zip
     - rsync -hrvz --chown=www-data:www-data --delete --exclude=_ -e 'ssh -i id_rsa' public/ ${SSH_USER}@${SSH_HOST}:${SSH_PATH}
   only:
     - master
 
-deploy_cv:
-  stage: deploy_curriculum_vitae
-  image: alpine:latest
-  script:
-    - apk add curl
-    - curl -X POST -F token=820997d4448ec555a8e9040da2f949 -F ref=master https://gitlab.wirtel.be/api/v4/projects/13/trigger/pipeline
-  only:
-    - master
+# deploy_cv:
+#   stage: deploy_curriculum_vitae
+#   image: alpine:latest
+#   script:
+#     - apk add curl
+#     - curl -X POST -F token=820997d4448ec555a8e9040da2f949 -F ref=master https://gitlab.wirtel.be/api/v4/projects/13/trigger/pipeline
+#   only:
+#     - master

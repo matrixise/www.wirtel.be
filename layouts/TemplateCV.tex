@@ -1,0 +1,439 @@
+% FortySecondsCV LaTeX template
+% Copyright © 2019 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Attributions
+% ------------
+% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
+
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+  a4paper,
+%   showframes,
+%   maincolor=cvgreen,
+%   sectioncolor=red,
+%   subsectioncolor=orange
+%   sidebarwidth=0.4\paperwidth,
+%   topbottommargin=0.03\paperheight,
+%   leftrightmargin=20pt
+]{fortysecondscv}
+
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% take care of proper font encoding
+\ifxetex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+% \newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
+\else
+	\usepackage[utf8x]{inputenc}
+	\usepackage[T1]{fontenc}
+% \usepackage[sfdefault]{noto} % use noto google font
+\fi
+
+\usepackage{upgreek}
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+  % defaut font size is \large, so adjust to harmonize with sidebar layout
+  bubble center node font = \footnotesize,
+  bubble node font = \footnotesize,
+  % default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+  bubble center node size = 0.4\sidebartextwidth,
+  bubble node size = 0.25\sidebartextwidth,
+  distance center/other bubbles = 1.5em,
+  % set center bubble color
+  bubble center node color = maincolor!70,
+  % define the list of colors usable in the diagram
+  set color list = {maincolor!10, maincolor!40,
+  maincolor!20, maincolor!60, maincolor!35},
+  % sets the opacity at which the bubbles are shown
+  bubble fill opacity = 0.8,
+}
+
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+% profile picture
+\cvprofilepic{pics/profile.jpg}
+% your name
+\cvname{ [[config.Author.name ]] }
+% job title/career
+\cvjobtitle{Python Expert Senior}
+% date of birth
+\cvbirthday{15 September 1980}
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{\raggedright 6001 Marcinelle\newline Belgium}
+% phone number
+\cvphone{[[ config.Author.phone ]]}
+% personal website
+\cvgithub{[[config.Params.github]]}
+\cvsite{[[config.baseurl]]}
+\cvsitepro{[[config.Company.site]]}
+\cvtwitter{[[config.Params.twitter]]}
+% email address
+\cvmail{[[config.Author.email]]}
+% pgp key
+%\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+% add additional information
+% \newcommand{\additional}{some more?}
+
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% overwrite default icons and order of personal information
+ \renewcommand{\personaltable}{
+ 	\begin{personal}[0.8em]
+% 		\circleicon{\faKey}      & \cvkey  \\
+		\circleicon{\faAt}       & \cvmail \\
+        \circleicon{\faTwitter}    & \cvtwitter \\
+		\circleicon{\faGithub}    & \cvgithub \\
+        \circleicon{\faGlobe} & \cvsite \\
+        \circleicon{\faGlobe} & \cvsitepro \\
+		\circleicon{\faPhone}    & \cvphone \\
+		\circleicon{\faBirthdayCake}     & \cvbirthday \\
+		\circleicon{\faEnvelope} & \cvaddress \\\
+ 		% add another line
+% 		\circleicon{\faQuestion} & \additional
+ 	\end{personal}
+ }
+
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+	% include gosquare national flags from https://github.com/gosquared/flags;
+	% naming according to ISO 3166-1 alpha-2 country codes
+	\profilesection{About Me}
+	\aboutme{
+        Python enthusiast, Python Core Dev, Best Practices Automation and
+        Distributed Systems are my favourite topics. Founder of Mgx.io SPRL.
+        Former Core Dev of Odoo}
+    \graphicspath{{pics/flags/}}
+	\profilesection{Languages}
+	\pointskill{\flag{python.png}}{Python}{5}
+	\pointskill{\flag{go.png}}{Go}{3}
+	\pointskill{\flag{c++.png}}{C/C++}{3}
+	\pointskill{\flag{erlang.png}}{Erlang}{2}
+
+	\profilesection{Skills}
+        \pointskill{\flag{python.png}}{Python}{5}
+			\skill[1.8em]{\faLeaf}{Core Developer}
+            \skill[1.8em]{\faLeaf}{CPython Extensions}
+			\skill[1.8em]{\faServer}{Python packaging}
+            \skill[1.8em]{\faServer}{...long list...}
+		\pointskill{\faCodeFork}{DevOps}{4}
+			\skill[1.8em]{\faServer}{Github, GitLab, GitLab-CI, Travis}
+            \skill[1.8em]{\faServer}{Docker, Nomad, Traefik}
+            \skill[1.8em]{\faServer}{Ansible}
+}
+
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 2nd PAGE
+%-------------------------------------------------------------------------------
+\addtobacksidebar{
+	\profilesection{Skills}
+		\pointskill{\faCodeFork}{Software Development}{5}
+ 			\skill[1.8em]{\faCodeFork}{Object-oriented programming}
+			\skill[1.8em]{\faCodeFork}{Unit testing, BDD}
+			\skill[1.8em]{\faCodeFork}{Documentation with sphinx}
+ 			\skill[1.8em]{\faDatabase}{PostgreSQL, SQLite3}
+ 			\skill[1.8em]{\faDatabase}{Redis, RabbitMQ}
+ 			\skill[1.8em]{\faDatabase}{Unix environments}
+ 		    \skill[1.8em]{\faServer}{Best Practices}
+	\profilesection{More Skills}
+		\pointskill{\faConnectdevelop}{Web API}{4}
+		    \skill[1.5em]{\faServer}{Django Rest Framework}
+            \skill[1.5em]{\faServer}{Flask, WerkZeug, Golang}
+		    \skill[1.5em]{\faServer}{asyncio/aiohttp/starlette}
+		    \skill[1.5em]{\faServer}{REST, GraphQL, XML-RPC}
+		\pointskill{\faTv}{Web development}{3}
+			\skill[1.8em]{\faServer}{Django, Flask}
+			\skill[1.8em]{\faTv}{VueJS, Javascript}
+		\pointskill{\faMicrophone}{Communication}{5}
+			\skill[1.8em]{\faUsers}{Presenting to conferences}
+    \profilesection{Memberships}
+        \skill{}{Python Software Foundation}
+        \skill{}{EuroPython Society}
+        \skill{}{Association Francophone de Python}
+    \profilesection{Interests}
+        \skill{}{Programming / Oenology / Nature}
+        \skill{}{Martial Arts -- Karate Shotokan JKA}
+	\graphicspath{{pics/flags/}}
+	\profilesection{Languages}
+    \pointskill{\flag{france.png}}{French}{5}
+    \pointskill{\flag{english.jpg}}{English}{3}
+	\pointskill{\flag{italian.png}}{Italian}{2}
+	\pointskill{\flag{dutch.jpg}}{Dutch}{1}
+	%\pointskill{\flag{erlang.png}}{Erlang}{2}
+}
+
+
+
+	%% High throughput data analysis
+%% Archer course
+
+	%% things I've experimented with
+	% HMM's
+	% Dynamic time warp algorithm
+	% k means
+	% Pure python ffw neural net
+		% for clustering time series
+	% use fa-braille for neural networks
+	% built a pure python neural netowrk implementation to estimate ODE solution
+%	\profilesection{Modelling Skills}
+%
+%	\profilesection{Transferable Skills}
+
+
+%	\profilesection{Diagrams}
+%	\chartlabel{Bubble Diagram}
+%	\begin{figure}\centering
+%		\smartdiagram[bubble diagram]{
+%			\textcolor{white}{\textbf{Being a}} \\
+%			\textcolor{white}{\textbf{Panda}}, % center bubble
+%			\textcolor{black!90}{Eating},
+%			\textcolor{black!90}{Sleeping},
+%			\textcolor{black!90}{Rolling},
+%			\textcolor{black!90}{Playing},
+%			\textcolor{black!90}{Chilling}
+%		}
+%	\end{figure}
+%
+%	\chartlabel{Wheel Chart}
+%
+%	\wheelchart{4em}{2em}{
+%  	20/3em/maincolor!50/Chill,
+%  	15/3em/maincolor!15/Play,
+%  	30/4em/maincolor!40/Sleep,
+%  	20/3em/maincolor!20/Eat
+%	}
+%
+%	\profilesection{Barskills}
+%	\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
+%	\barskill{\faImage}{Playing Chess}{30}
+%	\barskill{\faMusic}{Playing the bamboo flute}{50}
+%
+%	\profilesection{Memberships}
+%	\begin{memberships}
+%		\membership{pics/logo.png}{PandaScience.net}
+%		\membership{pics/logo.png}{Here's some longer text spanning over more than
+%			only one line}
+%	\end{memberships}
+
+%}
+
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+
+\cvsection{Current Positions}
+\begin{cvtable}
+    \cvitemx{Mgx.io SPRL -- Charleroi -- Belgium}{Founder -- 2017 -- Today}
+    {Mgx.io SPRL is a company specialized in consulting, developing and training
+     of applications written in Python.  } \end{cvtable}
+
+\cvsection{Past Positions}
+\begin{cvtable}
+    \cvitemx{OncoDNA S.A. -- Gosselies -- Belgium}{Python Expert -- 2018-Q3 -- 2019-Q2}
+    {OncoKDM is a DNA sequencing interpretation platform for biologists and
+    oncologists.
+    
+    Mission in several steps. 1. Audit the code and the quality of the platform.
+    2. Improve the workflow with the best practices (linter, static analyzer,
+    packaging) 3. Refactoring of the platform with a new platform. 4. Help for
+    the migration from the former platform to the new one.
+    
+    Creation of a framework for the migration from the former platform (PHP) to
+    the new platform (Django).
+
+    Technologies: Django, Django REST Framework, Docker, Gitlab, Gitlab-CI,
+    Traefik, VueJS, AngularJS, Refactoring, Cleanup, Docker-compose, DevPI.
+    }
+    \cvitemx{Université Catholique de Louvain --- 2017 -- 2018-Q3}{Python/Django Developer}{
+        Python and Django Coach, Best Practices, Integration with Travis-CI, Custom
+        developments. Integration of Reddot into a custom CMS, Improvements of
+        the performance. Add Functional Tests with Selenium. Use BDD (Behave).
+        Django, Django Rest Framework, RabbitMQ, PostgreSQL
+    }
+    \cvitemx{Haulogy, Nivelles, Belgium -- 2017 -- 2018-Q3}{Odoo Expert}{
+        Best Practices Python and Odoo -- Gitlab CI -- Creation of a framework
+        for the portage of the addons of OpenERP 7.0 to Odoo 8.0 via AST and
+        Python. Docker, Python, Odoo, PostgreSQL 
+    }
+    \cvitemx{Makina Corpus, Toulouse, France -- 2018-09}{Python Trainer}{
+        Advanced Python Training
+    }
+    \cvitemx{BNP Paribas, Brussels, Belgium -- 2018-06}{Python Trainer}{
+        Python Training
+    }
+    \cvitemx{Mirounga, France -- 2016}{Python Expert}{
+        PoC for an ERP -- Python 3.5, aiohttp, sqlalchemy, aiopg
+    }
+    \cvitemx{RodeoFX, Montreal -- 2016-Q2-Q3}{Python Coach}{
+        Audit Code, Python Training, Advanced Python Concepts, Best Practices,
+        Refactoring, UnitTest, Mocking, Portability, Jenkins CI Server,
+        Deployment
+    }
+    \cvitemx{BPSO -- 2016}{Python Expert}{
+        Broker based on Redis and Python, Dashboard and Web Interface for the
+        jobs and workers.
+    }
+    \cvitemx{Spada -- 2016}{Python Trainer}{}
+    \cvitemx{Saluc S.A. -- 2016}{Python Trainer}{}
+    \cvitemx{Real Solutions -- 2015 -- 2016}{Odoo Expert}{Development Odoo Addons --  Best
+    Practices -- Integration with the Activiti project. Development of Python
+    packages}
+    
+    \cvitemx{Conceptive -- 2015}{Python Expert}{
+        Best Practices -- Add RPC Web Services for an existing platform
+    }
+    \cvitemx{Voice Agency S.A. -- 2015}{Django Consultant}{}
+    \cvitemx{Devoteam -- 2014}{Python Trainer}{}
+    \cvitemx{Eezee-IT -- 2014}{Odoo Expert}{Deployment and Customisation of Runbot for the support of BitBucket}
+    \cvitemx{Odoo S.A. -- 2008 -- 2014}{Software Engineer}{
+        Core Developer -- SaaS Engineer -- Technical Project Manager --
+        Technical Trainer -- Release Manager -- Support Manager
+    }
+    \cvitemx{Descasoft S.A. -- 2004 -- 2008}{Software Engineer}{
+        HealthWeb is a Health plaform for the patients and the practitioners. 
+        Develop a Continuous Integration Server in Ruby, Add Unit Test to the
+        main component (C++), Binding to Java and Delphi with Swig and a
+        handmade generator. Unit tested with JRuby via the Java binding.
+    }
+\end{cvtable}
+
+$% \cvsection{Current Occupation}
+$% %\subsection{}
+$% \begin{cvtable}
+$% 	\cvitemx{Research Associate in MESI-STRAT Project -- 2018}{Newcastle University}
+$% 		{A modeller in the MESI-STRAT project (www.mesi-strat.eu), an initiative
+$% 		for the optimization of treatment strategies for breast cancer patients. The goal is to combine molecular
+$% 		biology with mathematical modelling to predict disease progression and response to treatments. This includes abstraction of
+$% 		biological processes into mathematical formalisms using expert knowledge and biochemistry theory, training models
+$% 		on dynamic perturbation data, testing on unseen validation data and selecting between multiple model hypotheses.
+$% 		This work involves frequent use of Newcastle University's HPC supercomputer for intense computation.
+$% 		}
+$% \end{cvtable}
+
+% \cvsection{\Large PhD in Computational Systems Biology -- 2014 -- 2018}
+% \begin{cvtable}
+% 		%% A focus on interdisaplinary
+% 		%% attended and presented at conferences
+% 	\cvitemx{Skin Ageing Research Project}{Newcastle University}
+% 		{An computational investigation into the changes in cell signalling which lead to the skin ageing phenotype,
+% 		 specifically in reduced collagen content with age. Designed and analysed microarray and
+% 		high-throughput qPCR experiments to study changes in TGF-$\upbeta{}$ signalling network with age.
+% 		This data was then used to inform a mechanistic model that predicts the relative quantity
+% 		of collagen produced in young and old human dermal fibroblasts, given the relative
+% 		concentration of other network components.
+% 		}
+% 	\cvitemx{Programming and Software Development}{Newcastle University}
+% 	{Programming abilities matured through development of two Python packages, 1) 'PyCoTools`, a package
+% 	for ODE modelling and 2) 'pytseries` a package for analysis of time series data.
+% 	PyCoTools is essentially a third party API for COPASI, an application for modelling biological systems.
+% 	Facilities are included for building and numerically solving deterministic or stochastic models, parameter estimation, model selection,
+% 	identifiability analysis, sensitivity analysis and exploratory data analysis
+% 	on parameter estimation data. Pytseries provides convenient classes
+% 	for manipulation of time series objects, an implementation of the
+% 	dynamic time warping (DTW) algorithm and time series clustering using the k-means with the DTW distance. }
+% 	\cvitemx{Interdisciplinary Research}{Newcastle University}
+% 		{Well versed in the challenges of interdisciplinary research.
+% 		Experience to date has provided a solid platform from which to develop
+% 		proficiency in computer science, mathematics, molecular biology and
+% 		general research skills.}
+% 	\cvitemx{Collaboration with Industry Partners}{Newcastle University}
+% 		{Project was funded by P\&G, Cincinnati. This necessitated
+% 		regular monthly progress reports via telecoms and
+% 		detailed presentations once a year to the board of directors.
+% 		}
+% \end{cvtable}
+
+% \section{MSc in Computational Systems Biology -- 2014}
+% \begin{cvtable}
+% 	\cvitemx{Modules}{Distinction -- Newcastle University}
+% 		{Modelling Cellular Systems; Introductory Programming for Biologists;
+% 		Research Skills for Bioinformatics; Numeric Skills (Statistics and Mathematics);
+% 		Stochastic Systems Biology; Systems Biology; Computing Environments for Bioinformatics;
+% 		Advanced Object-Oriented Programming; Research Project: A systems biology investigation into
+% 		NF-$\upkappa$B signalling during oxidative stress.
+% 		}
+% \end{cvtable}
+
+\newpage
+\makebacksidebar
+
+\cvsection{Talks}
+\begin{itemize}
+    \item{What's new in Python 3.7?}{}{ }
+    \item{CPython loves your Pull Requests}{}{ }
+    \item{Va debugger ton Python}{}{ }
+    \item{Django, from a nightmare to a dream with Best Practices}{}{ }
+    \item{Architecture of CPython, the bricks!}{}{ }
+    \item{CPython -- Bytecode and Virtual Machine}{}{ }
+    \item{Exploring our Python Interpreter}{}{ }
+    \item{Python and PostgreSQL, a Wonderful wedding}{}{ }
+    \item{Evy, Distributed Integration Server}{}{ }
+\end{itemize}
+
+\cvsection{Conferences}
+\begin{cvtable}
+    \cvitemx{EuroPython 2015, 2016, 2017, 2018}{} {Speaker, Co-Organiser, Volunteer}
+    \cvitemx{PyCon Canada 2014, 2015, 2016, 2017}{} {Speaker}
+    \cvitemx{PyCon France 2010, 2012, 2013, 2014, 2015, 2017, 2018}{} {Volunteer, Speaker}
+    \cvitemx{PyCon Germany 2018}{} {Speaker}
+    \cvitemx{PyCon Ireland 2014, 2015, 2016, 2017, 2018}{} {Speaker}
+    \cvitemx{PyCon Italy 2018}{} {Speaker}
+    \cvitemx{PyCon Slovakia 2018}{} {Speaker}
+    \cvitemx{PyCon UK 2014, 2015, 2016, 2018}{} {Speaker}
+    \cvitemx{PyCon US 2014, 2015, 2016, 2017, 2018, 2019}{} {Volunteer, Helper for Tutorials, Language Summit}
+    \cvitemx{PyCon Ukraine 2018}{}{Keynoter}
+    \cvitemx{PythonFOSDEM 2013, 2014, 2015, 2016, 2017}{} {Co-Organiser, Speaker}
+\end{cvtable}
+% \section{BSc in Biochemistry -- 2009 -- 2013}
+% \begin{cvtable}
+% 	\cvitemx{Final Year Modules}{2:1 -- University of Surrey}
+% 		{Biochemistry, Immunology, Systems Biology, Pharmacology,
+% 		Neuroscience, Cancer Therapeutics and Disease and a
+% 		Research Project}
+% 	\cvitemx{Erasmus Placement Year -- 2011 -- 2012}{University of Cagliari, Italy}
+% 		{During this year I spent time shadowing an experimental scientist in a research environment. The project revolved
+% 		around investigating the influence of caffeine on MDMA-induced neuroinflammation in mice. I was involved in
+% 		performing and quantifying experimental data and interpreting the results. }
+% \end{cvtable}
+%\subsection{Year in industry}
+\section{Python}
+\begin{cvtable}
+    \cvitemx{EuroPython Society -- 2019}{Board Member}{Promoted as Board Member of EuroPython Society -- Co-Organizer of EuroPython 2020}
+    \cvitemx{CPython Core Developer -- 2019}{Commit Rights}{Promoted as Python Core Dev since April 2019}
+	\cvitemx{CPython Contributor -- 2014}{Bug Triager}{Several contributions to CPython 3.x, devguide, planet, other projects}
+    \cvitemx{Member of EuroPython Society -- 2014}{}{Member of the workgroups
+    for the organisation of EuroPython}
+    \cvitemx{Python Software Foundation -- 2016}{Community Service
+    Award}{Received a Community Service Award during PyCon US 2017 in Portland for my contributions
+    to the Python language and for the creation of PythonFOSDEM (\textasciitilde800 people)}
+    \cvitemx{Python Software Foundation -- 2015}{Members of Workgroups}{
+        Member of the \#fellow and \#marketing workgroups of the Python Software
+        Foundation}
+	\cvitemx{Python Software Foundation -- 2013}{Fellow Member}{  }
+\end{cvtable}
+
+\cvsignature
+
+\end{document}
