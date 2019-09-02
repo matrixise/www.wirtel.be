@@ -8,7 +8,7 @@ from yaml import SafeLoader
 
 def main():
     env = Environment(variable_start_string='[[', variable_end_string=']]',
-                      loader=FileSystemLoader('layouts'),
+                      loader=FileSystemLoader('templates'),
                       autoescape=False)
     template = env.get_template('TemplateCV.tex')
     with pathlib.Path('config.yaml').open() as fp:
