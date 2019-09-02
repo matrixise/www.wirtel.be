@@ -25,6 +25,7 @@ build-html:
     - git submodule update --init --recursive
     - hugo -t=ghostwriter -d public/
     - zip -r public.zip public/
+    - ls -l public.zip -h
 
   artifacts:
     paths:
