@@ -9,7 +9,7 @@ build-tex:
   image: python:3.7
 
   script:
-    - pip install jinja2
+    - pip install -r requirements.txt
     - python generate-cv.py
   artifacts:
     paths:
@@ -24,15 +24,15 @@ build-html:
     - apk add zip
     - git submodule update --init --recursive
     - hugo -t=ghostwriter -d public/
-    - zip -r public.zip public/
-    - ls -l public.zip -h
+    # - zip -r public.zip public/
 
   artifacts:
     paths:
-      - public.zip
+      - public/
+      # - public.zip
     expire_in: 1h
 
-build-cv:
+build-c
   stage: build-cv
   image: aergus/latex:latest
 
@@ -62,7 +62,7 @@ deploy:
     - mkdir -p ~/.ssh
     - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    - unzip public.zip
+    # - unzip public.zip
     - rsync -hrvz --chown=www-data:www-data --delete --exclude=_ -e 'ssh -i id_rsa' public/ ${SSH_USER}@${SSH_HOST}:${SSH_PATH}
   only:
     - master
