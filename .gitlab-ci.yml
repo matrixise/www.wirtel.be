@@ -2,7 +2,6 @@ stages:
   - build
   - build-cv
   - deploy
-    # - deploy_curriculum_vitae
 
 build-tex:
   stage: build
@@ -32,7 +31,7 @@ build-html:
       # - public.zip
     expire_in: 1h
 
-build-c
+build-cv:
   stage: build-cv
   image: aergus/latex:latest
 
