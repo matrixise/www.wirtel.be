@@ -4,6 +4,7 @@ description: ""
 date: 2019-08-11T00:00:00+02:00
 conferences:
     - "PyCon.DE 2019"
+    - "PyCon.IE 2019"
 ---
 
 # Abstract
@@ -18,3 +19,5 @@ Examples:
 * audit hook
 * f-string {=} debug
 * etc...
+
+{{< speakerdeck "matrixise/whats-new-in-python-3-dot-8" >}}
