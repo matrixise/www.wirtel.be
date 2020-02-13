@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/matrixise
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://wirtel.be
+  * I am matrixise (https://keybase.io/matrixise) on keybase.
+  * I have a public key ASCT2-o0V9XEAvbBHps3fLz4dC_-FDIXWfYbm___5S7rJwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012093dbea3457d5c402f6c11e9b377cbcf8742ffe14321759f61b9bffffe52eeb270a",
+      "host": "keybase.io",
+      "kid": "012093dbea3457d5c402f6c11e9b377cbcf8742ffe14321759f61b9bffffe52eeb270a",
+      "uid": "319e186debc65715df2270e0136dec19",
+      "username": "matrixise"
+    },
+    "merkle_root": {
+      "ctime": 1581574821,
+      "hash": "a62f7a909ec7dfb20fb39f9255c2fff6e5228c2fbd0feb7b0f680aac9b146cee936b9af6563fd0f73a273d4d96b09cdc039a2679d1eef4da41d93b38cf4236d7",
+      "hash_meta": "d1da4c6575656306e1d5aebe96a29ad31aff99b903df6dcab96cd1cb9df2d798",
+      "seqno": 14588976
+    },
+    "service": {
+      "entropy": "B4yQQYk++SwncwPfVwI4QEbj",
+      "hostname": "wirtel.be",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.2.0"
+  },
+  "ctime": 1581574834,
+  "expire_in": 504576000,
+  "prev": "a5a9e2700382c9fcdb8f4bbb6c20c860e47e26b3a559c4fcacd092d5035e3860",
+  "seqno": 26,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgk9vqNFfVxAL2wR6bN3y8+HQv/hQyF1n2G5v//+Uu6ycKp3BheWxvYWTESpcCGsQgpanicAOCyfzbj0u7bCDIYOR+JrOlWcT8rNCS1QNeOGDEIO0ur5cvEWFURxLR5UBWmjH6lKBKQvn4l5+CZj4BEyo6AgHCo3NpZ8RAHtwLaz4bNXdz5vwJejy6sRTeBvDL0id1VjD9p32oYiIc3Cw6LG8WUrqxCmM1PcTUQzCE9iKrMZ+DseIJpFerAKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIF7nnF6b60JGbKVMKvSmYLwWxDzGekgBUV9to1CkfAr1o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/matrixise
+
+==================================================================
