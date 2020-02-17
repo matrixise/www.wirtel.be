@@ -47,11 +47,6 @@ deploy:
   stage: deploy
   image: alpine:latest
 
-  variables:
-    SSH_HOST: vhost.wirtel.be
-    SSH_USER: root
-    SSH_PATH: /home/www/www.wirtel.be/src
-
   script:
     - apk add rsync openssh-client
     - eval $(ssh-agent -s)
