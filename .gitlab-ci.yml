@@ -1,3 +1,4 @@
+---
 stages:
   - build
   - build-cv
@@ -17,7 +18,7 @@ build-tex:
 
 build-html:
   stage: build
-  image: jojomi/hugo
+  image: jojomi/hugo:0.64.0
   variables:
     HUGO_DESTINATION: public/
   script:
