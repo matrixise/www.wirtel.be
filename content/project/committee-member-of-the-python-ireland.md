@@ -1,5 +1,5 @@
 ---
-title: Committee Member of the Python Ireland
+title: Committee Member of Python Ireland
 date: 2020-03-23T15:28:21.248Z
 ---
 I am happy to help the Python Ireland team. I think I will be in charge of the new website and help them with some other things.
