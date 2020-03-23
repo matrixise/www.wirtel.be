@@ -2,6 +2,11 @@
 title: Contribution to PythonIreland
 decription: Working on the sites of the previous editions
 date: 2020-03-23T14:31:15.243Z
+tags:
+  - python
+  - ireland
+  - limerick
+  - contribution
 ---
 At the end of February, I was in Limerick to help the [PythonIreland](https://python.ie) team for the PyCon Limerick held there during the weekend of February 29th.
 
