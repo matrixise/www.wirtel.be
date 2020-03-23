@@ -1,4 +1,30 @@
 ---
 backend:
   name: gitlab
-  branch: master
+  repo: matrixise/wirtel.be
+  auth_type: implicit
+  # app_id: 5efeff2574a0e41624a978073ffeff8f5f96b75d52e30647a46e20ed7d1f164e
+  # app_id: b1b8dab7e1914b75761b3a9749098a388a12b06927ff664baa435c99f0c5da0b
+  app_id: f4b9ff893c80a24759f42fc9666e007998224ecff2e9b6de8ed7100b6bdcde39
+media_folder: static/img
+public_folder: /img
+collections:
+  - name: post
+    label: Post
+    folder: 'content/post'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: decription
+        widget: string
+      - label: Date
+        name: date
+        widget: datetime
+      - label: 'Body'
+        name: body
+        widget: markdown
