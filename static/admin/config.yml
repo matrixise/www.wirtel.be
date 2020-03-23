@@ -1,0 +1,4 @@
+---
+backend:
+  name: gitlab
+  branch: master
