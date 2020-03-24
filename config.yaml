@@ -49,5 +49,5 @@ menu:
     url: /page/about/
     weight: 5
 newContentEditor: /usr/bin/nvim
-theme: ghostwriter
+theme: original-ghostwriter
 title: Blog
