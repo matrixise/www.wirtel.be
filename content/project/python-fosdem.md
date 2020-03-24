@@ -20,7 +20,6 @@ Editions:
 * [PythonFOSDEM 2016](https://archive.fosdem.org/2016/schedule/track/python/) 363 seats
 * [PythonFOSDEM 2017](https://archive.fosdem.org/2017/schedule/track/python/) 148 + 446 seats
 * [PythonFOSDEM 2018](https://archive.fosdem.org/2018/schedule/track/python/) 800 seats
-* [PythonFOSDEM 2018](https://fosdem.org/2019/schedule/track/python/) 800 seats
 
 Thank you to the volunteers during the FOSDEM.
 
