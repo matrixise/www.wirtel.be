@@ -1,3 +1,10 @@
+newContentEditor: /usr/bin/nvim
+theme: original-ghostwriter
+title: Blog
+baseurl: https://wirtel.be/
+copyright: Stéphane Wirtel
+googleAnalytics: UA-22059464-1
+
 Author:
   email: stephane@wirtel.be
   name: Stéphane Wirtel
@@ -31,9 +38,6 @@ Taxonomies:
   categories: categories
   series: series
   tags: tags
-baseurl: https://wirtel.be/
-copyright: Stéphane Wirtel
-googleAnalytics: UA-22059464-1
 menu:
   main:
   - name: Blog
@@ -48,6 +52,3 @@ menu:
   - name: About
     url: /page/about/
     weight: 5
-newContentEditor: /usr/bin/nvim
-theme: original-ghostwriter
-title: Blog
