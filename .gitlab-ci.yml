@@ -4,17 +4,17 @@ stages:
   - build-cv
   - deploy
 
-build-tex:
-  stage: build
-  image: python:3.7
-
-  script:
-    - pip install -r requirements.txt
-    - python generate-cv.py
-  artifacts:
-    paths:
-      - StephaneWirtel.tex
-    expire_in: 1h
+# build-tex:
+#   stage: build
+#   image: python:3.7
+# 
+#   script:
+#     - pip install -r requirements.txt
+#     - python generate-cv.py
+#   artifacts:
+#     paths:
+#       - StephaneWirtel.tex
+#     expire_in: 1h
 
 build-html:
   stage: build
@@ -30,19 +30,18 @@ build-html:
       - public/
     expire_in: 1h
 
-build-cv:
-  stage: build-cv
-  image: aergus/latex:latest
+# build-cv:
+#   stage: build-cv
+#   image: aergus/latex:latest
 
-  script:
-    - pdflatex StephaneWirtel.tex
-    - pdflatex StephaneWirtel.tex
+#   script:
+#     - pdflatex StephaneWirtel.tex
+#     - pdflatex StephaneWirtel.tex
 
-  artifacts:
-    paths:
-      - StephaneWirtel.pdf
-    expire_in: 1 week
-
+#   artifacts:
+#     paths:
+#       - StephaneWirtel.pdf
+#     expire_in: 1 week
 
 deploy:
   stage: deploy
