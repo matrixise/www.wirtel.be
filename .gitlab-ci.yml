@@ -18,12 +18,15 @@ stages:
 
 build-html:
   stage: build
-  image: jojomi/hugo:0.64.0
+  image: alpine:latest
   variables:
     HUGO_DESTINATION: public/
   script:
+    - apk add git wget
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.68.2/hugo_0.68.2_Linux-64bit.tar.gz
+    - tar xfz hugo_0.68.2_Linux-64bit.tar.gz
     - git submodule update --init --recursive
-    - hugo -d $HUGO_DESTINATION
+    - ./hugo -d $HUGO_DESTINATION
 
   artifacts:
     paths:
