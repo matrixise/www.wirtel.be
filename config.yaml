@@ -24,6 +24,8 @@ Params:
   twitter: https://twitter.com/matrixise
   email: stephane@wirtel.be
   linkedin: https://www.linkedin.com/in/stephanewirtel/
+  readingTime: true
+  readingTimeText: "Estimated reading time:"
 Permalinks:
   cv: /:filename/
   post: /post/:year/:month/:day/:filename
