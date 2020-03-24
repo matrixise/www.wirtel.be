@@ -1,5 +1,5 @@
 ---
-title: Contribution to PythonIreland
+title: Contribution to Python Ireland
 decription: Working on the sites of the previous editions
 date: 2020-03-23T14:31:15.243Z
 tags:
@@ -7,8 +7,11 @@ tags:
   - ireland
   - limerick
   - contribution
+image: /images/python-ireland.png
 ---
-At the end of February, I was in Limerick to help the [PythonIreland](https://python.ie) team for the PyCon Limerick held there during the weekend of February 29th.
+
+# Contribution to Python Ireland
+At the end of February, I was in Limerick to help the [Python Ireland](https://python.ie) team for the PyCon Limerick held there during the weekend of February 29th.
 
 And because I wanted to help them, I have started to rewrite the web site of PyCon Limerick 2020. The current version of PyCon Limerick uses a Wordpress instance, I have no issues with the set up. But I prefer to work with a static site, and with some other members of the team, I have started to work on a static version with [Hugo](https://gohugo.io).
 
