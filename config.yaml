@@ -7,14 +7,16 @@ Company:
   site: https://mgx.io
 Params:
   dateFormat: Mon, Jan 2, 2006
-  description: Description
-  github: https://github.com/matrixise
-  headline: nothing
-  intro: false
+  description: About programming, karate, contributions and stuff I enjoy.
+  intro: true
+  headline: 今日は
   opengraph: true
   shareLinkedIn: true
   shareTwitter: true
+  github: https://github.com/matrixise
   twitter: https://twitter.com/matrixise
+  email: stephane@wirtel.be
+  linkedin: https://www.linkedin.com/in/stephanewirtel/
 Permalinks:
   cv: /:filename/
   post: /post/:year/:month/:day/:filename
