@@ -27,7 +27,6 @@ Params:
   readingTime: true
   readingTimeText: "Estimated reading time:"
 Permalinks:
-  cv: /:filename/
   post: /post/:year/:month/:day/:filename
 Privacy:
   disqus:
