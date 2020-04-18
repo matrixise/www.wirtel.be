@@ -33,6 +33,12 @@ tags: ["python", "weekly-updates", "europython", "language summit"]
     * *Core Workflow updates* by **Mariatta**
     * *CPython on Mobile platforms* by **Russell Keith-Magee**
 
+#### Pictures
+
+![](EV4CH0GXQAAE4Rr.jpeg)
+![](EV4CHCfXQAA2Hp1.jpeg)
+![](EV4CGXGWkAEKDVu.jpeg)
+
 ### EuroPython
 * EuroPython Society Board meeting: Big discussion about Zoom and Discord, we will use these platforms for EuroPython 2020.
 * The talk voting is Open, you can start to vote for your favourite talks (https://blog.europython.eu/post/615363800716263424/europython-2020-talk-voting-is-open)
