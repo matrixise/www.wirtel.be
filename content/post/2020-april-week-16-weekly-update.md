@@ -1,6 +1,6 @@
 ---
 title: "Weekly Update, April 18, 2020"
-date: 2020-04-18T12:00:00+02:00
+date: 2020-04-18T00:00:00+02:00
 description: "Weekly Update"
 tags: ["python", "weekly-updates", "europython", "language summit"]
 ---
