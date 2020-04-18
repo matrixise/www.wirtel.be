@@ -2,6 +2,7 @@
 title: "Yes!, I am a Github Sponsor"
 date: 2020-04-17T02:20:31+02:00
 tags: ["python", "sponsoring", "github", "opensource"]
+image: mona-heart-featured.png
 ---
 
 # What's a Github Sponsor?
@@ -49,3 +50,6 @@ Repo: https://github.com/wagoodman/dive
 Cheers,
 
 Stéphane
+
+
+Credits: Originally hosted on the Github blog, I have a copy of this image on my server. Original link: https://github.blog/2019-05-23-announcing-github-sponsors-a-new-way-to-contribute-to-open-source/
