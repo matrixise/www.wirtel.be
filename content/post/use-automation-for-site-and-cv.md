@@ -1,6 +1,6 @@
 ---
 title: "Use Automation for Site and CV"
-description: ""
+description: "Automate the creation of your CV with Gitlab-CI and your site"
 tags: ["hugo", "cv", "site", "automation", "gitlab", "gitlab-runner", "latex",
 "html"]
 date: 2019-06-21T14:00:00+02:00
