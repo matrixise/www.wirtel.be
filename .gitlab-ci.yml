@@ -6,7 +6,7 @@ stages:
 
 build-tex:
   stage: build
-  image: python:3.8-slim
+  image: python:3.9-slim
 
   script:
     - pip install -r requirements.txt
@@ -18,7 +18,7 @@ build-tex:
 
 build-html:
   stage: build
-  image: jojomi/hugo:0.65.0
+  image: jojomi/hugo:0.76.0
   variables:
     HUGO_DESTINATION: public/
   script:
