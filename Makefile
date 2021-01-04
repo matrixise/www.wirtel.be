@@ -1,29 +1,36 @@
 USERID:=$(shell id -u)
 GROUPID:=$(shell id -g)
 BUILD_DIR=/tmp/hugo-build-output
--include .env
-# --user=$(USERID):$(GROUPID) \
+DOCKER_IMAGE=jojomi/hugo:0.65
 
-build-html:
+-include .env
+
+update-submodules:
+	git submodule update --init --recursive
+
+build-html: update-submodules
 	docker run --rm \
 		-e HUGO_DESTINATION=/public \
 		-e HUGO_THEME=ghostwriter \
 		-v $(PWD):/src/ \
 		-v $(BUILD_DIR):/public \
-		jojomi/hugo
+		$(DOCKER_IMAGE)
 
 build-cv:
 	docker run --rm --user=$(USERID):$(GROUPID) \
 		-v $(PWD):/src/ \
 		-w /src/ aergus/latex \
-		pdflatex StephaneWirtel.tex
+		make make_pdf
 
-run:
+make_pdf:
+	pdflatex StephaneWirtel.tex
+
+run: update-submodules
 	docker run --rm \
 		-e HUGO_DESTINATION=/public \
 		-e HUGO_THEME=ghostwriter \
 		-v $(PWD):/src/ \
 		-v $(BUILD_DIR):/public \
-		--publish-all \
-		jojomi/hugo \
+		--publish 1313:1313 \
+		$(DOCKER_IMAGE) \
 		hugo server --bind=0.0.0.0
