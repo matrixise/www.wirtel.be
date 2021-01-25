@@ -46,6 +46,7 @@ tags: ["python", "weekly-updates", "europython", "language summit"]
 * Work with the Program WG
     * Prepare emails
     * Cancel the duplicated talks for EP2020
+    * Work for Python Ireland 2020
 
 Cheers,
 
