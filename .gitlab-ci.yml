@@ -4,7 +4,7 @@ stages:
   - build-cv
   - deploy
 
-build-tex:
+.build-tex:
   stage: build
   image: python:3.9
 
@@ -30,7 +30,7 @@ build-html:
       - public/
     expire_in: 1h
 
-build-cv:
+.build-cv:
   stage: build-cv
   image: aergus/latex:latest
 
@@ -55,7 +55,7 @@ deploy:
     - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
     - rsync -hrvz --chown=www-data:www-data --delete --exclude=_ -e 'ssh -i id_rsa' public/ ${SSH_USER}@${SSH_HOST}:${SSH_PATH}
-    - rsync -hrvz --chown=www-data:www-data --exclude=_ -e 'ssh -i id_rsa' StephaneWirtel.pdf ${SSH_USER}@${SSH_HOST}:${SSH_PATH}
+#     - rsync -hrvz --chown=www-data:www-data --exclude=_ -e 'ssh -i id_rsa' StephaneWirtel.pdf ${SSH_USER}@${SSH_HOST}:${SSH_PATH}
   only:
     - master
 
