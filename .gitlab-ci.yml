@@ -6,7 +6,7 @@ stages:
 
 build-tex:
   stage: build
-  image: python:3.9-slim
+  image: python:3.9
 
   script:
     - make install_dependencies
