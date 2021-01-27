@@ -11,6 +11,9 @@ install_dependencies:
 update-submodules:
 	git submodule update --init --recursive
 
+generate-cv:
+	python generate-cv.py --template TemplateCV.tex --output StephaneWirtel.tex
+
 build-html: update-submodules
 	docker run --rm \
 		-e HUGO_DESTINATION=/public \
