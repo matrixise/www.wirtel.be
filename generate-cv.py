@@ -9,18 +9,20 @@ import argparse
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--template')
-    parser.add_argument('--output')
+    parser.add_argument('template')
+    parser.add_argument('output')
 
     return parser.parse_args()
 
 def main():
     args = parse_args()
 
+    template = pathlib.Path(args.template)
+
     env = Environment(variable_start_string='[[', variable_end_string=']]',
-                      loader=FileSystemLoader('templates'),
+                      loader=FileSystemLoader(template.parent),
                       autoescape=False)
-    template = env.get_template(args.template)
+    template = env.get_template(template.name)
     with pathlib.Path('config.yaml').open() as fp:
         config = yaml.load(fp, Loader=SafeLoader)
     content = template.render(config=config)
