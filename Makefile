@@ -12,7 +12,7 @@ update-submodules:
 	git submodule update --init --recursive
 
 generate-cv:
-	python generate-cv.py --template TemplateCV.tex --output StephaneWirtel.tex
+	python generate-cv.py TemplateCV.tex StephaneWirtel.tex
 
 build-html: update-submodules
 	docker run --rm \
