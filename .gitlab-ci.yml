@@ -4,7 +4,7 @@ stages:
   - build-cv
   - deploy
 
-.build-tex:
+build-tex:
   stage: build
   image: python:3.9
 
@@ -30,7 +30,7 @@ build-html:
       - public/
     expire_in: 1h
 
-.build-cv:
+build-cv:
   stage: build-cv
   image: aergus/latex:latest
 
