@@ -10,7 +10,7 @@ draft: false
 
 ## Past
 
-Since January, I have no mission, no customers. There is some reasons. Where you work for a customer, it's funny because you can learn a lof of technologies. But you don't improve your own processes and you cannot learn for yourself. 
+Since January, I have no missions, no customers. There is some reasons. When you work for a customer, it's funny because you can learn a lof of technologies. But you don't improve your own processes and you can not learn for yourself. 
 
 That's why since January, I have fixed a lot of things (for my company or at Home) and also started to learn new technologies.
 
