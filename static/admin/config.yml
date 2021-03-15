@@ -3,7 +3,6 @@ site_url: https://wirtel.be
 backend:
   name: github
   repo: matrixise/www.wirtel.be
-  auth_type: implicit
 media_folder: static/img
 public_folder: /img
 collections:
