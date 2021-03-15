@@ -2,3 +2,6 @@ public/
 StephaneWirtel.tex
 *~
 venv
+
+# Local Netlify folder
+.netlify
