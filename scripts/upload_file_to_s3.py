@@ -6,7 +6,7 @@ from botocore.config import Config
 
 BUCKET_NAME = 'public-mgxio'
 FOLDER_NAME = 'wirtel.be'
-file_name = 'StephaneWirtel.tex'
+file_name = 'StephaneWirtel.pdf'
 
 config = Config(
     region_name = 'eu-west-3',
