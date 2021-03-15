@@ -41,3 +41,7 @@ Thank you to the [Python Software Foundation](https://www.python.org/psf)
 ### Formerly
 
 * [Odoo](https://www.odoo.com) Core Dev (6y)
+
+## CV
+
+You can download my [CV](https://public-mgxio.s3.eu-west-3.amazonaws.com/wirtel.be/StephaneWirtel.pdf) - Updated at midnight (UTC) 
