@@ -1,10 +1,10 @@
-+++
-date = "2015-12-21T11:09:42+01:00"
-title = "Move to Hugo"
-comments = false
-share = false
-slug = "move-to-hugo"
-+++
+---
+date: "2015-12-21T11:09:42+01:00"
+title: "Move to Hugo"
+comments: false
+share: false
+slug: "move-to-hugo"
+---
 
 # Introduction
 

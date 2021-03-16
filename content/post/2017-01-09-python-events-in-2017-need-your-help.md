@@ -1,11 +1,11 @@
-+++
-date = "2017-01-09T17:56:00+01:00"
-title = "Python Events in 2017, Need your help!"
-tags = [ "python", "events", "event", "2017", "community", "psf" ]
-author = "Stephane Wirtel"
-categories = ["event"]
-slug = "python-events-in-2017-need-your-help"
-+++
+---
+date: "2017-01-09T17:56:00+01:00"
+title: "Python Events in 2017, Need your help!"
+tags: [ "python", "events", "event", "2017", "community", "psf" ]
+author: "Stephane Wirtel"
+categories: ["event"]
+slug: "python-events-in-2017-need-your-help"
+---
 
 # Events in 2017
 

@@ -1,14 +1,11 @@
-+++
-title = "Connect to Odoo in your application with ERPpeek"
-tags = ["python", "openerp", "odoo", "erppeek", "xmlrpc"]
-date = "2014-06-13T18:16:29+01:00"
-categories = ["programming"]
-image = "background.jpg"
-slug = "using_erppeek_to_discuss_with_openerp"
-# aliases = [
-#    "/posts/en/2014/06/13/using_erppeek_to_discuss_with_openerp"
-#]
-+++
+---
+title: "Connect to Odoo in your application with ERPpeek"
+tags: ["python", "openerp", "odoo", "erppeek", "xmlrpc"]
+date: "2014-06-13T18:16:29+01:00"
+categories: ["programming"]
+image: "background.jpg"
+slug: "using_erppeek_to_discuss_with_openerp"
+---
 
 In this post, we will use the new name, [Odoo] instead of [OpenERP] but
 the content and the examples are compatible with OpenERP 5.0, 6.0, 6.1 and 7.0

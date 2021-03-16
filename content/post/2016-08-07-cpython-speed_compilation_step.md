@@ -1,13 +1,13 @@
-+++
-title = "CPython - Speed the compilation step"
-draft=true
-date="2016-08-07T10:00:00+01:00"
-comments=false
-share=false
-tags=["python", "cpython", "compilation", "ccache", "autoconf"]
-series=["Welcome to CPython"]
-slug = "cpython-speed_compilation_step"
-+++
+---
+title: "CPython - Speed the compilation step"
+draft: true
+date: "2016-08-07T10:00:00+01:00"
+comments: false
+share: false
+tags: ["python", "cpython", "compilation", "ccache", "autoconf"]
+series: ["Welcome to CPython"]
+slug: "cpython-speed_compilation_step"
+---
 
 ## Introduction
 
