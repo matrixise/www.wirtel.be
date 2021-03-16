@@ -7,7 +7,7 @@ tags:
   - ireland
   - limerick
   - contribution
-image: /images/python-ireland.png
+image: /project/python-ireland/python-ireland.png
 ---
 
 # Contribution to Python Ireland
