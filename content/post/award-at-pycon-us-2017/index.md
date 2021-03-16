@@ -5,6 +5,7 @@ tags:
     - python
     - psf
     - contributions
+image: "award.jpg"
 ---
 
 # Introduction
@@ -22,8 +23,6 @@ After that, the PSF has written a [blog post](http://pyfound.blogspot.be/2016/08
 And with this award, the PSF has offered me the ticket for the conference.
 
 # Award
-
-![Award](https://pbs.twimg.com/media/DAXg5FuUIAAohWd.jpg)
 
 Dear Python Software Foundation,
 

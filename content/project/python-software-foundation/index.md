@@ -2,6 +2,7 @@
 title = "Member of Python Software Foundation"
 author = "Stephane Wirtel"
 date = "2013-04-01T00:00:00"
+image = "award.jpg"
 +++
 
 ## Description
@@ -24,5 +25,3 @@ The Python Software Foundation (PSF) is a 501(c)(3) non-profit corporation that 
 * In May 2017, I received a CSA (Community Service Award) from the [Python Software Foundation](https://www.python.org/psf/) for my contribution to the Python ecosystem with [PythonFOSDEM](https://python-fosdem.org) and some events in Belgium.
 * Confirmation of the CSA: https://www.python.org/community/awards/psf-awards/#june-2016
 * Article on me from the [Python Software Foundation](https://www.python.org/psf/) http://pyfound.blogspot.be/2016/08/in-beginning-there-was-one-python-group.html
-
-<img src="https://pbs.twimg.com/media/DAXg5FuUIAAohWd.jpg" width="25%"/>
