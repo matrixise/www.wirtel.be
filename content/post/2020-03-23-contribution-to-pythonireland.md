@@ -8,6 +8,7 @@ tags:
   - limerick
   - contribution
 image: /project/python-ireland/python-ireland.png
+slug: "contribution-to-pythonireland"
 ---
 
 # Contribution to Python Ireland

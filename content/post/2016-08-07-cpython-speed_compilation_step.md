@@ -6,6 +6,7 @@ comments=false
 share=false
 tags=["python", "cpython", "compilation", "ccache", "autoconf"]
 series=["Welcome to CPython"]
+slug = "cpython-speed_compilation_step"
 +++
 
 ## Introduction

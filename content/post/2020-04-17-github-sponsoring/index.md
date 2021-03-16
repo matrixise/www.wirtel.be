@@ -3,6 +3,7 @@ title: "Yes!, I am a Github Sponsor"
 date: 2020-04-17T02:20:31+02:00
 tags: ["python", "sponsoring", "github", "opensource"]
 image: mona-heart-featured.png
+slug: "github-sponsoring"
 ---
 
 # What's a Github Sponsor?

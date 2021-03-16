@@ -4,6 +4,7 @@ tags = ["python", "openerp", "odoo", "erppeek", "xmlrpc"]
 date = "2014-06-13T18:16:29+01:00"
 categories = ["programming"]
 image = "background.jpg"
+slug = "using_erppeek_to_discuss_with_openerp"
 # aliases = [
 #    "/posts/en/2014/06/13/using_erppeek_to_discuss_with_openerp"
 #]

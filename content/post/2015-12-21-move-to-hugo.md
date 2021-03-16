@@ -4,6 +4,7 @@ draft = false
 title = "Move to Hugo"
 comments = false
 share = false
+slug = "move-to-hugo"
 +++
 
 # Introduction

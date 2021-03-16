@@ -3,6 +3,7 @@ title = "Francisez Python ;-)"
 draft = true
 tags = ["cpython", "python", "pyconfr", "grammar"]
 date = "2016-10-14T16:30:00"
+slug = "frenchify-cpython-37-fr"
 +++
 
 # PyConFR 2016

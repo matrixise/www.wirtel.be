@@ -6,6 +6,7 @@ tags:
     - psf
     - contributions
 image: "award.jpg"
+slug: "award-at-pycon-us-2017"
 ---
 
 # Introduction

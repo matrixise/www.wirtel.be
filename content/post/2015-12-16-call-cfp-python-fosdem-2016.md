@@ -5,6 +5,7 @@ title = "Help PythonFOSDEM 2016 with your proposals"
 tags = ["python", "fosdem", "conference"]
 categories = ["conference"]
 image = "python-fosdem-2016.jpg"
+slug = "call-cfp-python-fosdem-2016"
 +++
 
 # Introduction

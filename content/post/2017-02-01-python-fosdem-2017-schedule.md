@@ -4,6 +4,7 @@ draft = false
 title = "PythonFOSDEM 2017 - Schedule"
 tags = ["python", "fosdem", "conference", "schedule"]
 categories = ["conference"]
+slug = "python-fosdem-2017-schedule"
 +++
 
 # Introduction
