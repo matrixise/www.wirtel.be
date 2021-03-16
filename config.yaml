@@ -27,7 +27,7 @@ Params:
   readingTime: true
   readingTimeText: "Estimated reading time:"
 Permalinks:
-  post: /post/:year/:month/:day/:filename
+  post: /post/:year/:month/:day/:slug
 Privacy:
   disqus:
     disable: true

@@ -2,7 +2,7 @@
 title: "Enfin Papa!"
 date: 2011-01-21T03:26:00+02:00
 tags: ['family']
-draft: false
+slug: enfin-papa
 resources:
   - name: Margaux
     src: margaux.png
