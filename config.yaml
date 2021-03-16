@@ -1,6 +1,6 @@
 newContentEditor: /usr/bin/nvim
 theme: original-ghostwriter
-title: Blog
+title: Stéphane's Blog
 baseurl: https://wirtel.be/
 copyright: Stéphane Wirtel
 googleAnalytics: UA-22059464-1
