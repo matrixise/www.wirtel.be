@@ -1,7 +1,7 @@
-+++
-title = "PythonFOSDEM"
-date = "2013-02-01T00:00:00"
-+++
+---
+title: "PythonFOSDEM"
+date: "2013-02-01T00:00:00"
+---
 
 PythonFOSDEM is a small conference in Brussels during FOSDEM.
 
