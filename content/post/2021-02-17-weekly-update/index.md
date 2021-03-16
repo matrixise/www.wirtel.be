@@ -4,8 +4,6 @@ description: "Side Project, Health, Sport, Django, VueJS"
 date: 2021-02-17T01:19:49+01:00
 tags: ["weekly-updates", "weekly", "updates"]
 image: jannis-brandt-mmsQUgMLqUo-unsplash.jpg
-images:
-  - /post/2021/02/17/2021-february-week-7-weekly-update/jannis-brandt-mmsQUgMLqUo-unsplash.jpg
 slug: "2021-february-week-7-weekly-update"
 ---
 
