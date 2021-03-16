@@ -1,0 +1,6 @@
+<footer class="post-footer clearfix">
+    {{ $pageTitle := .Title }}
+    {{ with .Params.project_url }}
+        Site: <a href="{{ . }}">{{ $pageTitle }}</a>
+    {{ end }}
+</footer>
