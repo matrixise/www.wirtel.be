@@ -1,6 +1,7 @@
 ---
 title: "PythonFOSDEM"
 date: "2013-02-01T00:00:00"
+project_url: "https://www.python-fosdem.org/"
 ---
 
 PythonFOSDEM is a small conference in Brussels during FOSDEM.

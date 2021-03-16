@@ -1,7 +1,7 @@
 ---
-title: "CPython Core Developer"
-author: "Stephane Wirtel"
+title: "CPython"
 date: "2014-04-01T18:00:00"
+project_url: "https://www.python.org"
 ---
 
 ## Description

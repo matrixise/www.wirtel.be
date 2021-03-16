@@ -1,14 +1,14 @@
 ---
-title: "Board Member of EuroPython"
-author: "Stephane Wirtel"
+title: "EuroPython"
 date: "2015-10-11T18:00:00"
+project_url: "https://www.europython-society.org/"
 ---
 
 ## Description
 
 EuroPython is the largest Python conference in Europe (+- 1200 people).
 
-The **EuroPython** conference series was initiated by the EuroPython Python
+The **EuroPython** conference series was initiated by the European Python
 community in 2002. Since then we've come a long way.
 
 http://www.europython-society.org/europython
