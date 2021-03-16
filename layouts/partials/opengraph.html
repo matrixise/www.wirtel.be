@@ -3,6 +3,7 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 {{ $parentScope := . }}
-{{- with .Params.image }}
-<meta property="og:image" content="{{ (path.Join $parentScope.Permalink .) | absURL }} " />
-{{- end }}
+{{- with .Params.image -}}
+{{ $url := delimit (slice $parentScope.Permalink .) "/" | absURL }}
+<meta property="og:image" content="{{ $url }}" />
+{{- end -}}
