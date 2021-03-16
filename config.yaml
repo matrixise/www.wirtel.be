@@ -20,7 +20,7 @@ Params:
   opengraph: true
   shareLinkedIn: true
   shareTwitter: true
-  twitter_username: matrixise
+  twitterUsername: matrixise
   github: https://github.com/matrixise
   twitter: https://twitter.com/matrixise
   email: stephane@wirtel.be
