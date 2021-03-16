@@ -1,6 +1,5 @@
 +++
 date = "2015-12-21T11:09:42+01:00"
-draft = false
 title = "Move to Hugo"
 comments = false
 share = false

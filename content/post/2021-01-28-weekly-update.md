@@ -3,7 +3,6 @@ title: "Weekly Update, January 28, 2021"
 description: "Weekly Update"
 date: 2021-01-28T10:19:49+01:00
 tags: ["python", "weekly-updates", "weekly", "updates", "europython", "personal"]
-draft: false
 slug: "2021-january-week-4-weekly-update"
 ---
 

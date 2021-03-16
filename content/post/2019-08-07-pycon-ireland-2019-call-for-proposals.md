@@ -3,7 +3,6 @@ title: "PyCon Ireland 2019: Call for proposals"
 description: ""
 date: 2019-08-07T17:00:00+02:00
 tags: ["python", "pycon", "ireland"]
-draft: false
 slug: "pycon-ireland-2019-call-for-proposals"
 ---
 
