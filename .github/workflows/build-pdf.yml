@@ -24,7 +24,7 @@ jobs:
 
       - name: Generate StephaneWirtel.tex
         run: |
-          python generate-cv.py templates/TemplateCV.tex StephaneWirtel.tex
+          python scripts/generate-cv.py templates/TemplateCV.tex StephaneWirtel.tex
 
       - name: Build PDF
         uses: xu-cheng/latex-action@v2
