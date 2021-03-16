@@ -42,7 +42,7 @@ Taxonomies:
   tags: tags
 menu:
   main:
-  - name: Blog
+  - name: Posts
     url: /
     weight: 1
   - name: Projects
