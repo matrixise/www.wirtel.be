@@ -1,8 +1,8 @@
 ---
-title: "Member of Python Software Foundation"
-author: "Stephane Wirtel"
+title: "Python Software Foundation"
 date: "2013-04-01T00:00:00"
 image: "award.jpg"
+project_url: "https://www.python.org/psf"
 ---
 
 ## Description

@@ -1,6 +1,6 @@
 newContentEditor: /usr/bin/nvim
 theme: original-ghostwriter
-title: Blog
+title: Stéphane's Blog
 baseurl: https://wirtel.be/
 copyright: Stéphane Wirtel
 googleAnalytics: UA-22059464-1
@@ -20,6 +20,7 @@ Params:
   opengraph: true
   shareLinkedIn: true
   shareTwitter: true
+  twitterUsername: matrixise
   github: https://github.com/matrixise
   twitter: https://twitter.com/matrixise
   email: stephane@wirtel.be
@@ -41,7 +42,7 @@ Taxonomies:
   tags: tags
 menu:
   main:
-  - name: Blog
+  - name: Posts
     url: /
     weight: 1
   - name: Projects
