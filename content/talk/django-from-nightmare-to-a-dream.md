@@ -1,11 +1,10 @@
-+++
-title = "Django, from a nightmare to a dream with Best Practices"
-date = "2017-07-11T15:45:00"
-conferences = [
-    "EuroPython 2017",
-    "PyCon France 2017"
-]
-+++
+---
+title: "Django, from a nightmare to a dream with Best Practices"
+date: "2017-07-11T15:45:00"
+conferences:
+    - "EuroPython 2017"
+    - "PyCon France 2017"
+---
 
 ## About
 

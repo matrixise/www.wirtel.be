@@ -1,8 +1,8 @@
-+++
-title = "Board Member of EuroPython"
-author = "Stephane Wirtel"
-date = "2015-10-11T18:00:00"
-+++
+---
+title: "Board Member of EuroPython"
+author: "Stephane Wirtel"
+date: "2015-10-11T18:00:00"
+---
 
 ## Description
 

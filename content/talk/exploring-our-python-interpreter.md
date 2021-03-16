@@ -1,15 +1,14 @@
-+++
-title = "Exploring our Python Interpreter"
-date = "2015-10-01T00:00:00"
-tags = ["cpython"]
-conferences = [
-    "PyCon Ireland 2015",
-    "PyCon Canada 2015",
-    "Python FOSDEM 2016",
-    "EuroPython 2016",
-    "PyCon France 2016"
-]
-+++
+---
+title: "Exploring our Python Interpreter"
+date: "2015-10-01T00:00:00"
+tags: ["cpython"]
+conferences:
+    - PyCon Ireland 2015
+    - PyCon Canada 2015
+    - Python FOSDEM 2016
+    - EuroPython 2016
+    - PyCon France 2016
+---
 
 ## About
 
