@@ -243,14 +243,20 @@
 
 \makefrontsidebar
 
+[% import "cv-item.tex" as cv_item %]
 \cvsection{Current Positions}
 \begin{cvtable}
-    \cvitemx{Mgx.io SPRL -- Charleroi -- Belgium}{Founder -- 2017 -- Today}
-    {Mgx.io SPRL is my company, specialized in consulting, developing and training with the Python programming language.}
+    [% for position in position_loader.get_current_positions() %]
+        [[ cv_item.cv_item(position) ]]
+    [% endfor %]
 \end{cvtable}
 
 \cvsection{Past Positions}
 \begin{cvtable}
+    [% for position in position_loader.get_other_positions() %]
+    [[ cv_item.cv_item(position) ]]
+    [% endfor %]
+
     \cvitemx{Entso-e.eu -- Brussels -- Belgium}{Python Expert -- 2019-Q3 -- 2020-Q4}
     {ENTSO-E and all Transmission System Operators need to operate in a clear and safe legal and regulatory framework. 
      Architecture Design: MicroServices, Distributed, Containers
