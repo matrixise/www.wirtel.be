@@ -29,7 +29,7 @@ This page has been created by the PSF and is maintained by some volunteers.
 
 I am also working on a t-shirt for the Python events in 2017
 
-![Python Events in 2017](http://wirtel.be/t-shirt-pythonfosdem-2017.png)
+![Python Events in 2017](t-shirt-pythonfosdem-2017.png)
 
 I know this list of events: 
 
