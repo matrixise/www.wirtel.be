@@ -1,3 +1,4 @@
+---
 newContentEditor: /usr/bin/nvim
 theme: original-ghostwriter
 title: Stéphane's Blog
@@ -8,10 +9,11 @@ googleAnalytics: UA-22059464-1
 Author:
   email: stephane@wirtel.be
   name: Stéphane Wirtel
+  title: Senior Python Expert
   phone: +32 474 76 80 72
 Company:
   email: stephane.wirtel@mgx.io
-  site: https://mgx.io
+  site: https://mgx.io/
 Params:
   dateFormat: Mon, Jan 2, 2006
   description: About programming, karate, contributions and stuff I enjoy.
@@ -42,18 +44,18 @@ Taxonomies:
   tags: tags
 menu:
   main:
-  - name: Posts
-    url: /
-    weight: 1
-  - name: Projects
-    url: /project
-    weight: 2
-  - name: Talks
-    url: /talk
-    weight: 3
-  - name: About
-    url: /page/about/
-    weight: 5
+    - name: Posts
+      url: /
+      weight: 1
+    - name: Projects
+      url: /project
+      weight: 2
+    - name: Talks
+      url: /talk
+      weight: 3
+    - name: About
+      url: /page/about/
+      weight: 5
 
 markup:
   highlight:
