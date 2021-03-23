@@ -9,10 +9,10 @@ position: Python/Django Expert
 
 Python and Django Coach
 
-* Best Practice
+* Best Practices
 * Integration with Travis-CI
 * Custom developments
-* Integration of Reddot CMS with a new CMS
+* Integration with Reddot CMS with a new CMS
 * Performance Improvements
 * Add Functional Tests with Selenium
 * Add Behaviour Development Driven (BDD)
