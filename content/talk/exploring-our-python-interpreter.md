@@ -1,6 +1,6 @@
 ---
 title: "Exploring our Python Interpreter"
-date: "2015-10-01T00:00:00"
+date: 2015-10-01
 tags: ["cpython"]
 conferences:
     - PyCon Ireland 2015

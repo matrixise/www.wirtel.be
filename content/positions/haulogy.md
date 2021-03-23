@@ -5,6 +5,7 @@ country: Belgium
 start-on: 2017/02
 stop-on: 2018/07
 position: Odoo Technical Expert
+ignore: true
 ---
 
 * Best Practices Python and Odoo

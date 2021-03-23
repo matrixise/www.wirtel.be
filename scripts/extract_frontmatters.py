@@ -23,6 +23,8 @@ class PositionLoader:
 
         for position_file in self.directory.glob('*.md'):
             position = frontmatter.load(position_file)
+            if position.get('ignore'):
+                continue
             position['start-on'] = pendulum.from_format(position['start-on'], 'YYYY/MM').date()
             try:
                 position['stop-on'] = pendulum.from_format(position['stop-on'], 'YYYY/MM').date()
@@ -35,13 +37,36 @@ class PositionLoader:
         positions.sort(key=lambda position: position['stop-on'], reverse=True)
         self.positions = positions
 
-def main():
-    loader = PositionLoader(pathlib.Path('content/positions'))
-    loader.load()
-    for position in loader.get_positions():
-        print(f"{position['start-on']} {position['stop-on']} {position['title']}")
+class TalkLoader:
+    def __init__(self, directory: pathlib.Path):
+        if isinstance(directory, str):
+            directory = pathlib.Path(directory)
+        self.directory = directory
+        self.talks = []
 
-    print(loader.get_current_positions())
+    def load(self):
+        talks = []
+
+        for talk_file in self.directory.glob('*.md'):
+            talk = frontmatter.load(talk_file)
+            talks.append(talk)
+
+        talks.sort(key=lambda obj: obj['date'], reverse=True)
+        self.talks = talks
+
+def main():
+    # loader = PositionLoader(pathlib.Path('content/positions'))
+    # loader.load()
+    # for position in loader.get_positions():
+    #     print(f"{position['start-on']} {position['stop-on']} {position['title']}")
+
+    # print(loader.get_current_positions())
+
+    loader = TalkLoader(pathlib.Path('content/talk'))
+    loader.load()
+
+    for talk in loader.talks:
+        print(talk['title'], talk['date'], type(talk['date']))
 
 if __name__ == '__main__':
     main()

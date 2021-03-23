@@ -1,6 +1,6 @@
 ---
 title: Python and PostgreSQL, a Wonderful Wedding
-date: "2014-10-01T00:00:00"
+date: 2014-10-01
 conferences: [
     "PyCon France 2014",
     "Python FOSDEM 2015",

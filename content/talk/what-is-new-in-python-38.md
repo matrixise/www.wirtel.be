@@ -1,7 +1,7 @@
 ---
 title: "What's new in Python 3.8?"
 description: ""
-date: 2019-08-11T00:00:00+02:00
+date: 2019-08-11
 conferences:
     - "PyCon.DE 2019"
     - "PyCon.IE 2019"

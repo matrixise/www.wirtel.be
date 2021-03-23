@@ -5,6 +5,7 @@ country: Belgium
 start-on: 2017/02
 stop-on: 2018/10
 position: Python/Django Expert
+ignore: true
 ---
 
 Python and Django Coach
