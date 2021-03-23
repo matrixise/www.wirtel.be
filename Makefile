@@ -12,7 +12,7 @@ update-submodules:
 	git submodule update --init --recursive
 
 generate-cv:
-	python generate-cv.py templates/TemplateCV.tex StephaneWirtel.tex
+	python scripts/generate-cv.py templates/TemplateCV.tex StephaneWirtel.tex
 
 build-html: update-submodules
 	docker run --rm \
@@ -40,3 +40,5 @@ run: update-submodules
 		--publish 1313:1313 \
 		$(DOCKER_IMAGE) \
 		hugo server --bind=0.0.0.0
+
+build: generate-cv build-cv build-cv

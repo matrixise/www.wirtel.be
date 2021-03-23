@@ -1,0 +1,8 @@
+[% macro cv_item(record) %]
+[%- if record.current %]
+\cvitemx{[[ record.title ]] -- [[ record.location ]] -- [[ record.country ]]}{[[record.position]] -- [[record['start-on'].format('YYYY/MM') ]] -- Today}
+[% else %]
+\cvitemx{[[ record.title ]] -- [[ record.location ]] -- [[ record.country ]]}{[[record.position]] -- [[record['start-on'].format('YYYY/MM') ]] -- [[ record['stop-on'].format('YYYY/MM') ]]}
+[% endif -%]
+{[[- record.content | wordwrap -]]}
+[% endmacro %]

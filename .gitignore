@@ -4,4 +4,5 @@ StephaneWirtel.tex
 venv
 
 # Local Netlify folder
-.netlify
+.netlify/
+__pycache__/
