@@ -1,10 +1,8 @@
-[% macro cv_item(record) -%]
-[% if record.current %]
-\cvitemx{ [[ record.title ]] -- [[ record.location ]] -- [[ record.country ]]}{ [[record.position]] -- [[record['start-on'] ]] -- Today}
+[% macro cv_item(record) %]
+[%- if record.current %]
+\cvitemx{[[ record.title ]] -- [[ record.location ]] -- [[ record.country ]]}{[[record.position]] -- [[record['start-on'] ]] -- Today}
 [% else %]
-\cvitemx{ [[ record.title ]] -- [[ record.location ]] -- [[ record.country ]]}{ [[record.position]] -- [[record['start-on'] ]] -- [[ record['stop-on'] ]]}
-[% endif %]
-{
-[[ record.content ]]
-}
-[%- endmacro %]
+\cvitemx{[[ record.title ]] -- [[ record.location ]] -- [[ record.country ]]}{[[record.position]] -- [[record['start-on'] ]] -- [[ record['stop-on'] ]]}
+[% endif -%]
+{[[- record.content | wordwrap -]]}
+[% endmacro %]

@@ -1,3 +1,4 @@
+---
 newContentEditor: /usr/bin/nvim
 theme: original-ghostwriter
 title: Blog
@@ -11,7 +12,7 @@ Author:
   phone: +32 474 76 80 72
 Company:
   email: stephane.wirtel@mgx.io
-  site: https://mgx.io
+  site: https://mgx.io/
 Params:
   dateFormat: Mon, Jan 2, 2006
   description: About programming, karate, contributions and stuff I enjoy.

@@ -19,7 +19,7 @@
 %   maincolor=cvgreen,
 %   sectioncolor=red,
 %   subsectioncolor=orange
-%   sidebarwidth=0.4\paperwidth,
+  sidebarwidth=0.4\paperwidth,
 %   topbottommargin=0.03\paperheight,
 %   leftrightmargin=20pt
 ]{fortysecondscv}
@@ -67,9 +67,9 @@
 %                            PERSONAL INFORMATION
 %-------------------------------------------------------------------------------
 % profile picture
-\cvprofilepic{pics/profile.jpg}
+\cvprofilepic{pics/matrixise.jpg}
 % your name
-\cvname{ [[config.Author.name ]] }
+\cvname{[[config.Author.name ]]}
 % job title/career
 \cvjobtitle{Python Expert Senior}
 % date of birth
@@ -84,7 +84,7 @@
 \cvsitepro{[[config.Company.site]]}
 \cvtwitter{[[config.Params.twitter]]}
 % email address
-\cvmail{[[config.Author.email]]}
+\cvmail{[[config.Company.email]]}
 % pgp key
 %\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
 % add additional information
@@ -134,7 +134,7 @@
 			\skill[1.8em]{\faServer}{Python packaging}
             \skill[1.8em]{\faServer}{...long list...}
 		\pointskill{\faCodeFork}{DevOps}{4}
-			\skill[1.8em]{\faServer}{Github, GitLab, GitLab-CI, Travis}
+			\skill[1.8em]{\faServer}{Github, GitLab, GitLab-CI, Travis-CI, Github Actions}
             \skill[1.8em]{\faServer}{Docker, Nomad, Traefik}
             \skill[1.8em]{\faServer}{Ansible}
 }
@@ -170,7 +170,7 @@
         \skill{}{Association Francophone de Python}
     \profilesection{Interests}
         \skill{}{Programming / Oenology / Nature}
-        \skill{}{Martial Arts -- Karate Shotokan JKA -- 1st Kuy}
+        \skill{}{Martial Arts -- Karate Shotokan JKA Shodan}
 	\graphicspath{{pics/flags/}}
 	\profilesection{Languages}
     \pointskill{\flag{france.png}}{French}{5}
@@ -246,95 +246,16 @@
 [% import "cv-item.tex" as cv_item %]
 \cvsection{Current Positions}
 \begin{cvtable}
-    [% for position in position_loader.get_current_positions() %]
-        [[ cv_item.cv_item(position) ]]
-    [% endfor %]
+[%- for position in position_loader.get_current_positions() -%]
+[[- cv_item.cv_item(position) -]]
+[%- endfor -%]
 \end{cvtable}
 
 \cvsection{Past Positions}
 \begin{cvtable}
-    [% for position in position_loader.get_other_positions() %]
-    [[ cv_item.cv_item(position) ]]
-    [% endfor %]
-
-    \cvitemx{Entso-e.eu -- Brussels -- Belgium}{Python Expert -- 2019-Q3 -- 2020-Q4}
-    {ENTSO-E and all Transmission System Operators need to operate in a clear and safe legal and regulatory framework. 
-     Architecture Design: MicroServices, Distributed, Containers
-     Language: Python 3, Golang, Javascript
-     Pattern: Asynchronous Programming
-     Libraries: Starlette, FastAPI, Faust, Avro, Drools, VueJS
-     Documentation, OpenAPI, Sphinx
-     Components: Kong, Keycloak, Kafka, KSQL, Minio, Elassandra (Cassandra + ElasticSearch), Drools, MJML, Prometheus, Kibana, Fluentd
-     Containers Management: Kubernetes, Istio
-     Cloud Provider: OVH Cloud
-     Automation: Terraform, Ansible, GitLab CI-CD, Kubernetes
-    }
-    \cvitemx{OncoDNA S.A. -- Gosselies -- Belgium}{Python Expert -- 2018-Q3 -- 2019-Q2}
-    {OncoKDM is a DNA sequencing interpretation platform for biologists and
-    oncologists.
-    
-    Mission in several steps. 1. Audit the code and the quality of the platform.
-    2. Improve the workflow with the best practices (linter, static analyzer,
-    packaging) 3. Refactoring of the platform with a new platform. 4. Help for
-    the migration from the former platform to the new one.
-    
-    Creation of a framework for the migration from the former platform (PHP) to
-    the new platform (Django).
-
-    Technologies: Django, Django REST Framework, Docker, Gitlab, Gitlab-CI,
-    Traefik, VueJS, AngularJS, Refactoring, Cleanup, Docker-compose, DevPI.
-    }
-    \cvitemx{Université Catholique de Louvain --- 2017 -- 2018-Q3}{Python/Django Developer}{
-        Python and Django Coach, Best Practices, Integration with Travis-CI, Custom
-        developments. Integration of Reddot into a custom CMS, Improvements of
-        the performance. Add Functional Tests with Selenium. Use BDD (Behave).
-        Django, Django Rest Framework, RabbitMQ, PostgreSQL
-    }
-    \cvitemx{Haulogy, Nivelles, Belgium -- 2017 -- 2018-Q3}{Odoo Expert}{
-        Best Practices Python and Odoo -- Gitlab CI -- Creation of a framework
-        for the portage of the addons of OpenERP 7.0 to Odoo 8.0 via AST and
-        Python. Docker, Python, Odoo, PostgreSQL 
-    }
-    \cvitemx{Makina Corpus, Toulouse, France -- 2018-09}{Python Trainer}{
-        Advanced Python Training
-    }
-    \cvitemx{BNP Paribas, Brussels, Belgium -- 2018-06}{Python Trainer}{
-        Python Training
-    }
-    \cvitemx{Mirounga, France -- 2016}{Python Expert}{
-        PoC for an ERP -- Python 3.5, aiohttp, sqlalchemy, aiopg
-    }
-    \cvitemx{RodeoFX, Montreal -- 2016-Q2-Q3}{Python Coach}{
-        Audit Code, Python Training, Advanced Python Concepts, Best Practices,
-        Refactoring, UnitTest, Mocking, Portability, Jenkins CI Server,
-        Deployment
-    }
-    \cvitemx{BPSO -- 2016}{Python Expert}{
-        Broker based on Redis and Python, Dashboard and Web Interface for the
-        jobs and workers.
-    }
-    \cvitemx{Spada -- 2016}{Python Trainer}{}
-    \cvitemx{Saluc S.A. -- 2016}{Python Trainer}{}
-    \cvitemx{Real Solutions -- 2015 -- 2016}{Odoo Expert}{Development Odoo Addons --  Best
-    Practices -- Integration with the Activiti project. Development of Python
-    packages}
-    
-    \cvitemx{Conceptive -- 2015}{Python Expert}{
-        Best Practices -- Add RPC Web Services for an existing platform
-    }
-    \cvitemx{Voice Agency S.A. -- 2015}{Django Consultant}{}
-    \cvitemx{Devoteam -- 2014}{Python Trainer}{}
-    \cvitemx{Eezee-IT -- 2014}{Odoo Expert}{Deployment and Customisation of Runbot for the support of BitBucket}
-    \cvitemx{Odoo S.A. -- 2008 -- 2014}{Software Engineer}{
-        Core Developer -- SaaS Engineer -- Technical Project Manager --
-        Technical Trainer -- Release Manager -- Support Manager
-    }
-    \cvitemx{Descasoft S.A. -- 2004 -- 2008}{Software Engineer}{
-        HealthWeb is a Health plaform for the patients and the practitioners. 
-        Develop a Continuous Integration Server in Ruby, Add Unit Test to the
-        main component (C++), Binding to Java and Delphi with Swig and a
-        handmade generator. Unit tested with JRuby via the Java binding.
-    }
+[% for position in position_loader.get_other_positions() %]
+[[ cv_item.cv_item(position) ]]
+[% endfor %]
 \end{cvtable}
 
 $% \cvsection{Current Occupation}
@@ -395,6 +316,7 @@ $% \end{cvtable}
 % \end{cvtable}
 
 \newpage
+
 \makebacksidebar
 
 \cvsection{Talks}
@@ -437,7 +359,11 @@ $% \end{cvtable}
 % 		performing and quantifying experimental data and interpreting the results. }
 % \end{cvtable}
 %\subsection{Year in industry}
-\section{Python}
+\newpage
+\begin{sidebar}
+    \nameandjob
+\end{sidebar}
+\cvsection{Python}
 \begin{cvtable}
     \cvitemx{Python Ireland}{Co-Director}{Promote Python in Ireland}
     \cvitemx{EuroPython Society -- 2019}{Board Member}{Promoted as Board Member of EuroPython Society -- Co-Organizer of EuroPython 2020}

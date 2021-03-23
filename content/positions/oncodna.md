@@ -3,7 +3,7 @@ title: OncoDNA S.A.
 location: Gosselies
 country: Belgium
 start-on: 2018/11
-# stop-on: 2019/07
+stop-on: 2019/07
 position: Python Expert
 ---
 
