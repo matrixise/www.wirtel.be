@@ -403,7 +403,7 @@
 
 \newcommand{\cvsignature}{
 	\vfill
-	{\large\bfseries\color{maincolor!70}\today \hfill \cvname \hfill \cvjobtitle}
+	{\bfseries\color{maincolor!70}\today \hfill \cvname \hfill \cvjobtitle}
 }
 
 
