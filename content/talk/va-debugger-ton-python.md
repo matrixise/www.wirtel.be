@@ -1,6 +1,6 @@
 ---
 title: "Va debugger ton Python"
-date: "2017-09-23T00:00:00"
+date: 2017-09-23
 tags: ["cpython", "gdb", "pdb"]
 conferences: [
     "PyCon France 2017"

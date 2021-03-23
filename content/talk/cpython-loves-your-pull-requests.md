@@ -1,6 +1,6 @@
 ---
 title: "CPython loves your Pull Requests"
-date: 2017-11-19T14:09:00+01:00
+date: 2017-11-19
 tags: ["cpython", "git", "github", "statistics", "contributions", "automation"]
 conferences:
     - PyCon Canada 2017

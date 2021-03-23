@@ -1,6 +1,6 @@
 ---
 title: "Architecture of CPython - Part 1"
-date: "2016-11-13T00:00:00"
+date: 2016-11-13
 conferences:
     - "PyCon Ireland 2016"
     - "PyCon Canada 2016"

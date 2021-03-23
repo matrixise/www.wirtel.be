@@ -104,7 +104,6 @@
         \circleicon{\faGlobe} & \cvsite \\
         \circleicon{\faGlobe} & \cvsitepro \\
 		\circleicon{\faPhone}    & \cvphone \\
-		\circleicon{\faBirthdayCake}     & \cvbirthday \\
 		\circleicon{\faEnvelope} & \cvaddress \\\
  		% add another line
 % 		\circleicon{\faQuestion} & \additional
@@ -157,7 +156,7 @@
 		\pointskill{\faConnectdevelop}{Web API}{4}
 		    \skill[1.5em]{\faServer}{Django REST Framework}
             \skill[1.5em]{\faServer}{Flask, WerkZeug, Golang}
-		    \skill[1.5em]{\faServer}{asyncio/aiohttp/starlette/fastapi}
+		    \skill[1.5em]{\faServer}{aiohttp/starlette/fastapi}
 		    \skill[1.5em]{\faServer}{REST, GraphQL, XML-RPC}
 		\pointskill{\faTv}{Web development}{3}
 			\skill[1.8em]{\faServer}{Django, Flask}
@@ -166,6 +165,7 @@
 			\skill[1.8em]{\faUsers}{Presenting to conferences}
     \profilesection{Memberships}
         \skill{}{Python Software Foundation}
+        \skill{}{Python Ireland}
         \skill{}{EuroPython Society}
         \skill{}{Association Francophone de Python}
 }
@@ -234,7 +234,7 @@
 \makefrontsidebar
 
 [% import "cv-item.tex" as cv_item %]
-\cvsection{Current Positions}
+\cvsection{Current Position}
 \begin{cvtable}
 [%- for position in position_loader.get_current_positions() -%]
 [[- cv_item.cv_item(position) -]]
@@ -305,23 +305,16 @@ $% \end{cvtable}
 % 		}
 % \end{cvtable}
 
+\cvsection{Talks}
+\begin{itemize}
+[% for talk in talk_loader.talks %]
+\item{[[talk['title']]]}{}{ }
+[% endfor %]
+\end{itemize}
+
 \newpage
 
 \makebacksidebar
-
-\cvsection{Talks}
-\begin{itemize}
-    \item{What's new in Python 3.8?}{}{ }
-    \item{What's new in Python 3.7?}{}{ }
-    \item{CPython loves your Pull Requests}{}{ }
-    \item{Va debugger ton Python}{}{ }
-    \item{Django, from a nightmare to a dream with Best Practices}{}{ }
-    \item{Architecture of CPython, the bricks!}{}{ }
-    \item{CPython -- Bytecode and Virtual Machine}{}{ }
-    \item{Exploring our Python Interpreter}{}{ }
-    \item{Python and PostgreSQL, a Wonderful wedding}{}{ }
-    \item{Evy, Distributed Integration Server}{}{ }
-\end{itemize}
 
 \cvsection{Conferences}
 \begin{cvtable}
@@ -349,21 +342,21 @@ $% \end{cvtable}
 % 		performing and quantifying experimental data and interpreting the results. }
 % \end{cvtable}
 %\subsection{Year in industry}
-\newpage
-\begin{sidebar}
-    \nameandjob
-    \profilesection{Interests}
-        \skill{}{Programming / Oenology / Nature}
-    \profilesection{Sports}
-        \skill{}{Running, Walking, Cycling}
-        \skill{}{Karate Shotokan JKA Shodan}
-	\graphicspath{{pics/flags/}}
-	\profilesection{Languages}
-    \pointskill{\flag{france.png}}{French}{5}
-    \pointskill{\flag{english.jpg}}{English}{3}
-	\pointskill{\flag{italian.png}}{Italian}{2}
-	\pointskill{\flag{dutch.jpg}}{Dutch}{1}
-\end{sidebar}
+
+%%% \begin{sidebar}
+%%%     \nameandjob
+%%%     \profilesection{Interests}
+%%%         \skill{}{Programming / Oenology / Nature}
+%%%     \profilesection{Sports}
+%%%         \skill{}{Running, Walking, Cycling}
+%%%         \skill{}{Karate Shotokan JKA Shodan}
+%%% 	\graphicspath{{pics/flags/}}
+%%% 	\profilesection{Languages}
+%%%     \pointskill{\flag{france.png}}{French}{5}
+%%%     \pointskill{\flag{english.jpg}}{English}{3}
+%%% 	\pointskill{\flag{italian.png}}{Italian}{2}
+%%% 	\pointskill{\flag{dutch.jpg}}{Dutch}{1}
+%%% \end{sidebar}
 \cvsection{Python}
 \begin{cvtable}
     \cvitemx{Python Ireland}{Co-Director}{Promote Python in Ireland}

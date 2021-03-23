@@ -5,6 +5,7 @@ country: Belgium
 start-on: 2018/11
 stop-on: 2019/07
 position: Python Expert
+ignore: true
 ---
 
 OncoKDM is a DNA sequencing interpretation platform for biologists and oncologists.

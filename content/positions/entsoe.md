@@ -5,6 +5,7 @@ country: Belgium
 start-on: "2019/09"
 stop-on: "2020/12"
 position: Python Expert 
+ignore: true
 ---
 
 ENTSOE-E and all Transmission System Operators need to operatre in a clear and safe legard and regulatory framework.
