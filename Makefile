@@ -6,7 +6,10 @@ DOCKER_IMAGE=jojomi/hugo:0.65
 -include .env
 
 install_dependencies:
-	pip install -r requirements.txt
+	pip install -r scripts/requirements.txt
+
+update_dependencies:
+	pip freeze | sort > scripts/requirements.txt
 
 update-submodules:
 	git submodule update --init --recursive
