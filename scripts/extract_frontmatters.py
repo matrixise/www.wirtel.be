@@ -27,17 +27,29 @@ class PositionLoader:
             position = frontmatter.load(position_file)
             if position.get('ignore'):
                 continue
-            position['start-on'] = pendulum.from_format(position['start-on'], 'YYYY/MM').date()
-            try:
-                position['stop-on'] = pendulum.from_format(position['stop-on'], 'YYYY/MM').date()
-                position['current'] = False
-            except KeyError:
-                position['stop-on'] = pendulum.today().end_of('month').date()
-                position['current'] = True
+            position = self.format_position(position)
             positions.append(position)
 
         positions.sort(key=lambda position: position['stop-on'], reverse=True)
         self.positions = positions
+
+    def format_position(self, position):
+        position['start-on'] = pendulum.from_format(position['start-on'], 'YYYY/MM').date()
+        try:
+            position['stop-on'] = pendulum.from_format(position['stop-on'], 'YYYY/MM').date()
+            position['current'] = False
+        except KeyError:
+            position['stop-on'] = pendulum.today().end_of('month').date()
+            position['current'] = True
+
+        import markdown
+        import mdx_latex
+        md = markdown.Markdown()
+        latex_mdx = mdx_latex.LaTeXExtension()
+        latex_mdx.extendMarkdown(md, markdown.__init__)
+        out = md.convert(position.content)
+        position.content = out.replace('<root>', '').replace('</root>', '').strip()
+        return position
 
 class TalkLoader:
     def __init__(self, directory: pathlib.Path):
