@@ -8,7 +8,7 @@ import argparse
 
 import frontmatter
 import pendulum
-from extract_frontmatters import PositionLoader, TalkLoader
+from extract_frontmatters import PositionLoader, TalkLoader, Conferences
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -29,14 +29,20 @@ def main():
     talk_loader = TalkLoader('content/talk')
     talk_loader.load()
 
+    conferences = Conferences.load('data/conferences.yml')
+    print(conferences)
+
     env = Environment(
         variable_start_string='[[', variable_end_string=']]',
         block_start_string='[%', block_end_string='%]',
         loader=FileSystemLoader(template.parent),
         autoescape=False
     )
-    env.globals.update(position_loader=position_loader)
-    env.globals.update(talk_loader=talk_loader)
+    env.globals.update(
+        position_loader=position_loader,
+        talk_loader=talk_loader,
+        conferences=conferences
+    )
 
     template = env.get_template(template.name)
     with pathlib.Path('config.yaml').open() as fp:

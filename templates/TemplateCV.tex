@@ -139,6 +139,11 @@
 %                              SIDEBAR 2nd PAGE
 %-------------------------------------------------------------------------------
 \addtobacksidebar{
+    % \profilesection{Memberships}
+	% \begin{memberships}
+	% 	\membership{pics/profile.jpg}{EuroPython}
+	% 	\membership{pics/profile.jpg}{Core Dev Python}
+	% \end{memberships}
 	\profilesection{Skills}
 		\pointskill{\faCodeFork}{DevOps}{4}
 			\skill[1.8em]{\faServer}{Github, GitLab, GitLab-CI, Travis-CI, Github Actions}
@@ -216,12 +221,6 @@
 %	\barskill{\faImage}{Playing Chess}{30}
 %	\barskill{\faMusic}{Playing the bamboo flute}{50}
 %
-%	\profilesection{Memberships}
-%	\begin{memberships}
-%		\membership{pics/logo.png}{PandaScience.net}
-%		\membership{pics/logo.png}{Here's some longer text spanning over more than
-%			only one line}
-%	\end{memberships}
 
 %}
 
@@ -257,38 +256,30 @@
 
 \cvsection{Conferences}
 \begin{cvtable}
-    \cvitemx{EuroPython 2015, 2016, 2017, 2018, 2020, 2021}{} {Speaker, Co-Organiser, Volunteer}
-    \cvitemx{PyCon Canada 2014, 2015, 2016, 2017}{} {Speaker}
-    \cvitemx{PyCon France 2010, 2012, 2013, 2014, 2015, 2017, 2018}{} {Volunteer, Speaker}
-    \cvitemx{PyCon Germany 2018, 2019}{} {Speaker}
-    \cvitemx{PyCon Ireland 2014, 2015, 2016, 2017, 2018, 2019}{} {Speaker}
-    \cvitemx{PyCon Italy 2018}{} {Speaker}
-    \cvitemx{PyCon Slovakia 2018}{} {Speaker, Keynoter}
-    \cvitemx{PyCon UK 2014, 2015, 2016, 2018}{} {Speaker}
-    \cvitemx{PyCon US 2014, 2015, 2016, 2017, 2018, 2019}{} {Volunteer, Helper for Tutorials, Language Summit}
-    \cvitemx{PyCon Ukraine 2018}{}{Keynoter}
-    \cvitemx{PythonFOSDEM 2013, 2014, 2015, 2016, 2017}{} {Co-Organiser, Speaker}
+[% for conf in conferences.Conferences %]
+\cvitemx{[[ conf.title ]]}{} {[[conf.formatted_positions]]}
+[% endfor %]
 \end{cvtable}
 
 \newpage
 
 \makebacksidebar
 
+% \begin{sidebar}
+%     \nameandjob
+%     \profilesection{Interests}
+%         \skill{}{Programming / Oenology / Nature}
+%     \profilesection{Sports}
+%         \skill{}{Running, Walking, Cycling}
+%         \skill{}{Karate Shotokan JKA Shodan}
+% 	\graphicspath{{pics/flags/}}
+% 	\profilesection{Languages}
+%     \pointskill{\flag{france.png}}{French}{5}
+%     \pointskill{\flag{english.jpg}}{English}{3}
+% 	\pointskill{\flag{italian.png}}{Italian}{2}
+% 	\pointskill{\flag{dutch.jpg}}{Dutch}{1}
+% \end{sidebar}
 
-%%% \begin{sidebar}
-%%%     \nameandjob
-%%%     \profilesection{Interests}
-%%%         \skill{}{Programming / Oenology / Nature}
-%%%     \profilesection{Sports}
-%%%         \skill{}{Running, Walking, Cycling}
-%%%         \skill{}{Karate Shotokan JKA Shodan}
-%%% 	\graphicspath{{pics/flags/}}
-%%% 	\profilesection{Languages}
-%%%     \pointskill{\flag{france.png}}{French}{5}
-%%%     \pointskill{\flag{english.jpg}}{English}{3}
-%%% 	\pointskill{\flag{italian.png}}{Italian}{2}
-%%% 	\pointskill{\flag{dutch.jpg}}{Dutch}{1}
-%%% \end{sidebar}
 \cvsection{Python Contribs}
 \begin{cvtable}
     \cvitemx{Python Ireland}{Co-Director}{Promote Python in Ireland}
