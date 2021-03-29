@@ -1,6 +1,8 @@
 import frontmatter
 import pendulum
 import pathlib
+from pydantic_yaml import YamlModel
+from typing import List
 
 class PositionLoader:
     def __init__(self, directory: pathlib.Path):
@@ -54,6 +56,36 @@ class TalkLoader:
         talks.sort(key=lambda obj: obj['date'], reverse=True)
         self.talks = talks
 
+
+class ConferenceModel(YamlModel):
+    years: List[int] = []
+    positions: List[str] = []
+    name: str
+
+    @property
+    def formatted_positions(self):
+        return ', '.join(sorted(self.positions))
+
+    @property
+    def formatted_years(self):
+        return ', '.join(map(str, sorted(self.years)))
+
+    @property
+    def title(self):
+        if self.years:
+            return f'{self.name} - {self.formatted_years}'
+        return self.name
+
+
+
+class Conferences(YamlModel):
+    Conferences: List[ConferenceModel] = []
+
+    @classmethod
+    def load(cls, conference_file):
+        with pathlib.Path(conference_file).open() as fp:
+            return Conferences.parse_raw(fp, proto='yaml')
+
 def main():
     # loader = PositionLoader(pathlib.Path('content/positions'))
     # loader.load()
@@ -62,11 +94,13 @@ def main():
 
     # print(loader.get_current_positions())
 
-    loader = TalkLoader(pathlib.Path('content/talk'))
-    loader.load()
+    # loader = TalkLoader(pathlib.Path('content/talk'))
+    # loader.load()
 
-    for talk in loader.talks:
-        print(talk['title'], talk['date'], type(talk['date']))
+    # for talk in loader.talks:
+    #     print(talk['title'], talk['date'], type(talk['date']))
+    conferences = Conferences.load('data/conferences.yml')
+    print(conferences)
 
 if __name__ == '__main__':
     main()
