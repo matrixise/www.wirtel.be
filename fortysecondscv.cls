@@ -195,6 +195,7 @@
 \newcommand*{\cvphone}[1]{\renewcommand{\cvphone}{#1}}
 \newcommand*{\cvtwitter}[1]{\renewcommand{\cvtwitter}{#1}}
 \newcommand*{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
+\newcommand*{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{\href{https://linkedin.com/in/#1}{#1}}}
 \newcommand*{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand*{\cvsitepro}[1]{\renewcommand{\cvsitepro}{#1}}
 \newcommand*{\cvmail}[1]{\renewcommand{\cvmail}{\href{mailto:#1}{#1}}}
