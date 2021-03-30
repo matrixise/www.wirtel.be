@@ -260,16 +260,16 @@
 [% endfor %]
 \end{cvtable}
 
+\newpage
+
+\makebacksidebar
+
 \cvsection{Conferences}
 \begin{cvtable}
 [% for conf in conferences.Conferences %]
 \cvitemx{[[ conf.title ]]}{} {[[conf.formatted_positions]]}
 [% endfor %]
 \end{cvtable}
-
-\newpage
-
-\makebacksidebar
 
 \cvsection{Python Contribs}
 \begin{cvtable}
