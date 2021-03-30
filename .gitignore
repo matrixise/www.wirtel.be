@@ -6,3 +6,4 @@ venv
 # Local Netlify folder
 .netlify/
 __pycache__/
+.DS_Store
