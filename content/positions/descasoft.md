@@ -4,10 +4,17 @@ location: Charleroi
 country: Belgium
 start-on: "2004/10"
 stop-on: "2008/04"
-position: Junior Software Engineer 
+position: Junior Software Engineer
 ---
 
-HealthWeb is a Health plaform for the patients and the practitioners. 
-Develop a Continuous Integration Server in Ruby, Add Unit Test to the
-main component (C++), Binding to Java and Delphi with Swig and a
-handmade generator. Unit tested with JRuby via the Java binding.
+HealthWeb is a Health plaform for the patients and the practitioners.
+
+* Languages: C++, Delphi, Java, Python, Ruby, HTML, JS
+* Backend: Borland C++
+* Operating Systems: Microsoft Windows 2000 Server, Linux
+* Database: Oracle and Microsoft SQL Server
+* Web Frontend: Delphi with Microsoft IIS
+* GUI Frontend: Delphi
+* Print server: iText2, Tomcat
+* Bug Tracker: Trac
+* Unit Testing: JRuby + SWIG and handmade generato
