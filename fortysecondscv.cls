@@ -217,19 +217,20 @@
 		\begin{tikzpicture}[x=0.8\sidebartextwidth, y=0.8\sidebartextwidth]
 			\begin{scope}
 			\path[clip]
-				(0, 0) [sharp corners] --
-				(0, 1) [rounded corners=0.15\sidebartextwidth] --
-				(1, 1) [sharp corners] --
-				(1, 0) [rounded corners=0.15\sidebartextwidth] -- cycle;
+				(0, 0) [rounded corners=0.25\sidebartextwidth] --
+				(0, 1) [rounded corners=0.25\sidebartextwidth] --
+				(1, 1) [rounded corners=0.25\sidebartextwidth] --
+				(1, 0) [rounded corners=0.25\sidebartextwidth] -- cycle;
 			\node[anchor=south west, inner sep=0pt] (profilepic) at (0, 0)
 				{\includegraphics[width=0.8\sidebartextwidth]{\cvprofilepic}};
 			\end{scope}
 			\begin{scope}
 			\draw	[line width=0.02\sidebartextwidth, color=iconcolor]
-				(0, 0) [sharp corners] --
-				(0, 1) [rounded corners=0.15\sidebartextwidth] --
-				(1, 1) [sharp corners] --
-				(1, 0) [rounded corners=0.15\sidebartextwidth] -- cycle;
+				% (0, 0) [sharp corners] --
+				(0, 0) [rounded corners=0.25\sidebartextwidth] --
+				(0, 1) [rounded corners=0.25\sidebartextwidth] --
+				(1, 1) [rounded corners=0.25\sidebartextwidth] --
+				(1, 0) [rounded corners=0.25\sidebartextwidth] -- cycle;
 			\end{scope}
 		\end{tikzpicture}
 	\end{figure}
