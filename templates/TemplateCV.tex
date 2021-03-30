@@ -121,7 +121,14 @@
         Python enthusiast, Python Core Developer, Best Practices Automation and
         Distributed Systems are my favourite topics. Founder of Mgx.io SRL.
         Former Core Developer of Odoo}
-    \graphicspath{{pics/flags/}}
+	\graphicspath{{pics/flags/}}
+	\profilesection{Languages}
+    \pointskill{\flag{france.png}}{French}{5}
+    \pointskill{\flag{english.jpg}}{English}{3}
+	\pointskill{\flag{italian.png}}{Italian}{2}
+	\pointskill{\flag{dutch.jpg}}{Dutch}{1}
+
+\graphicspath{{pics/flags/}}
 	\profilesection{Prog. Languages}
 	\pointskill{\flag{python.png}}{Python}{5}
 	\pointskill{\flag{go.png}}{Go}{3}
@@ -131,9 +138,6 @@
 	\profilesection{Skills}
         \pointskill{\flag{python.png}}{Python}{5}
 			\skill[1.8em]{\faLeaf}{Core Developer}
-            \skill[1.8em]{\faLeaf}{CPython Extensions}
-			\skill[1.8em]{\faServer}{Python packaging}
-            \skill[1.8em]{\faServer}{...long list...}
 }
 
 
@@ -156,25 +160,32 @@
 			\skill[1.8em]{\faCodeFork}{Unit testing, BDD}
 			\skill[1.8em]{\faCodeFork}{Documentation with sphinx}
  			\skill[1.8em]{\faDatabase}{PostgreSQL, SQLite3}
- 			\skill[1.8em]{\faDatabase}{Redis, RabbitMQ}
+            \skill[1.8em]{\faDatabase}{Redis, RabbitMQ, Kafka}
  			\skill[1.8em]{\faDatabase}{Unix environments}
  		    \skill[1.8em]{\faServer}{Best Practices}
 	\profilesection{More Skills}
 		\pointskill{\faConnectdevelop}{Web API}{4}
-		    \skill[1.5em]{\faServer}{Django REST Framework}
-            \skill[1.5em]{\faServer}{Flask, WerkZeug, Golang}
+		    \skill[1.5em]{\faServer}{Django REST Framework, Flask}
 		    \skill[1.5em]{\faServer}{aiohttp/starlette/fastapi}
 		    \skill[1.5em]{\faServer}{REST, GraphQL, XML-RPC}
-		\pointskill{\faTv}{Web development}{3}
+		\pointskill{\faTv}{Web development}{4}
 			\skill[1.8em]{\faServer}{Django, Flask}
 			\skill[1.8em]{\faTv}{VueJS, Javascript}
 		\pointskill{\faMicrophone}{Communication}{5}
 			\skill[1.8em]{\faUsers}{Presenting to conferences}
+
     \profilesection{Memberships}
         \skill{}{Python Software Foundation}
         \skill{}{Python Ireland}
         \skill{}{EuroPython Society}
         \skill{}{Association Francophone de Python}
+
+    \profilesection{Interests}
+        \skill{}{Programming / Oenology / Nature}
+
+    \profilesection{Sports}
+        \skill{}{Running, Walking, Cycling}
+        \skill{}{Karate Shotokan JKA Shodan}
 }
 
 
@@ -249,13 +260,6 @@
 [% endfor %]
 \end{cvtable}
 
-\cvsection{Talks}
-\begin{itemize}
-[% for talk in talk_loader.talks %]
-\item{[[talk['title']]]}{}{ }
-[% endfor %]
-\end{itemize}
-
 \cvsection{Conferences}
 \begin{cvtable}
 [% for conf in conferences.Conferences %]
@@ -266,21 +270,6 @@
 \newpage
 
 \makebacksidebar
-
-% \begin{sidebar}
-%     \nameandjob
-%     \profilesection{Interests}
-%         \skill{}{Programming / Oenology / Nature}
-%     \profilesection{Sports}
-%         \skill{}{Running, Walking, Cycling}
-%         \skill{}{Karate Shotokan JKA Shodan}
-% 	\graphicspath{{pics/flags/}}
-% 	\profilesection{Languages}
-%     \pointskill{\flag{france.png}}{French}{5}
-%     \pointskill{\flag{english.jpg}}{English}{3}
-% 	\pointskill{\flag{italian.png}}{Italian}{2}
-% 	\pointskill{\flag{dutch.jpg}}{Dutch}{1}
-% \end{sidebar}
 
 \cvsection{Python Contribs}
 \begin{cvtable}
