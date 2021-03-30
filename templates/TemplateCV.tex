@@ -79,10 +79,10 @@
 % phone number
 \cvphone{[[ config.Author.phone ]]}
 % personal website
-\cvgithub{[[config.Params.github]]}
-\cvsite{[[config.baseurl]]}
-\cvsitepro{[[config.Company.site]]}
-\cvtwitter{[[config.Params.twitter]]}
+\cvgithub{[[ config.Params.github | replace('https://', '') ]]}
+\cvsite{[[ config.baseurl | replace('https://', '') ]]}
+\cvsitepro{[[ config.Company.site | replace('https://', '') ]]}
+\cvtwitter{[[ config.Params.twitter | replace('https://', '') ]]}
 % email address
 \cvmail{[[config.Company.email]]}
 \cvlinkedin{stephanewirtel}
