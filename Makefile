@@ -5,6 +5,11 @@ DOCKER_IMAGE=jojomi/hugo:0.65
 
 -include .env
 
+all: update_profile_pic build
+
+update_profile_pic:
+	wget https://github.com/matrixise.png -O pics/profile.png
+
 install_dependencies:
 	pip install -r scripts/requirements.txt
 
