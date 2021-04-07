@@ -16,7 +16,7 @@ Company:
   site: https://mgx.io/
 Params:
   dateFormat: Mon, Jan 2, 2006
-  description: About programming, karate, contributions and stuff I enjoy.
+  description: About programming, karate, contributions and stuff I enjoy...
   intro: true
   headline: 今日は
   opengraph: true
