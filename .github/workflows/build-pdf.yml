@@ -31,7 +31,12 @@ jobs:
         with:
           root_file: StephaneWirtel.tex
 
-      - name: Deploy the file
+      - name: Setup Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      
+      - name: Install dependencies
         if: >
           (
             github.repository == 'matrixise/www.wirtel.be' &&
