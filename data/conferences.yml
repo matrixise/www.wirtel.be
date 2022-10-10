@@ -1,11 +1,16 @@
 ---
 Conferences:
   - name: EuroPython
-    years: [2015, 2016, 2017, 2018, 2020, 2021]
+    years: [2015, 2016, 2017, 2018, 2020]
     positions:
       - Speaker
       - Co-Organiser
       - Volunteer
+  - name: PyCon Ireland
+    years: [2014, 2015, 2016, 2017, 2018, 2019, 2022]
+    positions: 
+      - Speaker
+      - Co-Organiser
   - name: PyCon Canada
     years: [2014, 2015, 2016, 2017]
     positions: 
@@ -17,10 +22,6 @@ Conferences:
       - Speaker
   - name: PyCon Germany
     years: [2018, 2019]
-    positions: 
-      - Speaker
-  - name: PyCon Ireland
-    years: [2014, 2015, 2016, 2017, 2018, 2019]
     positions: 
       - Speaker
   - name: PyCon Italy
