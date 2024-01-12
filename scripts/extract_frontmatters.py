@@ -42,7 +42,7 @@ class PositionLoader:
             position['stop-on'] = pendulum.from_format(position['stop-on'], 'YYYY/MM').date()
             position['current'] = False
         except KeyError:
-            position['stop-on'] = pendulum.today().end_of('month').date()
+            position['stop-on'] = pendulum.today('Europe/Brussels').end_of('month').date()
             position['current'] = True
 
         md = markdown.Markdown()
