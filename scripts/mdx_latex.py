@@ -1,4 +1,3 @@
-#!/usr/bin/env python2
 # do some fancy importing stuff to allow use to override things in this module
 # in this file while still importing * for use in our own classes
 import re
@@ -13,29 +12,29 @@ import tempfile
 import urllib.request, urllib.parse, urllib.error
 
 
-start_single_quote_re = re.compile("(^|\s|\")'")
-start_double_quote_re = re.compile("(^|\s|'|`)\"")
-end_double_quote_re = re.compile("\"(,|\.|\s|$)")
+start_single_quote_re = re.compile(r"(^|\s|\")'")
+start_double_quote_re = re.compile(r"(^|\s|'|`)\"")
+end_double_quote_re = re.compile(r"\"(,|\.|\s|$)")
 
 def inline_html_latex(text):
     out = text
     # most of them to support smarty extensions
     if re.search(r'&ldquo;.*?&rdquo;', text , flags=re.DOTALL):
-        out = out.replace('&ldquo;', '\enquote{').replace('&rdquo;', '}')
+        out = out.replace('&ldquo;', r'\enquote{').replace('&rdquo;', '}')
     # replace certain html element with they LaTeX eqivarent
     if re.search(r'&lsquo;.*?&rsquo;', text , flags=re.DOTALL):
-        out = out.replace('&lsquo;', '\enquote{').replace('&rsquo;', '}')
+        out = out.replace('&lsquo;', r'\enquote{').replace('&rsquo;', '}')
     if re.search(r'&ldquo;.*?&ldquo;', text , flags=re.DOTALL):
         # sometimes is processing like this
-        out = out.replace('&ldquo;', '\enquote{', 1).replace('&ldquo;', '}', 1)
+        out = out.replace('&ldquo;', r'\enquote{', 1).replace('&ldquo;', '}', 1)
     if re.search(r'&laquo;.*?&raquo;', text , flags=re.DOTALL):
-        out = out.replace('&laquo;', '\enquote{').replace('&raquo;', '}')
-    out = out.replace("...", "\dots")
-    out = out.replace("&hellip;", "\dots")
+        out = out.replace('&laquo;', r'\enquote{').replace('&raquo;', '}')
+    out = out.replace("...", r"\dots")
+    out = out.replace("&hellip;", r"\dots")
     out = out.replace("&ndash;", "--")
     out = out.replace("&mdash;", "---")    
     # replace '\|' as we should already processed the tables and do not need in LaTeX
-    out = out.replace("\|", '|')
+    out = out.replace(r"\|", '|')
     return out 
         
 
@@ -54,9 +53,9 @@ def escape_latex_entities(text):
     out = out.replace('%', '\\%')
     out = out.replace('&', '\\&')
     out = out.replace('#', '\\#')
-    out = start_single_quote_re.sub('\g<1>`', out)
-    out = start_double_quote_re.sub('\g<1>``', out)
-    out = end_double_quote_re.sub("''\g<1>", out)
+    out = start_single_quote_re.sub(r'\g<1>`', out)
+    out = start_double_quote_re.sub(r'\g<1>``', out)
+    out = end_double_quote_re.sub(r"''\g<1>", out)
     # people should escape these themselves as it conflicts with maths
     # out = out.replace('{', '\\{')
     # out = out.replace('}', '\\}')
@@ -135,7 +134,7 @@ class LaTeXTreeProcessor(markdown.treeprocessors.Treeprocessor):
 
         if ournode.tag == 'h1':
             buffer += '\n\\title{%s}\n' % subcontent
-            buffer += """
+            buffer += r"""
 % ----------------------------------------------------------------
 \maketitle
 % ----------------------------------------------------------------
@@ -147,7 +146,7 @@ class LaTeXTreeProcessor(markdown.treeprocessors.Treeprocessor):
         elif ournode.tag == 'h4':
             buffer += '\n\\subsubsection{%s}\n' % subcontent
         elif ournode.tag == 'hr':
-            buffer += '\\noindent\makebox[\linewidth]{\\rule{\linewidth}{0.4pt}}'
+            buffer += '\\noindent\\makebox[\\linewidth]{\\rule{\\linewidth}{0.4pt}}'
         elif ournode.tag == 'ul':
             # no need for leading \n as one will be provided by li
             buffer += """
@@ -159,7 +158,7 @@ class LaTeXTreeProcessor(markdown.treeprocessors.Treeprocessor):
 \\begin{enumerate}"""            
             if 'start' in ournode.attrib.keys():
                 start = int(ournode.attrib['start'])-1
-                buffer += "\setcounter{enumi}{"+str(start)+"}"
+                buffer += r"\setcounter{enumi}{"+str(start)+"}"
             # no need for leading \n as one will be provided by li
             buffer += """
 %s
@@ -211,10 +210,10 @@ class LaTeXTreeProcessor(markdown.treeprocessors.Treeprocessor):
         elif ournode.tag == 'td':
             buffer += '<td>%s</td>' % subcontent
         elif ournode.tag == 'img':
-            buffer += '<img src=\"%s\" alt=\"%s\" />' % (ournode.get('src'),
+            buffer += '<img src=\"{}\" alt=\"{}\" />'.format(ournode.get('src'),
                       ournode.get('alt'))
         elif ournode.tag == 'a':
-            buffer += '<a href=\"%s\">%s</a>' % (escape_latex_entities(ournode.get('href')),
+            buffer += '<a href=\"{}\">{}</a>'.format(escape_latex_entities(ournode.get('href')),
                       subcontent)
         else:
             buffer = subcontent
@@ -252,10 +251,10 @@ class MathTextPostProcessor(markdown.postprocessors.Postprocessor):
             return '\\(%s\\)' % text
 
         # This $$x=3$$ is block math
-        pat = re.compile('\$\$([^\$]*)\$\$')
+        pat = re.compile(r'\$\$([^\$]*)\$\$')
         out = pat.sub(repl_1, instr)
         # This $x=3$ is inline math
-        pat2 = re.compile('\$([^\$]*)\$')
+        pat2 = re.compile(r'\$([^\$]*)\$')
         out = pat2.sub(repl_2, out)
         # some extras due to asciimathml
         out = out.replace('\\lt', '<')
@@ -322,7 +321,7 @@ class Table2Latex:
             subcontent = '\\textbf{%s}' % subcontent
         if element.hasAttribute('colspan'):
             colspan = int(element.getAttribute('colspan'))
-            buffer += ' \multicolumn{%s}{|c|}{%s}' % (colspan, subcontent)
+            buffer += r' \multicolumn{{{}}}{{|c|}}{{{}}}'.format(colspan, subcontent)
         # we don't support rowspan because:
         #   1. it needs an extra latex package \usepackage{multirow}
         #   2. it requires us to mess around with the alignment tags in
@@ -386,15 +385,15 @@ class Table2Latex:
         colformatting = self.colformat()
         table_latex = \
             """
-            \\begin{table}[h]
-            \\begin{tabular}{%s}
-            %s
+            \\begin{{table}}[h]
+            \\begin{{tabular}}{{{}}}
+            {}
             \\hline
-            \\end{tabular}
+            \\end{{tabular}}
             \\\\[5pt]
-            \\caption{%s}
-            \\end{table}
-            """ % (colformatting, core, caption)
+            \\caption{{{}}}
+            \\end{{table}}
+            """.format(colformatting, core, caption)
         return table_latex
 
 
@@ -422,7 +421,7 @@ class ImageTextPostProcessor(markdown.postprocessors.Postprocessor):
         return '\n\n'.join(new_blocks)
 
 
-class Img2Latex(object):
+class Img2Latex:
     def convert(self, instr):
         dom = xml.dom.minidom.parseString(instr)
         img = dom.documentElement
@@ -443,12 +442,12 @@ class Img2Latex(object):
 	# Using graphicx and ajustbox package for *max width*
         out = \
             """
-            \\begin{figure}[H]
+            \\begin{{figure}}[H]
             \\centering
-            \\includegraphics[max width=\\linewidth]{%s}
-            \\caption{%s}
-            \\end{figure}
-            """ % (src, alt)
+            \\includegraphics[max width=\\linewidth]{{{}}}
+            \\caption{{{}}}
+            \\end{{figure}}
+            """.format(src, alt)
         return out
 
 
@@ -477,7 +476,7 @@ class LinkTextPostProcessor(markdown.postprocessors.Postprocessor):
         return '\n\n'.join(new_blocks)
 
 
-class Link2Latex(object):
+class Link2Latex:
     def convert(self, instr):
         dom = xml.dom.minidom.parseString(instr)
         link = dom.documentElement
@@ -489,8 +488,8 @@ class Link2Latex(object):
         else:
             out = \
                 """
-                \\\href{%s}{%s}
-                """ % (href, desc.group(1))
+                \\\\href{{{}}}{{{}}}
+                """.format(href, desc.group(1))
         return out
 
 
