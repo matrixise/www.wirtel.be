@@ -7,9 +7,13 @@ Conferences:
       - Co-Organiser
       - Volunteer
   - name: PyCon Ireland
-    years: [2014, 2015, 2016, 2017, 2018, 2019, 2022]
+    years: [2014, 2015, 2016, 2017, 2018, 2019, 2022, 2023]
     positions: 
       - Speaker
+      - Co-Organiser
+  - name: PyCon Limerick
+    years: [2020, 2022, 2023]
+    positions:
       - Co-Organiser
   - name: PyCon Canada
     years: [2014, 2015, 2016, 2017]
