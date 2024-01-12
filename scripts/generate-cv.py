@@ -30,7 +30,7 @@ def main():
     talk_loader.load()
 
     conferences = Conferences.load('data/conferences.yml')
-    print(conferences)
+    # print(conferences)
 
     env = Environment(
         variable_start_string='[[', variable_end_string=']]',

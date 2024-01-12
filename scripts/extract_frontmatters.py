@@ -1,8 +1,11 @@
 import frontmatter
 import pendulum
 import pathlib
-from pydantic_yaml import YamlModel
+import markdown
+import mdx_latex
+from pydantic import BaseModel
 from typing import List
+from pydantic_yaml import parse_yaml_raw_as
 
 class PositionLoader:
     def __init__(self, directory: pathlib.Path):
@@ -42,11 +45,9 @@ class PositionLoader:
             position['stop-on'] = pendulum.today().end_of('month').date()
             position['current'] = True
 
-        import markdown
-        import mdx_latex
         md = markdown.Markdown()
         latex_mdx = mdx_latex.LaTeXExtension()
-        latex_mdx.extendMarkdown(md, markdown.__init__)
+        latex_mdx.extendMarkdown(md)
         out = md.convert(position.content)
         position.content = out.replace('<root>', '').replace('</root>', '').strip()
         return position
@@ -69,7 +70,7 @@ class TalkLoader:
         self.talks = talks
 
 
-class ConferenceModel(YamlModel):
+class ConferenceModel(BaseModel):
     years: List[int] = []
     positions: List[str] = []
     name: str
@@ -90,13 +91,12 @@ class ConferenceModel(YamlModel):
 
 
 
-class Conferences(YamlModel):
+class Conferences(BaseModel):
     Conferences: List[ConferenceModel] = []
 
     @classmethod
     def load(cls, conference_file):
-        with pathlib.Path(conference_file).open() as fp:
-            return Conferences.parse_raw(fp, proto='yaml')
+        return parse_yaml_raw_as(Conferences, pathlib.Path(conference_file).read_text())
 
 def main():
     # loader = PositionLoader(pathlib.Path('content/positions'))

@@ -1,77 +1,11 @@
 #!/usr/bin/env python2
-"""Extension to python-markdown to support LaTeX (rather than html) output.
-
-Authored by Rufus Pollock: <http://www.rufuspollock.org/>
-Reworked by Julian Wulfheide (ju.wulfheide@gmail.com) and
-Pedro Gaudencio (pmgaudencio@gmail.com)
-
-Usage:
-======
-
-1. Command Line. A script entitled markdown2latex.py is automatically
-installed. For details of usage see help::
-
-    $ markdown2latex.py -h
-
-2. As a python-markdown extension::
-
-    >>> import markdown
-    >>> md = markdown.Markdown(None, extensions=['latex'])
-    >>> # text is input string ...
-    >>> latex_out = md.convert(text)
-
-3. Directly as a module (slight inversion of std markdown extension setup)::
-
-    >>> import markdown
-    >>> import mdx_latex
-    >>> md = markdown.Markdown()
-    >>> latex_mdx = mdx_latex.LaTeXExtension()
-    >>> latex_mdx.extendMarkdown(md, markdown.__dict__)
-    >>> out = md.convert(text)
-
-History
-=======
-
-Version: 1.0 (November 15, 2006)
-
-  * First working version (compatible with markdown 1.5)
-  * Includes support for tables
-
-Version: 1.1 (January 17, 2007)
-
-  * Support for verbatim and images
-
-Version: 1.2 (June 2008)
-
-  * Refactor as an extension.
-  * Make into a proper python/setuptools package.
-  * Tested with markdown 1.7 but should work with 1.6 and (possibly) 1.5
-    (though pre/post processor stuff not as worked out there)
-
-Version 1.3: (July 2008)
-  * Improvements to image output (width)
-
-Version 1.3.1: (August 2009)
-  * Tiny bugfix to remove duplicate keyword argument and set zip_safe=False
-  * Add [width=\textwidth] by default for included images
-
-Version 2.0: (June 2011)
-  * PEP8 cleanup
-  * Major rework since this was broken by new Python-Markdown releases
-
-Version 2.1: (August 2013)
-  * Add handler for non locally referenced images, hyperlinks and horizontal rules
-  * Update math delimiters
-"""
-
-__version__ = '2.1'
-
 # do some fancy importing stuff to allow use to override things in this module
 # in this file while still importing * for use in our own classes
 import re
 import sys
 import markdown
 import xml.dom.minidom
+import xml.etree.ElementTree as etree
 from urllib.parse import urlparse
 import http.client
 import os
@@ -83,6 +17,27 @@ start_single_quote_re = re.compile("(^|\s|\")'")
 start_double_quote_re = re.compile("(^|\s|'|`)\"")
 end_double_quote_re = re.compile("\"(,|\.|\s|$)")
 
+def inline_html_latex(text):
+    out = text
+    # most of them to support smarty extensions
+    if re.search(r'&ldquo;.*?&rdquo;', text , flags=re.DOTALL):
+        out = out.replace('&ldquo;', '\enquote{').replace('&rdquo;', '}')
+    # replace certain html element with they LaTeX eqivarent
+    if re.search(r'&lsquo;.*?&rsquo;', text , flags=re.DOTALL):
+        out = out.replace('&lsquo;', '\enquote{').replace('&rsquo;', '}')
+    if re.search(r'&ldquo;.*?&ldquo;', text , flags=re.DOTALL):
+        # sometimes is processing like this
+        out = out.replace('&ldquo;', '\enquote{', 1).replace('&ldquo;', '}', 1)
+    if re.search(r'&laquo;.*?&raquo;', text , flags=re.DOTALL):
+        out = out.replace('&laquo;', '\enquote{').replace('&raquo;', '}')
+    out = out.replace("...", "\dots")
+    out = out.replace("&hellip;", "\dots")
+    out = out.replace("&ndash;", "--")
+    out = out.replace("&mdash;", "---")    
+    # replace '\|' as we should already processed the tables and do not need in LaTeX
+    out = out.replace("\|", '|')
+    return out 
+        
 
 def unescape_html_entities(text):
     out = text.replace('&amp;', '&')
@@ -125,7 +80,7 @@ class LaTeXExtension(markdown.Extension):
     def __init__(self, configs=None):
         self.reset()
 
-    def extendMarkdown(self, md, md_globals):
+    def extendMarkdown(self, md):
         self.md = md
 
         # remove escape pattern -- \\(.*) -- as this messes up any embedded
@@ -145,12 +100,12 @@ class LaTeXExtension(markdown.Extension):
         link_pp = LinkTextPostProcessor()
         unescape_html_pp = UnescapeHtmlTextPostProcessor()
 
-        md.treeprocessors['latex'] = latex_tp
-        md.postprocessors['unescape_html'] = unescape_html_pp
-        md.postprocessors['math'] = math_pp
-        md.postprocessors['image'] = image_pp
-        md.postprocessors['table'] = table_pp
-        md.postprocessors['link'] = link_pp
+        md.treeprocessors.register(latex_tp, 'latex', 20)
+        md.postprocessors.register(unescape_html_pp, 'unescape_html', 20)
+        md.postprocessors.register(math_pp, 'math', 20)
+        md.postprocessors.register(image_pp, 'image', 20)
+        md.postprocessors.register(table_pp, 'table', 20)
+        md.postprocessors.register(link_pp, 'link', 20)
 
     def reset(self):
         pass
@@ -163,7 +118,7 @@ class LaTeXTreeProcessor(markdown.treeprocessors.Treeprocessor):
         latex_text = self.tolatex(doc)
 
         doc.clear()
-        latex_node = markdown.util.etree.Element('root')
+        latex_node = etree.Element('root')
         latex_node.text = latex_text
         doc.append(latex_node)
 
@@ -174,9 +129,8 @@ class LaTeXTreeProcessor(markdown.treeprocessors.Treeprocessor):
         if ournode.text:
             subcontent += escape_latex_entities(ournode.text)
 
-        children = list(ournode)
-        if children:
-            for child in children:
+        if list(ournode):
+            for child in list(ournode):
                 subcontent += self.tolatex(child)
 
         if ournode.tag == 'h1':
@@ -201,9 +155,14 @@ class LaTeXTreeProcessor(markdown.treeprocessors.Treeprocessor):
 \\end{itemize}
 """ % subcontent
         elif ournode.tag == 'ol':
+            buffer += """
+\\begin{enumerate}"""            
+            if 'start' in ournode.attrib.keys():
+                start = int(ournode.attrib['start'])-1
+                buffer += "\setcounter{enumi}{"+str(start)+"}"
             # no need for leading \n as one will be provided by li
             buffer += """
-\\begin{enumerate}%s
+%s
 \\end{enumerate}
 """ % subcontent
         elif ournode.tag == 'li':
@@ -255,7 +214,7 @@ class LaTeXTreeProcessor(markdown.treeprocessors.Treeprocessor):
             buffer += '<img src=\"%s\" alt=\"%s\" />' % (ournode.get('src'),
                       ournode.get('alt'))
         elif ournode.tag == 'a':
-            buffer += '<a href=\"%s\">%s</a>' % (ournode.get('href'),
+            buffer += '<a href=\"%s\">%s</a>' % (escape_latex_entities(ournode.get('href')),
                       subcontent)
         else:
             buffer = subcontent
@@ -269,7 +228,7 @@ class LaTeXTreeProcessor(markdown.treeprocessors.Treeprocessor):
 class UnescapeHtmlTextPostProcessor(markdown.postprocessors.Postprocessor):
 
     def run(self, text):
-        return unescape_html_entities(text)
+        return unescape_html_entities(inline_html_latex(text))
 
 # ========================= MATHS =================================
 
@@ -503,12 +462,15 @@ class LinkTextPostProcessor(markdown.postprocessors.Postprocessor):
         new_blocks = []
         for block in instr.split("\n\n"):
             stripped = block.strip()
-            match = re.search(r'<a[^>]*>([^<]+)</a>', stripped)
+            match = re.findall(r'<a[^>]*>[^<]+</a>', stripped)
             # <table catches modified verions (e.g. <table class="..">
             if match:
-                latex_link = re.sub(r'<a[^>]*>([^<]+)</a>',
-                                    converter.convert(match.group(0)).strip(),
-                                    stripped)
+                latex_link = stripped
+                # replace multiple <a> occurrences individually
+                for occurrence in match:
+                    latex_link = re.sub(r'<a[^>]*>([^<]+)</a>',
+                        converter.convert(occurrence).strip(),
+                        latex_link, count=1)
                 new_blocks.append(latex_link)
             else:
                 new_blocks.append(block)
@@ -522,10 +484,13 @@ class Link2Latex(object):
         href = link.getAttribute('href')
 
         desc = re.search(r'>([^<]+)', instr)
-        out = \
-            """
-            \\\href{%s}{%s}
-            """ % (href, desc.group(0)[1:])
+        if href == desc.group(1):
+            out = r"\\url{%s}" % (href)
+        else:
+            out = \
+                """
+                \\\href{%s}{%s}
+                """ % (href, desc.group(1))
         return out
 
 
@@ -546,7 +511,7 @@ class FootnoteExtension (markdown.Extension):
     def __init__(self, configs=None):
         self.reset()
 
-    def extendMarkdown(self, md, md_globals):
+    def extendMarkdown(self, md):
         self.md = md
 
         # Stateless extensions do not need to be registered
@@ -564,7 +529,8 @@ class FootnoteExtension (markdown.Extension):
         #index = md.inlinePatterns.index(md_globals['IMAGE_REFERENCE_PATTERN'])
         #md.inlinePatterns.insert(index, FootnotePattern(FOOTNOTE_RE, self))
         md.inlinePatterns.add('footnotes', FootnotePattern(FOOTNOTE_RE, self),
-                              '_begin')
+                              '_begin')        
+        
 
     def reset(self):
         self.used_footnotes = {}
@@ -684,16 +650,16 @@ def main():
         parser.print_help()
         sys.exit(1)
     inpath = args[0]
-    infile = file(inpath)
 
-    md = markdown.Markdown()
-    mkdn2latex = LaTeXExtension()
-    mkdn2latex.extendMarkdown(md, markdown.__dict__)
-    out = md.convert(infile.read())
+    with open(inpath) as infile:
+        md = markdown.Markdown()
+        mkdn2latex = LaTeXExtension()
+        mkdn2latex.extendMarkdown(md)
+        out = md.convert(infile.read())
 
     if options.template:
-        tmpl_fo = file(options.template)
-        out = template(tmpl_fo, out)
+        with open(options.template) as tmpl_fo:
+            out = template(tmpl_fo, out)
 
     print(out)
 
