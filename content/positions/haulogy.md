@@ -8,13 +8,13 @@ position: Odoo Technical Expert
 ignore: true
 ---
 
-* Best Practices Python and Odoo
+* Best Practices Python and [Odoo](https://www.odoo.com)
 * Gitlab CI
 * Creation of a framework for the portage of the addons of OpenERP 7.0 to Odoo 8.0 via AST and Python
 
 Technologies:
 * Python
-* Odoo
+* [Odoo](https://www.odoo.com)
 * Gitlab
 * Docker
 * PostgreSQL
