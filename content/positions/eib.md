@@ -1,5 +1,5 @@
 ---
-title: Europen Investment Bank
+title: European Investment Bank
 location: Luxembourg
 country: Luxembourg
 start-on: "2022/12"
