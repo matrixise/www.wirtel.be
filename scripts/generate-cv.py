@@ -6,8 +6,6 @@ from jinja2 import Environment, FileSystemLoader
 from yaml import SafeLoader
 import argparse
 
-import frontmatter
-import pendulum
 from extract_frontmatters import PositionLoader, TalkLoader, Conferences
 
 def parse_args():
