@@ -1,0 +1,80 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  VIRTUALENV: $HOME/.virtualenvs/www.wirtel.be
+  LOCAL_PYTHON: "{{ .VIRTUALENV }}/bin/python"
+
+tasks:
+  init:
+    cmds:
+      - echo {{ .LOCAL_PYTHON }}
+      - python -m venv {{ .VIRTUALENV }}
+
+  dep:compile:
+    desc: Compile the dependencies
+    cmds:
+      - "{{ .LOCAL_PYTHON }} -m uv pip compile -o scripts/requirements.txt scripts/requirements.in"
+
+  dep:bootstrap:
+    desc: Install the bootstrap tools
+    cmds:
+      - "{{ .LOCAL_PYTHON }} -m pip install --upgrade uv"
+
+  dep:install:
+    desc: Install the dependencies
+    cmds:
+      - "{{ .LOCAL_PYTHON }} -m uv pip install -r scripts/requirements.txt"
+
+  dep:outdated:
+    desc: Outdated dependencies
+    cmds:
+      - "{{ .LOCAL_PYTHON }} -m pip list -o"
+
+  generate:cv:
+    desc: Generate the CV as TeX
+    cmds:
+      - "{{ .LOCAL_PYTHON }} scripts/generate-cv.py templates/TemplateCV.tex StephaneWirtel.tex"
+
+  build:cv:
+    desc: Build the CV as PDF
+    env:
+      DOCKER_DEFAULT_PLATFORM: "linux/amd64"
+    vars:
+      USERID:
+        sh: id -u
+      GROUPID:
+        sh: id -g
+    cmds:
+      - docker run --rm --user={{.USERID}}:{{.GROUPID}} -v {{.PWD}}:/src/ -w /src/ aergus/latex pdflatex StephaneWirtel.tex
+      - docker run --rm --user={{.USERID}}:{{.GROUPID}} -v {{.PWD}}:/src/ -w /src/ aergus/latex pdflatex StephaneWirtel.tex
+
+  cv:from-scratch:
+    desc: Rebuild the CV from scratch
+    cmds:
+      - task: generate:cv
+      - task: build:cv
+
+  refresh:all:
+    desc: Refresh all the installations from Scratch
+    cmds:
+      - task: init
+      - task: dep:bootstrap
+      - task: dep:install
+      - task: generate:cv
+
+  build:site:
+    desc: Build the site via Hugo
+    cmds:
+      - hugo
+
+  serve:
+    desc: Serve the HTML site
+    cmds:
+      - hugo server
+
+  docker:fetch:
+    desc: Download all the docker images
+    cmds:
+      - docker pull aergus/latex
