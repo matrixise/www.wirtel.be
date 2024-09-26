@@ -8,4 +8,4 @@ position: Odoo Expert
 ignore: true
 ---
 
-Deployment and Customisation of Runbot for the support for the support of BitBucket
+Deployment and Customisation of Runbot for the support of BitBucket
