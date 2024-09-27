@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.0
 
       - name: Set up Python 3.12
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v5.2.0
         with:
           python-version: 3.12
 
@@ -28,15 +28,15 @@ jobs:
           python scripts/generate-cv.py templates/TemplateCV.tex StephaneWirtel.tex
 
       - name: Build PDF
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: StephaneWirtel.tex
 
       - name: Setup Python 3.12
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v5.2.0
         with:
           python-version: 3.12
-      
+
       - name: Deploy to AWS
         if: >
           (
