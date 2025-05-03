@@ -3,18 +3,19 @@ title: European Investment Bank
 location: Luxembourg
 country: Luxembourg
 start-on: "2022/12"
+stop-on: "2025/04"
 position: Python Expert 
 ignore: false
 ---
 
-I am a dedicated professional currently employed at the European Investment Bank (EIB) in Luxembourg. In my role, I have the privilege of working on a transformative project aimed at supporting quantitative analysts (quants) in creating robust and scalable business applications using Python.
+At the European Investment Bank (EIB), I developed several Python tools supporting credit risk modelling and financial data workflows.
 
-## Job Responsibilities:
+I started by building a multi-interface demonstrator exposing a shared risk library via CLI, FastAPI, Vue.js, Excel (xlwings), and Python.
 
-As a key member of the EIB's technology team, I play a pivotal role in collaborating with quants to bridge the gap between complex quantitative models and practical, efficient applications. My primary responsibilities include:
+I then developed Protog, a credit risk engine computing Expected Losses (analytical & Monte Carlo), with support for tranching, pari passu, WAVG, and remuneration spreads.
 
-* Collaborating closely with quants to understand their requirements and objectives.
-* Developing Python-based applications that are not only stable but also capable of handling substantial scaling to meet the bank's evolving needs.
-* Ensuring the reliability and robustness of these applications, aligning them with the highest industry standards.
-* Providing ongoing support and enhancements to maintain the optimal performance of these business applications.
+I built DataTreatment, an ETL pipeline that standardizes heterogeneous Excel datasets using Pandera and Pandas, feeding modelling and dashboarding tools.
 
+I also delivered Cashflow Generator (reporting) and Cashflow-Rebucketer (cashflow normalization).
+
+All tools include Excel/CLI integration, follow strong engineering standards (typing, testing, profiling, docs), and are used daily by EIB teams.
