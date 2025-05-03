@@ -78,3 +78,8 @@ tasks:
     desc: Download all the docker images
     cmds:
       - docker pull aergus/latex
+
+  upload:cv:
+    desc: Upload the CV to AWS
+    cmds:
+      - aws s3 cp --acl public-read StephaneWirtel.pdf s3://public-mgxio/wirtel.be/StephaneWirtel.pdf
