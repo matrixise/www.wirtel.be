@@ -35,6 +35,7 @@ Privacy:
   disqus:
     disable: true
   googleAnalytics:
+    disable: true
     anonymizeIP: true
     respectDoNotTrack: true
     useSessionStorage: false
