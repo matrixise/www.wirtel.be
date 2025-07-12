@@ -1,3 +1,4 @@
-{{ $id := .Get "id" | default (.Get 0) }}
-{{- $item := getJSON "https://speakerdeck.com/oembed.json?url=https://speakerdeck.com/" $id -}}
-{{ $item.html | safeHTML }}
+{{ $id := .Get "id" | default (.Get 0) }} {{ $url := printf
+"https://speakerdeck.com/oembed.json?url=https://speakerdeck.com/%s" $id }} {{
+$remote := resources.GetRemote $url }} {{ $json := $remote | transform.Unmarshal
+}} {{ $json.html | safeHTML }}
