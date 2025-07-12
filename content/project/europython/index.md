@@ -2,6 +2,7 @@
 title: "EuroPython"
 date: "2015-10-11T18:00:00"
 project_url: "https://www.europython-society.org/"
+image: europython-rimini-2017.jpg
 ---
 
 ## Description
@@ -22,6 +23,4 @@ http://www.europython-society.org/europython
 * Board Member of EuroPython Society 2019/2020
   * Co-Organizer of EuroPython 2020
 
-Pictures from [EuroPython 2017](https://ep2017.europython.eu) in Rimini
-
-<a data-flickr-embed="true" data-header="true" data-context="true"  href="https://www.flickr.com/photos/photogenicgreen/35921860090/in/pool-europython17/" title="Jul13_group_picture_volunteers_1_APeviani"><img src="https://farm5.staticflickr.com/4291/35921860090_f311d48b26_h.jpg" width="1600" height="1066" alt="Jul13_group_picture_volunteers_1_APeviani"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+[Pictures](https://www.flickr.com/photos/photogenicgreen/35921860090/in/pool-europython17/) from [EuroPython 2017](https://ep2017.europython.eu) in Rimini
