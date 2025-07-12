@@ -83,3 +83,11 @@ tasks:
     desc: Upload the CV to AWS
     cmds:
       - aws s3 cp --acl public-read StephaneWirtel.pdf s3://public-mgxio/wirtel.be/StephaneWirtel.pdf
+
+  new:post:
+    desc: Create a new post
+    vars:
+      TODAY:
+        sh: date +%Y-%m-%d
+    cmds:
+      - hugo new content content/post/{{.TODAY}}-{{ humanize .ARGS | title }}

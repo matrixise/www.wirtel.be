@@ -4,7 +4,7 @@ location: Luxembourg
 country: Luxembourg
 start-on: "2022/12"
 stop-on: "2025/04"
-position: Python Expert 
+position: Python Consultant
 ignore: false
 ---
 

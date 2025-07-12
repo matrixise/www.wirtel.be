@@ -24,44 +24,51 @@ For this edition, Python will be represented by its Community. If you want to
 discuss with a lot of Python Users, it's the place to be!
 
 Here is the schedule:
+# 📅 Conference Schedule
 
-<table>
-<tr><td colspan="3" style="text-align: center;">Saturday 2017-02-04 / H.1308 (Rolin)</td></tr>
-<tr><td>10:30</td><td><em>Python Winding Itself Around Datacubes</em></td><td><strong>Peter Baumann</strong></td></tr>
-<tr><td>11:00</td><td><em>MSS - Software for planning research aircraft missions</em></td><td><strong>Reimar  Bauer</strong></td></tr>
-<tr><td>11:30</td><td><em>The power of duck typing and linear algrebra </em></td><td><strong>Julien Tayon</strong></td></tr>
-<tr><td>12:00</td><td><em>It's time for datetime</em></td><td><strong>Mario Corchero</strong></td></tr>
-<tr><td>12:30</td><td><em>Webpush notifications for Kinto</em></td><td><strong>Mansimar Kaur</strong></td></tr>
-<tr><td>13:00</td><td><em>Tanker</em></td><td><strong>Bertrand Chenal</strong></td></tr>
-<tr><td>13:30</td><td><em>OSINT Tools for Security Auditing</em></td><td><strong>José Manuel Ortega</strong></td></tr>
-<tr><td>14:00</td><td><em>rinohtype - the Python document processor</em></td><td><strong>Brecht Machiels</strong></td></tr>
-<tr><td colspan="3" style="text-align:center;">Sunday 2017-02-05 / UD2.120 (Chavanne)</td></tr>
-<tr><td>09:00</td><td><em>Introduction to Pandas</em></td><td><strong>Sahil Dua</strong></td></tr>
-<tr><td>09:30</td><td><em>Python and "the SOLID principles"</em></td><td><strong>Jonathan Slenders</strong></td></tr>
-<tr><td>10:00</td><td><em>Storing metrics at scale with Gnocchi</em></td><td><strong>Julien Danjou</strong></td></tr>
-<tr><td>10:30</td><td><em>Selinon</em></td><td><strong>Fridolín Pokorný</strong></td></tr>
-<tr><td>11:00</td><td><em>Hacking midi devices with StepPy</em></td><td><strong>Yann Gravrand</strong></td></tr>
-<tr><td>11:30</td><td><em>GrimoireLab</em></td><td><strong>Jesus M. Gonzalez-Barahona</strong></td></tr>
-<tr><td>12:00</td><td><em>Script the Web with Weboob</em></td><td><strong>François Revol</strong></td></tr>
-<tr><td>12:30</td><td><em>Python Data Structures implementation</em></td><td><strong>Flavien Raynaud</strong></td></tr>
-<tr><td>13:00</td><td><em>Cloud Native Python</em></td><td><strong>Floris Bruynooghe</strong></td></tr>
-<tr><td>13:30</td><td><em>Debugging Hung Python Processes with GDB</em></td><td><strong>Brian Bouterse</strong></td></tr>
-<tr><td>14:00</td><td><em>Asynchronous programming with Coroutines in Python</em></td><td><strong>Ewoud Van Craeynest</strong></td></tr>
-<tr><td>14:30</td><td><em>Python and Raspberry Pi</em></td><td><strong>Ben Nuttall</strong></td></tr>
-<tr><td>15:00</td><td><em>How to run a stable benchmark</em></td><td><strong>Victor Stinner</strong></td></tr>
-<tr><td>15:30</td><td><em>prompt_toolkit</em></td><td><strong>Jonathan Slenders</strong></td></tr>
-<tr><td>16:00</td><td><em>asynctest</em></td><td><strong>Martin Richard</strong></td></tr>
-<tr><td>16:30</td><td><em>Introduction to pyasn1</em></td><td><strong>Ilya Etingof</strong></td></tr>
-</table>
+## Saturday 2017-02-04 / H.1308 (Rolin)
+
+| Heure  | Présentation                                                    | Intervenant             |
+|--------|------------------------------------------------------------------|--------------------------|
+| 10:30  | *Python Winding Itself Around Datacubes*                         | **Peter Baumann**        |
+| 11:00  | *MSS - Software for planning research aircraft missions*         | **Reimar Bauer**         |
+| 11:30  | *The power of duck typing and linear algebra*                    | **Julien Tayon**         |
+| 12:00  | *It's time for datetime*                                         | **Mario Corchero**       |
+| 12:30  | *Webpush notifications for Kinto*                                | **Mansimar Kaur**        |
+| 13:00  | *Tanker*                                                         | **Bertrand Chenal**      |
+| 13:30  | *OSINT Tools for Security Auditing*                              | **José Manuel Ortega**   |
+| 14:00  | *rinohtype - the Python document processor*                      | **Brecht Machiels**      |
+
+---
+
+## Sunday 2017-02-05 / UD2.120 (Chavanne)
+
+| Heure  | Présentation                                                    | Intervenant                    |
+|--------|------------------------------------------------------------------|---------------------------------|
+| 09:00  | *Introduction to Pandas*                                         | **Sahil Dua**                   |
+| 09:30  | *Python and "the SOLID principles"*                              | **Jonathan Slenders**           |
+| 10:00  | *Storing metrics at scale with Gnocchi*                          | **Julien Danjou**               |
+| 10:30  | *Selinon*                                                        | **Fridolín Pokorný**            |
+| 11:00  | *Hacking midi devices with StepPy*                               | **Yann Gravrand**               |
+| 11:30  | *GrimoireLab*                                                    | **Jesus M. Gonzalez-Barahona** |
+| 12:00  | *Script the Web with Weboob*                                     | **François Revol**              |
+| 12:30  | *Python Data Structures implementation*                          | **Flavien Raynaud**             |
+| 13:00  | *Cloud Native Python*                                            | **Floris Bruynooghe**           |
+| 13:30  | *Debugging Hung Python Processes with GDB*                       | **Brian Bouterse**              |
+| 14:00  | *Asynchronous programming with Coroutines in Python*             | **Ewoud Van Craeynest**         |
+| 14:30  | *Python and Raspberry Pi*                                        | **Ben Nuttall**                 |
+| 15:00  | *How to run a stable benchmark*                                  | **Victor Stinner**              |
+| 15:30  | *prompt_toolkit*                                                 | **Jonathan Slenders**           |
+| 16:00  | *asynctest*                                                      | **Martin Richard**              |
+| 16:30  | *Introduction to pyasn1*                                         | **Ilya Etingof**                |
 
 ## Location
-<pre>
+
 Université Libre de Bruxelles
 Campus de Solbosch
 Avenue Franklin D. Roosevelt 50
 1050 Bruxelles
 Belgium
-</pre>
 
 You can find more information on [PythonFOSDEM](https://www.python-fosdem.org)
 
