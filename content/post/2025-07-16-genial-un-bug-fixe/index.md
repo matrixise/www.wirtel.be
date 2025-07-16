@@ -11,6 +11,7 @@ tags:
   - open-source
   - git
   - submodule
+image: update-ghostwriter.png
 ---
 
 L’Open Source, c’est vraiment cool.
@@ -48,6 +49,6 @@ Encore merci à [@jbub](https://github.com/jbub) pour sa réactivité et sa rép
 
 Ce genre d’interaction rappelle pourquoi j’aime autant le logiciel libre.
 
-  
+
 
 Vive les logiciels libres !
