@@ -4,7 +4,9 @@ theme: original-ghostwriter
 title: Stéphane's Blog
 baseurl: https://wirtel.be/
 copyright: Stéphane Wirtel
-googleAnalytics: UA-22059464-1
+services:
+  googleAnalytics:
+    id: G-BC0WC3PWS6
 
 Author:
   email: stephane@wirtel.be
@@ -35,7 +37,7 @@ Privacy:
   disqus:
     disable: true
   googleAnalytics:
-    disable: true
+    disable: false
     anonymizeIP: true
     respectDoNotTrack: true
     useSessionStorage: false
