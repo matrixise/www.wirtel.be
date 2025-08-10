@@ -1,0 +1,10 @@
+---
+title: DEV
+
+services:
+  googleAnalytics:
+    id: ""
+
+Privacy:
+  googleAnalytics:
+    disable: true

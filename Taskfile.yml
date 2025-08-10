@@ -1,6 +1,6 @@
 # https://taskfile.dev
 
-version: '3'
+version: "3"
 
 vars:
   VIRTUALENV: $HOME/.virtualenvs/www.wirtel.be
@@ -72,7 +72,7 @@ tasks:
   serve:
     desc: Serve the HTML site
     cmds:
-      - hugo server
+      - hugo server --environment development --buildDrafts
 
   docker:fetch:
     desc: Download all the docker images
