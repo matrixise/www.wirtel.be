@@ -165,6 +165,14 @@ José ne se contente pas d’être aux fourneaux — il est aussi celui qui a ma
 
 **Le résultat est tout simplement exceptionnel**, et encore plus touchant quand on sait qu’il est le fruit de leur énergie, de leur goût, et de leur engagement.
 
+## Une reconnaissance bien méritée
+
+En parlant de cuisine… nous avons appris avec joie que _Les Rêves de Baie de Somme_ a été sélectionné par **Gault & Millau** pour figurer dans le guide *Hauts-de-France – Itinéraires et Découvertes gourmandes 2025*.
+
+Une distinction qui salue non seulement le talent culinaire et la créativité de José, mais aussi le travail acharné de nos hôtes pour offrir un accueil chaleureux et un séjour de qualité.
+
+Une mention prestigieuse, largement méritée.
+
 ## En résumé
 
 Une maison d’hôtes pleine de charme, décorée avec soin, où tout est pensé pour le confort, la convivialité… et les petits détails qui font la différence.
