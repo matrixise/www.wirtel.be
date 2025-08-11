@@ -10,9 +10,9 @@ keywords:
   - séjour baie de somme
   - table d’hôtes saint valery sur somme
   - hébergement proche le crotoy
-slug: les-reves-de-baie-de-somme-avis
-date: 2025-08-09
-updated: 2025-08-09
+slug: les-reves-de-baie-de-somme
+date: 2025-08-11
+updated: 2025-08-11
 tags:
   - maison-d-hotes
   - chambre-d-hotes
@@ -40,6 +40,8 @@ tags:
   - avis
 draft: false
 ---
+
+> Séjour effectué du **mardi 5 août 2025** au **jeudi 7 août 2025**.
 
 ## Aux portes d’un joyau naturel
 
