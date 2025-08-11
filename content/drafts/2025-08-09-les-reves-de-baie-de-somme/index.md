@@ -14,9 +14,28 @@ slug: les-reves-de-baie-de-somme-avis
 date: 2025-08-09
 updated: 2025-08-09
 tags:
+  - maison-d-hotes
+  - chambre-d-hotes
+  - baie-de-somme
+  - le-treport
+  - saint-valery-sur-somme
+  - le-crotoy
+  - le-hourdel
+  - tourisme-hauts-de-france
+  - sejour-romantique
+  - gastronomie
+  - table-d-hotes
+  - voyage-france
+  - escapade-weekend
+  - hebergement-de-charme
+  - vacances-cote-picarde
+  - avis-sejour
+  - tourisme-cote-opale
+  - phoques-baie-de-somme
+  - village-pittoresque
+  - bons-plans-voyage
   - voyage
   - picardie
-  - maison-d-hotes
   - baie-de-somme
   - avis
 draft: false
