@@ -55,15 +55,15 @@ C’est dans ce décor d’exception que se niche notre destination du jour : _L
 
 ## José & Sandrine, des hôtes passionnés au parcours unique
 
-Avant de créer _Les Rêves de Baie de Somme_, José et Sandrine ont déjà vécu plusieurs vies dédiées à l’art de recevoir.
+Avant de créer *Les Rêves de Baie de Somme*, José et Sandrine avaient déjà une belle histoire d’accueil.
 
 José, cuisinier professionnel, a affûté son talent dans de grandes maisons — y compris étoilées — où il a appris à marier finesse des saveurs et générosité des assiettes.
 
-Sandrine, issue du monde de l’hôtellerie-restauration, a toujours cultivé un sens de l’accueil chaleureux et attentif, où chaque invité se sent attendu et considéré.
+Sandrine, originaire du **Tréport** et issue de l’hôtellerie-restauration, excelle dans l’art de recevoir, avec toujours ce souci du bien-être de ses invités.
 
-Ensemble, ils ont d’abord dirigé _Les Rêves de Bourgogne_ à **Selongey** (berceau de la cocotte-minute SEB), un lieu déjà marqué par leur goût du détail et leur passion pour la convivialité.
+Ensemble, ils ont dirigé *Les Rêves de Bourgogne* à **Selongey** (berceau de la cocotte-minute SEB). Mais la crise du Covid-19 est venue chambouler leurs projets : une restriction imposait alors aux Français de ne pas dépasser un périmètre de **100 km autour de leur domicile** sans motif impérieux. Or, entre Selongey et Le Tréport, il y avait environ **500 km** — distance insurmontable pour que Sandrine puisse rendre visite à ses parents âgés.
 
-Forts de cette expérience, ils ont posé leurs valises en Picardie, aux portes de la Baie de Somme, pour donner vie à un nouveau projet : une maison élégante et authentique, façonnée de leurs mains et pensée pour offrir bien plus qu’un simple séjour.
+C’est ce contexte, mêlé à leur volonté profonde d’être proches des leurs, qui les a conduits à poser leurs valises en Picardie, aux portes de la Baie de Somme, pour donner vie à ce nouveau lieu, élégant, authentique, façonné de leurs mains… et empreint de tout ce que l’on appelle le sens de l’accueil.
 
 
 ## Un séjour tout en douceur
@@ -137,7 +137,7 @@ Même si le cadre invite à la déconnexion, il est rassurant de pouvoir rester 
 
 ## Bons plans & conseils
 
-Sandrine, originaire du Tréport, connaît la région comme sa poche. Elle partage volontiers ses bonnes adresses, ses coins secrets, ses suggestions de balades ou de restaurants.
+Sandrine connaît la région comme sa poche et partage volontiers ses bonnes adresses, ses coins secrets, ses suggestions de balades ou de restaurants.
 
 Parmi les incontournables :
 - **Saint-Valery-sur-Somme** (21 km)
@@ -145,7 +145,7 @@ Parmi les incontournables :
 - **Le Hourdel** et ses phoques (30 km)
 - **Le Tréport** (40 km)
 
-Sa connaissance du territoire et sa générosité transforment un simple séjour en une véritable découverte locale. Une aide précieuse pour ceux et celles qui aiment explorer hors des sentiers battus.
+Sa connaissance du territoire et sa générosité transforment un simple séjour en une véritable découverte locale. Une aide précieuse pour celles et ceux qui aiment explorer hors des sentiers battus.
 
 ## L’ambiance
 
