@@ -39,6 +39,12 @@ tags:
   - baie-de-somme
   - avis
 draft: false
+image: images/BF8DFCBA-2CF0-4673-8F57-E0B8D97EA648.jpg
+
+images:
+  - images/BF8DFCBA-2CF0-4673-8F57-E0B8D97EA648.jpg
+  - images/CCDB8AF0-D8F4-465D-9098-219105D9D108.jpg
+  - images/CE347384-7C1A-4814-912A-DC6E96635C94.jpg
 ---
 
 > Séjour effectué du **mardi 5 août 2025** au **jeudi 7 août 2025**.
