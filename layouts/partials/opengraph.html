@@ -11,4 +11,5 @@
 {{ $parentScope := . }} {{- with .Params.images }} {{- range first 6 . }} {{
 $url := delimit (slice $parentScope.Permalink .) "/" | absURL }}
 <meta property="og:image" content="{{ $url }}" />
+<meta property="og:image:secure_url" content="{{ $url }}" />
 {{- end }} {{- end }}
