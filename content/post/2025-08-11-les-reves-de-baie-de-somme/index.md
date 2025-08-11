@@ -63,7 +63,7 @@ José, cuisinier professionnel, a affûté son talent dans de grandes maisons �
 
 Sandrine, originaire du **Tréport** et issue de l’hôtellerie-restauration, excelle dans l’art de recevoir, avec toujours ce souci du bien-être de ses invités.
 
-Ensemble, ils ont dirigé *Les Rêves de Bourgogne* à **Selongey** (berceau de la cocotte-minute SEB). Mais la crise du Covid-19 est venue chambouler leurs projets : une restriction imposait alors aux Français de ne pas dépasser un périmètre de **100 km autour de leur domicile** sans motif impérieux. Or, entre Selongey et Le Tréport, il y avait environ **500 km** — distance insurmontable pour que Sandrine puisse rendre visite à ses parents âgés.
+Ensemble, ils ont dirigé *Les Rêves de Bourgogne* à **Selongey** (berceau de la cocotte-minute SEB).
 
 C’est ce contexte, mêlé à leur volonté profonde d’être proches des leurs, qui les a conduits à poser leurs valises en Picardie, aux portes de la Baie de Somme, pour donner vie à ce nouveau lieu, élégant, authentique, façonné de leurs mains… et empreint de tout ce que l’on appelle le sens de l’accueil.
 
