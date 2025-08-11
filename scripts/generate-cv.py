@@ -21,10 +21,11 @@ def main():
 
     template = pathlib.Path(args.template)
 
-    position_loader = PositionLoader('content/positions')
+    content_dir = pathlib.Path('content')
+    position_loader = PositionLoader(content_dir / 'positions')
     position_loader.load()
 
-    talk_loader = TalkLoader('content/talk')
+    talk_loader = TalkLoader(content_dir / 'talk')
     talk_loader.load()
 
     conferences = Conferences.load('data/conferences.yml')
@@ -43,7 +44,7 @@ def main():
     )
 
     template = env.get_template(template.name)
-    with pathlib.Path('config.yaml').open() as fp:
+    with pathlib.Path('config/_default/config.yaml').open() as fp:
         config = yaml.load(fp, Loader=SafeLoader)
     content = template.render(config=config)
     pathlib.Path(args.output).write_text(content)
