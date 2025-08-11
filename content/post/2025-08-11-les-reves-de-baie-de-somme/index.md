@@ -175,19 +175,14 @@ Une mention prestigieuse, largement méritée.
 
 ## En résumé
 
-Une maison d’hôtes pleine de charme, décorée avec soin, où tout est pensé pour le confort, la convivialité… et les petits détails qui font la différence.
+Aux portes de la **Baie de Somme**, classée parmi les plus belles baies du monde, _Les Rêves de Baie de Somme_ offre un cadre idéal pour le **repos**, la **déconnexion**… et ces **anecdotes** que l’on aime partager ensuite. Située à **Béhen**, cette maison d’hôtes permet de rayonner facilement vers **Saint-Valery-sur-Somme**, **Le Crotoy**, **Le Hourdel** et ses phoques, ou encore **Le Tréport** et ses falaises spectaculaires.
 
-Les chambres sont calmes, confortables (mention spéciale à la chambre 2 et son volet électrique !), le jardin est magnifique, et un espace SPA est également disponible — à découvrir lors d’un prochain séjour. La connexion internet est rapide (100 Mbps), idéale même pour télétravailler.
+**José** et **Sandrine**, hôtes passionnés et chaleureux, ont su créer une atmosphère conviviale où l’on se sent attendu, considéré, presque comme un ami de longue date. José, cuisinier talentueux passé par de grandes maisons étoilées, et Sandrine, originaire du **Tréport** et issue de l’hôtellerie-restauration, forment un duo complémentaire. Leur **table d’hôtes** raffinée et généreuse est une véritable expérience culinaire, reconnue par le **Gault & Millau 2025 – Hauts-de-France Itinéraires et Découvertes gourmandes**. Les soirées autour de leur grande table sont de véritables moments de partage, rythmés par rires, discussions et belles rencontres.
 
-**Le plus impressionnant ?** José et Sandrine ont entièrement rénové la maison eux-mêmes pendant plus d’un an. José est aussi doué aux fourneaux qu’avec les outils, et Sandrine est à la fois une hôtesse attentionnée et une véritable bâtisseuse.
+Les **chambres** sont calmes, spacieuses, décorées avec soin, et la literie de qualité promet des nuits reposantes (mention spéciale à la **chambre 2** et son volet électrique). Le **jardin**, parfaitement entretenu, et l’**espace SPA** viennent prolonger la détente. Les petits détails comptent aussi : connexion internet rapide (100 Mbps), parking privé, et surtout les **bons conseils** de Sandrine pour explorer la région hors des sentiers battus.
 
-La table d’hôtes est raffinée, généreuse, et surtout **deux soirées inoubliables** ont marqué notre séjour, entre gastronomie et belles rencontres.
-
-Le cadre est propice au repos, à la déconnexion… et aux anecdotes que l’on aime partager ensuite.
-
-**Les Rêves de Baie de Somme** porte bien son nom.
-
-**Une adresse à recommander sans hésiter !**
+Entièrement rénovée par leurs mains expertes pendant plus d’un an, la maison reflète le goût, le travail et l’engagement de ses propriétaires. Ici, on ne vient pas seulement dormir : **on vient vivre une expérience authentique, élégante et humaine**.
+**Une adresse à recommander sans hésiter.**
 
 [Les Rêves de Baie de Somme](https://www.lesrevesdebaiedesomme.com/)
 
