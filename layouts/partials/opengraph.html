@@ -7,6 +7,10 @@
     property="og:type"
     content="{{ if .IsPage }}article{{ else }}website{{ end }}"
 />
+{{ with .Site.Params.site_name }}<meta
+    property="og:site_name"
+    content="{{ . }}"
+/>{{ end }}
 <meta property="og:url" content="{{ .Permalink }}" />
 {{ $parentScope := . }} {{- with .Params.images }} {{- range first 6 . }} {{
 $url := delimit (slice $parentScope.Permalink .) "/" | absURL }}

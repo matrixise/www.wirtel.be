@@ -30,6 +30,7 @@ Params:
   linkedin: https://www.linkedin.com/in/stephanewirtel/
   readingTime: true
   readingTimeText: "Estimated reading time:"
+  site_name: "Stéphane's Blog"
 Permalinks:
   post: /post/:year/:month/:day/:slug
 Privacy:
