@@ -1,5 +1,8 @@
 <meta property="og:locale" content="en_US" />
-<meta property="og:logo" content="{{ "logo.png" | relURL | absURL }}" />
+{{ with resources.Get "logo.png" }} {{ $logo512 := .Resize "512x512" }}
+<meta property="og:logo" content="{{ $logo512.Permalink }}" />
+{{ end }}
+
 <meta property="og:title" content="{{ .Title }}" />
 <meta
     property="og:description"
