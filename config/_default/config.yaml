@@ -4,6 +4,7 @@ theme: ["original-ghostwriter", "hugo-shortcode-gallery"]
 title: Stéphane's Blog
 baseurl: https://wirtel.be/
 copyright: Stéphane Wirtel
+defaultContentLanguage: en
 services:
   googleAnalytics:
     id: G-BC0WC3PWS6
