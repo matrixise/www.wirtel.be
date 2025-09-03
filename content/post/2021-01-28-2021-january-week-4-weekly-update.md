@@ -1,9 +1,19 @@
 ---
-title: "Weekly Update, January 28, 2021"
-description: "Weekly Update"
+title: Weekly Update, January 28, 2021
+description: Weekly Update
 date: 2021-01-28T10:19:49+01:00
-tags: ["python", "weekly-updates", "weekly", "updates", "europython", "personal"]
-slug: "2021-january-week-4-weekly-update"
+tags:
+- python
+- weekly-updates
+- weekly
+- updates
+- europython
+- personal
+slug: 2021-january-week-4-weekly-update
+modified: 2025-09-03T09:56:11+02:00
+ContentType: post
+Status: published
+
 ---
 
 # Weekly Update
