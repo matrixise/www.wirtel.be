@@ -2,8 +2,14 @@
 title: "PyCon Ireland 2019: Call for proposals"
 description: ""
 date: 2019-08-07T17:00:00+02:00
-tags: ["python", "pycon", "ireland"]
-slug: "pycon-ireland-2019-call-for-proposals"
+tags:
+- python
+- pycon
+- ireland
+slug: pycon-ireland-2019-call-for-proposals
+ContentType: post
+Status: published
+
 ---
 
 # PyCon Ireland 2019
@@ -27,4 +33,3 @@ The call for proposals will be closed on 11st August 2019.
 Have a nice day,
 
 Stéphane
-

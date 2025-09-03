@@ -1,9 +1,12 @@
 ---
-date: "2015-12-21T11:09:42+01:00"
-title: "Move to Hugo"
+date: 2015-12-21T11:09:42+01:00
+title: Move to Hugo
 comments: false
 share: false
-slug: "move-to-hugo"
+slug: move-to-hugo
+ContentType: post
+Status: published
+
 ---
 
 # Introduction

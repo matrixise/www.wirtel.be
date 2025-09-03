@@ -1,24 +1,33 @@
 ---
 title: Génial, un bug fixé rapidement
-description: Une issue ouverte sur GitHub, une réponse rapide du mainteneur, et une mise à jour du thème Ghostwriter compatible avec Hugo 0.148.0. Vive l'open source !
+description: Une issue ouverte sur GitHub, une réponse rapide du mainteneur, et 
+  une mise à jour du thème Ghostwriter compatible avec Hugo 0.148.0. Vive l'open
+  source !
 date: 2025-07-16
 tags:
-  - hugo
-  - ghostwriter
-  - theme
-  - static-site
-  - github
-  - open-source
-  - git
-  - submodule
+- hugo
+- ghostwriter
+- theme
+- static-site
+- github
+- open-source
+- git
+- submodule
+ContentType: post
 image: update-ghostwriter.png
+modified: 2025-09-02T08:41:25+02:00
+obsidian-note-status:
+- colorful:completed
+Status: published
+slug: genial-un-bug-fixe-rapidement
+
 ---
 
 L’Open Source, c’est vraiment cool.
 
-La semaine dernière, je vous expliquais que j’avais dû mettre à jour mon site, ce qui incluait une montée de version du thème que j’utilise. À cette occasion, j’ai ouvert [une issue](https://github.com/jbub/ghostwriter/issues/126) sur le dépôt GitHub du thème, en signalant un problème lié au support du nouveau système de commentaires introduit par [Hugo](https://gohugo.io).
+La semaine dernière, je vous expliquais que j’avais dû mettre à jour mon site, ce qui incluait une montée de version du thème que j’utilise. À cette occasion, j’ai ouvert [une issue](https://github.com/jbub/ghostwriter/issues/126) sur le dépôt GitHub du thème, en signalant un problème lié au support du nouveau système de commentaires introduit par [Hugo].
 
-Ce matin, j’ai reçu un message du développeur du projet : le thème est désormais compatible avec Hugo `0.148.0`.
+Ce matin, j’ai reçu un message du développeur du projet : le thème est désormais compatible avec [Hugo] `0.148.0`.
 
 Évidemment, je me suis empressé de le remercier. J’avais l’impression que le projet était en pause, mais non : il est bien actif.
 
@@ -49,6 +58,8 @@ Encore merci à [@jbub](https://github.com/jbub) pour sa réactivité et sa rép
 
 Ce genre d’interaction rappelle pourquoi j’aime autant le logiciel libre.
 
-
+  
 
 Vive les logiciels libres !
+
+[Hugo]: https://gohugo.io

@@ -1,9 +1,13 @@
 ---
 title: "March - Week 12: Weekly Update"
 date: 2019-03-22T12:00:00+02:00
-description: "Weekly Update"
-tags: ["python"]
-slug: "2019-march-week-12-weekly-update"
+description: Weekly Update
+tags:
+- python
+slug: 2019-march-week-12-weekly-update
+ContentType: post
+Status: published
+
 ---
 
 # Weekly Update 
@@ -47,4 +51,3 @@ happy.
 Cheers,
 
 Stéphane
-

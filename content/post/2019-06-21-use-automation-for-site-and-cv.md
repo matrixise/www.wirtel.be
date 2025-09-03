@@ -1,10 +1,11 @@
 ---
 title: "Use Automation for Site and CV"
+ContentType: post
 description: "Automate the creation of your CV with Gitlab-CI and your site"
-tags: ["hugo", "cv", "site", "automation", "gitlab", "gitlab-runner", "latex",
-"html"]
-date: 2019-06-21T14:00:00+02:00
+tags: ["hugo", "cv", "site", "automation", "gitlab", "gitlab-runner", "latex", "html"]
+date: 2019-06-21
 slug: "use-automation-for-site-and-cv"
+
 ---
 
 # Use Automation for this site and my CV
