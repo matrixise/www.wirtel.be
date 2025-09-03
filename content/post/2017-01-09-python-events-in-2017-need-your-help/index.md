@@ -1,10 +1,19 @@
 ---
-date: "2017-01-09T17:56:00+01:00"
-title: "Python Events in 2017, Need your help!"
-tags: [ "python", "events", "event", "2017", "community", "psf" ]
-author: "Stephane Wirtel"
-categories: ["event"]
-slug: "python-events-in-2017-need-your-help"
+date: 2017-01-09T17:56:00+01:00
+title: Python Events in 2017, Need your help!
+tags:
+- python
+- events
+- event
+- "2017"
+- community
+- psf
+author: Stephane Wirtel
+categories:
+- event
+slug: python-events-in-2017-need-your-help
+modified: 2025-09-02T11:10:47+02:00
+
 ---
 
 # Events in 2017
@@ -63,4 +72,3 @@ Thank you so much for your help.
 Stephane
 
 [1] https://www.python-fosdem.org
-

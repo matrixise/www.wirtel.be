@@ -1,9 +1,10 @@
 ---
-date: "2017-02-01T20:00:00+01:00"
+date: 2017-02-01 20:00:00+01:00
 title: "PythonFOSDEM 2017 - Call for Volunteers"
 tags: ["python", "fosdem", "conference"]
 categories: ["conference"]
 slug: "call-volunteers-python-fosdem-2017"
+
 ---
 
 # Introduction

@@ -1,50 +1,55 @@
 ---
-title: Séjour aux Rêves de Baie de Somme – Maison d’hôtes chaleureuse en Picardie
+title: Séjour aux Rêves de Baie de Somme – Maison d’hôtes chaleureuse en 
+  Picardie
 seo_title: Avis sur Les Rêves de Baie de Somme – Maison d’hôtes en Baie de Somme
-description: "Découvrez notre séjour aux Rêves de Baie de Somme : accueil chaleureux, gastronomie raffinée et paysages uniques près de Saint-Valery, Le Crotoy et Le Tréport."
-seo_description: "Séjour aux Rêves de Baie de Somme : maison d’hôtes en Picardie avec accueil chaleureux, table d’hôtes savoureuse et cadre exceptionnel près de Saint-Valery, Le Crotoy et Le Tréport."
+description: "Découvrez notre séjour aux Rêves de Baie de Somme : accueil chaleureux,
+  gastronomie raffinée et paysages uniques près de Saint-Valery, Le Crotoy et Le Tréport."
+seo_description: "Séjour aux Rêves de Baie de Somme : maison d’hôtes en Picardie avec
+  accueil chaleureux, table d’hôtes savoureuse et cadre exceptionnel près de Saint-Valery,
+  Le Crotoy et Le Tréport."
 keywords:
-  - les rêves de baie de somme
-  - avis maison d’hôtes baie de somme
-  - chambre d’hôtes picardie
-  - séjour baie de somme
-  - table d’hôtes saint valery sur somme
-  - hébergement proche le crotoy
+- les rêves de baie de somme
+- avis maison d’hôtes baie de somme
+- chambre d’hôtes picardie
+- séjour baie de somme
+- table d’hôtes saint valery sur somme
+- hébergement proche le crotoy
 slug: les-reves-de-baie-de-somme
 date: 2025-08-11
 updated: 2025-08-11
 tags:
-  - maison-d-hotes
-  - chambre-d-hotes
-  - baie-de-somme
-  - le-treport
-  - saint-valery-sur-somme
-  - le-crotoy
-  - le-hourdel
-  - tourisme-hauts-de-france
-  - sejour-romantique
-  - gastronomie
-  - table-d-hotes
-  - voyage-france
-  - escapade-weekend
-  - hebergement-de-charme
-  - vacances-cote-picarde
-  - avis-sejour
-  - tourisme-cote-opale
-  - phoques-baie-de-somme
-  - village-pittoresque
-  - bons-plans-voyage
-  - voyage
-  - picardie
-  - baie-de-somme
-  - avis
+- maison-d-hotes
+- chambre-d-hotes
+- baie-de-somme
+- le-treport
+- saint-valery-sur-somme
+- le-crotoy
+- le-hourdel
+- tourisme-hauts-de-france
+- sejour-romantique
+- gastronomie
+- table-d-hotes
+- voyage-france
+- escapade-weekend
+- hebergement-de-charme
+- vacances-cote-picarde
+- avis-sejour
+- tourisme-cote-opale
+- phoques-baie-de-somme
+- village-pittoresque
+- bons-plans-voyage
+- voyage
+- picardie
+- baie-de-somme
+- avis
 draft: false
 image: images/BF8DFCBA-2CF0-4673-8F57-E0B8D97EA648.jpg
-
 images:
-  - images/BF8DFCBA-2CF0-4673-8F57-E0B8D97EA648.jpg
-  - images/CCDB8AF0-D8F4-465D-9098-219105D9D108.jpg
-  - images/CE347384-7C1A-4814-912A-DC6E96635C94.jpg
+- images/BF8DFCBA-2CF0-4673-8F57-E0B8D97EA648.jpg
+- images/CCDB8AF0-D8F4-465D-9098-219105D9D108.jpg
+- images/CE347384-7C1A-4814-912A-DC6E96635C94.jpg
+modified: 2025-09-02T09:43:51+02:00
+
 ---
 
 > Séjour effectué du **mardi 5 août 2025** au **jeudi 7 août 2025**.

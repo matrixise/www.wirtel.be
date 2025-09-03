@@ -4,6 +4,7 @@ description: "Long time no see!"
 date: 2024-09-25T01:34:49+01:00
 tags: ["updates", "personal"]
 slug: "2024-september-whatsnew"
+
 ---
 
 **Why I Haven’t Been Active for 3 Years**

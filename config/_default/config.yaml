@@ -31,6 +31,7 @@ Params:
   readingTime: true
   readingTimeText: "Estimated reading time:"
   site_name: "Stéphane's Blog"
+  mainSections: [post]
 Permalinks:
   post: /post/:year/:month/:day/:slug
 Privacy:

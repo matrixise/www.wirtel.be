@@ -1,11 +1,15 @@
 ---
 title: "Enfin Papa!"
 date: 2011-01-21T03:26:00+02:00
-tags: ['family']
+tags:
+- family
 slug: enfin-papa
+ContentType: post
 resources:
-  - name: Margaux
-    src: margaux.png
+- name: Margaux
+  src: margaux.png
+modified: 2025-09-02T11:09:26+02:00
+
 ---
 
 # Margaux 1.0
@@ -16,4 +20,4 @@ Ma compagne et moi-même avons donc le grand plaisir de vous informer que notre 
 
 Regardez par vous-même.
 
-{{< image "Margaux" >}}
+![Margaux](margaux.png)

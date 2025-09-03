@@ -4,6 +4,7 @@ date: 2017-08-23T16:00:00+02:00
 tags: ["python", "france", "conference"]
 categories: ["conference"]
 slug: "je-parle-a-pycon-fr-2017"
+
 ---
 
 # PyCon France 2017

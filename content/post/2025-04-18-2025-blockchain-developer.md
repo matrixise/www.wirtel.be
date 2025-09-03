@@ -4,6 +4,7 @@ description: "From Web2 to Web3: My Journey Through Blockchain Development with 
 date: 2025-04-18
 tags: [blockchain, web3, developer, nft, gnosis, alyra, nextjs, solidity]
 slug: "2025-blockchain-developer"
+
 ---
 
 ✨ **A New Milestone!**

@@ -1,33 +1,37 @@
 ---
 title: Migration Hugo et passage à Obsidian
-description: Retour sur la migration technique de mon site vers Hugo 0.148.1, l’abandon de getJSON, et une réflexion sur Obsidian comme source unique pour le contenu et le CV.
+description: Retour sur la migration technique de mon site vers Hugo 0.148.1, 
+  l’abandon de getJSON, et une réflexion sur Obsidian comme source unique pour 
+  le contenu et le CV.
 date: 2025-07-10
 tags:
-  - hugo
-  - obsidian
-  - automation
-  - cv
-  - llm
-  - static-site
-  - developer-tools
-slug: 2025-migration-hugo-obsidian-cv
+- hugo
+- obsidian
+- automation
+- cv
+- llm
+- static-site
+- developer-tools
+ContentType: post
+slug: migration-hugo-obsidian-cv
 image: obsidian2hugo.png
+obsidian-note-status:
+- colorful:completed
+modified: 2025-09-02T18:34:11+02:00
+
 ---
 
-
-Rien de spectaculaire à signaler, si ce n'est que je viens de migrer mon site vers la dernière version stable de [Hugo](https://gohugo.io). L’outil reste toujours aussi impressionnant : ultra performant, aucun souci de vitesse ni de compilation.
+Rien de spectaculaire à signaler, si ce n'est que je viens de migrer mon site vers la dernière version stable de [Hugo]. L’outil reste toujours aussi impressionnant : ultra performant, aucun souci de vitesse ni de compilation.
 
 En revanche, le [thème que j’utilise](https://github.com/jbub/ghostwriter) – toujours maintenu – ne suit pas entièrement les dernières évolutions de Hugo. Résultat : quelques blocages et ajustements à faire moi-même.
 
 ## Quelques problèmes rencontrés
 
-1. **Commentaires internes non pris en charge**
+1. **Commentaires internes non pris en charge**  
    Le thème ne supporte pas le nouveau système de commentaires intégré à Hugo. Dommage, surtout quand on veut rester sur une solution native.
-
-2. **Google Analytics obsolète**
+2. **Google Analytics obsolète**  
    Je dois migrer vers une version plus récente. Honnêtement, je me demande encore comment mon site arrivait à afficher des stats… peu intéressantes, il faut l’avouer (mais bon, ce blog n’est pas très lu — et la faute m’en revient totalement 😅).
-
-3. **Corrections de bugs liés aux entités HTML**
+3. **Corrections de bugs liés aux entités HTML**  
    J’utilisais certaines entités HTML directement dans le contenu, ce qui posait problème avec les nouvelles versions. J’ai fait le ménage.
 
 ## 💡 Changement technique : adieu `getJSON`, bonjour `resources.GetRemote`
@@ -35,7 +39,7 @@ En revanche, le [thème que j’utilise](https://github.com/jbub/ghostwriter) �
 
 L’un des changements les plus concrets concerne l’utilisation de `getJSON` dans certains shortcodes — notamment pour [SpeakerDeck](https://speakerdeck.com). Depuis [Hugo 0.123](https://github.com/gohugoio/hugo/releases/tag/v0.123.0), [getJSON](https://gohugo.io/functions/data/getjson/) est déprécié, remplacé par `resources.GetRemote` couplé à `transform.Unmarshal`.
 
-Voici le diff :
+Voici le diff :  
 
 ```diff
 -{{ $id := .Get "id" | default (.Get 0) }}
@@ -58,7 +62,7 @@ Et là, je me suis dit: ce que je voulais faire depuis longtemps est désormais 
 
 ### **Pourquoi je vais passer à Obsidian pour générer mon site (et mon CV)**
 
-1. **J’utilise déjà Obsidian quotidiennement** — pour mes notes pro, perso, techniques, etc.
+1. **J’utilise déjà Obsidian quotidiennement** — pour mes notes pro, perso, techniques, etc.    
 2. **Centraliser tout** (connaissances, brouillons, idées d’articles, contenu de mon site) dans un même espace me semble évident.
 3. **Je gagne du temps** :
 	- J’écris mes articles directement dans mes notes.
@@ -73,7 +77,7 @@ Et là, je me suis dit: ce que je voulais faire depuis longtemps est désormais 
 Je prépare donc une migration progressive de mon flux `nvim` / `VSCode` vers un système **Obsidian + automatisation**:
 - **Templates de post** gérés via le plugin Templater
 - **Notes liées aux projets** et aux expériences pro
-- **Script d’export vers Hugo**
+- **Script d’export vers Hugo** 
 
 ## **🎯 Objectifs de cette transition**
 

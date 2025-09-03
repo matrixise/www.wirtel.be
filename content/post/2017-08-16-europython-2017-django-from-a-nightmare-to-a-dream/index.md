@@ -2,8 +2,14 @@
 title: "EuroPython 2017: Django From A Nightmare To A Dream"
 date: 2017-08-16T01:01:56+02:00
 draft: true
-tags: ["python", "conference", "django", "europython"]
-slug: "europython-2017-django-from-a-nightmare-to-a-dream"
+tags:
+- python
+- conference
+- django
+- europython
+slug: europython-2017-django-from-a-nightmare-to-a-dream
+modified: 2025-09-01T15:54:26+02:00
+
 ---
 
 # Introduction

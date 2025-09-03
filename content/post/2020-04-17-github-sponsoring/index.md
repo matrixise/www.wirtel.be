@@ -1,9 +1,17 @@
 ---
-title: "Yes!, I am a Github Sponsor"
+title: Yes!, I am a Github Sponsor
 date: 2020-04-17T02:20:31+02:00
-tags: ["python", "sponsoring", "github", "opensource"]
+ContentType: post
+tags:
+- python
+- sponsoring
+- github
+- opensource
 image: mona-heart-featured.png
-slug: "github-sponsoring"
+slug: github-sponsoring
+modified: 2025-09-02T12:31:06+02:00
+Status: published
+
 ---
 
 # What's a Github Sponsor?
