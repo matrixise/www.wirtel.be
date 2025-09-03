@@ -17,6 +17,8 @@ slug: ce-que-je-fabrique-pendant-mes-vacances
 image: background.png
 modified: 2025-09-02T18:56:42+02:00
 image_y: 0.5
+ContentType: post
+Status: published
 
 ---
 

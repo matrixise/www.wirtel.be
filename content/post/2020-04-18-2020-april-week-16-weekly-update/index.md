@@ -9,6 +9,8 @@ tags:
 - language summit
 slug: 2020-april-week-16-weekly-update
 modified: 2025-09-02T08:45:45+02:00
+ContentType: post
+Status: published
 
 ---
 

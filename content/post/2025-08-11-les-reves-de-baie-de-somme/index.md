@@ -49,6 +49,8 @@ images:
 - images/CCDB8AF0-D8F4-465D-9098-219105D9D108.jpg
 - images/CE347384-7C1A-4814-912A-DC6E96635C94.jpg
 modified: 2025-09-02T09:43:51+02:00
+ContentType: post
+Status: published
 
 ---
 

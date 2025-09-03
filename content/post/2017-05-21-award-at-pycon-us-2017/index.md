@@ -8,6 +8,8 @@ tags:
 image: award.jpg
 slug: award-at-pycon-us-2017
 modified: 2025-09-02T08:45:03+02:00
+ContentType: post
+Status: published
 
 ---
 

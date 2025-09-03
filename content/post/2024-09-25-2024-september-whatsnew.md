@@ -1,9 +1,13 @@
 ---
-title: "What's new?"
-description: "Long time no see!"
+title: What's new?
+description: Long time no see!
 date: 2024-09-25T01:34:49+01:00
-tags: ["updates", "personal"]
-slug: "2024-september-whatsnew"
+tags:
+- updates
+- personal
+slug: 2024-september-whatsnew
+ContentType: post
+Status: published
 
 ---
 

@@ -1,9 +1,13 @@
 ---
 title: "October - Week 40: Contributions to CPython"
 date: 2018-10-19T12:23:28+02:00
-description: "I start, again..."
-tags: ["python", "contribution"]
-slug: "2018-october-week40-contributions-to-cpython"
+description: I start, again...
+tags:
+- python
+- contribution
+slug: 2018-october-week40-contributions-to-cpython
+ContentType: post
+Status: published
 
 ---
 

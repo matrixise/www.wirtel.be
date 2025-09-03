@@ -13,6 +13,8 @@ categories:
 - event
 slug: python-events-in-2017-need-your-help
 modified: 2025-09-02T11:10:47+02:00
+ContentType: post
+Status: published
 
 ---
 

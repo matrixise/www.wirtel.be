@@ -1,10 +1,18 @@
 ---
-title: "Connect to Odoo in your application with ERPpeek"
-tags: ["python", "openerp", "odoo", "erppeek", "xmlrpc"]
-date: 2014-06-13 18:16:29+01:00
-categories: ["programming"]
-image: "background.jpg"
-slug: "using_erppeek_to_discuss_with_openerp"
+title: Connect to Odoo in your application with ERPpeek
+tags:
+- python
+- openerp
+- odoo
+- erppeek
+- xmlrpc
+date: 2014-06-13T18:16:29+01:00
+categories:
+- programming
+image: background.jpg
+slug: using_erppeek_to_discuss_with_openerp
+ContentType: post
+Status: published
 
 ---
 

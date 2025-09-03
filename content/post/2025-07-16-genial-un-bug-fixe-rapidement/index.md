@@ -18,6 +18,7 @@ image: update-ghostwriter.png
 modified: 2025-09-02T08:41:25+02:00
 obsidian-note-status:
 - colorful:completed
+Status: published
 slug: genial-un-bug-fixe-rapidement
 
 ---

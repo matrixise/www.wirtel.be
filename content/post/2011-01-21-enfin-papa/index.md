@@ -9,6 +9,7 @@ resources:
 - name: Margaux
   src: margaux.png
 modified: 2025-09-02T11:09:26+02:00
+Status: published
 
 ---
 

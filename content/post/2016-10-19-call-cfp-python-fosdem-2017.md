@@ -9,6 +9,8 @@ categories:
 - conference
 slug: call-cfp-python-fosdem-2017
 modified: 2025-09-02T12:12:59+02:00
+ContentType: post
+Status: published
 
 ---
 

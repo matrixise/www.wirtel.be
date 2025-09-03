@@ -9,6 +9,8 @@ tags:
 - europython
 slug: europython-2017-django-from-a-nightmare-to-a-dream
 modified: 2025-09-01T15:54:26+02:00
+ContentType: post
+Status: published
 
 ---
 

@@ -1,9 +1,16 @@
 ---
-date: 2017-02-01 21:00:00+01:00
-title: "PythonFOSDEM 2017 - Schedule"
-tags: ["python", "fosdem", "conference", "schedule"]
-categories: ["conference"]
-slug: "python-fosdem-2017-schedule"
+date: 2017-02-01T21:00:00+01:00
+title: PythonFOSDEM 2017 - Schedule
+tags:
+- python
+- fosdem
+- conference
+- schedule
+categories:
+- conference
+slug: python-fosdem-2017-schedule
+ContentType: post
+Status: published
 
 ---
 
