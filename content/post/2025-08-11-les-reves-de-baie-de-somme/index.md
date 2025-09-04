@@ -48,7 +48,7 @@ images:
 - images/BF8DFCBA-2CF0-4673-8F57-E0B8D97EA648.jpg
 - images/CCDB8AF0-D8F4-465D-9098-219105D9D108.jpg
 - images/CE347384-7C1A-4814-912A-DC6E96635C94.jpg
-modified: 2025-09-02T09:43:51+02:00
+modified: 2025-08-11T09:43:51
 ContentType: post
 Status: published
 

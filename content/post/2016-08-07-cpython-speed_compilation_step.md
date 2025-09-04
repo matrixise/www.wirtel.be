@@ -31,13 +31,13 @@ In fact, these steps are really easy
 
 Here are the normal steps
 
-{{< highlight text >}}
+```
 > hg clone https://hg.python.org/cpython
 > cd cpython
 > ./configure --prefix=$PWD-build -q
 > make -s
 > ./python
-{{< /highlight >}}
+```
 
 Ok, in this logic, the compilation of Python is easy, we have the sources, we compile them and just test it.
 
@@ -57,7 +57,7 @@ But I don't want to explain how to use the `autotools` and how to generate this 
 
 Example::
 
-{{< highlight text >}}
+```
 > time -p make -j 4 -s
 > time -p ./configure --prefix=$PWD-build -q
 real 13.06
@@ -71,7 +71,7 @@ sys 6.53
 real 2.62
 user 1.08
 sys 1.87
-{{< /highlight >}}
+```
 
 ## CCache
 
@@ -95,9 +95,9 @@ I use Fedora 24 and of course, the packaged version of ccache is 3.2.7 (released
 
 so, for the installation, just install it with dnf
 
-{{< highlight text >}}
+```
 sudo dnf install ccache
-{{< /highlight >}}
+```
 
 Once installed, you have to install it manually, the binaries are in the systems but not available.
 

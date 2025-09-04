@@ -13,6 +13,7 @@ image: background.jpg
 slug: using_erppeek_to_discuss_with_openerp
 ContentType: post
 Status: published
+modified: 2025-09-04T15:23:20+02:00
 
 ---
 
@@ -32,7 +33,7 @@ options.
 ### The protocols
 
 1. xmlrpc (since the beginning of Odoo)
-   
+
    * available from the first version of OpenERP
    * based on HTTP (allow the virtual hosting with a reverse-proxy [nginx])
    * very simple
@@ -52,7 +53,7 @@ options.
 Imagining that you want to show the users from the database, you can use the
 following code with the [xmlrpclib] module of the Standard Library of Python.
 
-{{< highlight python >}}
+```python
 #!/usr/bin/env python
 from __future__ import print_function
 from xmlrpclib import ServerProxy
@@ -78,8 +79,7 @@ users = server.execute(
 
 for user in users:
     print(user['id'], user['name'])
-
-{{< /highlight >}}
+```
 
 With the above example, I think it's not very verbose, the code is very simple.
 We use the ServerProxy object from the [xmlrpclib] library and the library does
@@ -93,7 +93,7 @@ Now, we will use the [ERPpeek] library by [Florent Xicluna](https://github.com/f
 
 Here is the same example with ERPpeek
 
-{{< highlight python >}}
+```python
 #!/usr/bin/env python
 from __future__ import print_function
 import erppeek
@@ -111,8 +111,7 @@ users = proxy.browse([])
 
 for user in users:
     print("{user.id} {user.name}".format(user=user))
-{{< /highlight >}}
-
+```
 
 Interested in this library? Let's go for this tutorial.
 
@@ -123,27 +122,26 @@ debian or ubuntu).
 
 In the case where you want to use a virtualenv.
 
-{{< highlight bash >}}
+```bash
 pip install virtualenv
 virtualenv ~/.venvs/erppeek
 source ~/.venvs/erppeek/bin/activate
-{{< /highlight >}}
+```
 
 Once your environment is installed, you can install the library with [pip].
 
 # Install the library
 
-{{< highlight bash >}}
+```bash
 pip install erppeek
-{{< /highlight >}}
-
+```
 After that, you'll be free to use it via the CLI provided by the library,
 because this one contains a CLI called erppeek ;-) Or you can use the library
 via the API and in this tutorial, we will use this option, the API.
 
 # List the databases
 
-{{< highlight python >}}
+```python
 #!/usr/bin/env python
 from __future__ import print_function
 import erppeek
@@ -154,11 +152,11 @@ client = erppeek.Client(server=SERVER)
 
 for database in client.db.list():
    print('database: %r' % (database,))
-{{< /highlight >}}
+```
 
 # Check if a database exists
 
-{{< highlight python >}}
+```python
 #!/usr/bin/env python
 from __future__ import print_function
 import erppeek
@@ -174,13 +172,12 @@ if database_exists:
     print("Database {} exists".format(DATABASE))
 else:
     print("Database {} does not exist".format(DATABASE))
-{{< /highlight >}}
-
+```
 # Create a database
 
 Firstly, when you start with [Odoo], you want to create a new database.
 
-{{< highlight python >}}
+```python
 #!/usr/bin/env python
 from __future__ import print_function
 import erppeek
@@ -194,7 +191,7 @@ client = erppeek.Client(server=SERVER)
 if not DATABASE in client.db.list():
     print("the database does not exist...")
     client.create_database(ADMIN_PASSWORD, DATABASE)
-{{< /highlight >}}
+```
 
 # Default configuration
 
@@ -203,18 +200,18 @@ several environments. By the way, instead of using the **erppeek.Client** method
 and pass the arguments for the connection, you can use the
 **erppeek.Client.from_config** method and give the right environment.
 
-{{< highlight ini >}}
+```ini
 [demo]
 host = localhost
 port = 8069
 database = demo
 username = admin
 password = admin
-{{< /highlight >}}
+```
 
 For example, here is the right code
 
-{{< highlight python >}}
+```python
 #!/usr/bin/env python
 import erppeek
 
@@ -225,11 +222,11 @@ client = erppeek.Client('http://localhost:8069', 'demo', 'admin', 'admin')
 # you can use the erppeek.Client.from_config method
 
 client = erppeek.Client.from_config('demo')
-{{< /highlight >}}
+```
 
 # List the installed modules
 
-{{< highlight python >}}
+```python
 #!/usr/bin/env python
 from __future__ import print_function
 import erppeek
@@ -247,11 +244,11 @@ installed_modules = proxy.browse([('state', '=', 'installed')])
 
 for module in installed_modules:
     print('{:>5} {}'.format(module.name, module.description))
-{{< /highlight >}}
+```
 
 # Update the module list
 
-{{< highlight python >}}
+```python
 #!/usr/bin/env python
 from __future__ import print_function
 import erppeek
@@ -259,11 +256,11 @@ import erppeek
 client = erppeek.Client.from_config('demo')
 proxy = client.model('ir.module.module')
 proxy.update_list()
-{{< /highlight >}}
+```
 
 # Install the CRM module
 
-{{< highlight python >}}
+```python
 #!/usr/bin/env python
 from __future__ import print_function
 import erppeek
@@ -272,14 +269,14 @@ client = erppeek.Client.from_config('demo')
 modules = client.modules('crm', installed=False)
 if 'crm' in modules['uninstalled']:
     client.install('crm')
-{{< /highlight >}}
+```
 
 # List the models
 
 Here is a part of code which shows how to fetch the list of the models installed
 in the database.
 
-{{< highlight python >}}
+```
 #!/usr/bin/env python
 from __future__ import print_function
 import erppeek
@@ -288,11 +285,11 @@ client = erppeek.Client.from_config('demo')
 proxy = client.model('ir.model')
 for model in proxy.browse([]):
     print("{model.model} {model.state}".format(model=model))
-{{< /highlight >}}
+```
 
 # Show the description of a model
 
-{{< highlight python >}}
+```python
 #!/usr/bin/env python
 from __future__ import print_function
 import erppeek
@@ -306,14 +303,14 @@ for fname, field in sorted(user_model.fields().items()):
     values = dict(DEFAULTS, name=fname, **field)
 
 print("{name:30} {type:10} {string}".format(**values))
-{{< /highlight >}}
+```
 
 # Create a new model
 
 In this example, we will see how to create a new model via XML-RPC and add a new
 field.
 
-{{< highlight python >}}
+```python
 #!/usr/bin/env python
 from __future__ import print_function
 import erppeek
@@ -342,17 +339,17 @@ values = {
     'domain': '[]',
 }
 field = field_proxy.create(values)
-{{< /highlight >}}
+```
 
 With this code, you will be able to create a new record with ERPpeek
 
-{{< highlight python >}}
+```python
 contact_proxy = client.model('x_contact')
 contact_proxy.create({'x_firstname': 'Stephane'})
 
 for contact in contact_proxy.browse([]):
     print(contact.x_firstname)
-{{< /highlight >}}
+```
 
 
 In the second part of this series, I will explain how to create an invoice and
