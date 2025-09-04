@@ -1,6 +1,7 @@
 ---
 title: DEV
 
+baseurl: http://localhost:1313/
 services:
   googleAnalytics:
     id: ""
