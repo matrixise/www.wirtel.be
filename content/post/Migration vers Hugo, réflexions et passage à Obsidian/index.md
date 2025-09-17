@@ -19,6 +19,8 @@ obsidian-note-status:
 - colorful:completed
 modified: 2025-09-02T18:34:11+02:00
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

@@ -10,6 +10,8 @@ categories:
 slug: call-volunteers-python-fosdem-2017
 ContentType: post
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

@@ -11,6 +11,8 @@ image: mona-heart-featured.png
 slug: github-sponsoring
 modified: 2025-09-02T12:31:06+02:00
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

@@ -7,6 +7,8 @@ tags:
 slug: 2019-march-week-12-weekly-update
 ContentType: post
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

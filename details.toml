@@ -1,0 +1,124 @@
+skills = ['Karate', 'Wine Tasting']
+
+[personal]
+first_name = "Stéphane"
+last_name = "Wirtel"
+github = "https://github.com/matrixise"
+linkedin = "https://linkedin.com/in/stephanewirtel"
+about_me = """
+Python enthusiast, Python Core Developer, Best Practices Automation and
+Distributed Systems are my favourite topics. Founder of Mgx.io SRL.
+Former Core Developer of Odoo
+"""
+
+[[positions]]
+name = "Mgx.io SRL"
+title = "Senior Python Consultant"
+current = true
+date_from = "2014/07"
+description = ""
+technologies = []
+
+[[positions]]
+name = "European Investment Bank"
+title = "Senior Python Consultant"
+# current = false
+date_from = "2022/12"
+date_to = "2025/04"
+technologies = ["FastAPI", "VueJS", "Python", "pandas", "DuckDB"]
+description = """
+At the European Investment Bank (EIB), several Python tools were developed to support credit risk modelling and financial data workflows.
+The work began with the creation of a multi-interface demonstrator exposing a shared risk library via CLI, FastAPI, Vue.js, Excel (xlwings), and Python.
+This was followed by the development of Protog, a credit risk engine computing Expected Losses (both analytical and Monte Carlo), with support for tranching, pari passu, WAVG, and remuneration spreads.
+DataTreatment, an ETL pipeline, was built to standardize heterogeneous Excel datasets using Pandera and Pandas, feeding modelling and dashboarding tools.
+Additional tools include Cashflow Generator (reporting) and Cashflow-Rebucketer (cashflow normalization).
+All tools provide Excel and CLI integration, follow strong engineering standards (typing, testing, profiling, documentation), and are actively used by EIB teams on a daily basis."""
+
+[[positions]]
+name = "Odoo"
+title = "Software Engineer"
+date_to = "2008/04"
+date_from = "2014/07"
+description = ""
+technologies = []
+
+[[positions]]
+name = "Descasoft"
+title = "Junior Software Engineer"
+date_from = "2004/10"
+date_to = "2008/04"
+description = ""
+technologies = []
+
+[[projects]]
+name = "Python"
+url = "https://www.python.org"
+
+[[projects]]
+name = "Gunicorn"
+url = "https://www.gunicorn.org"
+
+[[projects]]
+name = "Planet Python"
+url = "https://planet.python.org"
+
+
+[[conferences]]
+name = "EuroPython"
+years = [2015, 2016, 2017, 2018, 2020]
+positions = ["Speaker", "Co-Organiser", "Volunteer"]
+
+[[conferences]]
+name = "PyCon Ireland"
+years = [2014, 2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024]
+positions = ["Speaker", "Co-Organiser"]
+
+[[conferences]]
+name = "PyCon Limerick"
+years = [2020, 2022, 2023]
+positions = ["Co-Organiser"]
+
+[[conferences]]
+name = "PyCon Canada"
+years = [2014, 2015, 2016, 2017]
+positions = ["Speaker"]
+
+[[conferences]]
+name = "PyCon France"
+years = [2010, 2012, 2013, 2014, 2015, 2017, 2018]
+positions = ["Volunteer", "Speaker"]
+
+[[conferences]]
+name = "PyCon Germany"
+years = [2018, 2019]
+positions = ["Speaker"]
+
+[[conferences]]
+name = "PyCon Italy"
+years = [2018]
+positions = ["Speaker"]
+
+[[conferences]]
+name = "PyCon Slovakia"
+years = [2018]
+positions = ["Keynoter"]
+
+[[conferences]]
+name = "PyCon United Kingdom"
+years = [2014, 2015, 2016, 2018]
+positions = ["Speaker"]
+
+[[conferences]]
+name = "PyCon US"
+years = [2014, 2015, 2017, 2018, 2019]
+positions = ["Volunteer", "Helper for Tutorials"]
+
+[[conferences]]
+name = "PyCon Ukraine"
+years = [2018]
+positions = ["Keynoter"]
+
+[[conferences]]
+name = "PythonFOSDEM"
+years = [2013, 2014, 2015, 2016, 2017, 2025]
+positions = ["Co-Organiser", "Speaker"]

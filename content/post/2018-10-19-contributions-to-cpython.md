@@ -8,6 +8,8 @@ tags:
 slug: 2018-october-week40-contributions-to-cpython
 ContentType: post
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

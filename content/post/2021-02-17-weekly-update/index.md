@@ -10,6 +10,8 @@ image: jannis-brandt-mmsQUgMLqUo-unsplash.jpg
 slug: 2021-february-week-7-weekly-update
 ContentType: post
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

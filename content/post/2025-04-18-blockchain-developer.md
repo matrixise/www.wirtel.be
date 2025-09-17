@@ -14,6 +14,8 @@ tags:
 slug: 2025-blockchain-developer
 ContentType: post
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

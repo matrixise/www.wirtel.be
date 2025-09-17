@@ -14,6 +14,8 @@ slug: using_erppeek_to_discuss_with_openerp
 ContentType: post
 Status: published
 modified: 2025-09-04T15:23:20+02:00
+author:
+- Stéphane Wirtel
 
 ---
 

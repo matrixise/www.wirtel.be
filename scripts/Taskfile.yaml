@@ -1,0 +1,117 @@
+version: '3'
+
+vars:
+  # Texte du watermark
+  TEXT: 'Crédits: Les Rêves de Baie de Somme'
+  # Taille du texte
+  POINTSIZE: 28
+  # Qualité JPEG (70–90 recommandé)
+  QUALITY: 85
+  # Taille max (largeur/hauteur)
+  MAX: 1024
+  # Position du texte (top-left, top-right, bottom-left, bottom-right, center, etc.)
+  GRAVITY: southeast
+  # Offsets depuis le bord choisi
+  OFFSET_X: 20
+  OFFSET_Y: 20
+  # Dossier de sortie
+  OUTDIR: out
+  # Optionnel: chemin police. Tu peux overrider: `task process FONT=/chemin/police.ttf`
+  FONT: ""
+
+tasks:
+  # Tâche par défaut: traite les fichiers passés en arguments
+  process:
+    desc: "Redimensionne, watermark, convertit en JPEG optimisé et renomme en UUID. Usage: task process -- img/*.jpg img/*.png"
+    cmds:
+      - |
+        set -euo pipefail
+
+        # Détecter ImageMagick
+        if ! command -v magick >/dev/null 2>&1; then
+          echo "❌ ImageMagick (magick) introuvable. Installe-le (brew install imagemagick / apt install imagemagick)."
+          exit 1
+        fi
+
+        # Police: priorité à {{.FONT}}, sinon auto macOS/Linux
+        FONT="{{.FONT}}"
+        if [ -z "$FONT" ]; then
+          if [ -f "/System/Library/Fonts/Supplemental/Arial.ttf" ]; then
+            FONT="/System/Library/Fonts/Supplemental/Arial.ttf"
+          elif [ -f "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf" ]; then
+            FONT="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+          else
+            echo "❌ Police introuvable. Spécifie une police: task process FONT=/chemin/Inter-Regular.ttf -- <fichiers>"
+            exit 1
+          fi
+        fi
+
+        # Vérif arguments
+        if [ $# -eq 0 ]; then
+          echo "❌ Aucun fichier à traiter. Exemple: task process -- img/*.jpg img/*.png"
+          exit 1
+        fi
+
+        # Dossier sortie
+        mkdir -p "{{.OUTDIR}}"
+
+        # Petite fonction UUID portable
+        gen_uuid() {
+          if command -v uuidgen >/dev/null 2>&1; then
+            uuidgen
+          elif command -v python3 >/dev/null 2>&1; then
+            python3 - <<'PY'
+import uuid; print(uuid.uuid4())
+PY
+          else
+            # Fallback pseudo-UUID
+            date +%s%N | shasum | cut -c1-32
+          fi
+        }
+
+        # Boucle sur les fichiers passés après `--`
+        for f in "$@"; do
+          if [ ! -f "$f" ]; then
+            echo "⏭️  SKIP: $f (pas un fichier)"
+            continue
+          fi
+
+          id="$(gen_uuid)"
+          out="{{.OUTDIR}}/${id}.jpg"
+
+          echo "→ $f  ->  $out"
+
+          magick "$f" -auto-orient \
+            -resize '{{.MAX}}x{{.MAX}}>' \
+            -font "$FONT" -pointsize {{.POINTSIZE}} \
+            -fill white -stroke black -strokewidth 2 \
+            -gravity {{.GRAVITY}} -annotate +{{.OFFSET_X}}+{{.OFFSET_Y}} "{{.TEXT}}" \
+            -strip -quality {{.QUALITY}} -interlace JPEG \
+            "$out"
+        done
+    vars:
+      # Permet de passer les fichiers après `--`
+      FILES: '{{.CLI_ARGS}}'
+    silent: false
+
+  # Nettoyer le dossier de sortie
+  clean:
+    desc: "Supprime le dossier de sortie"
+    cmds:
+      - rm -rf "{{.OUTDIR}}"
+      - echo "🧹 Dossier '{{.OUTDIR}}' supprimé."
+
+  # Exemple: traite tout un dossier d'entrée
+  blog:
+    desc: "Traitement 'blog-ready' du dossier ./images -> ./out (jpg, 1024px, watermark, UUID)"
+    cmds:
+      - task: process
+        vars:
+          # tu peux override ici aussi (ex. POINTSIZE, TEXT, etc.)
+          OUTDIR: "{{.OUTDIR}}"
+        silent: false
+    sources:
+      - images/**
+    generates:
+      - out/**
+    # Appel: task blog -- images/*.jpg images/*.png
