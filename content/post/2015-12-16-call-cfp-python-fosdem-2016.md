@@ -11,6 +11,8 @@ image: python-fosdem-2016.jpg
 slug: call-cfp-python-fosdem-2016
 ContentType: post
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

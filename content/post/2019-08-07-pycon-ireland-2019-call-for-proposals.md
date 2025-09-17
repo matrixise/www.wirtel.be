@@ -9,6 +9,8 @@ tags:
 slug: pycon-ireland-2019-call-for-proposals
 ContentType: post
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

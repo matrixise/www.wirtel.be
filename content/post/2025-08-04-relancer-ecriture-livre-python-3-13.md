@@ -16,6 +16,8 @@ tags:
 - pandoc
 - typst
 modified: 2025-08-05T08:42:33
+author:
+- Stéphane Wirtel
 slug: relancer-lecriture-de-mon-livre-introduction-a-python-3-13
 
 ---

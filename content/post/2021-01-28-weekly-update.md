@@ -13,6 +13,8 @@ slug: 2021-january-week-4-weekly-update
 modified: 2025-09-03T09:56:11+02:00
 ContentType: post
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

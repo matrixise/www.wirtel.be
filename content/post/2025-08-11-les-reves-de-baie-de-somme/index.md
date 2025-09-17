@@ -51,6 +51,8 @@ images:
 modified: 2025-08-11T09:43:51
 ContentType: post
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

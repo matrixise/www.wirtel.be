@@ -11,6 +11,8 @@ slug: je-parle-a-pycon-fr-2017
 modified: 2025-09-03T10:40:06+02:00
 ContentType: post
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

@@ -11,6 +11,8 @@ categories:
 slug: python-fosdem-2017-schedule
 ContentType: post
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

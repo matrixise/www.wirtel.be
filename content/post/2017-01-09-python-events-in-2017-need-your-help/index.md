@@ -8,7 +8,7 @@ tags:
 - "2017"
 - community
 - psf
-author: Stephane Wirtel
+author: Stéphane Wirtel
 categories:
 - event
 slug: python-events-in-2017-need-your-help

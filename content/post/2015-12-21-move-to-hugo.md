@@ -6,6 +6,8 @@ share: false
 slug: move-to-hugo
 ContentType: post
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 

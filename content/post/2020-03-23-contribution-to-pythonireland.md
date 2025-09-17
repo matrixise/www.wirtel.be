@@ -12,6 +12,8 @@ slug: contribution-to-pythonireland
 ContentType: post
 modified: 2025-09-02T18:56:50+02:00
 Status: published
+author:
+- Stéphane Wirtel
 
 ---
 
