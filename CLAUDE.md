@@ -153,3 +153,4 @@ layouts/
 - **Blog**: Netlify auto-deploys from `main` branch
 - **CV**: GitHub Actions runs daily cron job to build and upload to S3
 - Status badge: [![Netlify Status](https://api.netlify.com/api/v1/badges/c67c87b3-bc74-4667-b63f-d235ae5516fd/deploy-status)](https://app.netlify.com/sites/stephane-wirtel/deploys)
+- Never mention Claude or Claude Code in your commits
