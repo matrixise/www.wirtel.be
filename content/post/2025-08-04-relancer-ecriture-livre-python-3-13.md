@@ -1,6 +1,6 @@
 ---
-title: Relancer l’écriture de mon livre *Introduction à Python 3.13*`
-description: Relancer l’écriture de mon livre _Introduction à Python 3.13_ en 
+title: Relancer l'écriture de mon livre *Introduction à Python 3.13*
+description: Relancer l'écriture de mon livre _Introduction à Python 3.13_ en 
   m’appuyant sur Obsidian, Pandoc, Typst et une chaîne d’outils moderne et 
   fluide.
 date: 2025-08-04
@@ -154,11 +154,11 @@ Mais franchement… **ça me motive**.
 Avec tous les chapitres structurés dans Obsidian et réunis via Longform, je peux générer un manuscrit complet en Markdown.
 Une fois converti avec Pandoc et stylisé avec Typst, j’obtiens un PDF de qualité professionnelle.
 
-Aujourd’hui, le livre fait environ 60 pages, mais il est encore en construction.
+Aujourd'hui, le livre fait environ 60 pages, mais il est encore en construction.
 Je dois y intégrer plusieurs éléments essentiels pour être à jour :
-	•	des exemples avec `requests` et `numpy`, `pandas`,
-	•	l’usage de asyncio en situation réelle, `httpx`, `aiohttp`
-	•	le `match/case` et d’autres nouveautés du langage.
+- des exemples avec `requests` et `numpy`, `pandas`,
+- l'usage de asyncio en situation réelle, `httpx`, `aiohttp`
+- le `match/case` et d'autres nouveautés du langage.
 
 Le gros avantage, c’est que tout mon flux est maintenant en place.
 Je n’ai plus à réfléchir à l’outillage, je peux me concentrer uniquement sur le contenu.
