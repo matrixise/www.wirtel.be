@@ -91,3 +91,21 @@ tasks:
         sh: date +%Y-%m-%d
     cmds:
       - hugo new content content/post/{{.TODAY}}-{{ humanize .ARGS | title }}
+
+  migrate:obsidian:
+    desc: Convert Obsidian note to Hugo post
+    cmds:
+      - "{{ .LOCAL_PYTHON }} scripts/obsidian2hugo.py {{ .CLI_ARGS }}"
+
+  stats:content:
+    desc: Show content statistics
+    cmds:
+      - echo "Total posts:" && find content/post -name "*.md" | wc -l
+      - echo "Total talks:" && find content/talk -name "*.md" | wc -l
+      - echo "Total projects:" && find content/project -name "*.md" | wc -l
+
+  stats:words:
+    desc: Count words in posts
+    cmds:
+      - hugo list all | awk '{sum+=$4} END {print "Total words:", sum}'
+
