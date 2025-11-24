@@ -6,3 +6,4 @@ python-frontmatter
 awscli
 pyyaml
 jinja2
+python-slugify
