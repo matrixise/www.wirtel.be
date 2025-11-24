@@ -1,6 +1,6 @@
 ---
 created: 2025-09-17T16:30:25+02:00
-modified: 2025-09-17T16:44:24+02:00
+modified: 2025-10-20T12:18:13+02:00
 title: How about checking out the upcoming interesting conferences?
 date: 2025-09-17
 obsidian-note-status:
