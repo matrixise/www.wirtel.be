@@ -40,7 +40,7 @@ Status: published
 author:
 - Stéphane Wirtel
 created: 2025-11-22T10:00:00+01:00
-modified: 2025-11-23T08:21:05+01:00
+modified: 2025-11-23T20:21:31+01:00
 obsidian-note-status:
 - colorful:completed
 

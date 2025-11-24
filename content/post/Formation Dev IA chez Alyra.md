@@ -1,12 +1,11 @@
 ---
 created: 2025-10-18T15:28:39+02:00
-modified: 2025-10-20T12:52:27+02:00
+modified: 2025-10-20T18:03:08+02:00
 title: "Retour aux études : ma formation en intelligence artificielle chez Alyra"
 date: 2025-10-18
-summary: Depuis fin septembre, j'ai commencé une formation sur le développement 
-  en intelligence artificielle chez Alyra. Un retour passionnant vers les bases 
-  du machine learning et du deep learning, entre mathématiques, code et plaisir 
-  d'apprendre.
+summary: Depuis fin septembre, j'ai commencé une formation sur le développement en
+  intelligence artificielle chez Alyra. Un retour passionnant vers les bases du machine
+  learning et du deep learning, entre mathématiques, code et plaisir d'apprendre.
 tags:
 - formation
 - intelligence-artificielle
