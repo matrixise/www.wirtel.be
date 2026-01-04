@@ -6,6 +6,7 @@ tags:
 - openerp
 - xml
 lang: en
+modified: 2026-01-04T17:37:22+01:00
 
 ---
 
