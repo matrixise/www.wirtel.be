@@ -195,6 +195,10 @@ def main(
 
         print(f'{is_folder=} {path.name}')
 
+        if "title" not in document.metadata:
+            console.print(f"[bold red]Error:[/bold red] File '{markdown_document_path}' is missing required 'title' field in frontmatter", style="red")
+            raise ValueError(f"Missing 'title' field in {markdown_document_path}")
+
         computed_slug = slugify(document.metadata["title"])
         slug = document.metadata.get("slug", computed_slug)
         document.metadata["slug"] = slug
