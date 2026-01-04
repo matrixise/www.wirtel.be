@@ -176,6 +176,8 @@ def main(
     target_path: TargetPath = pathlib.Path('content/post'),
 ):
     console = Console()
+    errors = []
+
     for path, is_folder in find_notes(parent_path):
         path: pathlib.Path
         is_folder: bool
@@ -185,52 +187,77 @@ def main(
         else:
             markdown_document_path = path
 
-        document = fm.load(markdown_document_path, handler=YAML_HANDLER)
+        try:
+            document = fm.load(markdown_document_path, handler=YAML_HANDLER)
+        except Exception as e:
+            console.print(f"\n[bold red]❌ YAML Parse Error:[/bold red]", style="red")
+            console.print(f"   File: [bold]{markdown_document_path}[/bold]")
+            console.print(f"   Error: {str(e)[:200]}")
+            errors.append((markdown_document_path, e))
+            continue
 
-        # title = document.metadata['title']
-        # date = parse_date(document.metadata['date'])
+        try:
+            # title = document.metadata['title']
+            # date = parse_date(document.metadata['date'])
 
-        # console.print(f'Date: {date}')
-        # console.print(f'Title: {title}')
+            # console.print(f'Date: {date}')
+            # console.print(f'Title: {title}')
 
-        print(f'{is_folder=} {path.name}')
+            print(f'{is_folder=} {path.name}')
 
-        if "title" not in document.metadata:
-            console.print(f"[bold red]Error:[/bold red] File '{markdown_document_path}' is missing required 'title' field in frontmatter", style="red")
-            raise ValueError(f"Missing 'title' field in {markdown_document_path}")
+            if "title" not in document.metadata:
+                console.print(f"\n[bold red]❌ Missing Title:[/bold red]", style="red")
+                console.print(f"   File: [bold]{markdown_document_path}[/bold]")
+                errors.append((markdown_document_path, "Missing 'title' field"))
+                continue
 
-        computed_slug = slugify(document.metadata["title"])
-        slug = document.metadata.get("slug", computed_slug)
-        document.metadata["slug"] = slug
+            computed_slug = slugify(document.metadata["title"])
+            slug = document.metadata.get("slug", computed_slug)
+            document.metadata["slug"] = slug
 
-        if (
-            (image := document.metadata.get("image"))
-            and image.startswith("![[")
-            and image.endswith("]]")
-        ):
-            document.metadata["image"] = image[3:-2]
+            if (
+                (image := document.metadata.get("image"))
+                and image.startswith("![[")
+                and image.endswith("]]")
+            ):
+                document.metadata["image"] = image[3:-2]
 
-        # slug_path = f"{date.strftime('%Y-%m-%d')}-{slug}"
+            # slug_path = f"{date.strftime('%Y-%m-%d')}-{slug}"
 
-        content = convert_wikilinks_to_relref(document.content)
-        post = fm.Post(content, **document.metadata)
+            content = convert_wikilinks_to_relref(document.content)
+            post = fm.Post(content, **document.metadata)
 
-        dumped_post = fm.dumps(post, handler=YAML_HANDLER)
+            dumped_post = fm.dumps(post, handler=YAML_HANDLER)
 
-        if not is_folder:
-            final_path = target_path / path.name
-            final_path.write_text(dumped_post, encoding="utf-8")
-        else:
-            directory_path = target_path / path.name
-            final_path = directory_path / "index.md"
-            directory_path.mkdir(exist_ok=True)
-            shutil.copytree(
-                path, directory_path, ignore=ignore_folder_note, dirs_exist_ok=True
-            )
-            final_path.write_text(dumped_post, encoding="utf-8")
+            if not is_folder:
+                final_path = target_path / path.name
+                final_path.write_text(dumped_post, encoding="utf-8")
+            else:
+                directory_path = target_path / path.name
+                final_path = directory_path / "index.md"
+                directory_path.mkdir(exist_ok=True)
+                shutil.copytree(
+                    path, directory_path, ignore=ignore_folder_note, dirs_exist_ok=True
+                )
+                final_path.write_text(dumped_post, encoding="utf-8")
 
+            # console.rule(f"Target: {final_path.relative_to(target_path)}")
+        except Exception as e:
+            console.print(f"\n[bold red]❌ Processing Error:[/bold red]", style="red")
+            console.print(f"   File: [bold]{markdown_document_path}[/bold]")
+            console.print(f"   Error: {str(e)[:200]}")
+            errors.append((markdown_document_path, e))
+            continue
 
-        # console.rule(f"Target: {final_path.relative_to(target_path)}")
+    # Print summary
+    console.print("\n" + "="*80)
+    if errors:
+        console.print(f"\n[bold yellow]⚠️  Migration completed with {len(errors)} error(s)[/bold yellow]")
+        console.print("\n[yellow]Files that failed:[/yellow]")
+        for path, error in errors:
+            console.print(f"  • {path.name}")
+    else:
+        console.print("\n[bold green]✅ Success! All files migrated successfully.[/bold green]")
 
 
 if __name__ == "__main__":
