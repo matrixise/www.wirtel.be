@@ -1,8 +1,10 @@
 ---
 date: 2013-01-09
-tags: [python]
+tags:
+- python
 slug: new-year-python-meme-2012
-title: "New Year's Python Meme 2012"
+title: New Year's Python Meme 2012
+modified: 2026-01-04T22:31:57+01:00
 
 ---
 
