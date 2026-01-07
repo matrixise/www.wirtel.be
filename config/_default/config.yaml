@@ -5,6 +5,8 @@ title: Stéphane's Blog
 baseurl: https://wirtel.be/
 copyright: Stéphane Wirtel
 defaultContentLanguage: en
+ignoreFiles:
+  - "CLAUDE\\.md$"
 services:
   googleAnalytics:
     id: G-BC0WC3PWS6
