@@ -24,6 +24,9 @@ def ignore_folder_note(path, names):
 def find_notes(parent_path: pathlib.Path) -> typing.Iterator[pathlib.Path]:
     for path in parent_path.glob("*"):
         if path.is_file() and path.suffix.lower() == ".md":
+            # Ignore CLAUDE.md files (Claude Code configuration)
+            if path.name == "CLAUDE.md":
+                continue
             yield path, False
         elif is_folder_note(path):
             yield path, True
