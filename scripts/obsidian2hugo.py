@@ -177,9 +177,11 @@ def convert_wikilinks_to_relref(
 def main(
     parent_path: ParentPath,
     target_path: TargetPath = pathlib.Path('content/post'),
+    force: bool = typer.Option(False, "--force", "-f", help="Overwrite existing files in target directory"),
 ):
     console = Console()
     errors = []
+    skipped = []
 
     for path, is_folder in find_notes(parent_path):
         path: pathlib.Path
@@ -234,10 +236,18 @@ def main(
 
             if not is_folder:
                 final_path = target_path / path.name
+                if final_path.exists() and not force:
+                    console.print(f"⏭️  Skipping existing file: {path.name}", style="yellow")
+                    skipped.append(path.name)
+                    continue
                 final_path.write_text(dumped_post, encoding="utf-8")
             else:
                 directory_path = target_path / path.name
                 final_path = directory_path / "index.md"
+                if directory_path.exists() and not force:
+                    console.print(f"⏭️  Skipping existing directory: {path.name}", style="yellow")
+                    skipped.append(path.name)
+                    continue
                 directory_path.mkdir(exist_ok=True)
                 shutil.copytree(
                     path, directory_path, ignore=ignore_folder_note, dirs_exist_ok=True
@@ -259,8 +269,17 @@ def main(
         console.print("\n[yellow]Files that failed:[/yellow]")
         for path, error in errors:
             console.print(f"  • {path.name}")
-    else:
+
+    if skipped:
+        console.print(f"\n[bold yellow]⏭️  Skipped {len(skipped)} existing file(s)[/bold yellow]")
+        console.print("\n[yellow]Files that were skipped (use --force to overwrite):[/yellow]")
+        for name in skipped:
+            console.print(f"  • {name}")
+
+    if not errors and not skipped:
         console.print("\n[bold green]✅ Success! All files migrated successfully.[/bold green]")
+    elif not errors:
+        console.print("\n[bold green]✅ Migration completed successfully.[/bold green]")
 
 
 if __name__ == "__main__":
