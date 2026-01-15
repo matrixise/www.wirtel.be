@@ -11,6 +11,16 @@ from ruamel.yaml import YAML
 import io
 from typing import Optional
 from collections.abc import Callable
+from dataclasses import dataclass
+
+
+@dataclass
+class Note:
+    """Représente une note Obsidian avec ses métadonnées."""
+    path: pathlib.Path                    # Chemin source (fichier ou dossier)
+    is_folder: bool                       # True si folder note
+    markdown_document_path: pathlib.Path  # Chemin du fichier .md à lire
+    document: fm.Post | None = None       # Document frontmatter (None si pas encore chargé)
 
 
 def is_folder_note(path: pathlib.Path):
@@ -22,22 +32,161 @@ def ignore_folder_note(path, names):
     return [lpath.name]
 
 
-def find_notes(parent_path: pathlib.Path) -> typing.Iterator[pathlib.Path]:
+def find_notes(parent_path: pathlib.Path) -> typing.Iterator[Note]:
+    """Découvre toutes les notes Markdown dans un répertoire.
+
+    Retourne des objets Note sans document chargé (document=None).
+    """
     for path in parent_path.glob("*"):
         if path.is_file() and path.suffix.lower() == ".md":
             # Ignore CLAUDE.md files (Claude Code configuration)
             if path.name == "CLAUDE.md":
                 continue
-            yield path, False
+            markdown_path = path
+            yield Note(path=path, is_folder=False, markdown_document_path=markdown_path)
         elif is_folder_note(path):
-            yield path, True
+            markdown_path = path / "index.md"
+            yield Note(path=path, is_folder=True, markdown_document_path=markdown_path)
+
+
+def load_documents(
+    notes: typing.Iterator[Note],
+    console: Console,
+    errors: list[tuple[pathlib.Path, Exception | str]]
+) -> typing.Iterator[Note]:
+    """Charge les documents frontmatter pour chaque note.
+
+    Gestion d'erreur: Les notes avec erreur de parsing YAML sont loggées
+    dans errors[] et skippées (pas yieldées).
+    """
+    for note in notes:
+        try:
+            document = fm.load(note.markdown_document_path, handler=YAML_HANDLER)
+            # Créer une nouvelle Note avec le document chargé
+            yield Note(
+                path=note.path,
+                is_folder=note.is_folder,
+                markdown_document_path=note.markdown_document_path,
+                document=document
+            )
+        except Exception as e:
+            console.print(f"\n[bold red]❌ YAML Parse Error:[/bold red]", style="red")
+            console.print(f"   File: [bold]{note.markdown_document_path}[/bold]")
+            console.print(f"   Error: {str(e)[:200]}")
+            errors.append((note.markdown_document_path, e))
+            # Skip cette note (pas de yield)
+            continue
+
+
+def validate_notes(
+    notes: typing.Iterator[Note],
+    console: Console,
+    errors: list[tuple[pathlib.Path, Exception | str]]
+) -> typing.Iterator[Note]:
+    """Valide que chaque note a un titre dans les métadonnées.
+
+    Gestion d'erreur: Les notes sans titre sont loggées dans errors[]
+    et skippées (pas yieldées).
+    """
+    for note in notes:
+        if note.document is None:
+            # Sécurité: ne devrait jamais arriver si load_documents() a été appelé
+            console.print(f"\n[bold red]❌ Internal Error:[/bold red]", style="red")
+            console.print(f"   File: [bold]{note.markdown_document_path}[/bold]")
+            console.print("   Document not loaded")
+            errors.append((note.markdown_document_path, "Document not loaded"))
+            continue
+
+        if "title" not in note.document.metadata:
+            console.print(f"\n[bold red]❌ Missing Title:[/bold red]", style="red")
+            console.print(f"   File: [bold]{note.markdown_document_path}[/bold]")
+            errors.append((note.markdown_document_path, "Missing 'title' field"))
+            continue
+
+        yield note
+
+
+def transform_note(note: Note) -> Note:
+    """Applique les transformations à une note: slug, wikilinks, image embed.
+
+    Retourne une nouvelle Note avec le document modifié.
+    """
+    document = note.document
+    assert document is not None, "Document should be loaded"
+
+    # 1. Compute/set slug
+    computed_slug = slugify(document.metadata["title"])
+    slug = document.metadata.get("slug", computed_slug)
+    document.metadata["slug"] = slug
+
+    # 2. Convert image embed syntax
+    if (image := document.metadata.get("image")) and image.startswith("![[") and image.endswith("]]"):
+        document.metadata["image"] = image[3:-2]
+
+    # 3. Convert wikilinks to relref
+    converted_content = convert_wikilinks_to_relref(document.content)
+    transformed_document = fm.Post(converted_content, **document.metadata)
+
+    return Note(
+        path=note.path,
+        is_folder=note.is_folder,
+        markdown_document_path=note.markdown_document_path,
+        document=transformed_document
+    )
+
+
+def write_note(
+    note: Note,
+    target_path: pathlib.Path,
+    force: bool,
+    console: Console,
+    skipped: list[str],
+    errors: list[tuple[pathlib.Path, Exception | str]]
+) -> None:
+    """Écrit une note transformée dans le répertoire cible.
+
+    Gère les cas fichier simple vs folder note, et le flag --force.
+    """
+    try:
+        dumped_post = fm.dumps(note.document, handler=YAML_HANDLER)
+
+        if not note.is_folder:
+            # Fichier simple
+            final_path = target_path / note.path.name
+            if final_path.exists() and not force:
+                console.print(f"⏭️  Skipping existing file: {note.path.name}", style="yellow")
+                skipped.append(note.path.name)
+                return
+            final_path.write_text(dumped_post, encoding="utf-8")
+        else:
+            # Folder note
+            directory_path = target_path / note.path.name
+            final_path = directory_path / "index.md"
+            if directory_path.exists() and not force:
+                console.print(f"⏭️  Skipping existing directory: {note.path.name}", style="yellow")
+                skipped.append(note.path.name)
+                return
+            directory_path.mkdir(exist_ok=True)
+            shutil.copytree(
+                note.path, directory_path, ignore=ignore_folder_note, dirs_exist_ok=True
+            )
+            final_path.write_text(dumped_post, encoding="utf-8")
+    except Exception as e:
+        console.print(f"\n[bold red]❌ Processing Error:[/bold red]", style="red")
+        console.print(f"   File: [bold]{note.markdown_document_path}[/bold]")
+        console.print(f"   Error: {str(e)[:200]}")
+        errors.append((note.markdown_document_path, e))
+
 
 def parse_date(value) -> datetime.datetime:
+    """Parse une date et retourne un datetime naive (sans timezone)."""
+    result = None
+
     if isinstance(value, datetime.datetime):
-        return value
-    if isinstance(value, datetime.date):
-        return datetime.datetime(value.year, value.month, value.day)
-    if isinstance(value, str):
+        result = value
+    elif isinstance(value, datetime.date):
+        result = datetime.datetime(value.year, value.month, value.day)
+    elif isinstance(value, str):
         # essais classiques + fallback ISO
         fmts = ("%Y-%m-%d",
                 "%Y-%m-%d %H:%M",
@@ -45,11 +194,20 @@ def parse_date(value) -> datetime.datetime:
                 "%Y-%m-%dT%H:%M:%S%z")
         for f in fmts:
             try:
-                return datetime.datetime.strptime(value, f)
+                result = datetime.datetime.strptime(value, f)
+                break
             except ValueError:
                 pass
-        return datetime.datetime.fromisoformat(value)
-    raise TypeError(f"Unsupported date type: {type(value)!r}")
+        if result is None:
+            result = datetime.datetime.fromisoformat(value)
+    else:
+        raise TypeError(f"Unsupported date type: {type(value)!r}")
+
+    # Normaliser en naive (sans timezone) pour permettre les comparaisons
+    if result.tzinfo is not None:
+        result = result.replace(tzinfo=None)
+
+    return result
 
 class RuamelYAMLHandler(fm.YAMLHandler):
     def __init__(self, *args, **kwargs):
@@ -129,8 +287,6 @@ def build_target_with_fragment(target: str, heading: str | None, block: str | No
         return f"{target}#^{block}"
     return target
 
-# --- Conversion principale ---
-
 def convert_wikilinks_to_relref(
     text: str,
     *,
@@ -181,87 +337,30 @@ def main(
     force: bool = typer.Option(False, "--force", "-f", help="Overwrite existing files in target directory"),
 ):
     console = Console()
-    errors = []
-    skipped = []
+    errors: list[tuple[pathlib.Path, Exception | str]] = []
+    skipped: list[str] = []
 
-    for path, is_folder in find_notes(parent_path):
-        path: pathlib.Path
-        is_folder: bool
-        # console.rule(f'Source: {path.relative_to(parent_path)}')
-        if is_folder:
-            markdown_document_path = path / "index.md"
-        else:
-            markdown_document_path = path
+    # Phase 1: Pipeline LAZY (streaming)
+    pipeline = validate_notes(
+        load_documents(
+            find_notes(parent_path),
+            console,
+            errors
+        ),
+        console,
+        errors
+    )
 
-        try:
-            document = fm.load(markdown_document_path, handler=YAML_HANDLER)
-        except Exception as e:
-            console.print(f"\n[bold red]❌ YAML Parse Error:[/bold red]", style="red")
-            console.print(f"   File: [bold]{markdown_document_path}[/bold]")
-            console.print(f"   Error: {str(e)[:200]}")
-            errors.append((markdown_document_path, e))
-            continue
+    # Phase 2: MATÉRIALISATION + TRI par date
+    validated_notes = list(pipeline)
+    validated_notes.sort(
+        key=lambda n: parse_date(n.document.metadata.get('date', datetime.datetime.min))
+    )
 
-        try:
-            # title = document.metadata['title']
-            # date = parse_date(document.metadata['date'])
-
-            # console.print(f'Date: {date}')
-            # console.print(f'Title: {title}')
-
-            print(f'{is_folder=} {path.name}')
-
-            if "title" not in document.metadata:
-                console.print(f"\n[bold red]❌ Missing Title:[/bold red]", style="red")
-                console.print(f"   File: [bold]{markdown_document_path}[/bold]")
-                errors.append((markdown_document_path, "Missing 'title' field"))
-                continue
-
-            computed_slug = slugify(document.metadata["title"])
-            slug = document.metadata.get("slug", computed_slug)
-            document.metadata["slug"] = slug
-
-            if (
-                (image := document.metadata.get("image"))
-                and image.startswith("![[")
-                and image.endswith("]]")
-            ):
-                document.metadata["image"] = image[3:-2]
-
-            # slug_path = f"{date.strftime('%Y-%m-%d')}-{slug}"
-
-            content = convert_wikilinks_to_relref(document.content)
-            post = fm.Post(content, **document.metadata)
-
-            dumped_post = fm.dumps(post, handler=YAML_HANDLER)
-
-            if not is_folder:
-                final_path = target_path / path.name
-                if final_path.exists() and not force:
-                    console.print(f"⏭️  Skipping existing file: {path.name}", style="yellow")
-                    skipped.append(path.name)
-                    continue
-                final_path.write_text(dumped_post, encoding="utf-8")
-            else:
-                directory_path = target_path / path.name
-                final_path = directory_path / "index.md"
-                if directory_path.exists() and not force:
-                    console.print(f"⏭️  Skipping existing directory: {path.name}", style="yellow")
-                    skipped.append(path.name)
-                    continue
-                directory_path.mkdir(exist_ok=True)
-                shutil.copytree(
-                    path, directory_path, ignore=ignore_folder_note, dirs_exist_ok=True
-                )
-                final_path.write_text(dumped_post, encoding="utf-8")
-
-            # console.rule(f"Target: {final_path.relative_to(target_path)}")
-        except Exception as e:
-            console.print(f"\n[bold red]❌ Processing Error:[/bold red]", style="red")
-            console.print(f"   File: [bold]{markdown_document_path}[/bold]")
-            console.print(f"   Error: {str(e)[:200]}")
-            errors.append((markdown_document_path, e))
-            continue
+    # Phase 3: TRAITEMENT FINAL (transformation + écriture)
+    for note in validated_notes:
+        transformed_note = transform_note(note)
+        write_note(transformed_note, target_path, force, console, skipped, errors)
 
     # Print summary
     console.print("\n" + "="*80)
