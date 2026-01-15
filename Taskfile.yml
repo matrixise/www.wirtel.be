@@ -3,7 +3,7 @@
 version: "3"
 
 vars:
-  VIRTUALENV: $HOME/.virtualenvs/www.wirtel.be
+  VIRTUALENV: $PWD/.venv
   LOCAL_PYTHON: "{{ .VIRTUALENV }}/bin/python"
   DOCKER_DEFAULT_PLATFORM: "linux/amd64"
 
