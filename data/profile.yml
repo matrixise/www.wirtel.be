@@ -1,0 +1,143 @@
+# Front sidebar (first page)
+about_me: |
+  Python enthusiast, Python Core Developer, Best Practices Automation and
+  Distributed Systems are my favourite topics. Founder of Mgx.io SRL.
+  Former Core Developer of Odoo
+
+languages:
+  - name: "French"
+    level: 5
+    flag: "france.png"
+  - name: "English"
+    level: 3
+    flag: "english.jpg"
+  - name: "Italian"
+    level: 2
+    flag: "italian.png"
+  - name: "Dutch"
+    level: 1
+    flag: "dutch.jpg"
+
+programming_languages:
+  - name: "Python"
+    level: 5
+    flag: "python.png"
+  - name: "Go"
+    level: 3
+    flag: "go.png"
+  - name: "C/C++"
+    level: 3
+    flag: "c++.png"
+  - name: "Erlang"
+    level: 2
+    flag: "erlang.png"
+
+front_sidebar_skills:
+  - name: "Python"
+    level: 5
+    flag: "python.png"
+    icon: "\\faLeaf"
+    description: "Core Developer"
+
+# Back sidebar (second page) - skills and information
+skills:
+  devops:
+    name: "DevOps"
+    level: 4
+    icon: "\\faCodeFork"
+    list:
+      - "Github, GitLab, GitLab-CI, Github Actions"
+      - "Docker, Nomad, Traefik"
+      - "Ansible"
+
+  software_development:
+    name: "Software Development"
+    level: 5
+    icon: "\\faCodeFork"
+    list:
+      - "Object-oriented programming"
+      - "Unit testing, BDD"
+      - "Documentation with sphinx"
+      - "PostgreSQL, SQLite3"
+      - "Redis, RabbitMQ, Kafka"
+      - "Unix environments"
+      - "Best Practices"
+
+  web_api:
+    name: "Web API"
+    level: 4
+    icon: "\\faConnectdevelop"
+    list:
+      - "Django REST Framework, Flask"
+      - "aiohttp/starlette/fastapi"
+      - "REST, GraphQL, XML-RPC"
+
+  web_development:
+    name: "Web development"
+    level: 4
+    icon: "\\faTv"
+    list:
+      - "Django, Flask"
+      - "VueJS, Javascript"
+
+  communication:
+    name: "Communication"
+    level: 5
+    icon: "\\faMicrophone"
+    list:
+      - "Presenting to conferences"
+
+memberships:
+  - "Python Software Foundation"
+  - "Python Ireland"
+  - "EuroPython Society"
+  - "Association Francophone de Python"
+
+interests:
+  - "Programming / Oenology / Nature"
+
+sports:
+  - "Running, Walking, Cycling"
+  - "Karate Shotokan JKA Nidan"
+
+# Python contributions
+python_contribs:
+  - title: "Python Ireland"
+    role: "Co-Director"
+    description: "Promote Python in Ireland"
+    year: null
+
+  - title: "EuroPython Society"
+    role: "Board Member"
+    description: "Promoted as Board Member of EuroPython Society -- Co-Organizer of EuroPython 2020"
+    year: 2019
+
+  - title: "CPython Core Developer"
+    role: "Commit Rights"
+    description: "Promoted as Python Core Dev since April 2019"
+    year: 2019
+
+  - title: "CPython Contributor"
+    role: "Bug Triager"
+    description: "Several contributions to CPython 3.x, devguide, planet, other projects"
+    year: 2014
+
+  - title: "Member of EuroPython Society"
+    role: ""
+    description: "Member of the workgroups for the organisation of EuroPython"
+    year: 2014
+
+  - title: "Python Software Foundation"
+    role: "Community Service Award"
+    description: "Received a Community Service Award during PyCon US 2017 in Portland for my contributions to the Python language and for the creation of PythonFOSDEM (\\textasciitilde800 people)"
+    year: 2016
+
+  - title: "Python Software Foundation"
+    role: "Members of Workgroups"
+    description: "Member of the \\#fellow and \\#marketing workgroups of the Python Software Foundation"
+    year: 2015
+
+  - title: "Python Software Foundation"
+    role: "Fellow Member"
+    description: ""
+    year: 2013
