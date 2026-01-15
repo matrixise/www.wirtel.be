@@ -2,7 +2,7 @@
 name: Build CV
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 jobs:
   build-cv:
@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.2.0
+        uses: actions/checkout@v6.0.1
 
       - name: Set up Python 3.13
-        uses: actions/setup-python@v5.2.0
+        uses: actions/setup-python@v6.1.0
         with:
-          python-version: '3.13'
+          python-version: "3.13"
 
       - name: Install dependencies
         run: |
@@ -28,14 +28,9 @@ jobs:
           python scripts/generate-cv.py templates/TemplateCV.tex StephaneWirtel.tex
 
       - name: Build PDF
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: StephaneWirtel.tex
-
-      - name: Setup Python 3.13
-        uses: actions/setup-python@v5.2.0
-        with:
-          python-version: '3.13'
 
       - name: Deploy to AWS
         if: >
