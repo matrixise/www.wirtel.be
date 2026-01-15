@@ -15,12 +15,17 @@ tasks:
   dep:compile:
     desc: Compile the dependencies
     cmds:
-      - "{{ .LOCAL_PYTHON }} -m uv pip compile -o scripts/requirements.txt scripts/requirements.in"
+      - "{{ .LOCAL_PYTHON }} -m uv pip compile --quiet -o scripts/requirements.txt scripts/requirements.in"
+
+  dep:upgrade:
+    desc: Compile the dependencies
+    cmds:
+      - "{{ .LOCAL_PYTHON }} -m uv pip compile --upgrade --quiet -o scripts/requirements.txt scripts/requirements.in"
 
   dep:bootstrap:
     desc: Install the bootstrap tools
     cmds:
-      - "{{ .LOCAL_PYTHON }} -m pip install --upgrade uv"
+      - "{{ .LOCAL_PYTHON }} -m pip install --upgrade uv pip"
 
   dep:install:
     desc: Install the dependencies
