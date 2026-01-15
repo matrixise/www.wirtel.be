@@ -77,6 +77,20 @@ This script:
 - Preserves frontmatter with YAML formatting
 - Copies associated images/assets
 
+### Repository Maintenance
+
+```bash
+# Clean untracked files (safe - respects .gitignore)
+task clean
+
+# Clean ALL untracked files including ignored ones (⚠️ DANGEROUS)
+# This will delete .envrc, .venv/, and all ignored files
+# Requires confirmation before executing
+task clean:all
+```
+
+**Important**: Always use `task clean` (without `:all`) unless you specifically want to delete ignored files like `.envrc` and `.venv/`. The `clean:all` command is destructive and will prompt for confirmation.
+
 ## Architecture
 
 ### Content Structure

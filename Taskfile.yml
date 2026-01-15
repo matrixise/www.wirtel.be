@@ -109,6 +109,17 @@ tasks:
     cmds:
       - hugo list all | awk '{sum+=$4} END {print "Total words:", sum}'
 
+  clean:
+    desc: Clean untracked files (respects .gitignore)
+    cmds:
+      - git clean -fd
+
+  clean:all:
+    desc: Clean ALL untracked files including ignored ones (⚠️  DANGEROUS - will delete .envrc!)
+    prompt: This will delete ALL untracked files including .envrc and .venv! Continue?
+    cmds:
+      - git clean -fdx
+
   renovate:check:
     desc: Check for GitHub Actions updates with Renovate
     cmds:
