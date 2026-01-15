@@ -9,7 +9,8 @@ from rich.console import Console
 from slugify import slugify
 from ruamel.yaml import YAML
 import io
-from typing import Optional, Callable
+from typing import Optional
+from collections.abc import Callable
 
 
 def is_folder_note(path: pathlib.Path):
@@ -93,7 +94,7 @@ class WikiLink:
     heading: str | None
     block: str | None
 
-def parse_inner(inner: str) -> tuple[str, Optional[str], Optional[str], Optional[str]]:
+def parse_inner(inner: str) -> tuple[str, str | None, str | None, str | None]:
     """
     inner = 'Target|Alias' ou 'Target#Heading' ou 'Target^block'
     Retourne (target, alias, heading, block)
@@ -116,7 +117,7 @@ def parse_inner(inner: str) -> tuple[str, Optional[str], Optional[str], Optional
 
     return target.strip(), (alias or None), (heading or None), (block or None)
 
-def build_target_with_fragment(target: str, heading: Optional[str], block: Optional[str]) -> str:
+def build_target_with_fragment(target: str, heading: str | None, block: str | None) -> str:
     """
     Construit la cible finale pour relref, en conservant l'ancre si fournie.
     Pour les block ids (^xyz), on les mappe en fragment '#^xyz' (Hugo peut
@@ -133,7 +134,7 @@ def build_target_with_fragment(target: str, heading: Optional[str], block: Optio
 def convert_wikilinks_to_relref(
     text: str,
     *,
-    transform_target: Optional[Callable[[str], str]] = None,
+    transform_target: Callable[[str], str] | None = None,
     use_markdown_link_syntax: bool = False,
 ) -> str:
     """
