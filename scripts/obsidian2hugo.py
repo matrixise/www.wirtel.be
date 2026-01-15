@@ -40,7 +40,7 @@ def find_notes(parent_path: pathlib.Path) -> typing.Iterator[Note]:
     for path in parent_path.glob("*"):
         if path.is_file() and path.suffix.lower() == ".md":
             # Ignore CLAUDE.md files (Claude Code configuration)
-            if path.name == "CLAUDE.md":
+            if path.stem.isupper():
                 continue
             markdown_path = path
             yield Note(path=path, is_folder=False, markdown_document_path=markdown_path)
