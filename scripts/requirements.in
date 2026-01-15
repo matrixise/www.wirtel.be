@@ -7,3 +7,4 @@ awscli
 pyyaml
 jinja2
 python-slugify
+pyupgrade
