@@ -10,7 +10,7 @@ tasks:
   init:
     cmds:
       - echo {{ .LOCAL_PYTHON }}
-      - python -m venv {{ .VIRTUALENV }}
+      - python -m venv {{ .VIRTUALENV }} --upgrade-deps
 
   dep:compile:
     desc: Compile the dependencies
