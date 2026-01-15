@@ -64,6 +64,7 @@ tasks:
   refresh:all:
     desc: Refresh all the installations from Scratch
     cmds:
+      - rm -rf {{ .VIRTUALENV }}
       - task: init
       - task: dep:bootstrap
       - task: dep:install
