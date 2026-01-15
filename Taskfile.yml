@@ -37,13 +37,13 @@ tasks:
     cmds:
       - "{{ .LOCAL_PYTHON }} -m pip list -o"
 
-  generate:cv:
-    desc: Generate the CV as TeX
+  local:cv:generate-tex:
+    desc: Generate the CV .tex file from templates and data
     cmds:
       - "{{ .LOCAL_PYTHON }} scripts/generate-cv.py templates/TemplateCV.tex StephaneWirtel.tex"
 
-  build:cv:
-    desc: Build the CV as PDF
+  local:cv:build-pdf:
+    desc: Compile the .tex file to PDF using Docker LaTeX
     env:
       DOCKER_DEFAULT_PLATFORM: "linux/amd64"
     vars:
@@ -55,11 +55,11 @@ tasks:
       - docker run --rm --user={{.USERID}}:{{.GROUPID}} -v {{.PWD}}:/src/ -w /src/ aergus/latex pdflatex StephaneWirtel.tex
       - docker run --rm --user={{.USERID}}:{{.GROUPID}} -v {{.PWD}}:/src/ -w /src/ aergus/latex pdflatex StephaneWirtel.tex
 
-  cv:from-scratch:
-    desc: Rebuild the CV from scratch
+  local:cv:rebuild:
+    desc: Rebuild the CV from scratch (generate .tex + compile PDF)
     cmds:
-      - task: generate:cv
-      - task: build:cv
+      - task: local:cv:generate-tex
+      - task: local:cv:build-pdf
 
   refresh:all:
     desc: Refresh all the installations from Scratch
@@ -67,7 +67,7 @@ tasks:
       - task: init
       - task: dep:bootstrap
       - task: dep:install
-      - task: generate:cv
+      - task: local:cv:generate-tex
 
   build:site:
     desc: Build the site via Hugo
@@ -84,13 +84,13 @@ tasks:
     cmds:
       - docker pull aergus/latex
 
-  upload:cv:
-    desc: Upload the CV to AWS
+  s3:cv:upload:
+    desc: Upload the CV PDF to AWS S3
     cmds:
       - aws s3 cp --acl public-read StephaneWirtel.pdf s3://public-mgxio/wirtel.be/StephaneWirtel.pdf
 
-  cv:build:remote:
-    desc: Trigger CV build on GitHub Actions
+  github:cv:build:
+    desc: Trigger CV build and deployment on GitHub Actions
     cmds:
       - gh workflow run build-pdf.yml
 
