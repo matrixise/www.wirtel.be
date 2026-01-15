@@ -62,6 +62,8 @@ task dep:install
 task dep:compile
 ```
 
+**Note**: The Python virtual environment is located in `.venv/` directory. You can run tools directly with `.venv/bin/python` or `.venv/bin/TOOL` without activating the environment.
+
 ### Obsidian to Hugo Migration
 
 ```bash
@@ -144,6 +146,7 @@ layouts/
 - **Current workflow uses Task and native tools** - prefer Task commands over Docker
 
 ### Python Dependencies
+- Virtual environment located in `.venv/` (run tools directly with `.venv/bin/python` or `.venv/bin/TOOL`)
 - Managed via `uv` (faster pip alternative)
 - Requirements defined in `scripts/requirements.in`
 - Locked in `scripts/requirements.txt`
