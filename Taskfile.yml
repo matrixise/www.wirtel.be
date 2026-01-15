@@ -89,6 +89,11 @@ tasks:
     cmds:
       - aws s3 cp --acl public-read StephaneWirtel.pdf s3://public-mgxio/wirtel.be/StephaneWirtel.pdf
 
+  cv:build:remote:
+    desc: Trigger CV build on GitHub Actions
+    cmds:
+      - gh workflow run build-pdf.yml
+
   new:post:
     desc: Create a new post
     vars:
