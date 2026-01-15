@@ -8,6 +8,8 @@ botocore==1.42.28
     # via
     #   awscli
     #   s3transfer
+click==8.3.1
+    # via typer
 colorama==0.4.6
     # via awscli
 docutils==0.19
@@ -18,8 +20,12 @@ jmespath==1.0.1
     # via botocore
 markdown==3.10
     # via -r scripts/requirements.in
+markdown-it-py==4.0.0
+    # via rich
 markupsafe==3.0.3
     # via jinja2
+mdurl==0.1.2
+    # via markdown-it-py
 pendulum==3.1.0
     # via -r scripts/requirements.in
 pyasn1==0.6.1
@@ -32,6 +38,8 @@ pydantic-core==2.41.5
     # via pydantic
 pydantic-yaml==1.6.0
     # via -r scripts/requirements.in
+pygments==2.19.2
+    # via rich
 python-dateutil==2.9.0.post0
     # via
     #   botocore
@@ -47,6 +55,8 @@ pyyaml==6.0.3
     #   -r scripts/requirements.in
     #   awscli
     #   python-frontmatter
+rich==14.2.0
+    # via typer
 rsa==4.7.2
     # via awscli
 ruamel-yaml==0.18.17
@@ -57,17 +67,22 @@ ruff==0.14.11
     # via -r scripts/requirements.in
 s3transfer==0.16.0
     # via awscli
+shellingham==1.5.4
+    # via typer
 six==1.17.0
     # via python-dateutil
 text-unidecode==1.3
     # via python-slugify
 tokenize-rt==6.2.0
     # via pyupgrade
+typer==0.21.1
+    # via -r scripts/requirements.in
 typing-extensions==4.15.0
     # via
     #   pydantic
     #   pydantic-core
     #   pydantic-yaml
+    #   typer
     #   typing-inspection
 typing-inspection==0.4.2
     # via pydantic
