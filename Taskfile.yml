@@ -113,3 +113,18 @@ tasks:
     desc: Count words in posts
     cmds:
       - hugo list all | awk '{sum+=$4} END {print "Total words:", sum}'
+
+  renovate:check:
+    desc: Check for GitHub Actions updates with Renovate
+    cmds:
+      - RENOVATE_TOKEN=$(gh auth token) npx renovate --platform=github --dry-run=full --enabled-managers=github-actions matrixise/www.wirtel.be
+
+  renovate:check:all:
+    desc: Check all dependencies (GitHub Actions + Python)
+    cmds:
+      - RENOVATE_TOKEN=$(gh auth token) npx renovate --platform=github --dry-run=full matrixise/www.wirtel.be
+
+  renovate:check:verbose:
+    desc: Check for updates with verbose output
+    cmds:
+      - LOG_LEVEL=debug RENOVATE_TOKEN=$(gh auth token) npx renovate --platform=github --dry-run=full --enabled-managers=github-actions matrixise/www.wirtel.be
