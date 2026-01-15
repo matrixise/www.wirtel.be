@@ -5,6 +5,7 @@ version: "3"
 vars:
   VIRTUALENV: $HOME/.virtualenvs/www.wirtel.be
   LOCAL_PYTHON: "{{ .VIRTUALENV }}/bin/python"
+  DOCKER_DEFAULT_PLATFORM: "linux/amd64"
 
 tasks:
   init:
@@ -43,17 +44,10 @@ tasks:
       - "{{ .LOCAL_PYTHON }} scripts/generate-cv.py templates/TemplateCV.tex StephaneWirtel.tex"
 
   local:cv:build-pdf:
-    desc: Compile the .tex file to PDF using Docker LaTeX
-    env:
-      DOCKER_DEFAULT_PLATFORM: "linux/amd64"
-    vars:
-      USERID:
-        sh: id -u
-      GROUPID:
-        sh: id -g
+    desc: Compile the .tex file to PDF using pdflatex
     cmds:
-      - docker run --rm --user={{.USERID}}:{{.GROUPID}} -v {{.PWD}}:/src/ -w /src/ aergus/latex pdflatex StephaneWirtel.tex
-      - docker run --rm --user={{.USERID}}:{{.GROUPID}} -v {{.PWD}}:/src/ -w /src/ aergus/latex pdflatex StephaneWirtel.tex
+      - pdflatex -interaction=nonstopmode StephaneWirtel.tex
+      - pdflatex -interaction=nonstopmode StephaneWirtel.tex
 
   local:cv:rebuild:
     desc: Rebuild the CV from scratch (generate .tex + compile PDF)
@@ -79,11 +73,6 @@ tasks:
     desc: Serve the HTML site
     cmds:
       - hugo server --environment development --buildDrafts
-
-  docker:fetch:
-    desc: Download all the docker images
-    cmds:
-      - docker pull aergus/latex
 
   s3:cv:upload:
     desc: Upload the CV PDF to AWS S3
