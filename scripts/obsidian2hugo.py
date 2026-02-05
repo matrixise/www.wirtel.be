@@ -1,26 +1,28 @@
 import datetime
-import typer
-import typing
+import io
 import pathlib
 import shutil
-import frontmatter as fm
-from rich.pretty import pprint
-from rich.console import Console
-from slugify import slugify
-from ruamel.yaml import YAML
-import io
-from typing import Optional
+import typing
 from collections.abc import Callable
 from dataclasses import dataclass
+from typing import Optional
+
+import frontmatter as fm
+import typer
+from rich.console import Console
+from rich.pretty import pprint
+from ruamel.yaml import YAML
+from slugify import slugify
 
 
 @dataclass
 class Note:
     """Représente une note Obsidian avec ses métadonnées."""
-    path: pathlib.Path                    # Chemin source (fichier ou dossier)
-    is_folder: bool                       # True si folder note
+
+    path: pathlib.Path  # Chemin source (fichier ou dossier)
+    is_folder: bool  # True si folder note
     markdown_document_path: pathlib.Path  # Chemin du fichier .md à lire
-    document: fm.Post | None = None       # Document frontmatter (None si pas encore chargé)
+    document: fm.Post | None = None  # Document frontmatter (None si pas encore chargé)
 
 
 def is_folder_note(path: pathlib.Path):
@@ -52,7 +54,7 @@ def find_notes(parent_path: pathlib.Path) -> typing.Iterator[Note]:
 def load_documents(
     notes: typing.Iterator[Note],
     console: Console,
-    errors: list[tuple[pathlib.Path, Exception | str]]
+    errors: list[tuple[pathlib.Path, Exception | str]],
 ) -> typing.Iterator[Note]:
     """Charge les documents frontmatter pour chaque note.
 
@@ -67,7 +69,7 @@ def load_documents(
                 path=note.path,
                 is_folder=note.is_folder,
                 markdown_document_path=note.markdown_document_path,
-                document=document
+                document=document,
             )
         except Exception as e:
             console.print(f"\n[bold red]❌ YAML Parse Error:[/bold red]", style="red")
@@ -78,10 +80,27 @@ def load_documents(
             continue
 
 
+def filter_drafts(
+    notes: typing.Iterator[Note],
+    console: Console,
+) -> typing.Iterator[Note]:
+    """Filtre les notes marquées comme draft dans le frontmatter.
+
+    Les notes avec draft: true sont loggées et skippées (pas yieldées).
+    """
+    for note in notes:
+        if note.document and note.document.metadata.get("draft") is True:
+            console.print(
+                f"📝 Skipping draft: {note.markdown_document_path.name}", style="dim"
+            )
+            continue
+        yield note
+
+
 def validate_notes(
     notes: typing.Iterator[Note],
     console: Console,
-    errors: list[tuple[pathlib.Path, Exception | str]]
+    errors: list[tuple[pathlib.Path, Exception | str]],
 ) -> typing.Iterator[Note]:
     """Valide que chaque note a un titre dans les métadonnées.
 
@@ -120,7 +139,11 @@ def transform_note(note: Note) -> Note:
     document.metadata["slug"] = slug
 
     # 2. Convert image embed syntax
-    if (image := document.metadata.get("image")) and image.startswith("![[") and image.endswith("]]"):
+    if (
+        (image := document.metadata.get("image"))
+        and image.startswith("![[")
+        and image.endswith("]]")
+    ):
         document.metadata["image"] = image[3:-2]
 
     # 3. Convert wikilinks to relref
@@ -131,7 +154,7 @@ def transform_note(note: Note) -> Note:
         path=note.path,
         is_folder=note.is_folder,
         markdown_document_path=note.markdown_document_path,
-        document=transformed_document
+        document=transformed_document,
     )
 
 
@@ -141,7 +164,7 @@ def write_note(
     force: bool,
     console: Console,
     skipped: list[str],
-    errors: list[tuple[pathlib.Path, Exception | str]]
+    errors: list[tuple[pathlib.Path, Exception | str]],
 ) -> None:
     """Écrit une note transformée dans le répertoire cible.
 
@@ -154,7 +177,9 @@ def write_note(
             # Fichier simple
             final_path = target_path / note.path.name
             if final_path.exists() and not force:
-                console.print(f"⏭️  Skipping existing file: {note.path.name}", style="yellow")
+                console.print(
+                    f"⏭️  Skipping existing file: {note.path.name}", style="yellow"
+                )
                 skipped.append(note.path.name)
                 return
             final_path.write_text(dumped_post, encoding="utf-8")
@@ -163,7 +188,9 @@ def write_note(
             directory_path = target_path / note.path.name
             final_path = directory_path / "index.md"
             if directory_path.exists() and not force:
-                console.print(f"⏭️  Skipping existing directory: {note.path.name}", style="yellow")
+                console.print(
+                    f"⏭️  Skipping existing directory: {note.path.name}", style="yellow"
+                )
                 skipped.append(note.path.name)
                 return
             directory_path.mkdir(exist_ok=True)
@@ -188,10 +215,12 @@ def parse_date(value) -> datetime.datetime:
         result = datetime.datetime(value.year, value.month, value.day)
     elif isinstance(value, str):
         # essais classiques + fallback ISO
-        fmts = ("%Y-%m-%d",
-                "%Y-%m-%d %H:%M",
-                "%Y-%m-%dT%H:%M:%S",
-                "%Y-%m-%dT%H:%M:%S%z")
+        fmts = (
+            "%Y-%m-%d",
+            "%Y-%m-%d %H:%M",
+            "%Y-%m-%dT%H:%M:%S",
+            "%Y-%m-%dT%H:%M:%S%z",
+        )
         for f in fmts:
             try:
                 result = datetime.datetime.strptime(value, f)
@@ -209,6 +238,7 @@ def parse_date(value) -> datetime.datetime:
 
     return result
 
+
 class RuamelYAMLHandler(fm.YAMLHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -223,6 +253,7 @@ class RuamelYAMLHandler(fm.YAMLHandler):
         self.yaml.dump(metadata, s)
         return s.getvalue()
 
+
 YAML_HANDLER = RuamelYAMLHandler()
 
 
@@ -233,15 +264,14 @@ ParentPath = typing.Annotated[
 
 TargetPath = typing.Annotated[
     pathlib.Path,
-    typer.Argument(
-        exists=True,
-        dir_okay=True
-    ),
+    typer.Argument(exists=True, dir_okay=True),
 ]
 
 import re
 from dataclasses import dataclass
-WIKILINK_RE = re.compile(r'(!?)\[\[([^\]]+)\]\]')
+
+WIKILINK_RE = re.compile(r"(!?)\[\[([^\]]+)\]\]")
+
 
 @dataclass
 class WikiLink:
@@ -251,6 +281,7 @@ class WikiLink:
     alias: str | None
     heading: str | None
     block: str | None
+
 
 def parse_inner(inner: str) -> tuple[str, str | None, str | None, str | None]:
     """
@@ -275,7 +306,10 @@ def parse_inner(inner: str) -> tuple[str, str | None, str | None, str | None]:
 
     return target.strip(), (alias or None), (heading or None), (block or None)
 
-def build_target_with_fragment(target: str, heading: str | None, block: str | None) -> str:
+
+def build_target_with_fragment(
+    target: str, heading: str | None, block: str | None
+) -> str:
     """
     Construit la cible finale pour relref, en conservant l'ancre si fournie.
     Pour les block ids (^xyz), on les mappe en fragment '#^xyz' (Hugo peut
@@ -286,6 +320,7 @@ def build_target_with_fragment(target: str, heading: str | None, block: str | No
     if block:
         return f"{target}#^{block}"
     return target
+
 
 def convert_wikilinks_to_relref(
     text: str,
@@ -307,6 +342,7 @@ def convert_wikilinks_to_relref(
     - transform_target(target) te permet de mapper 'Titre' vers un chemin Hugo
       (ex: slugify, 'blog/...' etc.)
     """
+
     def _repl(m: re.Match) -> str:
         bang, inner = m.group(1), m.group(2)
         is_embed = bool(bang)
@@ -333,8 +369,10 @@ def convert_wikilinks_to_relref(
 
 def main(
     parent_path: ParentPath,
-    target_path: TargetPath = pathlib.Path('content/post'),
-    force: bool = typer.Option(False, "--force", "-f", help="Overwrite existing files in target directory"),
+    target_path: TargetPath = pathlib.Path("content/post"),
+    force: bool = typer.Option(
+        False, "--force", "-f", help="Overwrite existing files in target directory"
+    ),
 ):
     console = Console()
     errors: list[tuple[pathlib.Path, Exception | str]] = []
@@ -342,19 +380,18 @@ def main(
 
     # Phase 1: Pipeline LAZY (streaming)
     pipeline = validate_notes(
-        load_documents(
-            find_notes(parent_path),
+        filter_drafts(
+            load_documents(find_notes(parent_path), console, errors),
             console,
-            errors
         ),
         console,
-        errors
+        errors,
     )
 
     # Phase 2: MATÉRIALISATION + TRI par date
     validated_notes = list(pipeline)
     validated_notes.sort(
-        key=lambda n: parse_date(n.document.metadata.get('date', datetime.datetime.min))
+        key=lambda n: parse_date(n.document.metadata.get("date", datetime.datetime.min))
     )
 
     # Phase 3: TRAITEMENT FINAL (transformation + écriture)
@@ -363,21 +400,29 @@ def main(
         write_note(transformed_note, target_path, force, console, skipped, errors)
 
     # Print summary
-    console.print("\n" + "="*80)
+    console.print("\n" + "=" * 80)
     if errors:
-        console.print(f"\n[bold yellow]⚠️  Migration completed with {len(errors)} error(s)[/bold yellow]")
+        console.print(
+            f"\n[bold yellow]⚠️  Migration completed with {len(errors)} error(s)[/bold yellow]"
+        )
         console.print("\n[yellow]Files that failed:[/yellow]")
         for path, error in errors:
             console.print(f"  • {path.name}")
 
     if skipped:
-        console.print(f"\n[bold yellow]⏭️  Skipped {len(skipped)} existing file(s)[/bold yellow]")
-        console.print("\n[yellow]Files that were skipped (use --force to overwrite):[/yellow]")
+        console.print(
+            f"\n[bold yellow]⏭️  Skipped {len(skipped)} existing file(s)[/bold yellow]"
+        )
+        console.print(
+            "\n[yellow]Files that were skipped (use --force to overwrite):[/yellow]"
+        )
         for name in skipped:
             console.print(f"  • {name}")
 
     if not errors and not skipped:
-        console.print("\n[bold green]✅ Success! All files migrated successfully.[/bold green]")
+        console.print(
+            "\n[bold green]✅ Success! All files migrated successfully.[/bold green]"
+        )
     elif not errors:
         console.print("\n[bold green]✅ Migration completed successfully.[/bold green]")
 
