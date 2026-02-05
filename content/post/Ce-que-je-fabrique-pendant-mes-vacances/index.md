@@ -1,26 +1,21 @@
 ---
+modified: 2025-09-02T18:56:42+02:00
+tags:
+- mgx/project
+- opensource
+- personal/wine
+- python
+- python/fastapi
+ContentType: post
 title: Ce que je fabrique pendant mes « vacances »
 description: "Retour sur un mois de pause active : entre jardinage, refonte de CV,
   et lancement d’un side project autour du vin."
 date: 2025-06-05
-tags:
-- python
-- fastapi
-- flutter
-- side-project
-- wine
-- mvp
-- open-source
-- developer
-- figma
 slug: ce-que-je-fabrique-pendant-mes-vacances
 image: background.png
-modified: 2025-09-02T18:56:42+02:00
 image_y: 0.5
-ContentType: post
 Status: published
 author:
-- Stéphane Wirtel
 
 ---
 

@@ -1,12 +1,11 @@
 ---
+tags:
+- devops/server
+- python
+- python/flask
 date: 2011-02-24
 slug: nginx-gunicorn-flask
 lang: en
-tags:
-- nginx
-- gunicorn
-- flask
-- python
 title: nginx, gunicorn and Flask
 
 ---

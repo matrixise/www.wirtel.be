@@ -1,10 +1,10 @@
 ---
+tags:
+- event/fosdem
+- python
 date: 2013-02-19
 lang: en
 slug: python-community-thankyou
-tags:
-- python
-- fosdem
 title: To the Python Community, Thank you for the FOSDEM !
 
 ---

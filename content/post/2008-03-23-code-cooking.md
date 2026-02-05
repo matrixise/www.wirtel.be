@@ -1,8 +1,7 @@
 ---
-date: 2008-03-23
 tags:
-- code
 - cook
+date: 2008-03-23
 lang: fr
 title: Code Cooking
 slug: code-cooking

@@ -1,17 +1,13 @@
 ---
+modified: 2025-09-02T11:09:26+02:00
+ContentType: post
 title: Enfin Papa!
 date: 2011-01-21T03:26:00+02:00
-tags:
-- family
 slug: enfin-papa
-ContentType: post
 resources:
-- name: Margaux
-  src: margaux.png
-modified: 2025-09-02T11:09:26+02:00
+src: margaux.png
 Status: published
 author:
-- Stéphane Wirtel
 
 ---
 

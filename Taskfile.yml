@@ -95,6 +95,7 @@ tasks:
   migrate:obsidian:
     desc: Convert Obsidian note to Hugo post
     cmds:
+      - "mkdir -p content/post/"
       - "{{ .LOCAL_PYTHON }} scripts/obsidian2hugo.py '{{ .OBSIDIAN_VAULT_PATH }}'"
 
   stats:content:

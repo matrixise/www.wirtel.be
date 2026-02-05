@@ -1,19 +1,15 @@
 ---
+modified: 2025-09-02T11:10:47+02:00
+tags:
+- community
+- event/conference
+- python
+ContentType: post
 date: 2017-01-09T17:56:00+01:00
 title: Python Events in 2017, Need your help!
-tags:
-- python
-- events
-- event
-- "2017"
-- community
-- psf
 author: Stéphane Wirtel
 categories:
-- event
 slug: python-events-in-2017-need-your-help
-modified: 2025-09-02T11:10:47+02:00
-ContentType: post
 Status: published
 
 ---

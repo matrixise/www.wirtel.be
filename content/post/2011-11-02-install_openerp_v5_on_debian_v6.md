@@ -1,7 +1,6 @@
 ---
 tags:
-- debian
-- openerp
+- python/odoo
 date: 2011-11-02
 slug: install_openerp_v5_on_debian_v6
 title: Installation of OpenERP 5.0 on Debian 6.0

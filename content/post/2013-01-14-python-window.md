@@ -1,9 +1,8 @@
 ---
-date: 2013-01-14
-slug: python-window-iterator
 tags:
 - python
-- tips
+date: 2013-01-14
+slug: python-window-iterator
 lang: fr
 title: Astuce Windows Iterator
 

@@ -1,22 +1,21 @@
 ---
+modified: 2026-01-04T17:03:21+01:00
+tags:
+- mgx/formation
+- personal/writing
+- python
+- tool/obsidian
+- tool/pandoc
+- tool/typst
+ContentType: post
 title: Relancer l’écriture de mon livre *Introduction à Python 3.13*
-description: Relancer l’écriture de mon livre _Introduction à Python 3.13_ en m’appuyant
-  sur Obsidian, Pandoc, Typst et une chaîne d’outils moderne et fluide.
+description: Relancer l’écriture de mon livre _Introduction à Python 3.13_ en 
+  m’appuyant sur Obsidian, Pandoc, Typst et une chaîne d’outils moderne et 
+  fluide.
 date: 2025-08-04
 updated: 2025-08-04
-ContentType: post
 Status: published
-tags:
-- python
-- formation
-- écriture
-- livre-technique
-- obsidian
-- pandoc
-- typst
-modified: 2026-01-04T17:03:21+01:00
 author:
-- Stéphane Wirtel
 slug: relancer-lecriture-de-mon-livre-introduction-a-python-3-13
 
 ---

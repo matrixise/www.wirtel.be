@@ -1,18 +1,16 @@
 ---
+tags:
+- event/conference
+- event/fosdem
+- python
+ContentType: post
 date: 2015-12-16T18:16:29+01:00
 title: Help PythonFOSDEM 2016 with your proposals
-tags:
-- python
-- fosdem
-- conference
 categories:
-- conference
 image: python-fosdem-2016.jpg
 slug: call-cfp-python-fosdem-2016
-ContentType: post
 Status: published
 author:
-- Stéphane Wirtel
 
 ---
 

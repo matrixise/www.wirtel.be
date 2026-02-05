@@ -1,12 +1,11 @@
 ---
+modified: 2026-01-04T17:57:51+01:00
+tags:
+- tool
 author: Stephane Wirtel
 date: 2012-02-21
 lang: fr
 title: MailCatcher, L'outil pour le développeur
-tags:
-- smtp
-- tools
-modified: 2026-01-04T17:57:51+01:00
 slug: mailcatcher-l-outil-pour-le-developpeur
 
 ---

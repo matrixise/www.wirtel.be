@@ -1,18 +1,15 @@
 ---
+modified: 2025-09-02T08:45:45+02:00
+tags:
+- event/europython
+- python
+ContentType: post
 title: Weekly Update, April 18, 2020
 date: 2020-04-18T00:00:00+02:00
 description: Weekly Update
-tags:
-- python
-- weekly-updates
-- europython
-- language-summit
 slug: 2020-april-week-16-weekly-update
-modified: 2025-09-02T08:45:45+02:00
-ContentType: post
 Status: published
 author:
-- Stéphane Wirtel
 
 ---
 

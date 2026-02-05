@@ -1,18 +1,17 @@
 ---
+modified: 2025-09-01T15:54:26+02:00
+tags:
+- event/conference
+- event/europython
+- python
+- python/django
+ContentType: post
 title: "EuroPython 2017: Django From A Nightmare To A Dream"
 date: 2017-08-16T01:01:56+02:00
 draft: true
-tags:
-- python
-- conference
-- django
-- europython
 slug: europython-2017-django-from-a-nightmare-to-a-dream
-modified: 2025-09-01T15:54:26+02:00
-ContentType: post
 Status: published
 author:
-- Stéphane Wirtel
 
 ---
 

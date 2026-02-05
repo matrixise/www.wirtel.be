@@ -1,9 +1,9 @@
 ---
-date: 2011-02-22
 tags:
-- openerp
-- flask
 - extensions
+- python/flask
+- python/odoo
+date: 2011-02-22
 slug: flask-openerp
 title: Flask-OpenERP
 

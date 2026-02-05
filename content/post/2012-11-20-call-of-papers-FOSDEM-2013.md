@@ -1,11 +1,10 @@
 ---
+tags:
+- event/fosdem
+- python
 author: Stephane Wirtel
 date: 2012-11-20
 lang: en
-tags:
-- fosdem
-- python
-- devroom
 title: Call Of Papers FOSDEM 2013
 slug: call-of-papers-fosdem-2013
 

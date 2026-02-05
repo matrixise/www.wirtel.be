@@ -1,10 +1,9 @@
 ---
-date: 2011-07-15
 tags:
-- parallel
-- pg_dump
-- backup
-- postgresql
+- database/postgresql
+- devops/backup
+- devops/parallel
+date: 2011-07-15
 title: "PostgreSQL: Use GNU/Parallel and pg_dump"
 slug: rsync_parallel
 

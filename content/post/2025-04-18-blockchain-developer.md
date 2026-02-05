@@ -1,21 +1,16 @@
 ---
+tags:
+- blockchain
+- blockchain/nft
+- blockchain/solidity
+- mgx/formation/alyra
+ContentType: post
 title: Successful blockchain developer certification
 description: "From Web2 to Web3: My Journey Through Blockchain Development with Alyra"
 date: 2025-04-18
-tags:
-- blockchain
-- web3
-- developer
-- nft
-- gnosis
-- alyra
-- nextjs
-- solidity
 slug: 2025-blockchain-developer
-ContentType: post
 Status: published
 author:
-- Stéphane Wirtel
 
 ---
 

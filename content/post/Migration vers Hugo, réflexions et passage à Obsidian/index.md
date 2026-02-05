@@ -1,26 +1,24 @@
 ---
-title: Migration Hugo et passage à Obsidian
-description: Retour sur la migration technique de mon site vers Hugo 0.148.1, l’abandon
-  de getJSON, et une réflexion sur Obsidian comme source unique pour le contenu et
-  le CV.
-date: 2025-07-10
+modified: 2025-09-02T18:34:11+02:00
 tags:
-- hugo
-- obsidian
-- automation
-- cv
-- llm
-- static-site
-- developer-tools
+- ai/llm
+- devops/automation
+- personal/cv
+- tool
+- tool/hugo
+- tool/obsidian
+- tool/static-site
 ContentType: post
+title: Migration Hugo et passage à Obsidian
+description: Retour sur la migration technique de mon site vers Hugo 0.148.1, 
+  l’abandon de getJSON, et une réflexion sur Obsidian comme source unique pour 
+  le contenu et le CV.
+date: 2025-07-10
 slug: migration-hugo-obsidian-cv
 image: obsidian2hugo.png
 obsidian-note-status:
-- colorful:completed
-modified: 2025-09-02T18:34:11+02:00
 Status: published
 author:
-- Stéphane Wirtel
 
 ---
 

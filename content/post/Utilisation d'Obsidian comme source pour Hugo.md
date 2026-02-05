@@ -1,23 +1,20 @@
 ---
+created: 2025-09-04T15:37:28+02:00
+modified: 2025-09-04T20:50:54+02:00
+tags:
+- format/document
+- python
+- tool/hugo
+- tool/obsidian
+ContentType: post
 title: Utilisation d'Obsidian comme source pour Hugo
 date: 2025-09-04
 slug: use-obsidian-as-source-for-hugo
-description: Centraliser ses notes dans Obsidian et publier avec Hugo grâce à un script
-  maison. Un workflow fluide, automatisé et cohérent.
-tags:
-- obsidian
-- hugo
-- markdown
-- folder-notes
-- python
-created: 2025-09-04T15:37:28+02:00
-modified: 2025-09-04T20:50:54+02:00
+description: Centraliser ses notes dans Obsidian et publier avec Hugo grâce à un
+  script maison. Un workflow fluide, automatisé et cohérent.
 obsidian-note-status:
-- colorful:completed
 Status: published
-ContentType: post
 author:
-- Stéphane Wirtel
 
 ---
 

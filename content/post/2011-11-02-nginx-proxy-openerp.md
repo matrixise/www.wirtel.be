@@ -1,12 +1,10 @@
 ---
-date: 2011-11-02
 tags:
+- devops/server
+- devops/virtualization
 - python
-- proxy
-- openerp
-- nginx
-- virtual
-- hosting
+- python/odoo
+date: 2011-11-02
 slug: nginx-proxy-openerp
 lang: en
 title: Nginx and multiple instances of OpenERP

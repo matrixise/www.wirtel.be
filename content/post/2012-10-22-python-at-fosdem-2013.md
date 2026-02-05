@@ -1,10 +1,10 @@
 ---
+tags:
+- event/fosdem
+- python
 slug: python-at-fosdem-2013
 date: 2012-10-22
 lang: en
-tags:
-- fosdem
-- python
 title: Python @ FOSDEM 2013
 
 ---

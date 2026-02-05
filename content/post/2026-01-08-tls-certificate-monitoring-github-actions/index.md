@@ -1,42 +1,27 @@
 ---
-title: Automating TLS Certificate Monitoring with GitHub Actions, certificate_watcher,
-  and Slack
-description: Build a serverless TLS certificate monitoring system using GitHub Actions
-  and certificate_watcher that sends alerts to Slack, with zero infrastructure costs
-  and minimal maintenance.
-date: 2026-01-08
-slug: automating-tls-certificate-monitoring-github-actions-certificate-watcher-slack
+created: 2026-01-08T20:00:00+01:00
+modified: 2026-01-08T10:33:37+01:00
 tags:
-- github-actions
-- monitoring
-- ssl-tls
-- certificate-watcher
-- slack
 - devops
-- automation
+- devops/automation
+- devops/monitoring
 - python
-- gitops
-keywords:
-- certificate monitoring
-- ssl monitoring
-- github actions automation
-- certificate expiration
-- lets encrypt monitoring
-- slack notifications
-- certificate watcher
-- tls certificates
-- devops automation
-- serverless monitoring
-difficulty: intermediate
+- tool/git
 ContentType: post
+title: Automating TLS Certificate Monitoring with GitHub Actions, 
+  certificate_watcher, and Slack
+description: Build a serverless TLS certificate monitoring system using GitHub 
+  Actions and certificate_watcher that sends alerts to Slack, with zero 
+  infrastructure costs and minimal maintenance.
+date: 2026-01-08
+slug: 
+  automating-tls-certificate-monitoring-github-actions-certificate-watcher-slack
+keywords:
+difficulty: intermediate
 Status: draft
 image: certificate_watcher_infography.png
 author:
-- Stéphane Wirtel
-created: 2026-01-08T20:00:00+01:00
-modified: 2026-01-08T10:33:37+01:00
 obsidian-note-status:
-- colorful:completed
 
 ---
 

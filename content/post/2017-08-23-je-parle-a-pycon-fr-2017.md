@@ -1,18 +1,15 @@
 ---
+modified: 2025-09-03T10:40:06+02:00
+tags:
+- event/conference
+- python
+ContentType: post
 title: Je présente à PyCon France 2017
 date: 2017-08-23T16:00:00+02:00
-tags:
-- python
-- france
-- conference
 categories:
-- conference
 slug: je-parle-a-pycon-fr-2017
-modified: 2025-09-03T10:40:06+02:00
-ContentType: post
 Status: published
 author:
-- Stéphane Wirtel
 
 ---
 

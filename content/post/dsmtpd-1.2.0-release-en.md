@@ -1,15 +1,11 @@
 ---
+tags:
+- devops/debugging
+- devops/testing
+- python
 title: "dsmtpd 1.2.0: Test Your Emails Risk-Free"
 date: 2026-01-07
-tags:
-- python
-- smtp
-- debugging
-- development
-- testing
 categories:
-- releases
-- tooling
 author: Stéphane Wirtel
 draft: false
 slug: dsmtpd-1-2-0-test-your-emails-risk-free

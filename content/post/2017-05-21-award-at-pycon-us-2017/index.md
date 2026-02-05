@@ -1,17 +1,15 @@
 ---
+modified: 2025-09-02T08:45:03+02:00
+tags:
+- contribution
+- python
+ContentType: post
 title: Award At Pycon US 2017
 date: 2017-05-21T00:00:00+02:00
-tags:
-- python
-- psf
-- contributions
 image: award.jpg
 slug: award-at-pycon-us-2017
-modified: 2025-09-02T08:45:03+02:00
-ContentType: post
 Status: published
 author:
-- Stéphane Wirtel
 
 ---
 

@@ -1,12 +1,11 @@
 ---
+modified: 2026-01-04T17:37:22+01:00
+tags:
+- python/odoo
 title: OpenERP Introduces XML Attribute Overriding in Views
 date: 2009-11-24
 slug: openerp-override-xml-attribute
-tags:
-- openerp
-- xml
 lang: en
-modified: 2026-01-04T17:37:22+01:00
 
 ---
 

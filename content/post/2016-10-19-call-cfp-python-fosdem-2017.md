@@ -1,18 +1,16 @@
 ---
+modified: 2025-09-02T12:12:59+02:00
+tags:
+- event/conference
+- event/fosdem
+- python
+ContentType: post
 date: 2016-10-19T20:00:00+01:00
 title: PythonFOSDEM 2017 - Call for Proposals
-tags:
-- python
-- fosdem
-- conference
 categories:
-- conference
 slug: call-cfp-python-fosdem-2017
-modified: 2025-09-02T12:12:59+02:00
-ContentType: post
 Status: published
 author:
-- Stéphane Wirtel
 
 ---
 

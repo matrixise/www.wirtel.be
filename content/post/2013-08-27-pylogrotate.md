@@ -1,12 +1,9 @@
 ---
+tags:
+- python
 date: 2013-08-27
 title: Sphinx, Pygments and the logrotate format.
 slug: pylogrotate
-tags:
-- python
-- sphinx
-- pygments
-- logrotate
 
 ---
 

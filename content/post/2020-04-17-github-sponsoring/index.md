@@ -1,18 +1,16 @@
 ---
+modified: 2025-09-02T12:31:06+02:00
+tags:
+- opensource
+- python
+- tool/git
+ContentType: post
 title: Yes!, I am a Github Sponsor
 date: 2020-04-17T02:20:31+02:00
-ContentType: post
-tags:
-- python
-- sponsoring
-- github
-- opensource
 image: mona-heart-featured.png
 slug: github-sponsoring
-modified: 2025-09-02T12:31:06+02:00
 Status: published
 author:
-- Stéphane Wirtel
 
 ---
 

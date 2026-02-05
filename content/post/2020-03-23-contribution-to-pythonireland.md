@@ -1,19 +1,17 @@
 ---
+modified: 2025-09-02T18:56:50+02:00
+tags:
+- contribution
+- personal/travel
+- python
+ContentType: post
 title: Contribution to Python Ireland
 decription: Working on the sites of the previous editions
 date: 2020-03-23T14:31:15.243000Z
-tags:
-- python
-- ireland
-- limerick
-- contribution
 image: /project/python-ireland/python-ireland.png
 slug: contribution-to-pythonireland
-ContentType: post
-modified: 2025-09-02T18:56:50+02:00
 Status: published
 author:
-- Stéphane Wirtel
 
 ---
 

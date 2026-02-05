@@ -1,13 +1,12 @@
 ---
+tags:
+- database/postgresql
+- python
+- python/odoo
 author: Stephane Wirtel
 date: 2012-02-04
 lang: en
 slug: postgresql-foreign-data-wrapper-openerp
-tags:
-- python
-- openerp
-- postgresql
-- fdw
 title: PostgreSQL - Foreign Data Wrapper
 
 ---

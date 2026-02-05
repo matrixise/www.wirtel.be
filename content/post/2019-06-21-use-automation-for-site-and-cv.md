@@ -1,8 +1,13 @@
 ---
-title: "Use Automation for Site and CV"
+tags:
+- devops/automation
+- personal/cv
+- tool/hugo
+- tool/latex
+- tool/static-site
 ContentType: post
+title: "Use Automation for Site and CV"
 description: "Automate the creation of your CV with Gitlab-CI and your site"
-tags: ["hugo", "cv", "site", "automation", "gitlab", "gitlab-runner", "latex", "html"]
 date: 2019-06-21
 slug: "use-automation-for-site-and-cv"
 

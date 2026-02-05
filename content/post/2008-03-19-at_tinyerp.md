@@ -1,7 +1,6 @@
 ---
 tags:
-- openerp
-- job
+- python/odoo
 lang: fr
 date: 2008-03-19
 title: Nouveau Travail chez OpenERP (anciennement TinyERP)
