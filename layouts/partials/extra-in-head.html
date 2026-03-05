@@ -1,3 +1,4 @@
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:site" content="@{{ .Site.Params.twitterUsername }}" />
 <meta property="twitter:creator" content="@{{ .Site.Params.twitterUsername }}" />
+{{ if .IsHome }}{{ partial "jsonld-website.html" . }}{{ end }}

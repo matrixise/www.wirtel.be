@@ -1,0 +1,14 @@
+{{- $json := dict
+  "@context" "https://schema.org"
+  "@type" "Person"
+  "name" .Site.Params.Author.name
+  "jobTitle" .Site.Params.Author.title
+  "email" .Site.Params.email
+  "url" .Site.BaseURL
+  "sameAs" (slice
+    .Site.Params.twitter
+    .Site.Params.github
+    .Site.Params.linkedin
+  )
+  | jsonify (dict "indent" "  ") -}}
+{{- printf "<script type=\"application/ld+json\">%s</script>" $json | safeHTML }}

@@ -19,6 +19,10 @@ Company:
   email: stephane.wirtel@mgx.io
   site: https://mgx.io/
 Params:
+  Author:
+    name: Stéphane Wirtel
+    email: stephane@wirtel.be
+    title: Senior Python Expert
   dateFormat: Mon, Jan 2, 2006
   description: About programming, karate, contributions and stuff I enjoy...
   intro: true
