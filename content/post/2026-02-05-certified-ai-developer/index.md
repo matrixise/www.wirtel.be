@@ -20,6 +20,7 @@ date: 2026-02-05
 slug: 2026-certified-ai-developer
 author:
 modified: 2026-02-05T13:40:38+01:00
+image: cover.jpg
 
 ---
 
