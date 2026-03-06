@@ -1,4 +1,9 @@
-<meta property="twitter:card" content="summary" />
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:site" content="@{{ .Site.Params.twitterUsername }}" />
 <meta property="twitter:creator" content="@{{ .Site.Params.twitterUsername }}" />
+{{- $img := "" -}}
+{{- with .Resources.GetMatch "cover*" -}}{{- $img = .Permalink -}}{{- end -}}
+{{- if and (not $img) .Params.image -}}{{- $img = .Params.image | absURL -}}{{- end -}}
+{{- with $img }}<meta property="twitter:image" content="{{ . }}" />{{- end }}
 {{ if .IsHome }}{{ partial "jsonld-website.html" . }}{{ end }}
