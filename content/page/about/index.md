@@ -2,14 +2,14 @@
 title: "About Stéphane Wirtel — Senior Python Consultant"
 date: "2016-11-11T14:39:12"
 author: "Stéphane Wirtel"
-description: "Stéphane Wirtel is a Senior Python Consultant with 20+ years of experience, CPython Core Developer, PSF Fellow, and certified AI developer. Based in Dublin."
+description: "Stéphane Wirtel is a Senior Python Consultant with 20+ years of experience, CPython Core Developer, PSF Fellow, and certified AI developer. Based in Charleroi, Belgium."
 ---
 
 ## Hi, I'm Stéphane Wirtel
 
 ![Picture](https://github.com/matrixise.png)
 
-I'm a **Senior Python Consultant** with over 20 years of experience building software, contributing to open source, and helping organisations adopt Python at scale. I'm based in **Dublin, Ireland**, and I operate through my consulting company, [Mgx.io SRL](https://mgx.io/).
+I'm a **Senior Python Consultant** with over 20 years of experience building software, contributing to open source, and helping organisations adopt Python at scale. I'm based in **Charleroi, Belgium**, and I operate through my consulting company, [Mgx.io SRL](https://mgx.io/).
 
 My work spans from backend development and system architecture to AI and blockchain — always with Python at the core.
 
@@ -27,8 +27,6 @@ I've spoken at numerous PyCon conferences across Europe and North America, inclu
 ## Professional Experience
 
 Before consulting, I spent 6 years as a core developer at [Odoo](https://www.odoo.com) (formerly OpenERP), where I gained deep expertise in building large-scale business applications with Python.
-
-I've also consulted for the **European Investment Bank (EIB)**, where I helped introduce Python into the banking sector's technology stack.
 
 Today, through [Mgx.io SRL](https://mgx.io/), I help companies with Python development, AI integration, and technical strategy.
 
