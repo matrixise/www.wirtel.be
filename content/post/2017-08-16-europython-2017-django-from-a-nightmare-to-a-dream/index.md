@@ -7,6 +7,7 @@ tags:
 - python/django
 ContentType: post
 title: "EuroPython 2017: Django From A Nightmare To A Dream"
+description: "How I helped improve the EuroPython 2017 Django website by adding tests, coverage, and documentation to a codebase that had none."
 date: 2017-08-16T01:01:56+02:00
 draft: true
 slug: europython-2017-django-from-a-nightmare-to-a-dream

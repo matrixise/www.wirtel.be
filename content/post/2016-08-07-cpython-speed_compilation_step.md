@@ -3,6 +3,7 @@ tags:
 - python
 ContentType: post
 title: CPython - Speed the compilation step
+description: "Tips and techniques to speed up the CPython compilation process when working with the source code and testing new features."
 draft: true
 date: 2016-08-07T10:00:00+01:00
 comments: false

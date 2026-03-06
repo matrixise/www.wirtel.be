@@ -1,4 +1,5 @@
 ---
+language: fr
 modified: 2025-09-02T08:41:25+02:00
 tags:
 - opensource

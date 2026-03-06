@@ -1,21 +1,23 @@
-<meta property="og:locale" content="en_US" />
+{{- $desc := "" -}}
+{{- with .Description -}}
+  {{- $desc = . -}}
+{{- else -}}
+  {{- if .IsPage -}}
+    {{- $desc = .Summary | plainify | truncate 200 -}}
+  {{- else -}}
+    {{- with .Site.Params.description -}}{{- $desc = . -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $lang := or .Params.language "en" -}}
+{{- $locale := cond (eq $lang "fr") "fr_FR" "en_US" -}}
+<meta property="og:locale" content="{{ $locale }}" />
 {{ with resources.Get "logo.png" }} {{ $logo512 := .Resize "512x512" }}
 <meta property="og:logo" content="{{ $logo512.Permalink }}" />
 {{ end }}
-
 <meta property="og:title" content="{{ .Title }}" />
-<meta
-    property="og:description"
-    content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"
-/>
-<meta
-    property="og:type"
-    content="{{ if .IsPage }}article{{ else }}website{{ end }}"
-/>
-{{ with .Site.Params.site_name }}<meta
-    property="og:site_name"
-    content="{{ . }}"
-/>{{ end }}
+<meta property="og:description" content="{{ $desc }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+{{ with .Site.Params.site_name }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
 <meta property="og:url" content="{{ .Permalink }}" />
 {{- $img := "" -}}
 {{- with .Resources.GetMatch "cover*" -}}{{- $img = .Permalink -}}{{- end -}}
@@ -30,3 +32,5 @@
 <meta property="og:image:secure_url" content="{{ $url }}" />
 {{- end -}}{{- end -}}
 {{- end }}
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ $desc }}" />

@@ -1,4 +1,5 @@
 ---
+language: fr
 modified: 2025-08-11T09:43:51
 tags:
 - personal/travel

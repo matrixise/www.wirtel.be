@@ -1,4 +1,5 @@
 ---
+language: fr
 modified: 2026-01-04T17:03:21+01:00
 tags:
 - mgx/formation

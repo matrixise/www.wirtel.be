@@ -1,4 +1,5 @@
 ---
+language: fr
 modified: 2025-09-02T18:34:11+02:00
 tags:
 - ai/llm

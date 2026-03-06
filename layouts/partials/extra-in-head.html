@@ -1,11 +1,12 @@
 <link rel="canonical" href="{{ .Permalink }}">
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:site" content="@{{ .Site.Params.twitterUsername }}" />
-<meta property="twitter:creator" content="@{{ .Site.Params.twitterUsername }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@{{ .Site.Params.twitterUsername }}" />
+<meta name="twitter:creator" content="@{{ .Site.Params.twitterUsername }}" />
 {{- $img := "" -}}
 {{- with .Resources.GetMatch "cover*" -}}{{- $img = .Permalink -}}{{- end -}}
 {{- if and (not $img) .Params.image -}}{{- $img = .Params.image | absURL -}}{{- end -}}
-{{- with $img }}<meta property="twitter:image" content="{{ . }}" />{{- end }}
+{{- with $img }}
+<meta name="twitter:image" content="{{ . }}" />{{- end }}
 {{ if .IsHome }}{{ partial "jsonld-website.html" . }}{{ end }}
 {{- if or (eq .Kind "term") (eq .Kind "taxonomy") -}}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/taxonomy.css">
