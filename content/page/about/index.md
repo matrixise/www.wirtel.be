@@ -18,9 +18,10 @@ My work spans from backend development and system architecture to AI and blockch
 I've been deeply involved in the Python ecosystem for most of my career:
 
 - **CPython Core Developer** since 2019, promoted by Victor Stinner and Julien Palard
-- **Python Software Foundation Fellow** since 2013
+- **Python Software Foundation Fellow** since 2013, and voting member of the PSF Fellowship Workgroup
 - **PSF Community Service Award** (2016) for organising the Python devroom at FOSDEM and my community engagement
 - **EuroPython Society Board Member** (2019–2020) and co-organiser of EuroPython 2020
+- **Python Ireland** — active admin of the [GitHub organisation](https://github.com/python-ireland), managing repository maintenance
 
 I've spoken at numerous PyCon conferences across Europe and North America, including PyCon France, PyCon Ireland, PyCon UK, PyCon Canada, PyCon Italy, PyCon Slovakia, PyCon Ukraine, and FOSDEM.
 
