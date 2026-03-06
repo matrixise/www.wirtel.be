@@ -47,7 +47,7 @@ Outside of tech, I practice **Karate JKA Shotokan** — I hold a 2nd DAN black b
 - [LinkedIn](https://www.linkedin.com/in/stephanewirtel/)
 - [Consulting — Mgx.io](https://mgx.io/) — [stephane.wirtel@mgx.io](mailto:stephane.wirtel@mgx.io)
 - [Blog](https://wirtel.be/)
-- Email: [stephane@wirtel.be](mailto:stephane@wirtel.be)
+- Community & blog: [stephane@wirtel.be](mailto:stephane@wirtel.be)
 
 ## CV
 
