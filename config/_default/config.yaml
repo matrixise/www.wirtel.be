@@ -35,6 +35,7 @@ Params:
   twitter: https://twitter.com/matrixise
   email: stephane@wirtel.be
   linkedin: https://www.linkedin.com/in/stephanewirtel/
+  consultingURL: https://mgx.io/
   readingTime: true
   readingTimeText: "Estimated reading time:"
   site_name: "Stéphane Wirtel — Senior Python Consultant"
@@ -53,6 +54,15 @@ Taxonomies:
   categories: categories
   series: series
   tags: tags
+related:
+  threshold: 20
+  includeNewer: true
+  toLower: true
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 70
 menu:
   main:
     - name: Posts
@@ -64,6 +74,9 @@ menu:
     - name: Talks
       url: /talk
       weight: 3
+    - name: Search
+      url: /page/search/
+      weight: 4
     - name: About
       url: /page/about/
       weight: 5

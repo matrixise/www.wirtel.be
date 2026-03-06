@@ -7,6 +7,7 @@ tags:
 ContentType: post
 date: 2017-01-09T17:56:00+01:00
 title: Python Events in 2017, Need your help!
+description: A call to the Python community to help map all PyCon and Python events worldwide in 2017, from PyCon US to local events in Ireland, France, Italy and beyond.
 author: Stéphane Wirtel
 categories:
 slug: python-events-in-2017-need-your-help

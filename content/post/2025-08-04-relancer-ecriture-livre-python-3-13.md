@@ -9,9 +9,7 @@ tags:
 - tool/typst
 ContentType: post
 title: Relancer l’écriture de mon livre *Introduction à Python 3.13*
-description: Relancer l’écriture de mon livre _Introduction à Python 3.13_ en 
-  m’appuyant sur Obsidian, Pandoc, Typst et une chaîne d’outils moderne et 
-  fluide.
+description: Relancer l’écriture de mon livre _Introduction à Python 3.13_ en m’appuyant sur Obsidian, Pandoc, Typst et une chaîne d’outils moderne et fluide.
 date: 2025-08-04
 updated: 2025-08-04
 Status: published

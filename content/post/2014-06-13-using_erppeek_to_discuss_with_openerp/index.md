@@ -5,6 +5,7 @@ tags:
 - python/odoo
 ContentType: post
 title: Connect to Odoo in your application with ERPpeek
+description: Tutorial on using ERPpeek to connect to Odoo/OpenERP via XML-RPC. Covers database management, model browsing, module installation, and field introspection with Python.
 date: 2014-06-13T18:16:29+01:00
 categories:
 image: background.jpg

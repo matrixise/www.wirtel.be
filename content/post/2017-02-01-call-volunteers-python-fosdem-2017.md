@@ -6,6 +6,7 @@ tags:
 ContentType: post
 date: 2017-02-01T20:00:00+01:00
 title: PythonFOSDEM 2017 - Call for Volunteers
+description: The Python community at FOSDEM 2017 is looking for volunteers to help run two Python devrooms hosting 24 talks for thousands of open source enthusiasts in Brussels.
 categories:
 slug: call-volunteers-python-fosdem-2017
 Status: published

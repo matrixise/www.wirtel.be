@@ -6,6 +6,7 @@ author: Stephane Wirtel
 date: 2012-02-21
 lang: fr
 title: MailCatcher, L'outil pour le développeur
+description: "Découvrez MailCatcher, l'outil indispensable du développeur : un serveur SMTP local qui capture tous les emails sortants pour les inspecter facilement via une interface web."
 slug: mailcatcher-l-outil-pour-le-developpeur
 
 ---

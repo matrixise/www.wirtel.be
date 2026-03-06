@@ -1,6 +1,7 @@
 ---
 date: 2015-12-21T11:09:42+01:00
 title: Move to Hugo
+description: Why I switched from Pelican to Hugo as my static site generator. Hugo's speed, built-in features, and single binary make blogging simpler and more enjoyable.
 comments: false
 share: false
 slug: move-to-hugo

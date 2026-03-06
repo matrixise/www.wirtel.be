@@ -5,6 +5,7 @@ date: 2013-01-14
 slug: python-window-iterator
 lang: fr
 title: Astuce Windows Iterator
+description: Implémentation d'une fenêtre glissante en Python avec collections.deque et itertools, inspirée du site sam&max. Un pattern utile pour itérer sur des sous-séquences.
 
 ---
 

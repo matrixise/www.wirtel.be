@@ -8,8 +8,7 @@ tags:
 - python/fastapi
 ContentType: post
 title: Ce que je fabrique pendant mes « vacances »
-description: "Retour sur un mois de pause active : entre jardinage, refonte de CV,
-  et lancement d’un side project autour du vin."
+description: "Retour sur un mois de pause active : entre jardinage, refonte de CV, et lancement d’un side project autour du vin."
 date: 2025-06-05
 slug: ce-que-je-fabrique-pendant-mes-vacances
 image: background.png

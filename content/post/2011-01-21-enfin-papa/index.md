@@ -2,6 +2,7 @@
 modified: 2025-09-02T11:09:26+02:00
 ContentType: post
 title: Enfin Papa!
+description: La naissance de Margaux, notre petite fille, le 21 janvier 2011 à 3h26 — 3,270 kg et 51 cm de pur bonheur, version 1.0 enfin disponible !
 date: 2011-01-21T03:26:00+02:00
 slug: enfin-papa
 resources:

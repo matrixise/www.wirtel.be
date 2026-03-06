@@ -5,7 +5,7 @@ tags:
 - python
 ContentType: post
 title: "PyCon Ireland 2019: Call for proposals"
-description: ""
+description: "PyCon Ireland 2019 opens its Call for Proposals — submit your talk by August 11th to speak at Ireland's largest annual Python conference in Dublin in October."
 date: 2019-08-07T17:00:00+02:00
 slug: pycon-ireland-2019-call-for-proposals
 Status: published

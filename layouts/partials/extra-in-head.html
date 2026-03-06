@@ -7,3 +7,6 @@
 {{- if and (not $img) .Params.image -}}{{- $img = .Params.image | absURL -}}{{- end -}}
 {{- with $img }}<meta property="twitter:image" content="{{ . }}" />{{- end }}
 {{ if .IsHome }}{{ partial "jsonld-website.html" . }}{{ end }}
+{{- if or (eq .Kind "term") (eq .Kind "taxonomy") -}}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/taxonomy.css">
+{{- end -}}

@@ -10,9 +10,7 @@ tags:
 - tool/static-site
 ContentType: post
 title: Migration Hugo et passage à Obsidian
-description: Retour sur la migration technique de mon site vers Hugo 0.148.1, 
-  l’abandon de getJSON, et une réflexion sur Obsidian comme source unique pour 
-  le contenu et le CV.
+description: Retour sur la migration technique de mon site vers Hugo 0.148.1, l’abandon de getJSON, et une réflexion sur Obsidian comme source unique pour le contenu et le CV.
 date: 2025-07-10
 slug: migration-hugo-obsidian-cv
 image: obsidian2hugo.png

@@ -3,6 +3,7 @@ modified: 2026-01-04T17:37:22+01:00
 tags:
 - python/odoo
 title: OpenERP Introduces XML Attribute Overriding in Views
+description: Learn how to override XML attributes in OpenERP views using the 'attributes' position in XPath expressions, a powerful feature introduced in the trunk version.
 date: 2009-11-24
 slug: openerp-override-xml-attribute
 lang: en

@@ -14,13 +14,11 @@ tags:
 - neural-networks
 ContentType: post
 title: Certified AI Developer - A Journey of Growth, Grief, and New Beginning
-description: "Three intense months learning AI fundamentals: My journey through Alyra's
-  Machine Learning and Deep Learning certification"
+description: "Three intense months learning AI fundamentals: My journey through Alyra's Machine Learning and Deep Learning certification"
 date: 2026-02-05
 slug: 2026-certified-ai-developer
 author:
-modified: 2026-02-05T13:40:38+01:00
-image: cover.jpg
+modified: 2026-02-05T12:32:44+01:00
 
 ---
 

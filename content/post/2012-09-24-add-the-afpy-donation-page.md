@@ -5,6 +5,7 @@ date: 2012-09-24
 slug: add-the-afpy-donation-page
 lang: fr
 title: Page de Donation de l'AFPY
+description: Suite à l'Assemblée Générale de l'AFPY lors de PyConFR 2012, un appel à soutenir l'Association Francophone Python en partageant sa page de donation.
 
 ---
 

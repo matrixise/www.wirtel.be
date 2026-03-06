@@ -6,6 +6,7 @@ slug: python-at-fosdem-2013
 date: 2012-10-22
 lang: en
 title: Python @ FOSDEM 2013
+description: "Exciting news for the Python community: a dedicated Python devroom will be held at FOSDEM 2013 in Brussels, bringing together thousands of open source developers."
 
 ---
 

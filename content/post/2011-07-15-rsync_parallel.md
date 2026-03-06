@@ -5,6 +5,7 @@ tags:
 - devops/parallel
 date: 2011-07-15
 title: "PostgreSQL: Use GNU/Parallel and pg_dump"
+description: Speed up PostgreSQL backups by parallelizing pg_dump with GNU/Parallel — dump multiple databases simultaneously instead of one by one.
 slug: rsync_parallel
 
 ---

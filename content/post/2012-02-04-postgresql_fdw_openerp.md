@@ -8,6 +8,7 @@ date: 2012-02-04
 lang: en
 slug: postgresql-foreign-data-wrapper-openerp
 title: PostgreSQL - Foreign Data Wrapper
+description: How to use PostgreSQL Foreign Data Wrapper (FDW) with multicorn to query OpenERP data directly from PostgreSQL using XML-RPC as a backend connector.
 
 ---
 

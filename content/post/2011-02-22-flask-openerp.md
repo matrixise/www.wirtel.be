@@ -6,6 +6,7 @@ tags:
 date: 2011-02-22
 slug: flask-openerp
 title: Flask-OpenERP
+description: Announcing Flask-OpenERP, a new Flask extension that makes it easy to integrate OpenERP into your Python web applications. Available on GitHub.
 
 ---
 

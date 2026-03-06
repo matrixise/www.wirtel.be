@@ -5,6 +5,7 @@ tags:
 - python
 ContentType: post
 title: Award At Pycon US 2017
+description: Stéphane Wirtel receives a Python Software Foundation Community Service Award at PyCon US 2017, recognizing his contributions to the Python community.
 date: 2017-05-21T00:00:00+02:00
 image: award.jpg
 slug: award-at-pycon-us-2017

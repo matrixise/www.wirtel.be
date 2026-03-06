@@ -3,8 +3,29 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ .Title }} &middot; {{ .Site.Params.Author.name }}</title>
-        <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+        {{- $pageTitle := "" -}}
+        {{- $metaDesc := "" -}}
+        {{- if .IsHome -}}
+            {{- $pageTitle = .Site.Title -}}
+            {{- $metaDesc = .Site.Params.description -}}
+        {{- else if eq .Kind "term" -}}
+            {{- $pageTitle = printf "Articles tagged %s | %s" .Title .Site.Title -}}
+            {{- $metaDesc = printf "%d articles tagged \"%s\" on Stéphane Wirtel's blog." (len .Pages) .Title -}}
+        {{- else if eq .Kind "taxonomy" -}}
+            {{- $pageTitle = printf "All tags | %s" .Site.Title -}}
+            {{- $metaDesc = printf "Index of all topics covered on Stéphane Wirtel's blog." -}}
+        {{- else -}}
+            {{- $pageTitle = printf "%s · %s" .Title .Site.Title -}}
+            {{- if .Description -}}
+                {{- $metaDesc = .Description -}}
+            {{- else if .IsPage -}}
+                {{- $metaDesc = .Summary -}}
+            {{- else -}}
+                {{- $metaDesc = default "" .Site.Params.description -}}
+            {{- end -}}
+        {{- end -}}
+        <title>{{ $pageTitle }}</title>
+        <meta name="description" content="{{ $metaDesc }}">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         {{ hugo.Generator }}

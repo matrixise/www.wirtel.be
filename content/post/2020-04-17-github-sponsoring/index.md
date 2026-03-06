@@ -6,6 +6,7 @@ tags:
 - tool/git
 ContentType: post
 title: Yes!, I am a Github Sponsor
+description: How and why I started sponsoring open source maintainers via GitHub Sponsors, supporting projects like Coverage.py and Dive that I rely on daily as a developer.
 date: 2020-04-17T02:20:31+02:00
 image: mona-heart-featured.png
 slug: github-sponsoring

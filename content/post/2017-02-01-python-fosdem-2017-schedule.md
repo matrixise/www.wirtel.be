@@ -6,6 +6,7 @@ tags:
 ContentType: post
 date: 2017-02-01T21:00:00+01:00
 title: PythonFOSDEM 2017 - Schedule
+description: Full schedule of the Python devrooms at FOSDEM 2017 in Brussels, with 24 accepted talks across two rooms welcoming up to 450 Python enthusiasts.
 categories:
 slug: python-fosdem-2017-schedule
 Status: published

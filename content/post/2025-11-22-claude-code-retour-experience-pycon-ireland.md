@@ -14,9 +14,7 @@ tags:
 - tool/obsidian
 ContentType: post
 title: "Claude Code : comment un assistant IA m'a fait gagner des jours de développement"
-description: "Retour d'expérience sur l'utilisation de Claude Code pendant PyCon Ireland
-  : automatisation de migrations Django/Wagtail, conversion de contenu scanné, et
-  gain de productivité spectaculaire."
+description: "Retour d'expérience sur l'utilisation de Claude Code pendant PyCon Ireland : automatisation de migrations Django/Wagtail, conversion de contenu scanné, et gain de productivité spectaculaire."
 date: 2025-11-22
 slug: claude-code-retour-experience-pycon-ireland
 keywords:

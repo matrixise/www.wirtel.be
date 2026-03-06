@@ -4,6 +4,7 @@ tags:
 lang: fr
 date: 2008-03-19
 title: Nouveau Travail chez OpenERP (anciennement TinyERP)
+description: À partir du 14 mai 2008, je rejoins Tiny.be, l'éditeur du logiciel de gestion d'entreprise TinyERP (futur OpenERP), concurrent de SAP.
 slug: nouveau-travail-chez-openerp-anciennement-tinyerp
 
 ---
