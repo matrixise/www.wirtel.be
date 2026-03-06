@@ -5,7 +5,7 @@ author: "Stéphane Wirtel"
 description: "Senior Python Consultant with 20+ years of experience, CPython Core Developer, PSF Fellow, and certified AI developer. Based in Charleroi, Belgium."
 ---
 
-## Hi, I'm Stéphane Wirtel
+## Hi, I'm Stéphane
 
 ![Picture](https://github.com/matrixise.png)
 
