@@ -1,0 +1,19 @@
+/* Fix vertical alignment of site title and social icon buttons in header */
+.site-header .site-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.site-header .site-title {
+    float: none;
+    margin-right: 10px;
+}
+
+.site-header .button-square {
+    float: none;
+    padding-top: 8px;
+    padding-bottom: 9px;
+}

@@ -24,7 +24,7 @@ Params:
     email: stephane@wirtel.be
     title: Senior Python Expert
   dateFormat: Mon, Jan 2, 2006
-  description: Stéphane Wirtel's blog, Senior Python Consultant. Articles about Python, Machine Learning, DevOps and karate.
+  description: Articles about Python, AI & Open Source
   intro: true
   headline: 今日は
   opengraph: true
