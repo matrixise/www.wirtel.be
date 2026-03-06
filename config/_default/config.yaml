@@ -5,6 +5,12 @@ title: Stéphane Wirtel — Senior Python Consultant
 baseurl: https://wirtel.be/
 copyright: Stéphane Wirtel
 defaultContentLanguage: en
+languageCode: en
+enableRobotsTXT: true
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+  filename: sitemap.xml
 ignoreFiles:
   - "CLAUDE\\.md$"
 services:

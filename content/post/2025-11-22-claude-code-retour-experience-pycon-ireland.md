@@ -18,7 +18,7 @@ description: "Retour d'expérience sur l'utilisation de Claude Code pendant PyCo
 date: 2025-11-22
 slug: claude-code-retour-experience-pycon-ireland
 keywords:
-lang: fr
+language: fr
 reading_time: 14
 difficulty: intermediate
 Status: published

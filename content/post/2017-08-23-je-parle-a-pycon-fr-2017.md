@@ -1,4 +1,5 @@
 ---
+language: fr
 modified: 2025-09-03T10:40:06+02:00
 tags:
 - event/conference

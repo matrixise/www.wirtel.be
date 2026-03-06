@@ -1,4 +1,5 @@
 ---
+language: fr
 created: 2025-10-18T15:28:39+02:00
 modified: 2025-10-20T18:03:08+02:00
 tags:

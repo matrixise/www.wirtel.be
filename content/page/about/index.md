@@ -1,47 +1,54 @@
 ---
-title: "About"
+title: "About Stéphane Wirtel — Senior Python Consultant"
 date: "2016-11-11T14:39:12"
 author: "Stéphane Wirtel"
-description: "Things about me."
+description: "Stéphane Wirtel is a Senior Python Consultant with 20+ years of experience, CPython Core Developer, PSF Fellow, and certified AI developer. Based in Charleroi, Belgium."
 ---
 
-## Salut, Hi, Ciao, Dag, 今日は !
+## Hi, I'm Stéphane Wirtel
 
 ![Picture](https://github.com/matrixise.png)
 
-Sorry, I don't like to explain my life, so in this case, you won't find a full description of my activities. I am just a Python Software Developer and Freelancer, I live in Belgium.
+I'm a **Senior Python Consultant** with over 20 years of experience building software, contributing to open source, and helping organisations adopt Python at scale. I'm based in **Charleroi, Belgium**, and I operate through my consulting company, [Mgx.io SRL](https://mgx.io/).
 
-I like to contribute and give my time to the Python Community:
+My work spans from backend development and system architecture to AI and blockchain — always with Python at the core.
 
-### Contribs
+## Open Source & Python Community
 
-* [CPython Core Dev](https://www.python.org)
-* Contribute to [Python planet](https://planet.python.org)
-* [EuroPython Society](https://www.europython-society.org/) Board Member 2019-2020
-  * Web Workgroup - Contributor
-  * Program Worgroup - Co-Chair
-  * Communication Workgroup - Contributor
-* [Python Ireland](https://www.python.ie) Committee Member
-  * Works on the web sites.
-* [Python Software Foundation](https://www.python.org/psf):
-    * [Fellow Member](https://www.python.org/psf/members/) since 2013
-    * Fellowship WorkGroup
-    * Marketing WorkGroup
-* [AFPy-Association Francophone de Python](https://www.afpy.org) member
+I've been deeply involved in the Python ecosystem for most of my career:
 
-### Awards
+- **CPython Core Developer** since 2019, promoted by Victor Stinner and Julien Palard
+- **Python Software Foundation Fellow** since 2013, and voting member of the PSF Fellowship Workgroup
+- **[PSF Community Service Award](https://www.python.org/community/awards/psf-awards/#june-2016)** (2016) for organising the Python devroom at FOSDEM and my community engagement
+- **EuroPython Society Board Member** (2019–2020) and co-organiser of EuroPython 2020
+- **[Python Ireland](https://www.python.ie)** — active admin of the [GitHub organisation](https://github.com/python-ireland), managing repository maintenance
+- **[PythonFOSDEM](https://www.pythonfosdem.org)** — co-organiser of the Python devroom at FOSDEM from 2013 to 2018
 
-* [Community Service Award](https://www.python.org/community/awards/psf-awards/#june-2016), you can find the announce [on the
-blog](http://pyfound.blogspot.be/2016/08/in-beginning-there-was-one-python-group.html) of the Python Software Foundation.
+I've spoken at numerous PyCon conferences across Europe and North America, including PyCon France, PyCon Ireland, PyCon UK, PyCon Canada, PyCon Italy, PyCon Slovakia, PyCon Ukraine, and FOSDEM.
 
-During the PyCon US 2017 in Portland, I have received my Award. 
+## Professional Experience
 
-Thank you to the [Python Software Foundation](https://www.python.org/psf)
+Before consulting, I spent 6 years as a core developer at [Odoo](https://www.odoo.com) (formerly OpenERP), where I gained deep expertise in building large-scale business applications with Python.
 
-### Formerly
+Today, through [Mgx.io SRL](https://mgx.io/), I help companies with Python development, AI integration, and technical strategy.
 
-* [Odoo](https://www.odoo.com) Core Dev (6y)
+## Certifications
+
+- **Certified AI Developer** — Machine Learning & Deep Learning (Alyra, 2025)
+- **Certified Blockchain Developer** (Alyra, 2025)
+
+## Beyond Code
+
+Outside of tech, I practice **Karate JKA Shotokan** — I hold a 2nd DAN black belt and serve as a referee.
+
+## Get in Touch
+
+- [GitHub](https://github.com/matrixise)
+- [LinkedIn](https://www.linkedin.com/in/stephanewirtel/)
+- [Consulting — Mgx.io](https://mgx.io/)
+- [Blog](https://wirtel.be/)
+- Email: [stephane@wirtel.be](mailto:stephane@wirtel.be)
 
 ## CV
 
-You can download my [CV](https://public-mgxio.s3.eu-west-3.amazonaws.com/wirtel.be/StephaneWirtel.pdf) - Updated at midnight (UTC) 
+You can download my [CV](https://public-mgxio.s3.eu-west-3.amazonaws.com/wirtel.be/StephaneWirtel.pdf) — updated daily at midnight (UTC).

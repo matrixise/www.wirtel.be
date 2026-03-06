@@ -1,9 +1,20 @@
 {{- $author := dict
   "@type" "Person"
   "name" .Site.Params.Author.name
-  "email" .Site.Params.email
-  "url" .Site.BaseURL
+  "url" (printf "%spage/about/" .Site.BaseURL)
+  "jobTitle" "Senior Python Consultant"
+  "sameAs" (slice
+    "https://github.com/matrixise"
+    "https://www.linkedin.com/in/stephanewirtel/"
+    "https://mgx.io/"
+  )
 -}}
+{{- $publisher := dict
+  "@type" "Organization"
+  "name" "Mgx.io SRL"
+  "url" "https://mgx.io/"
+-}}
+{{- $lang := or .Params.language "en" -}}
 {{- $data := dict
   "@context" "https://schema.org"
   "@type" "BlogPosting"
@@ -13,12 +24,19 @@
   "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
   "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
   "wordCount" .WordCount
+  "inLanguage" $lang
   "author" $author
-  "publisher" $author
+  "publisher" $publisher
   "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
 -}}
 {{- with .Params.tags -}}
-  {{- $data = merge $data (dict "keywords" .) -}}
+  {{- $data = merge $data (dict "keywords" (delimit . ", ")) -}}
+{{- end -}}
+{{- $img := "" -}}
+{{- with .Resources.GetMatch "cover*" -}}{{- $img = .Permalink -}}{{- end -}}
+{{- if and (not $img) .Params.image -}}{{- $img = (.Params.image | absURL) -}}{{- end -}}
+{{- with $img -}}
+  {{- $data = merge $data (dict "image" $img) -}}
 {{- end -}}
 {{- $json := $data | jsonify (dict "indent" "  ") -}}
 {{- printf "<script type=\"application/ld+json\">%s</script>" $json | safeHTML }}

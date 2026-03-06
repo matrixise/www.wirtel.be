@@ -2,13 +2,13 @@
   "@context" "https://schema.org"
   "@type" "Person"
   "name" .Site.Params.Author.name
-  "jobTitle" .Site.Params.Author.title
+  "jobTitle" "Senior Python Consultant"
   "email" .Site.Params.email
-  "url" .Site.BaseURL
+  "url" (printf "%spage/about/" .Site.BaseURL)
   "sameAs" (slice
-    .Site.Params.twitter
-    .Site.Params.github
-    .Site.Params.linkedin
+    "https://github.com/matrixise"
+    "https://www.linkedin.com/in/stephanewirtel/"
+    "https://mgx.io/"
   )
   | jsonify (dict "indent" "  ") -}}
 {{- printf "<script type=\"application/ld+json\">%s</script>" $json | safeHTML }}
