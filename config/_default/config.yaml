@@ -1,7 +1,7 @@
 ---
 newContentEditor: /usr/bin/nvim
 theme: ["original-ghostwriter", "hugo-shortcode-gallery"]
-title: Stéphane's Blog
+title: Stéphane Wirtel — Senior Python Consultant
 baseurl: https://wirtel.be/
 copyright: Stéphane Wirtel
 defaultContentLanguage: en
@@ -24,7 +24,7 @@ Params:
     email: stephane@wirtel.be
     title: Senior Python Expert
   dateFormat: Mon, Jan 2, 2006
-  description: About programming, karate, contributions and stuff I enjoy...
+  description: Stéphane Wirtel's blog, Senior Python Consultant. Articles about Python, Machine Learning, DevOps and karate.
   intro: true
   headline: 今日は
   opengraph: true
@@ -37,7 +37,7 @@ Params:
   linkedin: https://www.linkedin.com/in/stephanewirtel/
   readingTime: true
   readingTimeText: "Estimated reading time:"
-  site_name: "Stéphane's Blog"
+  site_name: "Stéphane Wirtel — Senior Python Consultant"
   mainSections: [post]
 Permalinks:
   post: /post/:year/:month/:day/:slug
@@ -67,6 +67,9 @@ menu:
     - name: About
       url: /page/about/
       weight: 5
+    - name: Consulting
+      url: https://mgx.io/
+      weight: 6
 
 markup:
   highlight:

@@ -17,8 +17,16 @@
     content="{{ . }}"
 />{{ end }}
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ $parentScope := . }} {{- with .Params.images }} {{- range first 6 . }} {{
-$url := delimit (slice $parentScope.Permalink .) "/" | absURL }}
+{{- $img := "" -}}
+{{- with .Resources.GetMatch "cover*" -}}{{- $img = .Permalink -}}{{- end -}}
+{{- if and (not $img) .Params.image -}}{{- $img = (.Params.image | absURL) -}}{{- end -}}
+{{- if $img }}
+<meta property="og:image" content="{{ $img }}" />
+<meta property="og:image:secure_url" content="{{ $img }}" />
+{{- else -}}
+{{- $parentScope := . -}}{{- with .Params.images -}}{{- range first 6 . -}}
+{{- $url := delimit (slice $parentScope.Permalink .) "/" | absURL }}
 <meta property="og:image" content="{{ $url }}" />
 <meta property="og:image:secure_url" content="{{ $url }}" />
-{{- end }} {{- end }}
+{{- end -}}{{- end -}}
+{{- end }}

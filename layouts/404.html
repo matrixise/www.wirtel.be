@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+<div class="content container">
+    <div class="post">
+        <h1 class="post-title">Page introuvable</h1>
+        <p>La page que vous cherchez n'existe pas ou a été déplacée.</p>
+
+        <p><a href="{{ .Site.BaseURL }}">← Retour à l'accueil</a></p>
+
+        {{ $pages := first 5 (where .Site.RegularPages "Section" "post") }}
+        {{ with $pages }}
+        <h2>Articles récents</h2>
+        <ul>
+            {{ range . }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+        {{ end }}
+
+        <h2>Pages utiles</h2>
+        <ul>
+            <li><a href="{{ .Site.BaseURL }}project">Projets</a></li>
+            <li><a href="{{ .Site.BaseURL }}talk">Talks</a></li>
+            <li><a href="{{ .Site.BaseURL }}page/about/">À propos</a></li>
+        </ul>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
