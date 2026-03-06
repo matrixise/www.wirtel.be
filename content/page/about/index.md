@@ -1,17 +1,22 @@
 ---
-title: "About Stéphane Wirtel — Senior Python Consultant"
+title: "About"
 date: "2016-11-11T14:39:12"
 author: "Stéphane Wirtel"
-description: "Stéphane Wirtel is a Senior Python Consultant with 20+ years of experience, CPython Core Developer, PSF Fellow, and certified AI developer. Based in Charleroi, Belgium."
+description: "Senior Python Consultant with 20+ years of experience, CPython Core Developer, PSF Fellow, and certified AI developer. Based in Charleroi, Belgium."
 ---
 
-## Hi, I'm Stéphane Wirtel
+## Hi, I'm Stéphane
 
-![Picture](https://github.com/matrixise.png)
+<div style="display:flex; align-items:center; gap:24px; margin-bottom:24px;">
+  <img src="https://github.com/matrixise.png" alt="Stéphane Wirtel" style="width:150px; height:150px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+  <div>
 
 I'm a **Senior Python Consultant** with over 20 years of experience building software, contributing to open source, and helping organisations adopt Python at scale. I'm based in **Charleroi, Belgium**, and I operate through my consulting company, [Mgx.io SRL](https://mgx.io/).
 
 My work spans from backend development and system architecture to AI and blockchain — always with Python at the core.
+
+  </div>
+</div>
 
 ## Open Source & Python Community
 
@@ -45,9 +50,9 @@ Outside of tech, I practice **Karate JKA Shotokan** — I hold a 2nd DAN black b
 
 - [GitHub](https://github.com/matrixise)
 - [LinkedIn](https://www.linkedin.com/in/stephanewirtel/)
-- [Consulting — Mgx.io](https://mgx.io/)
+- [Consulting — Mgx.io](https://mgx.io/) — [stephane.wirtel@mgx.io](mailto:stephane.wirtel@mgx.io)
 - [Blog](https://wirtel.be/)
-- Email: [stephane@wirtel.be](mailto:stephane@wirtel.be)
+- Community & blog: [stephane@wirtel.be](mailto:stephane@wirtel.be)
 
 ## CV
 
