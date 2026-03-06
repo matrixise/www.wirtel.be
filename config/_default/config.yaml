@@ -91,5 +91,8 @@ menu:
       weight: 6
 
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     style: solarized-light

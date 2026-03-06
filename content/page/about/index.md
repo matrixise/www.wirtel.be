@@ -7,11 +7,16 @@ description: "Senior Python Consultant with 20+ years of experience, CPython Cor
 
 ## Hi, I'm Stéphane
 
-![Picture](https://github.com/matrixise.png)
+<div style="display:flex; align-items:center; gap:24px; margin-bottom:24px;">
+  <img src="https://github.com/matrixise.png" alt="Stéphane Wirtel" style="width:150px; height:150px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+  <div>
 
 I'm a **Senior Python Consultant** with over 20 years of experience building software, contributing to open source, and helping organisations adopt Python at scale. I'm based in **Charleroi, Belgium**, and I operate through my consulting company, [Mgx.io SRL](https://mgx.io/).
 
 My work spans from backend development and system architecture to AI and blockchain — always with Python at the core.
+
+  </div>
+</div>
 
 ## Open Source & Python Community
 
