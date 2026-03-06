@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify"
+command = "hugo --gc --minify && npx -y pagefind --site public --glob \"post/**/*.html\""
 
 [build.environment]
 HUGO_VERSION = "0.152.2"
@@ -8,3 +8,9 @@ HUGO_VERSION = "0.152.2"
 [context.production.environment]
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
+
+[context.deploy-preview]
+command = "hugo --gc --minify --baseURL $DEPLOY_PRIME_URL && npx -y pagefind --site public --glob \"post/**/*.html\""
+
+[context.branch-deploy]
+command = "hugo --gc --minify --baseURL $DEPLOY_PRIME_URL && npx -y pagefind --site public --glob \"post/**/*.html\""

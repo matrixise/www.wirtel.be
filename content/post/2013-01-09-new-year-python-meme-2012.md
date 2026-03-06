@@ -4,6 +4,7 @@ tags:
 - python
 slug: new-year-python-meme-2012
 title: New Year's Python Meme 2012
+description: "My Python highlights of 2012: VirtualEnv, Requests, Gunicorn, gevent, and my goals for 2013 including LLVM, Erlang, Go, and organizing Python at FOSDEM."
 modified: 2026-01-04T22:31:57+01:00
 
 ---

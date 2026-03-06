@@ -4,6 +4,7 @@ tags:
 - devops/testing
 - python
 title: "dsmtpd 1.2.0: Test Your Emails Risk-Free"
+description: "dsmtpd 1.2.0 is a minimalist local SMTP server for Python developers that captures test emails safely, with no risk of sending to real addresses."
 date: 2026-01-07
 categories:
 author: Stéphane Wirtel

@@ -8,11 +8,9 @@ tags:
 - mgx/formation/alyra
 - python
 title: "Retour aux études : ma formation en intelligence artificielle chez Alyra"
+description: "Retour sur ma formation en développement IA chez Alyra : machine learning, deep learning et Scikit-Learn en Python, pour combler mes lacunes et évoluer vers l'IA."
 date: 2025-10-18
-summary: Depuis fin septembre, j'ai commencé une formation sur le développement 
-  en intelligence artificielle chez Alyra. Un retour passionnant vers les bases 
-  du machine learning et du deep learning, entre mathématiques, code et plaisir 
-  d'apprendre.
+summary: Depuis fin septembre, j'ai commencé une formation sur le développement en intelligence artificielle chez Alyra. Un retour passionnant vers les bases du machine learning et du deep learning, entre mathématiques, code et plaisir d'apprendre.
 slug: retour-aux-etudes-ma-formation-en-intelligence-artificielle-chez-alyra
 
 ---

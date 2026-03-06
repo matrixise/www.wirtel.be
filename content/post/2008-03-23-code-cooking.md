@@ -4,6 +4,7 @@ tags:
 date: 2008-03-23
 lang: fr
 title: Code Cooking
+description: "Le développement logiciel comme un art culinaire : écrire du code lisible, maintenable et expressif, avec la même passion qu'un chef pour ses recettes."
 slug: code-cooking
 
 ---

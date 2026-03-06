@@ -5,6 +5,7 @@ tags:
 - python
 ContentType: post
 title: Je présente à PyCon France 2017
+description: "Stéphane Wirtel présentera trois talks à PyCon France 2017 à Toulouse : débogage Python avec gdb, bonnes pratiques Django et comment contribuer à CPython."
 date: 2017-08-23T16:00:00+02:00
 categories:
 slug: je-parle-a-pycon-fr-2017

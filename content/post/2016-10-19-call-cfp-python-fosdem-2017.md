@@ -7,6 +7,7 @@ tags:
 ContentType: post
 date: 2016-10-19T20:00:00+01:00
 title: PythonFOSDEM 2017 - Call for Proposals
+description: Official call for proposals for the Python devroom at FOSDEM 2017 in Brussels, February 4-5. Submit your talk by December 2 on Python frameworks, internals, or async.
 categories:
 slug: call-cfp-python-fosdem-2017
 Status: published

@@ -3,6 +3,7 @@ tags:
 - python
 date: 2013-08-27
 title: Sphinx, Pygments and the logrotate format.
+description: PyLogrotate adds a logrotate syntax lexer to Pygments, enabling syntax highlighting of logrotate config files in Sphinx documentation and with pygmentize.
 slug: pylogrotate
 
 ---

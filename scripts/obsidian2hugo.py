@@ -244,6 +244,7 @@ class RuamelYAMLHandler(fm.YAMLHandler):
         super().__init__(*args, **kwargs)
         self.yaml = YAML()
         self.yaml.preserve_quotes = True
+        self.yaml.width = 4096
 
     def load(self, fm, **kwargs):
         return self.yaml.load(fm)

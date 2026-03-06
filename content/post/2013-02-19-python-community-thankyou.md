@@ -6,6 +6,7 @@ date: 2013-02-19
 lang: en
 slug: python-community-thankyou
 title: To the Python Community, Thank you for the FOSDEM !
+description: A heartfelt thank-you to all speakers, sponsors, and attendees who made the Python devroom at FOSDEM 2013 in Brussels a great success for the Python community.
 
 ---
 

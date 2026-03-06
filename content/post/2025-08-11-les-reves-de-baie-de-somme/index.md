@@ -3,14 +3,10 @@ modified: 2025-08-11T09:43:51
 tags:
 - personal/travel
 ContentType: post
-title: Séjour aux Rêves de Baie de Somme – Maison d’hôtes chaleureuse en 
-  Picardie
+title: Séjour aux Rêves de Baie de Somme – Maison d’hôtes chaleureuse en Picardie
 seo_title: Avis sur Les Rêves de Baie de Somme – Maison d’hôtes en Baie de Somme
-description: "Découvrez notre séjour aux Rêves de Baie de Somme : accueil chaleureux,
-  gastronomie raffinée et paysages uniques près de Saint-Valery, Le Crotoy et Le Tréport."
-seo_description: "Séjour aux Rêves de Baie de Somme : maison d’hôtes en Picardie avec
-  accueil chaleureux, table d’hôtes savoureuse et cadre exceptionnel près de Saint-Valery,
-  Le Crotoy et Le Tréport."
+description: "Découvrez notre séjour aux Rêves de Baie de Somme : accueil chaleureux, gastronomie raffinée et paysages uniques près de Saint-Valery, Le Crotoy et Le Tréport."
+seo_description: "Séjour aux Rêves de Baie de Somme : maison d’hôtes en Picardie avec accueil chaleureux, table d’hôtes savoureuse et cadre exceptionnel près de Saint-Valery, Le Crotoy et Le Tréport."
 keywords:
 slug: les-reves-de-baie-de-somme
 date: 2025-08-11

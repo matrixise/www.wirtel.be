@@ -4,6 +4,7 @@ tags:
 date: 2011-11-02
 slug: install_openerp_v5_on_debian_v6
 title: Installation of OpenERP 5.0 on Debian 6.0
+description: Complete guide to install OpenERP 5.0 on Debian 6.0 with PostgreSQL, Python dependencies, and XML-RPC connectivity using the GTK client or Python code.
 
 ---
 

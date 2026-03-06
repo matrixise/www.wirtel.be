@@ -7,6 +7,7 @@ date: 2011-02-24
 slug: nginx-gunicorn-flask
 lang: en
 title: nginx, gunicorn and Flask
+description: Step-by-step guide to deploying a Flask application with gunicorn as WSGI server and nginx as reverse proxy for static content caching and request forwarding.
 
 ---
 

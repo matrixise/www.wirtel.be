@@ -7,9 +7,7 @@ tags:
 - tool/static-site
 ContentType: post
 title: Génial, un bug fixé rapidement
-description: Une issue ouverte sur GitHub, une réponse rapide du mainteneur, et 
-  une mise à jour du thème Ghostwriter compatible avec Hugo 0.148.0. Vive l'open
-  source !
+description: Une issue ouverte sur GitHub, une réponse rapide du mainteneur, et une mise à jour du thème Ghostwriter compatible avec Hugo 0.148.0. Vive l'open source !
 date: 2025-07-16
 image: update-ghostwriter.png
 obsidian-note-status:

@@ -6,6 +6,7 @@ tags:
 ContentType: post
 date: 2015-12-16T18:16:29+01:00
 title: Help PythonFOSDEM 2016 with your proposals
+description: Call for proposals for the Python devroom at FOSDEM 2016 in Brussels. Submit your talk on async, web frameworks, Python internals, cloud, or databases by December 20.
 categories:
 image: python-fosdem-2016.jpg
 slug: call-cfp-python-fosdem-2016

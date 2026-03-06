@@ -7,6 +7,7 @@ tags:
 - python
 - python/odoo
 title: How about checking out the upcoming interesting conferences?
+description: "A look at the upcoming Python and Odoo conferences I plan to attend: Odoo Experience, PyCon France 2025, and PyCon Ireland 2025."
 date: 2025-09-17
 obsidian-note-status:
 slug: how-about-checking-out-the-upcoming-interesting-conferences

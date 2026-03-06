@@ -8,6 +8,7 @@ date: 2011-11-02
 slug: nginx-proxy-openerp
 lang: en
 title: Nginx and multiple instances of OpenERP
+description: How to configure nginx as a reverse proxy to run multiple OpenERP instances (v5.0 and v6.0) simultaneously on the same server using virtual hosts and XML-RPC.
 
 ---
 

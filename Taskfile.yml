@@ -65,13 +65,16 @@ tasks:
       - task: local:cv:generate-tex
 
   build:site:
-    desc: Build the site via Hugo
+    desc: Build the site via Hugo and index with Pagefind
     cmds:
-      - hugo
+      - hugo --gc --minify
+      - pagefind --site public
 
   serve:
-    desc: Serve the HTML site
+    desc: Serve the HTML site (with Pagefind index for search)
     cmds:
+      - hugo --environment development --buildDrafts --cleanDestinationDir --quiet
+      - npx -y pagefind --site public --output-path static/pagefind --glob "post/**/*.html"
       - hugo server --environment development --buildDrafts
 
   s3:cv:upload:

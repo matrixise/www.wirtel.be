@@ -6,6 +6,7 @@ author: Stephane Wirtel
 date: 2012-11-20
 lang: en
 title: Call Of Papers FOSDEM 2013
+description: Call for Papers open for the Python devroom at FOSDEM 2013 in Brussels on February 3rd — submit your session proposal before December 21st at python-fosdem.org.
 slug: call-of-papers-fosdem-2013
 
 ---

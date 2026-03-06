@@ -10,8 +10,7 @@ ContentType: post
 title: Utilisation d'Obsidian comme source pour Hugo
 date: 2025-09-04
 slug: use-obsidian-as-source-for-hugo
-description: Centraliser ses notes dans Obsidian et publier avec Hugo grâce à un
-  script maison. Un workflow fluide, automatisé et cohérent.
+description: Centraliser ses notes dans Obsidian et publier avec Hugo grâce à un script maison. Un workflow fluide, automatisé et cohérent.
 obsidian-note-status:
 Status: published
 author:

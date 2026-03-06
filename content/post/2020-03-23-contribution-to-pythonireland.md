@@ -6,7 +6,7 @@ tags:
 - python
 ContentType: post
 title: Contribution to Python Ireland
-decription: Working on the sites of the previous editions
+description: How Stéphane Wirtel contributed to Python Ireland by rebuilding the PyCon Limerick 2020 website with Hugo and archiving the 2017–2019 PyCon Ireland editions with Jekyll.
 date: 2020-03-23T14:31:15.243000Z
 image: /project/python-ireland/python-ireland.png
 slug: contribution-to-pythonireland

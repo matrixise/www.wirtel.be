@@ -12,10 +12,10 @@
                     </a>
                 </div>
 
-                <div class="consulting-cta">
-                    <p>Disponible pour du consulting Python &amp; AI —
-                        <a href="https://mgx.io/" rel="noopener">mgx.io</a> /
-                        <a href="mailto:stephane@wirtel.be">Contactez-moi</a>
+                <div class="consulting-cta" style="text-align: center;">
+                    <p>Available for Python &amp; AI consulting —
+                        <a href="{{ .Site.Params.consultingURL }}" rel="noopener">{{ .Site.Params.consultingURL | strings.TrimPrefix "https://" | strings.TrimSuffix "/" }}</a> /
+                        <a href="mailto:{{ .Site.Params.email }}">Contact me</a>
                     </p>
                 </div>
 

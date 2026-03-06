@@ -2,6 +2,7 @@
 date: 2013-02-13
 slug: download_ubuntu_and_create_usb_stick_apple
 title: Download Ubuntu and create USB stick with your Mac
+description: Step-by-step guide to create a bootable Ubuntu USB stick on macOS using hdiutil and dd. Works with any Linux distribution and requires only Terminal commands.
 
 ---
 
