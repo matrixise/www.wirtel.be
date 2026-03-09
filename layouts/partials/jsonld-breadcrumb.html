@@ -10,7 +10,7 @@
   {{- $blog := dict "@type" "ListItem" "position" 2 "name" "Blog" "item" (printf "%spost/" $baseURL) -}}
   {{- $post := dict "@type" "ListItem" "position" 3 "name" (.Title | markdownify | plainify) "item" .Permalink -}}
   {{- $items = $items | append $blog | append $post -}}
-{{- else if .Section -}}
+{{- else if and .Section (ne .Section "page") -}}
   {{- /* talk, project, position, etc.: Home > [Section] > [Title] */ -}}
   {{- $sectionTitle := .Section | humanize | title -}}
   {{- $sectionURL := printf "%s%s/" $baseURL .Section -}}
