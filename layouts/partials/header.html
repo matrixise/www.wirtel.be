@@ -54,7 +54,7 @@
                     <div class="site-title-wrapper">
                         {{ with .Site.Params.logo }}
                             <a class="site-logo" href="{{ .Site.BaseURL }}">
-                                <img src="{{ . }}" alt="{{ .Title }}" />
+                                <img src="{{ . }}" alt="{{ .Title }}" loading="eager" />
                             </a>
                         {{ else }}
                             <p class="site-title">
