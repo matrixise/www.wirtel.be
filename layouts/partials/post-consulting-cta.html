@@ -1,0 +1,12 @@
+<section style="margin: 2.5rem 0; padding: 1.5rem 2rem; border-left: 4px solid #2b2b2b; background: #f9f9f9;">
+    <h3 style="margin-top: 0; font-size: 1.2rem;">Besoin d'aide sur ce sujet ?</h3>
+    <p style="margin-bottom: 1rem;">
+        Stéphane est disponible pour du consulting Python et AI.
+        20+ ans d'expérience, CPython Core Developer, PSF Fellow.
+    </p>
+    <p style="margin-bottom: 0;">
+        <a href="{{ .Site.Params.consultingURL }}" rel="noopener" style="font-weight: bold;">{{ .Site.Params.consultingURL | strings.TrimPrefix "https://" | strings.TrimSuffix "/" }}</a>
+        &nbsp;&mdash;&nbsp;
+        <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+    </p>
+</section>
