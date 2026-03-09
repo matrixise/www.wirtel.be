@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About Stéphane Wirtel"
 date: "2016-11-11T14:39:12"
 author: "Stéphane Wirtel"
 description: "Senior Python Consultant with 20+ years of experience, CPython Core Developer, PSF Fellow, and certified AI developer. Based in Charleroi, Belgium."
@@ -8,7 +8,7 @@ description: "Senior Python Consultant with 20+ years of experience, CPython Cor
 ## Hi, I'm Stéphane
 
 <div style="display:flex; align-items:center; gap:24px; margin-bottom:24px;">
-  <img src="https://github.com/matrixise.png" alt="Stéphane Wirtel" style="width:150px; height:150px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+  <img src="https://github.com/matrixise.png" alt="Stéphane Wirtel" loading="eager" style="width:150px; height:150px; border-radius:50%; object-fit:cover; flex-shrink:0;">
   <div>
 
 I'm a **Senior Python Consultant** with over 20 years of experience building software, contributing to open source, and helping organisations adopt Python at scale. I'm based in **Charleroi, Belgium**, and I operate through my consulting company, [Mgx.io SRL](https://mgx.io/).

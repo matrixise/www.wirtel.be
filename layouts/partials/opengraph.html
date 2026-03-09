@@ -30,7 +30,12 @@
 {{- $url := delimit (slice $parentScope.Permalink .) "/" | absURL }}
 <meta property="og:image" content="{{ $url }}" />
 <meta property="og:image:secure_url" content="{{ $url }}" />
-{{- end -}}{{- end -}}
+{{- end -}}{{- else -}}
+{{- with resources.Get "logo.png" -}}{{- $logo512 := .Resize "512x512" }}
+<meta property="og:image" content="{{ $logo512.Permalink }}" />
+<meta property="og:image:secure_url" content="{{ $logo512.Permalink }}" />
+{{- end -}}
+{{- end -}}
 {{- end }}
 <meta name="twitter:title" content="{{ .Title }}" />
 <meta name="twitter:description" content="{{ $desc }}" />

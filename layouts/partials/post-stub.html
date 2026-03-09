@@ -19,7 +19,7 @@
         {{ end }}
         <div style="display:flex; align-items:flex-start; gap:16px;">
             {{ if $imgSrc }}
-                <img src="{{ $imgSrc }}" alt="{{ .Title }}" style="width:80px; height:80px; object-fit:cover; flex-shrink:0; margin:0; border-radius:3px;">
+                <img src="{{ $imgSrc }}" alt="{{ .Title }}" loading="lazy" style="width:80px; height:80px; object-fit:cover; flex-shrink:0; margin:0; border-radius:3px;">
             {{ end }}
             <div style="min-width:0;">
                 <h4 class="post-stub-title">{{ .Title }}</h4>

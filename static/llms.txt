@@ -1,0 +1,43 @@
+# Stéphane Wirtel — Senior Python Consultant
+
+> Senior Python Consultant with 20+ years of experience, CPython Core Developer, PSF Fellow, and certified AI & Blockchain developer based in Charleroi, Belgium.
+
+Stéphane Wirtel is a Senior Python Consultant operating through his company Mgx.io SRL. He writes about Python, AI, open source, and software craftsmanship. He has been a CPython Core Developer since 2019, a Python Software Foundation Fellow since 2013, and has spoken at PyCon conferences across Europe and North America.
+
+## About
+
+- [About Stéphane Wirtel](https://wirtel.be/page/about/): Senior Python Consultant, CPython Core Developer, PSF Fellow, certified AI Developer and Blockchain Developer, Karate JKA 2nd DAN black belt.
+
+## Recent Posts
+
+- [Certified AI Developer - A Journey of Growth, Grief, and New Beginning](https://wirtel.be/post/2026/02/05/2026-certified-ai-developer/): Three intense months learning AI fundamentals — Machine Learning and Deep Learning certification from Alyra (RNCP38616, level 6).
+- [Automating TLS Certificate Monitoring with GitHub Actions, certificate_watcher, and Slack](https://wirtel.be/post/2026/01/08/automating-tls-certificate-monitoring-github-actions-certificate-watcher-slack/): Build a serverless TLS certificate monitoring system using GitHub Actions and certificate_watcher that sends alerts to Slack, with zero infrastructure costs.
+- [Claude Code : comment un assistant IA m'a fait gagner des jours de développement](https://wirtel.be/post/2025/11/22/claude-code-retour-experience-pycon-ireland/): Retour d'expérience sur l'utilisation de Claude Code pendant PyCon Ireland — automatisation de migrations Django/Wagtail et gain de productivité spectaculaire.
+- [Relancer l'écriture de mon livre Introduction à Python 3.13](https://wirtel.be/post/2025/08/04/relancer-ecriture-livre-python-3-13/): Relancer l'écriture d'un livre Python en s'appuyant sur Obsidian, Pandoc, Typst et une chaîne d'outils moderne.
+- [From script to version 1.0.0 — 12 years later](https://wirtel.be/post/2025/05/21/dsmtpd-10/): How a forgotten SMTP debug tool written in 2013 was revived in 2025 thanks to open source contributions.
+- [Successful blockchain developer certification](https://wirtel.be/post/2025/04/18/2025-blockchain-developer/): From Web2 to Web3 — journey through blockchain development with Alyra, covering Solidity, NFTs, and smart contracts.
+- [What's new?](https://wirtel.be/post/2024/09/25/2024-september-whatsnew/): Personal update after a long hiatus — what has been happening over the past three years.
+- [Architecture of CPython - Part 1](https://wirtel.be/post/): Deep dive into CPython internals presented at PyCon Ireland 2016 and PyCon Canada 2016.
+- [Contributions to CPython](https://wirtel.be/post/2018/10/19/contributions-to-cpython/): Overview of contributions to the CPython project as a core developer.
+
+## Projects
+
+- [dsmtpd](https://wirtel.be/project/dsmtpd-python-smtp/): A lightweight asynchronous SMTP server for local development and testing, storing emails in Maildir format. Built with aiosmtpd. Available at https://github.com/matrixise/dsmtpd
+- [CPython](https://wirtel.be/project/cpython/): Contributions to CPython, the reference Python interpreter — documentation, bug triaging, sprints, and core development since 2019.
+- [PythonFOSDEM](https://wirtel.be/project/python-fosdem/): Co-organiser of the Python devroom at FOSDEM from 2013 to 2018, growing from 80 to 800 attendees.
+- [EuroPython](https://wirtel.be/project/europython/): Board member of the EuroPython Society (2019–2020) and co-organiser of EuroPython 2020.
+- [Python Ireland](https://wirtel.be/project/python-ireland/): Active member and admin of the Python Ireland GitHub organisation.
+- [Python Software Foundation](https://wirtel.be/project/python-software-foundation/): PSF Fellow since 2013, PSF Community Service Award recipient (2016), voting member of the PSF Fellowship Workgroup.
+
+## Talks
+
+- [What's new in Python 3.8?](https://wirtel.be/talk/what-is-new-in-python-38/): Presented at PyCon.DE 2019 and PyCon.IE 2019.
+- [What's new in Python 3.7?](https://wirtel.be/talk/what-is-new-in-python-37/): Presented at EuroPython 2018, PyCon UK, PyCon France, PyCon Germany, PyCon Ireland 2018.
+- [CPython loves your Pull Requests](https://wirtel.be/talk/cpython-loves-your-pull-requests/): How to contribute to CPython via GitHub — presented at PyCon Canada 2017, PyCon Italy 2018, PyCon Ukraine 2018.
+- [Architecture of CPython - Part 1](https://wirtel.be/talk/architecture-of-cpython-part-1/): Internals of the CPython interpreter — presented at PyCon Ireland 2016 and PyCon Canada 2016.
+- [Exploring our Python Interpreter](https://wirtel.be/talk/exploring-our-python-interpreter/): Presented at PyCon Ireland 2015, PyCon Canada 2015, EuroPython 2016, PyCon France 2016.
+- [Python and PostgreSQL, a Wonderful Wedding](https://wirtel.be/talk/postgresql-and-python-a-wonderful-wedding/): Integration of Python with PostgreSQL — presented at PyCon France 2014, EuroPython 2015, PyCon Ireland and UK 2015.
+
+## Consulting
+
+- [Mgx.io SRL](https://mgx.io/): Stéphane's consulting company offering Python development, AI integration, and technical strategy services.
