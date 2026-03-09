@@ -2,11 +2,19 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@{{ .Site.Params.twitterUsername }}" />
 <meta name="twitter:creator" content="@{{ .Site.Params.twitterUsername }}" />
-{{- $img := "" -}}
-{{- with .Resources.GetMatch "cover*" -}}{{- $img = .Permalink -}}{{- end -}}
-{{- if and (not $img) .Params.image -}}{{- $img = .Params.image | absURL -}}{{- end -}}
-{{- with $img }}
-<meta name="twitter:image" content="{{ . }}" />{{- end }}
+{{- $twitterImg := "" -}}
+{{- with .Resources.GetMatch "cover*" -}}
+  {{- $resized := .Fill "1200x630" -}}
+  {{- $twitterImg = $resized.Permalink -}}
+{{- end -}}
+{{- if and (not $twitterImg) .Params.image -}}{{- $twitterImg = .Params.image | absURL -}}{{- end -}}
+{{- with $twitterImg }}
+<meta name="twitter:image" content="{{ . }}" />
+<meta name="twitter:image:alt" content="{{ $.Title }}" />
+{{- end }}
+{{- with .Site.Params.Author.name }}
+<meta name="author" content="{{ . }}" />
+{{- end }}
 {{ if .IsHome }}{{ partial "jsonld-website.html" . }}{{ end }}
 {{- if or (eq .Kind "term") (eq .Kind "taxonomy") -}}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/taxonomy.css">
