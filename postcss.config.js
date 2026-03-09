@@ -1,4 +1,4 @@
-const purgeCSSPlugin = require('@fullhuman/postcss-purgecss');
+const purgeCSSPlugin = require('@fullhuman/postcss-purgecss').default;
 
 const purgecss = purgeCSSPlugin({
   content: ["./hugo_stats.json"],
