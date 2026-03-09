@@ -2,6 +2,6 @@
 
 {{ range $res := .Page.Resources.ByType "image" }}
     {{ if eq $name $res.Name }}
-        <img src="{{ $res.Permalink }}"/>
+        <img src="{{ $res.Permalink }}" loading="lazy"/>
     {{ end }}
 {{ end }}
