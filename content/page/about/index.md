@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About Stéphane Wirtel"
 date: "2016-11-11T14:39:12"
 author: "Stéphane Wirtel"
 description: "Senior Python Consultant with 20+ years of experience, CPython Core Developer, PSF Fellow, and certified AI developer. Based in Charleroi, Belgium."
