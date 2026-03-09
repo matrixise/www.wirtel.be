@@ -3,12 +3,26 @@
   "@type" "Person"
   "name" .Site.Params.Author.name
   "jobTitle" "Senior Python Consultant"
+  "description" .Site.Params.Author.description
   "email" .Site.Params.email
   "url" (printf "%spage/about/" .Site.BaseURL)
   "sameAs" (slice
     "https://github.com/matrixise"
     "https://www.linkedin.com/in/stephanewirtel/"
     "https://mgx.io/"
+    "https://twitter.com/matrixise"
+  )
+  "knowsAbout" .Site.Params.Author.knowsAbout
+  "memberOf" (slice
+    (dict
+      "@type" "Organization"
+      "name" "Python Software Foundation"
+      "url" "https://www.python.org/psf/"
+    )
+  )
+  "award" (slice
+    "PSF Community Service Award 2016"
+    "Python Software Foundation Fellow since 2013"
   )
   | jsonify (dict "indent" "  ") -}}
 {{- printf "<script type=\"application/ld+json\">%s</script>" $json | safeHTML }}
