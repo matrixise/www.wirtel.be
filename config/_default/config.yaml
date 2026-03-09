@@ -29,6 +29,19 @@ Params:
     name: Stéphane Wirtel
     email: stephane@wirtel.be
     title: Senior Python Expert
+    description: "CPython Core Developer, Python Software Foundation Fellow, and Senior Python Consultant with 20+ years of experience. Specializes in Python, AI, and open source."
+    knowsAbout:
+      - "Python"
+      - "CPython"
+      - "Artificial Intelligence"
+      - "Machine Learning"
+      - "Open Source Software"
+      - "DevOps"
+      - "Software Architecture"
+      - "PostgreSQL"
+      - "Django"
+      - "FastAPI"
+      - "Blockchain"
   dateFormat: Mon, Jan 2, 2006
   description: Articles about Python, AI & Open Source
   intro: true
