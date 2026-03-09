@@ -10,10 +10,6 @@
   {{- $blog := dict "@type" "ListItem" "position" 2 "name" "Blog" "item" (printf "%spost/" $baseURL) -}}
   {{- $post := dict "@type" "ListItem" "position" 3 "name" (.Title | markdownify | plainify) "item" .Permalink -}}
   {{- $items = $items | append $blog | append $post -}}
-{{- else if eq .Kind "page" -}}
-  {{- /* Static page: Home > [Title] */ -}}
-  {{- $page := dict "@type" "ListItem" "position" 2 "name" (.Title | markdownify | plainify) "item" .Permalink -}}
-  {{- $items = $items | append $page -}}
 {{- else if .Section -}}
   {{- /* talk, project, position, etc.: Home > [Section] > [Title] */ -}}
   {{- $sectionTitle := .Section | humanize | title -}}
@@ -21,6 +17,10 @@
   {{- $sectionItem := dict "@type" "ListItem" "position" 2 "name" $sectionTitle "item" $sectionURL -}}
   {{- $leaf := dict "@type" "ListItem" "position" 3 "name" (.Title | markdownify | plainify) "item" .Permalink -}}
   {{- $items = $items | append $sectionItem | append $leaf -}}
+{{- else if eq .Kind "page" -}}
+  {{- /* Static page without section (About, Search…): Home > [Title] */ -}}
+  {{- $page := dict "@type" "ListItem" "position" 2 "name" (.Title | markdownify | plainify) "item" .Permalink -}}
+  {{- $items = $items | append $page -}}
 {{- end -}}
 
 {{- $data := dict
