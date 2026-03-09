@@ -15,7 +15,7 @@
 {{- with .Site.Params.Author.name }}
 <meta name="author" content="{{ . }}" />
 {{- end }}
-{{ if .IsHome }}{{ partial "jsonld-website.html" . }}{{ end }}
+{{ if .IsHome }}{{ partial "jsonld-website.html" . }}{{ partial "jsonld-person.html" . }}{{ end }}
 {{- if or (eq .Kind "term") (eq .Kind "taxonomy") -}}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/taxonomy.css">
 {{- end -}}
