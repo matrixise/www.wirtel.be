@@ -3,6 +3,15 @@ title: "About Stéphane Wirtel"
 date: "2016-11-11T14:39:12"
 author: "Stéphane Wirtel"
 description: "Senior Python Consultant with 20+ years of experience, CPython Core Developer, PSF Fellow, and certified AI developer. Based in Charleroi, Belgium."
+faq:
+  - q: "What is a CPython Core Developer?"
+    a: "CPython is the reference implementation of Python. A CPython Core Developer has commit access to the official Python repository and contributes to the language itself. Stéphane Wirtel has been a CPython Core Developer since 2019, promoted by Victor Stinner and Julien Palard."
+  - q: "What is the Python Software Foundation Fellowship?"
+    a: "The PSF Fellowship recognizes individuals who have made significant contributions to the Python community. Stéphane Wirtel has been a PSF Fellow since 2013 and received the PSF Community Service Award in 2016 for organizing the Python devroom at FOSDEM."
+  - q: "What conferences has Stéphane Wirtel spoken at?"
+    a: "Stéphane Wirtel has spoken at PyCon France, PyCon Ireland, PyCon UK, PyCon Canada, PyCon Italy, PyCon Slovakia, PyCon Ukraine, FOSDEM, and EuroPython. He co-organized EuroPython 2020 as a member of the EuroPython Society Board."
+  - q: "What open source projects does Stéphane Wirtel contribute to?"
+    a: "Stéphane Wirtel contributes to CPython (the reference Python implementation), and has been active in organizing FOSDEM Python devrooms (2013–2018) and Python Ireland. He also contributes to various Python ecosystem projects."
 ---
 
 ## Hi, I'm Stéphane
