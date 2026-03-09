@@ -4,7 +4,8 @@
     <article class="post-container">
         {{ partial "page-header.html" . }}
 
-        {{ if or (eq .Title "About") (hasPrefix .Title "About") (hasPrefix .Title "About") }}{{ partial "jsonld-person.html" . }}{{ end }}
+        {{ if or (eq .Title "About") (hasPrefix .Title "About") }}{{ partial "jsonld-person.html" . }}{{ end }}
+        {{ partial "jsonld-breadcrumb.html" . }}
 
         {{ partial "page-content.html" . }}
     </article>
