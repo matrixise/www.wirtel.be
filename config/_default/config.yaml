@@ -42,6 +42,11 @@ Params:
       - "Django"
       - "FastAPI"
       - "Blockchain"
+      - "DevSecOps"
+      - "Deep Learning"
+      - "Golang"
+      - "Linux"
+      - "Distributed Systems"
   dateFormat: Mon, Jan 2, 2006
   description: Articles about Python, AI & Open Source
   intro: true

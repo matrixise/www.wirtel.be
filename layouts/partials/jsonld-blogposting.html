@@ -1,7 +1,7 @@
 {{- $author := dict
   "@type" "Person"
   "name" .Site.Params.Author.name
-  "url" (printf "%spage/about/" .Site.BaseURL)
+  "url" .Site.BaseURL
   "jobTitle" "Senior Python Consultant"
   "sameAs" (slice
     "https://github.com/matrixise"
