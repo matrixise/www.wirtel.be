@@ -42,6 +42,7 @@ Params:
   email: stephane@wirtel.be
   linkedin: https://www.linkedin.com/in/stephanewirtel/
   consultingURL: https://mgx.io/
+  consultingEmail: stephane.wirtel@mgx.io
   readingTime: true
   readingTimeText: "Estimated reading time:"
   site_name: "Stéphane Wirtel — Senior Python Consultant"
