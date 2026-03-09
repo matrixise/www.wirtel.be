@@ -34,7 +34,15 @@
 {{- end -}}
 {{- $img := "" -}}
 {{- with .Resources.GetMatch "cover*" -}}{{- $img = .Permalink -}}{{- end -}}
-{{- if and (not $img) .Params.image -}}{{- $img = (.Params.image | absURL) -}}{{- end -}}
+{{- if not $img -}}
+  {{- with .Params.image -}}
+    {{- with $.Resources.GetMatch . -}}
+      {{- $img = .Permalink -}}
+    {{- else -}}
+      {{- $img = (. | absURL) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- with $img -}}
   {{- $data = merge $data (dict "image" $img) -}}
 {{- end -}}
