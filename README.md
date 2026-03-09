@@ -15,9 +15,9 @@ Personal blog and CV of Stéphane Wirtel. Built with Hugo and deployed on Netlif
 
 ## Requirements
 
-- [Hugo](https://gohugo.io/) >= 0.152.2 (extended)
+- [Hugo](https://gohugo.io/) >= 0.157 (extended)
 - [Task](https://taskfile.dev/) (task runner)
-- Python >= 3.10 (for CV generation and scripts)
+- Python >= 3.13 (for CV generation and scripts)
 - LaTeX / pdflatex (for CV PDF compilation)
 - Node.js / npx (for Pagefind indexing)
 
@@ -188,7 +188,7 @@ Structured data (JSON-LD) partials are included for `Person`, `WebSite`, `BlogPo
 
 ### Hugo Specifics
 - Uses Go modules for theme management (`go.mod`)
-- Hugo version: **0.152.2** (defined in `netlify.toml` and `go.mod`)
+- Hugo version: **0.157** (defined in `.tool-versions` and `netlify.toml`)
 - Permalinks for posts: `/post/:year/:month/:day/:slug`
 - Main sections: `post` (shown on homepage)
 - Google Analytics enabled (ID: G-BC0WC3PWS6)
