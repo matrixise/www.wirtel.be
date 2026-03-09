@@ -1,0 +1,32 @@
+{{- $baseURL := .Site.BaseURL -}}
+{{- $items := slice -}}
+
+{{- /* Item 1: Home (always present) */ -}}
+{{- $home := dict "@type" "ListItem" "position" 1 "name" "Home" "item" $baseURL -}}
+{{- $items = $items | append $home -}}
+
+{{- if eq .Section "post" -}}
+  {{- /* Post: Home > Blog > [Title] */ -}}
+  {{- $blog := dict "@type" "ListItem" "position" 2 "name" "Blog" "item" (printf "%spost/" $baseURL) -}}
+  {{- $post := dict "@type" "ListItem" "position" 3 "name" (.Title | markdownify | plainify) "item" .Permalink -}}
+  {{- $items = $items | append $blog | append $post -}}
+{{- else if eq .Kind "page" -}}
+  {{- /* Static page: Home > [Title] */ -}}
+  {{- $page := dict "@type" "ListItem" "position" 2 "name" (.Title | markdownify | plainify) "item" .Permalink -}}
+  {{- $items = $items | append $page -}}
+{{- else if .Section -}}
+  {{- /* talk, project, position, etc.: Home > [Section] > [Title] */ -}}
+  {{- $sectionTitle := .Section | humanize | title -}}
+  {{- $sectionURL := printf "%s%s/" $baseURL .Section -}}
+  {{- $sectionItem := dict "@type" "ListItem" "position" 2 "name" $sectionTitle "item" $sectionURL -}}
+  {{- $leaf := dict "@type" "ListItem" "position" 3 "name" (.Title | markdownify | plainify) "item" .Permalink -}}
+  {{- $items = $items | append $sectionItem | append $leaf -}}
+{{- end -}}
+
+{{- $data := dict
+  "@context" "https://schema.org"
+  "@type" "BreadcrumbList"
+  "itemListElement" $items
+-}}
+{{- $json := $data | jsonify (dict "indent" "  ") -}}
+{{- printf "<script type=\"application/ld+json\">%s</script>" $json | safeHTML }}
