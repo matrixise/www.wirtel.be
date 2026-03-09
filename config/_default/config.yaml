@@ -48,7 +48,7 @@ Params:
       - "Linux"
       - "Distributed Systems"
   dateFormat: Mon, Jan 2, 2006
-  description: Articles about Python, AI & Open Source
+  description: "Personal blog of Stéphane Wirtel — CPython Core Developer, PSF Fellow, and Python community member. Writing about Python, AI, open source, and software craftsmanship."
   intro: true
   headline: 今日は
   opengraph: true
