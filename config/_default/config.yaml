@@ -115,3 +115,15 @@ markup:
       unsafe: true
   highlight:
     style: solarized-light
+
+build:
+  buildStats:
+    enable: true
+
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: hugo_stats.json
+      target: assets/watching/hugo_stats.json
+      disableWatch: false
