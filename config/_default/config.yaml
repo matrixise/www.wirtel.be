@@ -1,29 +1,38 @@
----
 newContentEditor: /usr/bin/nvim
-theme: ["original-ghostwriter", "hugo-shortcode-gallery"]
-title: Stéphane Wirtel — Senior Python Consultant
 baseurl: https://wirtel.be/
 copyright: Stéphane Wirtel
 defaultContentLanguage: en
-languageCode: en
+defaultContentLanguageInSubdir: true
 enableRobotsTXT: true
+
 sitemap:
   changefreq: weekly
   priority: 0.5
   filename: sitemap.xml
+
 ignoreFiles:
   - "CLAUDE\\.md$"
-services:
-  googleAnalytics:
-    id: G-BC0WC3PWS6
-Author:
-  email: stephane@wirtel.be
-  name: Stéphane Wirtel
-  title: Senior Python Expert
-  phone: +32 474 76 80 72
+
+languages:
+  en:
+    languageName: English
+    weight: 1
+    contentDir: content/en
+    title: Stéphane Wirtel — Senior Python Consultant
+    params:
+      description: "Personal blog of Stéphane Wirtel — CPython Core Developer, PSF Fellow, and Python community member. Writing about Python, AI, open source, and software craftsmanship."
+  fr:
+    languageName: Français
+    weight: 2
+    contentDir: content/fr
+    title: Stéphane Wirtel — Consultant Senior Python
+    params:
+      description: "Blog personnel de Stéphane Wirtel — CPython Core Developer, PSF Fellow et membre de la communauté Python. Articles sur Python, l'IA, l'open source et le développement logiciel."
+
 Company:
   email: stephane.wirtel@mgx.io
   site: https://mgx.io/
+
 Params:
   Author:
     name: Stéphane Wirtel
@@ -47,26 +56,15 @@ Params:
       - "Golang"
       - "Linux"
       - "Distributed Systems"
-  dateFormat: Mon, Jan 2, 2006
-  description: "Personal blog of Stéphane Wirtel — CPython Core Developer, PSF Fellow, and Python community member. Writing about Python, AI, open source, and software craftsmanship."
-  intro: true
-  headline: 今日は
-  opengraph: true
-  shareLinkedIn: true
-  shareTwitter: true
+  consultingURL: https://mgx.io/
+  consultingEmail: stephane.wirtel@mgx.io
   twitterUsername: matrixise
   github: https://github.com/matrixise
   twitter: https://twitter.com/matrixise
   email: stephane@wirtel.be
   linkedin: https://www.linkedin.com/in/stephanewirtel/
-  consultingURL: https://mgx.io/
-  consultingEmail: stephane.wirtel@mgx.io
-  readingTime: true
-  readingTimeText: "Estimated reading time:"
-  site_name: "Stéphane Wirtel — Senior Python Consultant"
   mainSections: [post]
-Permalinks:
-  post: /post/:year/:month/:day/:slug
+
 Privacy:
   disqus:
     disable: true
@@ -75,10 +73,12 @@ Privacy:
     anonymizeIP: true
     respectDoNotTrack: true
     useSessionStorage: false
+
 Taxonomies:
   categories: categories
   series: series
   tags: tags
+
 related:
   threshold: 20
   includeNewer: true
@@ -88,42 +88,19 @@ related:
       weight: 100
     - name: categories
       weight: 70
-menu:
-  main:
-    - name: Posts
-      url: /
-      weight: 1
-    - name: Projects
-      url: /project
-      weight: 2
-    - name: Talks
-      url: /talk
-      weight: 3
-    - name: Search
-      url: /page/search/
-      weight: 4
-    - name: About
-      url: /page/about/
-      weight: 5
-    - name: Consulting
-      url: https://mgx.io/
-      weight: 6
 
 markup:
   goldmark:
     renderer:
       unsafe: true
   highlight:
-    style: solarized-light
-
-build:
-  buildStats:
-    enable: true
+    style: dracula
+    noClasses: false
 
 module:
+  imports:
+    - path: github.com/nunocoracao/blowfish/v2
+    - path: github.com/mfg92/hugo-shortcode-gallery
   mounts:
     - source: assets
       target: assets
-    - source: hugo_stats.json
-      target: assets/watching/hugo_stats.json
-      disableWatch: false

@@ -1,0 +1,10 @@
+[author]
+name = "Stéphane Wirtel"
+email = "stephane@wirtel.be"
+headline = "CPython Core Developer · PSF Fellow · Consultant Senior Python"
+bio = "CPython Core Developer, PSF Fellow et Consultant Senior Python avec plus de 20 ans d'expérience en Python, IA et logiciel open source. Je travaille via [mgx.io](https://mgx.io/)."
+links = [
+  {github = "https://github.com/matrixise"},
+  {twitter = "https://twitter.com/matrixise"},
+  {linkedin = "https://www.linkedin.com/in/stephanewirtel/"},
+]

@@ -265,7 +265,7 @@ ParentPath = typing.Annotated[
 
 TargetPath = typing.Annotated[
     pathlib.Path,
-    typer.Argument(exists=True, dir_okay=True),
+    typer.Argument(dir_okay=True),
 ]
 
 import re
@@ -370,7 +370,10 @@ def convert_wikilinks_to_relref(
 
 def main(
     parent_path: ParentPath,
-    target_path: TargetPath = pathlib.Path("content/post"),
+    target_path: Optional[TargetPath] = None,
+    language: str = typer.Option(
+        "en", "--language", "--lang", help="Target language ('en' or 'fr'). Determines output path when target_path is omitted."
+    ),
     force: bool = typer.Option(
         False, "--force", "-f", help="Overwrite existing files in target directory"
     ),
@@ -378,6 +381,12 @@ def main(
     console = Console()
     errors: list[tuple[pathlib.Path, Exception | str]] = []
     skipped: list[str] = []
+
+    # Determine target path: explicit arg takes precedence, otherwise derive from language
+    if target_path is None:
+        target_path = pathlib.Path(f"content/{language}/post")
+
+    target_path.mkdir(parents=True, exist_ok=True)
 
     # Phase 1: Pipeline LAZY (streaming)
     pipeline = validate_notes(
@@ -397,6 +406,10 @@ def main(
 
     # Phase 3: TRAITEMENT FINAL (transformation + écriture)
     for note in validated_notes:
+        # Inject language field if absent (from --language option or auto-detected)
+        note_language = note.document.metadata.get("language")
+        if not note_language:
+            note.document.metadata["language"] = language
         transformed_note = transform_note(note)
         write_note(transformed_note, target_path, force, console, skipped, errors)
 

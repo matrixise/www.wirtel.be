@@ -1,0 +1,65 @@
+colorScheme = "blowfish"
+defaultAppearance = "light"
+enableSearch = true
+enableCodeCopy = true
+enableImageLazyLoading = true
+mainSections = ["post"]
+
+[homepage]
+layout = "profile"
+showRecent = true
+showRecentItems = 10
+showMoreLink = false
+showMoreLinkDest = "post"
+
+[header]
+layout = "basic"
+
+[footer]
+showCopyright = true
+showThemeAttribution = false
+showAppearanceSwitcher = true
+showScrollToTop = true
+
+[article]
+showDate = true
+showDateUpdated = false
+showAuthor = true
+showReadingTime = true
+showWordCount = false
+showTableOfContents = true
+showPagination = true
+showRelatedContent = true
+relatedContentLimit = 3
+showTaxonomies = true
+showSummary = false
+showEdit = false
+invertPagination = false
+
+[list]
+showHero = false
+showBreadcrumbs = false
+groupByYear = true
+showCards = false
+orderByWeight = false
+showTableOfContents = false
+
+[sitemap]
+excludedKinds = []
+
+[taxonomy]
+showTermCount = true
+showHero = false
+
+[term]
+showHero = false
+showTableOfContents = false
+
+[analytics]
+[analytics.googleAnalytics]
+id = "G-BC0WC3PWS6"
+
+[fathom]
+[plausible]
+[umami]
+[splitbee]

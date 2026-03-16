@@ -1,0 +1,25 @@
+[[main]]
+name = "Articles"
+pageRef = "post"
+weight = 10
+
+[[main]]
+name = "Projets"
+pageRef = "project"
+weight = 20
+
+[[main]]
+name = "Conférences"
+pageRef = "talk"
+weight = 30
+
+[[main]]
+name = "À propos"
+pageRef = "page/about"
+weight = 40
+
+[[main]]
+name = "Consulting"
+url = "https://mgx.io/"
+weight = 50
+params.target = "_blank"
