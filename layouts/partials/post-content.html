@@ -1,7 +1,8 @@
 <div class="post-content clearfix" itemprop="articleBody">
     {{- $coverImg := .Resources.GetMatch "cover*" -}}
     {{- with $coverImg }}
-    <img class="post-featured-image" src="{{ .Permalink }}" alt="{{ $.Title }}">
+    {{- $webp := .Resize "1400x webp q85" -}}
+    <img class="post-featured-image" src="{{ $webp.Permalink }}" alt="{{ $.Title }}">
     {{- else }}{{- with $.Params.Image }}
     <img class="post-featured-image" src="{{ . }}" alt="{{ $.Title }}">
     {{- end }}{{- end }}
