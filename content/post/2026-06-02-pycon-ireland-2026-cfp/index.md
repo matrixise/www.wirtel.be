@@ -1,6 +1,6 @@
 ---
 title: "PyCon Ireland 2026: The Call for Proposals is Open"
-date: 2026-06-02
+date: 2026-06-01
 slug: pycon-ireland-2026-cfp-open
 description: "PyCon Ireland 2026 is looking for speakers of every level. If you've been sitting on a Python idea, 30 August is your deadline."
 tags:
@@ -12,8 +12,8 @@ ContentType: post
 Status: published
 author:
 - Stéphane Wirtel
-created: 2026-06-02T00:00:00+02:00
-modified: 2026-06-02T00:00:00+02:00
+created: 2026-06-01T00:00:00+02:00
+modified: 2026-06-01T00:00:00+02:00
 reading_time: 3
 
 ---
